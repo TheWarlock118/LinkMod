@@ -48,7 +48,7 @@ namespace HenryMod.Modules.Survivors
             {
                 InitializeUnlockables();
 
-                bodyPrefab = Modules.Prefabs.CreatePrefab(bodyName + "Body", "mdl" + bodyName, bodyInfo);
+                bodyPrefab = Modules.Prefabs.CreatePrefab("LinkBody", "mdlLink", bodyInfo);
                 bodyPrefab.GetComponent<EntityStateMachine>().mainStateType = new EntityStates.SerializableEntityStateType(characterMainState);
 
                 Modules.Prefabs.SetupCharacterModel(bodyPrefab, customRendererInfos, mainRendererIndex);
@@ -57,9 +57,9 @@ namespace HenryMod.Modules.Survivors
 
                 Modules.Prefabs.RegisterNewSurvivor(bodyPrefab, displayPrefab, Color.grey, bodyName.ToUpper(), characterUnlockableDef, sortPosition);
 
-                InitializeHitboxes();
+                //InitializeHitboxes();
                 InitializeSkills();
-                InitializeSkins();
+                //InitializeSkins();
                 InitializeItemDisplays();
                 InitializeDoppelganger();                
             }
