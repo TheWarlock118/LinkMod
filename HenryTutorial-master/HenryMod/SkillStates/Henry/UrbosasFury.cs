@@ -41,7 +41,7 @@ namespace HenryMod.SkillStates
                 baseDamage = base.characterBody.damage * 16f,
                 baseForce = 50f,
                 bonusForce = Vector3.zero,
-                attackerFiltering = AttackerFiltering.NeverHit,
+                attackerFiltering = AttackerFiltering.NeverHitSelf,
                 crit = base.characterBody.RollCrit(),
                 damageColorIndex = DamageColorIndex.Item,
                 damageType = DamageType.Generic,

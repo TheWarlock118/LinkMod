@@ -19,7 +19,7 @@ namespace HenryMod.Modules
 
         public System.Collections.IEnumerator LoadStaticContentAsync(LoadStaticContentAsyncArgs args)
         {
-            this.contentPack.identifier = this.identifier;
+            //this.contentPack.identifier = this.identifier;
             contentPack.bodyPrefabs.Add(Prefabs.bodyPrefabs.ToArray());
             contentPack.buffDefs.Add(Buffs.buffDefs.ToArray());
             contentPack.effectDefs.Add(Assets.effectDefs.ToArray());

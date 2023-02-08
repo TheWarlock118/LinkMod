@@ -9,14 +9,13 @@ namespace HenryMod.Modules
     internal static class Projectiles
     {
         internal static GameObject bombPrefab;
-        internal static GameObject arrowPrefab;
-        internal static GameObject stasisPrefab;
+        internal static GameObject arrowPrefab;        
 
         internal static void RegisterProjectiles()
         {
             // only separating into separate methods for my sanity
             CreateBomb();
-
+            CreateArrow();
             AddProjectile(bombPrefab);
         }
 
@@ -37,8 +36,7 @@ namespace HenryMod.Modules
             bombImpactExplosion.lifetime = 24f;
             bombImpactExplosion.impactEffect = Modules.Assets.bombExplosionEffect;
             bombImpactExplosion.explosionEffect = Modules.Assets.bombExplosionEffect;
-            bombImpactExplosion.explosionSoundString = "BombExplode";
-            bombImpactExplosion.lifetimeExpiredSound = Modules.Assets.CreateNetworkSoundEventDef("MiphasGraceReady");
+            bombImpactExplosion.explosionSoundString = "BombExplode";            
             bombImpactExplosion.timerAfterImpact = true;
             bombImpactExplosion.lifetimeAfterImpact = 0.1f;            
 
@@ -46,15 +44,15 @@ namespace HenryMod.Modules
             if (Modules.Assets.mainAssetBundle.LoadAsset<GameObject>("HenryBombGhost") != null) bombController.ghostPrefab = CreateGhostPrefab("HenryBombGhost");
             bombController.startSound = "";
         }
-        /*
+        
         private static void CreateArrow()
         {
-            arrowPrefab = CloneProjectilePrefab("TreebotSyringeProjectile", "LinkArrowProjectile");
+            arrowPrefab = CloneProjectilePrefab("WindbladeProjectile", "LinkArrowProjectile");
             ProjectileController arrowController = arrowPrefab.GetComponent<ProjectileController>();
-            if (Modules.Assets.mainAssetBundle.LoadAsset<GameObject>("HenryBombGhost") != null) arrowController.ghostPrefab = CreateGhostPrefab("HenryBombGhost");
+            arrowController.ghostPrefab = CreateGhostPrefab("linkArrow");
             arrowController.startSound = "";
         }
-        */
+        
 
         private static void InitializeImpactExplosion(ProjectileImpactExplosion projectileImpactExplosion)
         {
@@ -94,7 +92,7 @@ namespace HenryMod.Modules
 
         private static GameObject CloneProjectilePrefab(string prefabName, string newPrefabName)
         {
-            GameObject newPrefab = PrefabAPI.InstantiateClone(Resources.Load<GameObject>("Prefabs/Projectiles/" + prefabName), newPrefabName);
+            GameObject newPrefab = PrefabAPI.InstantiateClone(RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/Projectiles/" + prefabName), newPrefabName);
             return newPrefab;
         }
     }

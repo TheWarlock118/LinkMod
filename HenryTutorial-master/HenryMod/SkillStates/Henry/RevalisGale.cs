@@ -62,7 +62,8 @@ namespace HenryMod.SkillStates
             else
             {
                 SkillLocator skillLocator = PlayerCharacterMasterController.instances[0].master.GetBodyObject().GetComponent<SkillLocator>();
-                skillLocator.GetSkill(SkillSlot.Special).RestockSteplike();
+                //skillLocator.GetSkill(SkillSlot.Special).RestockSteplike();
+                skillLocator.GetSkill(SkillSlot.Special).AddOneStock();
                 fired = false;
                 this.outer.SetNextStateToMain();
                 return;

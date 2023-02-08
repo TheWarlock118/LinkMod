@@ -14,7 +14,7 @@ namespace HenryMod.SkillStates
         public static float force = 30f;
         public static float recoil = 3f;
         public static float range = 256f;
-        public static GameObject tracerEffectPrefab = Resources.Load<GameObject>("Prefabs/Effects/Tracers/TracerGoldGat");
+        public static GameObject tracerEffectPrefab = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/Tracers/TracerGoldGat");
         public static GameObject projectilePrefab;
 
         private float duration;
@@ -54,7 +54,7 @@ namespace HenryMod.SkillStates
                 {
                     Ray aimRay = base.GetAimRay();
                     
-                    ProjectileManager.instance.FireProjectile(EntityStates.Treebot.Weapon.FireSyringe.projectilePrefab, //Placeholder projectile
+                    ProjectileManager.instance.FireProjectile(Modules.Projectiles.arrowPrefab,
                         aimRay.origin,
                         Util.QuaternionSafeLookRotation(aimRay.direction),
                         base.gameObject,
@@ -75,7 +75,7 @@ namespace HenryMod.SkillStates
                     */
 
                     Vector3 arrow2Direction = new Vector3(aimRay.direction.x - 0.1f, aimRay.direction.y, aimRay.direction.z); //Adjusts direction for 2nd arrow to slight right
-                    ProjectileManager.instance.FireProjectile(EntityStates.Treebot.Weapon.FireSyringe.projectilePrefab, 
+                    ProjectileManager.instance.FireProjectile(Modules.Projectiles.arrowPrefab, 
                         aimRay.origin,
                         Util.QuaternionSafeLookRotation(arrow2Direction),
                         base.gameObject,
@@ -96,7 +96,7 @@ namespace HenryMod.SkillStates
                     */
 
                     Vector3 arrow3Direction = new Vector3(aimRay.direction.x + 0.1f, arrow2Direction.y, aimRay.direction.z); //Adjusts direction for 3rd to slight left
-                    ProjectileManager.instance.FireProjectile(EntityStates.Treebot.Weapon.FireSyringe.projectilePrefab, //Placeholder projectile
+                    ProjectileManager.instance.FireProjectile(Modules.Projectiles.arrowPrefab,
                         aimRay.origin,
                         Util.QuaternionSafeLookRotation(arrow3Direction),
                         base.gameObject,

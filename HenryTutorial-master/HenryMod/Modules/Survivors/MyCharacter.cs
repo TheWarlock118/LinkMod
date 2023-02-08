@@ -33,7 +33,7 @@ namespace HenryMod.Modules.Survivors
             jumpCount = 1,
             maxHealth = 110f,
             subtitleNameToken = HenryPlugin.developerPrefix + "_HENRY_BODY_SUBTITLE",
-            podPrefab = Resources.Load<GameObject>("Prefabs/NetworkedObjects/SurvivorPod")
+            podPrefab = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/NetworkedObjects/SurvivorPod")
         };
 
         internal static Material henryMat = Modules.Assets.CreateMaterial("matHenry");
@@ -350,7 +350,7 @@ namespace HenryMod.Modules.Survivors
             ModelSkinController skinController = model.AddComponent<ModelSkinController>();
             ChildLocator childLocator = model.GetComponent<ChildLocator>();
 
-            SkinnedMeshRenderer mainRenderer = characterModel.mainSkinnedMeshRenderer;
+            SkinnedMeshRenderer mainRenderer = characterModel.mainSkinnedMeshRenderer;            
 
             CharacterModel.RendererInfo[] defaultRenderers = characterModel.baseRendererInfos;
 
@@ -1981,6 +1981,7 @@ localScale = new Vector3(0.2845F, 0.2845F, 0.2845F),
                 }
             });
 
+            /*
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
                 keyAsset = RoR2Content.Items.CooldownOnCrit,
@@ -2001,6 +2002,7 @@ localScale = new Vector3(0.2789F, 0.2789F, 0.2789F),
                     }
                 }
             });
+            */
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
@@ -2369,6 +2371,7 @@ localScale = new Vector3(0.1F, 0.1F, 0.1F),
                 }
             });
 
+            /*
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
                 keyAsset = RoR2Content.Items.Incubator,
@@ -2389,6 +2392,7 @@ localScale = new Vector3(0.0528F, 0.0528F, 0.0528F),
                     }
                 }
             });
+            */
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {

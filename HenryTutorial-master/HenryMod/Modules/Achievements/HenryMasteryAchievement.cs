@@ -25,10 +25,12 @@ namespace HenryMod.Modules.Achievements
                                 Language.GetString(HenryPlugin.developerPrefix + "_HENRY_BODY_MASTERYUNLOCKABLE_ACHIEVEMENT_DESC")
                             }));
 
+        /*
         public override BodyIndex LookUpRequiredBodyIndex()
         {
             return BodyCatalog.FindBodyIndex(Modules.Survivors.MyCharacter.instance.fullBodyName);
         }
+        */
 
         public void ClearCheck(Run run, RunReport runReport)
         {

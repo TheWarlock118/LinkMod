@@ -46,8 +46,8 @@ namespace HenryMod.Modules
                 unlockableRewardIdentifier = instance.UnlockableIdentifier,
                 prerequisiteAchievementIdentifier = instance.PrerequisiteUnlockableIdentifier,
                 nameToken = instance.AchievementNameToken,
-                descriptionToken = instance.AchievementDescToken,
-                achievedIcon = instance.Sprite,
+                descriptionToken = instance.AchievementDescToken,      
+                // achievedIcon = instance.Sprite,
                 type = instance.GetType(),
                 serverTrackerType = (serverTracked ? instance.GetType() : null),
             };
@@ -176,13 +176,14 @@ where TDelegate : Delegate
             base.OnUninstall();
         }
         public override Single ProgressForAchievement() => base.ProgressForAchievement();
-        public override BodyIndex LookUpRequiredBodyIndex()
+        /*public override BodyIndex LookUpRequiredBodyIndex()
         {
             return base.LookUpRequiredBodyIndex();
         }
         public override void OnBodyRequirementBroken() => base.OnBodyRequirementBroken();
         public override void OnBodyRequirementMet() => base.OnBodyRequirementMet();
         public override bool wantsBodyCallbacks { get => base.wantsBodyCallbacks; }
+        */
         #endregion
     }
 }

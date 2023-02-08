@@ -1,4 +1,5 @@
-﻿using EntityStates;
+﻿using KinematicCharacterController;
+using EntityStates;
 using RoR2;
 using RoR2.Projectile;
 using RoR2.Audio;
@@ -58,7 +59,7 @@ namespace HenryMod.SkillStates.BaseStates
             this.hasFired = false;
             this.animator = base.GetModelAnimator();
             base.StartAimMode(0.5f + this.duration, false);
-            base.characterBody.outOfCombatStopwatch = 0f;
+            // base.characterBody.outOfCombat = 0f;
             this.animator.SetBool("attacking", true);
 
             HitBoxGroup hitBoxGroup = null;

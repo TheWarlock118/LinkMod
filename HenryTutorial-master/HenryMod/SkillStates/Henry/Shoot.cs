@@ -14,7 +14,7 @@ namespace HenryMod.SkillStates
         public static float force = 30f;
         public static float recoil = 3f;
         public static float range = 256f;
-        public static GameObject tracerEffectPrefab = Resources.Load<GameObject>("Prefabs/Effects/Tracers/TracerGoldGat");
+        public static GameObject tracerEffectPrefab = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/Tracers/TracerGoldGat");
         public static GameObject projectilePrefab;
 
         private float duration;
@@ -54,7 +54,7 @@ namespace HenryMod.SkillStates
                 {
                     Ray aimRay = base.GetAimRay();
                     
-                    ProjectileManager.instance.FireProjectile(EntityStates.Treebot.Weapon.FireSyringe.projectilePrefab, //Placeholder projectile
+                    ProjectileManager.instance.FireProjectile(Modules.Projectiles.arrowPrefab,
                         aimRay.origin,
                         Util.QuaternionSafeLookRotation(aimRay.direction),
                         base.gameObject,

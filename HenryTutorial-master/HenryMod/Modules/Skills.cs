@@ -25,7 +25,7 @@ namespace HenryMod.Modules
             SkillFamily primaryFamily = ScriptableObject.CreateInstance<SkillFamily>();
             (primaryFamily as ScriptableObject).name = targetPrefab.name + "PrimaryFamily";
             primaryFamily.variants = new SkillFamily.Variant[0];
-            skillLocator.primary._skillFamily = primaryFamily;
+            skillLocator.primary._skillFamily = primaryFamily;            
 
             skillLocator.secondary = targetPrefab.AddComponent<GenericSkill>();
             SkillFamily secondaryFamily = ScriptableObject.CreateInstance<SkillFamily>();
@@ -43,7 +43,7 @@ namespace HenryMod.Modules
             SkillFamily specialFamily = ScriptableObject.CreateInstance<SkillFamily>();
             (specialFamily as ScriptableObject).name = targetPrefab.name + "SpecialFamily";
             specialFamily.variants = new SkillFamily.Variant[0];
-            skillLocator.special._skillFamily = specialFamily;
+            skillLocator.special._skillFamily = specialFamily;            
 
             skillFamilies.Add(primaryFamily);
             skillFamilies.Add(secondaryFamily);
