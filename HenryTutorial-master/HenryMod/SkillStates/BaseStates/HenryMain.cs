@@ -17,28 +17,12 @@ namespace HenryMod.SkillStates
 
         public override void Update()
         {
-            base.Update();
-            if (!characterBody.healthComponent.alive)
-            {
-                characterBody.inventory.GiveItem(ItemCatalog.FindItemIndex("ExtraLife"), 1);
-            }
+            base.Update();            
         }
 
         public override void FixedUpdate()
         {
             base.FixedUpdate();
-
-            if (inputBank.jump.down)
-            {
-                Chat.SendBroadcastChat(new Chat.SimpleChatMessage
-                {
-                    baseToken = "YOU HAVE JUMPED"
-                });
-            }
-            if (!characterBody.healthComponent.alive)
-            {
-                characterBody.inventory.GiveItem(ItemCatalog.FindItemIndex("ExtraLife"), 1);
-            }
         }
 
 

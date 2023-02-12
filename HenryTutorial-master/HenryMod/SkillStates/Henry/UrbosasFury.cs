@@ -25,7 +25,8 @@ namespace HenryMod.SkillStates
         {
             base.OnEnter();
             this.duration = UrbosasFury.baseDuration;
-            this.fireTime = 0.5f;            
+            this.fireTime = 0.5f;
+            SummonUrbosa();
         }
 
         public override void OnExit()
@@ -74,6 +75,32 @@ namespace HenryMod.SkillStates
                 this.outer.SetNextStateToMain();
                 return;
             }
+        }
+
+        private void SummonUrbosa()
+        {
+
+            if (base.isAuthority)
+            {
+                Ray aimRay = base.GetAimRay();
+
+                FireProjectileInfo urbosaInfo = new FireProjectileInfo
+                {
+                    projectilePrefab = Modules.Projectiles.urbosaPrefab,
+                    position = aimRay.origin,
+                    rotation = Util.QuaternionSafeLookRotation(aimRay.direction),
+                    owner = base.gameObject,
+                    damage = 0f,
+                    force = 0f,
+                    crit = false,
+                    damageColorIndex = DamageColorIndex.Default,
+                    target = null,
+                    speedOverride = 0f,
+                    fuseOverride = -1f,
+                };
+                urbosaInfo.useFuseOverride = true;                
+                ProjectileManager.instance.FireProjectile(urbosaInfo);                    
+            }            
         }
 
         public override InterruptPriority GetMinimumInterruptPriority()

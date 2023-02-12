@@ -9,14 +9,27 @@ namespace HenryMod.Modules
     internal static class Projectiles
     {
         internal static GameObject bombPrefab;
-        internal static GameObject arrowPrefab;        
+        internal static GameObject arrowPrefab;
+        internal static GameObject miphaPrefab;
+        internal static GameObject urbosaPrefab;
+        internal static GameObject darukPrefab;
+        internal static GameObject revaliPrefab;
 
         internal static void RegisterProjectiles()
         {
             // only separating into separate methods for my sanity
             CreateBomb();
             CreateArrow();
+            CreateMipha();
+            CreateDaruk();
+            CreateRevali();
+            CreateUrbosa();
             AddProjectile(bombPrefab);
+            AddProjectile(arrowPrefab);
+            AddProjectile(miphaPrefab);
+            AddProjectile(urbosaPrefab);
+            AddProjectile(darukPrefab);
+            AddProjectile(revaliPrefab);
         }
 
         internal static void AddProjectile(GameObject projectileToAdd)
@@ -41,7 +54,7 @@ namespace HenryMod.Modules
             bombImpactExplosion.lifetimeAfterImpact = 0.1f;            
 
             ProjectileController bombController = bombPrefab.GetComponent<ProjectileController>();
-            if (Modules.Assets.mainAssetBundle.LoadAsset<GameObject>("HenryBombGhost") != null) bombController.ghostPrefab = CreateGhostPrefab("HenryBombGhost");
+            if (Modules.Assets.mainAssetBundle.LoadAsset<GameObject>("LinkBombRound") != null) bombController.ghostPrefab = CreateGhostPrefab("LinkBombRound");
             bombController.startSound = "";
         }
         
@@ -53,6 +66,53 @@ namespace HenryMod.Modules
             arrowController.startSound = "";
         }
         
+        private static void CreateMipha()
+        {
+            miphaPrefab = CloneProjectilePrefab("WindbladeProjectile", "MiphaProjectile");
+            ProjectileController miphaController = miphaPrefab.GetComponent<ProjectileController>();
+            miphaController.ghostPrefab = CreateGhostPrefab("mdlMipha");
+            miphaController.startSound = ""; // TODO: Add sounds            
+            miphaController.canImpactOnTrigger = false;
+
+            //ProjectileFuse miphaFuse = miphaPrefab.GetComponent<ProjectileFuse>();
+            //miphaFuse.fuse = 10f;
+        }
+
+        private static void CreateUrbosa()
+        {
+            urbosaPrefab = CloneProjectilePrefab("WindbladeProjectile", "urbosaProjectile");            
+            ProjectileController urbosaController = urbosaPrefab.GetComponent<ProjectileController>();            
+            urbosaController.ghostPrefab = CreateGhostPrefab("mdlUrbosa");
+            urbosaController.startSound = ""; // TODO: Add sounds
+            urbosaController.canImpactOnTrigger = false;
+
+            //ProjectileFuse urbosaFuse = urbosaPrefab.GetComponent<ProjectileFuse>();
+            //urbosaFuse.fuse = 10f;
+        }
+
+        private static void CreateRevali()
+        {
+            revaliPrefab = CloneProjectilePrefab("WindbladeProjectile", "revaliProjectile");
+            ProjectileController revaliController = revaliPrefab.GetComponent<ProjectileController>();
+            revaliController.ghostPrefab = CreateGhostPrefab("mdlRevali");
+            revaliController.startSound = ""; // TODO: Add sounds
+            revaliController.canImpactOnTrigger = false;
+
+            //ProjectileFuse revaliFuse = revaliPrefab.GetComponent<ProjectileFuse>();
+            //revaliFuse.fuse = 10f;
+        }
+
+        private static void CreateDaruk()
+        {
+            darukPrefab = CloneProjectilePrefab("WindbladeProjectile", "darukProjectile");
+            ProjectileController darukController = darukPrefab.GetComponent<ProjectileController>();
+            darukController.ghostPrefab = CreateGhostPrefab("mdlDaruk");
+            darukController.startSound = ""; // TODO: Add sounds
+            darukController.canImpactOnTrigger = false;
+
+            //ProjectileFuse darukFuse = darukPrefab.GetComponent<ProjectileFuse>();
+            //darukFuse.fuse = 10f;
+        }
 
         private static void InitializeImpactExplosion(ProjectileImpactExplosion projectileImpactExplosion)
         {

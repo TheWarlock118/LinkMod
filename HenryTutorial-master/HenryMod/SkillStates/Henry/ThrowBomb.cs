@@ -15,7 +15,9 @@ namespace HenryMod.SkillStates
         private float duration;
         private float fireTime;
         private bool hasFired;
+        
         private Animator animator;
+
 
         public override void OnEnter()
         {
@@ -32,10 +34,6 @@ namespace HenryMod.SkillStates
         public override void OnExit()
         {
             base.OnExit();
-        }
-
-        private void Fire()
-        {
             if (!this.hasFired)
             {
                 this.hasFired = true;
@@ -50,7 +48,7 @@ namespace HenryMod.SkillStates
                         Util.QuaternionSafeLookRotation(aimRay.direction),
                         base.gameObject,
                         ThrowBomb.damageCoefficient * this.damageStat,
-                        4000f,
+                        100f,
                         base.RollCrit(),
                         DamageColorIndex.Default,
                         null,
@@ -62,17 +60,11 @@ namespace HenryMod.SkillStates
         public override void FixedUpdate()
         {
             base.FixedUpdate();
-
-            if (base.fixedAge >= this.fireTime)
-            {
-                this.Fire();
-            }
-
-            if (base.fixedAge >= this.duration && base.isAuthority)
+            if (!base.inputBank.skill3.down)
             {
                 this.outer.SetNextStateToMain();
                 return;
-            }
+            }            
         }
 
         public override InterruptPriority GetMinimumInterruptPriority()

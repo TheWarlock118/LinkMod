@@ -35,7 +35,8 @@ namespace HenryMod.SkillStates
             Shoot.force = 30f;
             string[] sounds = { "Bow_Draw0", "Bow_Draw1", "Bow_Draw2", "Bow_Draw3", "Bow_Draw4", "Bow_Draw5" };
             Util.PlayAttackSpeedSound(sounds[Random.Range(0, 5)], base.gameObject, this.timer);
-            base.PlayAnimation("LeftArm, Override", "ShootGun", "ShootGun.playbackRate", 1.8f);
+            base.PlayAnimation("Gesture, Override", "BowEquip", "ShootGun.playbackRate", 1.8f);
+            base.PlayAnimation("Gesture, Override", "BowDraw", "ShootGun.playbackRate", 1.8f);
         }
 
         public override void OnExit()
@@ -49,6 +50,7 @@ namespace HenryMod.SkillStates
                 EffectManager.SimpleMuzzleFlash(EntityStates.Commando.CommandoWeapon.FirePistol2.muzzleEffectPrefab, base.gameObject, this.muzzleString, false);
                 string[] sounds = { "Bow_Release1", "Bow_Release2", "Bow_Release3", "Bow_Release5" };
                 Util.PlaySound(sounds[Random.Range(0,3)], base.gameObject);
+                base.PlayAnimation("Gesture, Override", "BowShoot", "ShootGun.playbackRate", 1.8f);
 
                 if (base.isAuthority)
                 {
@@ -59,7 +61,7 @@ namespace HenryMod.SkillStates
                         Util.QuaternionSafeLookRotation(aimRay.direction),
                         base.gameObject,
                         Shoot.damageCoefficient * this.damageStat,
-                        4000f,
+                        40f,
                         base.RollCrit(),
                         DamageColorIndex.Default,
                         null,

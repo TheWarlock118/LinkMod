@@ -15,6 +15,7 @@ namespace HenryMod.SkillStates
         private float duration;
         private float fireTime;
         private bool fired;
+        private bool revaliSummoned;
         private Animator animator;
 
         public override void OnEnter()
@@ -22,6 +23,8 @@ namespace HenryMod.SkillStates
             base.OnEnter();
             this.duration = RevalisGale.baseDuration;
             this.fireTime = 0f;
+            revaliSummoned = false;
+            
         }
 
         public override void OnExit()
@@ -37,9 +40,29 @@ namespace HenryMod.SkillStates
 
         private void Fire()
         {
-            characterBody.AddTimedBuff(RoR2Content.Buffs.Slow80, 0.1f);
+            characterBody.AddTimedBuff(RoR2Content.Buffs.Slow80, 0.1f);            
         }
 
+        private void SummonRevali()
+        {
+            if (base.isAuthority)
+            {
+                Ray aimRay = base.GetAimRay();
+
+                ProjectileManager.instance.FireProjectile(Modules.Projectiles.revaliPrefab,
+                    aimRay.origin,
+                    Util.QuaternionSafeLookRotation(aimRay.direction),
+                    base.gameObject,
+                    0f,
+                    0f,
+                    false,
+                    DamageColorIndex.Default,
+                    null,
+                    0f);
+//                base.PlayAnimation("Base Layer", "RevaliGale");
+            }
+            revaliSummoned = true;
+        }
 
         public override void FixedUpdate()
         {
@@ -47,6 +70,8 @@ namespace HenryMod.SkillStates
             fired = false;
             if (characterBody.characterMotor.isGrounded)
             {
+                if (!revaliSummoned)
+                    SummonRevali();
                 if (base.fixedAge >= this.fireTime)
                 {
                     this.Fire();

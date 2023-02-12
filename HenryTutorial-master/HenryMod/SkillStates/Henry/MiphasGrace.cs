@@ -20,21 +20,20 @@ namespace HenryMod.SkillStates
         {
             base.OnEnter();
             this.duration = MiphasGrace.baseDuration;
-            this.fireTime = 0.35f * this.duration;
+            this.fireTime = 0.35f * this.duration;            
         }
 
         public override void OnExit()
         {
             base.OnExit();
-        }
+        }        
 
         private void Fire()
         {
             SkillLocator skillLocator = PlayerCharacterMasterController.instances[0].master.GetBodyObject().GetComponent<SkillLocator>();
             // skillLocator.GetSkill(SkillSlot.Special).RestockSteplike();
-            skillLocator.GetSkill(SkillSlot.Special).AddOneStock();
+            skillLocator.GetSkill(SkillSlot.Special).AddOneStock();            
         }
-
         
         public override void FixedUpdate()
         {
@@ -51,6 +50,25 @@ namespace HenryMod.SkillStates
                 this.outer.SetNextStateToMain();
                 return;
             }
+        }
+
+        private void SummonMipha()
+        {
+            if (base.isAuthority)
+            {
+                Ray aimRay = base.GetAimRay();
+
+                ProjectileManager.instance.FireProjectile(Modules.Projectiles.miphaPrefab,
+                    aimRay.origin,
+                    Util.QuaternionSafeLookRotation(aimRay.direction),
+                    base.gameObject,
+                    0f,
+                    0f,
+                    false,
+                    DamageColorIndex.Default,
+                    null,
+                    0f);                
+            }            
         }
 
         public override InterruptPriority GetMinimumInterruptPriority()

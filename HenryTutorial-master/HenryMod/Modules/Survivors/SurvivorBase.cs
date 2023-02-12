@@ -50,14 +50,13 @@ namespace HenryMod.Modules.Survivors
 
                 bodyPrefab = Modules.Prefabs.CreatePrefab("LinkBody", "mdlLink", bodyInfo);
                 bodyPrefab.GetComponent<EntityStateMachine>().mainStateType = new EntityStates.SerializableEntityStateType(characterMainState);
+                bodyPrefab.GetComponent<CharacterDeathBehavior>().deathState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.BaseStates.DeathState));
 
                 Modules.Prefabs.SetupCharacterModel(bodyPrefab, customRendererInfos, mainRendererIndex);
 
-                displayPrefab = Modules.Prefabs.CreateDisplayPrefab(bodyName + "Display", bodyPrefab, bodyInfo);
+                displayPrefab = Modules.Prefabs.CreateDisplayPrefab("mdlLinkDisplay", bodyPrefab, bodyInfo);
 
-                Modules.Prefabs.RegisterNewSurvivor(bodyPrefab, displayPrefab, Color.grey, bodyName.ToUpper(), characterUnlockableDef, sortPosition);
-
-                //InitializeHitboxes();
+                Modules.Prefabs.RegisterNewSurvivor(bodyPrefab, displayPrefab, Color.grey, bodyName.ToUpper(), characterUnlockableDef, sortPosition);                 
                 InitializeSkills();
                 //InitializeSkins();
                 InitializeItemDisplays();
@@ -71,6 +70,8 @@ namespace HenryMod.Modules.Survivors
 
         internal virtual void InitializeSkills()
         {
+            //CharacterDeathBehavior deathBehavior = PlayerCharacterMasterController.instances[0].master.GetBodyObject().GetComponent<CharacterBody>().GetComponent<CharacterDeathBehavior>();
+            //deathBehavior.deathState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.BaseStates.DeathState));
         }
 
         internal virtual void InitializeHitboxes()

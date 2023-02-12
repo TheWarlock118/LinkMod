@@ -23,7 +23,7 @@ namespace HenryMod.SkillStates
             this.attackRecoil = 0.5f;
             this.hitHopVelocity = 4f;
 
-            this.swingSoundString = "HenrySwordSwing";
+            this.swingSoundString = "SwordSwing";
             this.hitSoundString = "";
             this.muzzleString = swingIndex % 2 == 0 ? "SwingLeft" : "SwingRight";
             this.swingEffectPrefab = Modules.Assets.swordSwingEffect;
@@ -52,7 +52,8 @@ namespace HenryMod.SkillStates
         protected override void SetNextState()
         {
             int index = this.swingIndex;
-            if (index == 0) index = 1;
+            if (index < 3)
+                index ++;
             else index = 0;
 
             this.outer.SetNextState(new SlashCombo

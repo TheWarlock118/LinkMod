@@ -12,6 +12,7 @@ namespace HenryMod.Modules
         internal static void RegisterStates()
         {
             entityStates.Add(typeof(HenryMain));
+            entityStates.Add(typeof(DeathState));
             entityStates.Add(typeof(BaseMeleeAttack));
             entityStates.Add(typeof(SlashCombo));
 

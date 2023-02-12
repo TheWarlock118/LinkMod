@@ -24,14 +24,14 @@ namespace HenryMod.SkillStates
             this.duration = DaruksProtection.baseDuration;
             this.fireTime = 0.35f;
             this.animator = base.GetModelAnimator();            
-            base.PlayAnimation("Gesture, Override", "ThrowBomb", "ThrowBomb.playbackRate", this.fireTime);
-            
+            base.PlayAnimation("Gesture, Override", "ThrowBomb", "ThrowBomb.playbackRate", this.fireTime);            
         }
 
         public override void OnExit()
         {           
             base.OnExit();
             characterBody.healthComponent.barrier = 0f;
+            SummonDaruk();
         }
 
         public override void FixedUpdate()
@@ -55,6 +55,24 @@ namespace HenryMod.SkillStates
             }
         }
 
+        private void SummonDaruk()
+        {
+            if (base.isAuthority)
+            {
+                Ray aimRay = base.GetAimRay();
+
+                ProjectileManager.instance.FireProjectile(Modules.Projectiles.darukPrefab,
+                    aimRay.origin,
+                    Util.QuaternionSafeLookRotation(aimRay.direction),
+                    base.gameObject,
+                    0f,
+                    0f,
+                    false,
+                    DamageColorIndex.Default,
+                    null,
+                    0f);                
+            }            
+        }
         public override InterruptPriority GetMinimumInterruptPriority()
         {
             return InterruptPriority.PrioritySkill;

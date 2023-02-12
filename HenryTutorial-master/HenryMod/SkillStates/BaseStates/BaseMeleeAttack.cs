@@ -32,7 +32,7 @@ namespace HenryMod.SkillStates.BaseStates
         private float projectileForce = 60f;
         private float projectileDamageCoef;
 
-        protected string swingSoundString = "";
+        protected string swingSoundString = "SwordSwing";
         protected string hitSoundString = "";
         protected string muzzleString = "SwingCenter";
         protected GameObject swingEffectPrefab;
@@ -89,7 +89,7 @@ namespace HenryMod.SkillStates.BaseStates
 
         protected virtual void PlayAttackAnimation()
         {
-            base.PlayCrossfade("Gesture, Override", "Slash" + (1 + swingIndex), "Slash.playbackRate", this.duration, 0.05f);
+            base.PlayCrossfade("Gesture, Override", "Sword" + (1 + swingIndex), "Slash.playbackRate", this.duration, 0.05f);
         }
 
         public override void OnExit()
@@ -146,7 +146,7 @@ namespace HenryMod.SkillStates.BaseStates
                         Util.QuaternionSafeLookRotation(aimRay.direction),
                         base.gameObject,
                         this.projectileDamageCoef * this.damageStat,
-                        4000f,
+                        40f,
                         base.RollCrit(),
                         DamageColorIndex.Default,
                         null,
@@ -156,7 +156,7 @@ namespace HenryMod.SkillStates.BaseStates
 
                 if (base.isAuthority)
                 {
-                    this.PlaySwingEffect();
+                    this.PlaySwingEffect();                    
                     base.AddRecoil(-1f * this.attackRecoil, -2f * this.attackRecoil, -0.5f * this.attackRecoil, 0.5f * this.attackRecoil);
                 }
             }
@@ -173,8 +173,12 @@ namespace HenryMod.SkillStates.BaseStates
         protected virtual void SetNextState()
         {
             int index = this.swingIndex;
-            if (index == 0) index = 1;
-            else index = 0;
+            if (index < 3)
+            {
+                index++;
+            }
+            else
+                index = 0;
 
             this.outer.SetNextState(new BaseMeleeAttack
             {
