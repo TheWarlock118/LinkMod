@@ -51,7 +51,7 @@ namespace HenryMod.SkillStates
                 position = characterBody.corePosition,
                 procChainMask = default(ProcChainMask),
                 procCoefficient = 1f,
-                radius = 50f,
+                radius = 200f,
                 losType = BlastAttack.LoSType.NearestHit,
                 teamIndex = base.characterBody.teamComponent.teamIndex
             }.Fire();
@@ -79,7 +79,18 @@ namespace HenryMod.SkillStates
 
         private void SummonUrbosa()
         {
-
+            /*
+            if (base.isAuthority)
+            {
+                Ray aimRay = base.GetAimRay();
+                EffectManager.SpawnEffect(Modules.Assets.urbosaEffect, new EffectData
+                {
+                    origin = base.GetAimRay().origin,
+                    rotation = Util.QuaternionSafeLookRotation(aimRay.direction),
+                }, true);
+            }
+            */            
+                       
             if (base.isAuthority)
             {
                 Ray aimRay = base.GetAimRay();
@@ -96,11 +107,12 @@ namespace HenryMod.SkillStates
                     damageColorIndex = DamageColorIndex.Default,
                     target = null,
                     speedOverride = 0f,
-                    fuseOverride = -1f,
+                    fuseOverride = 0.00001f,
                 };
                 urbosaInfo.useFuseOverride = true;                
                 ProjectileManager.instance.FireProjectile(urbosaInfo);                    
-            }            
+            }          
+            
         }
 
         public override InterruptPriority GetMinimumInterruptPriority()

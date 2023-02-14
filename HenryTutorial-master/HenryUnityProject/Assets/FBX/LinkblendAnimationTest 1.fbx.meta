@@ -1,0 +1,1197 @@
+fileFormatVersion: 2
+guid: 7b5b5fb428aac0249b5e212b875babe9
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Ankle_Assist_L
+    100002: Ankle_Assist_L 1
+    100004: Ankle_Assist_L_end
+    100006: Ankle_Assist_L_end 1
+    100008: Ankle_Assist_R
+    100010: Ankle_Assist_R 1
+    100012: Ankle_Assist_R_end
+    100014: Ankle_Assist_R_end 1
+    100016: Ankle_L
+    100018: Ankle_L 1
+    100020: Ankle_R
+    100022: Ankle_R 1
+    100024: Arm_1_Assist_L
+    100026: Arm_1_Assist_L 1
+    100028: Arm_1_Assist_L_end
+    100030: Arm_1_Assist_L_end 1
+    100032: Arm_1_Assist_R
+    100034: Arm_1_Assist_R 1
+    100036: Arm_1_Assist_R_end
+    100038: Arm_1_Assist_R_end 1
+    100040: Arm_1_L
+    100042: Arm_1_L 1
+    100044: Arm_1_L 2
+    100046: Arm_1_R
+    100048: Arm_1_R 1
+    100050: Arm_1_R 2
+    100052: Arm_2_L
+    100054: Arm_2_L 1
+    100056: Arm_2_L 2
+    100058: Arm_2_L_end
+    100060: Arm_2_R
+    100062: Arm_2_R 1
+    100064: Arm_2_R 2
+    100066: Arm_2_R_end
+    100068: Armature
+    100070: Armature.001
+    100072: Armature.002
+    100074: Armature.003
+    100076: Armature.004
+    100078: Armature.005
+    100080: Armature.006
+    100082: Belt_A_1
+    100084: Belt_A_1 1
+    100086: Belt_A_2
+    100088: Belt_A_2 1
+    100090: Belt_A_3
+    100092: Belt_A_3 1
+    100094: Belt_A_3_end
+    100096: Belt_A_3_end 1
+    100098: Belt_A_Buckle__Mt_Belt_A_001_Layer_2
+    100100: Belt_B_001_Buckle__Mt_Belt_B_001
+    100102: Belt_C_1
+    100104: Belt_C_1 1
+    100106: Belt_C_1_end
+    100108: Belt_C_1_end 1
+    100110: Belt_C_2
+    100112: Belt_C_2 1
+    100114: Belt_C_2_end
+    100116: Belt_C_2_end 1
+    100118: Belt_C_3
+    100120: Belt_C_3 1
+    100122: Belt_C_3_end
+    100124: Belt_C_3_end 1
+    100126: Belt_C_4
+    100128: Belt_C_4 1
+    100130: Belt_C_4_end
+    100132: Belt_C_4_end 1
+    100134: Belt_C_5
+    100136: Belt_C_5 1
+    100138: Belt_C_5_end
+    100140: Belt_C_5_end 1
+    100142: Belt_C_6
+    100144: Belt_C_6 1
+    100146: Belt_C_6_end
+    100148: Belt_C_6_end 1
+    100150: Belt_C_7
+    100152: Belt_C_7 1
+    100154: Belt_C_7_end
+    100156: Belt_C_8
+    100158: Belt_C_8 1
+    100160: Belt_C_8_end
+    100162: Belt_C_8_end 1
+    100164: Belt_C_Buckle__Mt_Belt_C
+    100166: Belt_C_Buckle__Mt_Belt_C_001
+    100168: Beltmini_001__Mt_Upper_Belt_001
+    100170: Boots_001__Mt_Lower_001
+    100172: Bow_L_1
+    100174: Bow_L_2
+    100176: Bow_R_1
+    100178: Bow_R_2
+    100180: Bow_Root
+    100182: Camera
+    100184: Chain_001__Mt_Upper_kusari_001
+    100186: Cheek_D_L
+    100188: Cheek_D_L_end
+    100190: Cheek_D_R
+    100192: Cheek_D_R_end
+    100194: Cheek_U_L
+    100196: Cheek_U_L_end
+    100198: Cheek_U_R
+    100200: Cheek_U_R_end
+    100202: Chin
+    100204: Chin 1
+    100206: Chin_end
+    100208: Chin_Point
+    100210: Chin_Point_end
+    100212: Clavicle_Assist_L
+    100214: Clavicle_Assist_L 1
+    100216: Clavicle_Assist_L 2
+    100218: Clavicle_Assist_L_end
+    100220: Clavicle_Assist_L_end 1
+    100222: Clavicle_Assist_L_end 2
+    100224: Clavicle_Assist_R
+    100226: Clavicle_Assist_R 1
+    100228: Clavicle_Assist_R 2
+    100230: Clavicle_Assist_R_end
+    100232: Clavicle_Assist_R_end 1
+    100234: Clavicle_Assist_R_end 2
+    100236: Clavicle_L
+    100238: Clavicle_L 1
+    100240: Clavicle_L 2
+    100242: Clavicle_R
+    100244: Clavicle_R 1
+    100246: Clavicle_R 2
+    100248: Ear_L
+    100250: Ear_L_end
+    100252: Ear_R
+    100254: Ear_R_end
+    100256: Earring__Mt_Earring
+    100258: Elbow_L
+    100260: Elbow_L 1
+    100262: Elbow_L_end
+    100264: Elbow_L_end 1
+    100266: Elbow_R
+    100268: Elbow_R 1
+    100270: Elbow_R_end
+    100272: Elbow_R_end 1
+    100274: Eye_In_L
+    100276: Eye_In_L_end
+    100278: Eye_In_R
+    100280: Eye_In_R_end
+    100282: Eye_L__Mt_Eyeball_L
+    100284: Eye_Out_L
+    100286: Eye_Out_L_end
+    100288: Eye_Out_R
+    100290: Eye_Out_R_end
+    100292: Eye_R__Mt_Eyeball_R
+    100294: Eyeball_L
+    100296: Eyeball_L_end
+    100298: Eyeball_R
+    100300: Eyeball_R_end
+    100302: Eyebrow_In_L
+    100304: Eyebrow_In_L_end
+    100306: Eyebrow_In_R
+    100308: Eyebrow_In_R_end
+    100310: Eyebrow_Mid_L
+    100312: Eyebrow_Mid_L_end
+    100314: Eyebrow_Mid_R
+    100316: Eyebrow_Mid_R_end
+    100318: Eyebrow_Out_L
+    100320: Eyebrow_Out_L_end
+    100322: Eyebrow_Out_R
+    100324: Eyebrow_Out_R_end
+    100326: Eyelashes__Mt_Eyelashes
+    100328: Eyelid_D_L
+    100330: Eyelid_D_L_end
+    100332: Eyelid_D_R
+    100334: Eyelid_D_R_end
+    100336: Eyelid_U_L
+    100338: Eyelid_U_L_end
+    100340: Eyelid_U_R
+    100342: Eyelid_U_R_end
+    100344: Face__Mt_Face
+    100346: Face__Mt_Head
+    100348: Face_Root
+    100350: Face_Root 1
+    100352: Finger_A_1_L
+    100354: Finger_A_1_L 1
+    100356: Finger_A_1_R
+    100358: Finger_A_1_R 1
+    100360: Finger_A_2_L
+    100362: Finger_A_2_L 1
+    100364: Finger_A_2_R
+    100366: Finger_A_2_R 1
+    100368: Finger_A_3_L
+    100370: Finger_A_3_L 1
+    100372: Finger_A_3_L_end
+    100374: Finger_A_3_L_end 1
+    100376: Finger_A_3_R
+    100378: Finger_A_3_R 1
+    100380: Finger_A_3_R_end
+    100382: Finger_A_3_R_end 1
+    100384: Finger_B_1_L
+    100386: Finger_B_1_L 1
+    100388: Finger_B_1_R
+    100390: Finger_B_1_R 1
+    100392: Finger_B_2_L
+    100394: Finger_B_2_L 1
+    100396: Finger_B_2_R
+    100398: Finger_B_2_R 1
+    100400: Finger_B_3_L
+    100402: Finger_B_3_L 1
+    100404: Finger_B_3_L_end
+    100406: Finger_B_3_L_end 1
+    100408: Finger_B_3_R
+    100410: Finger_B_3_R 1
+    100412: Finger_B_3_R_end
+    100414: Finger_B_3_R_end 1
+    100416: Finger_C_1_L
+    100418: Finger_C_1_L 1
+    100420: Finger_C_1_R
+    100422: Finger_C_1_R 1
+    100424: Finger_C_2_L
+    100426: Finger_C_2_L 1
+    100428: Finger_C_2_R
+    100430: Finger_C_2_R 1
+    100432: Finger_C_3_L
+    100434: Finger_C_3_L 1
+    100436: Finger_C_3_L_end
+    100438: Finger_C_3_L_end 1
+    100440: Finger_C_3_R
+    100442: Finger_C_3_R 1
+    100444: Finger_C_3_R_end
+    100446: Finger_C_3_R_end 1
+    100448: Finger_D_1_L
+    100450: Finger_D_1_L 1
+    100452: Finger_D_1_R
+    100454: Finger_D_1_R 1
+    100456: Finger_D_2_L
+    100458: Finger_D_2_L 1
+    100460: Finger_D_2_R
+    100462: Finger_D_2_R 1
+    100464: Finger_D_3_L
+    100466: Finger_D_3_L 1
+    100468: Finger_D_3_L_end
+    100470: Finger_D_3_L_end 1
+    100472: Finger_D_3_R
+    100474: Finger_D_3_R 1
+    100476: Finger_D_3_R_end
+    100478: Finger_D_3_R_end 1
+    100480: Finger_E_1_L
+    100482: Finger_E_1_L 1
+    100484: Finger_E_1_R
+    100486: Finger_E_1_R 1
+    100488: Finger_E_2_L
+    100490: Finger_E_2_L 1
+    100492: Finger_E_2_R
+    100494: Finger_E_2_R 1
+    100496: Finger_E_3_L
+    100498: Finger_E_3_L 1
+    100500: Finger_E_3_L_end
+    100502: Finger_E_3_L_end 1
+    100504: Finger_E_3_R
+    100506: Finger_E_3_R 1
+    100508: Finger_E_3_R_end
+    100510: Finger_E_3_R_end 1
+    100512: Hair_A_001_A__Mt_Hair_001
+    100514: Hair_A_1_Armor
+    100516: Hair_A_2_Armor
+    100518: Hair_A_2_Armor_end
+    100520: Hair_B_1_Armor
+    100522: Hair_B_2_Armor
+    100524: Hair_B_2_Armor_end
+    100526: Hair_Root
+    100528: Hair_Root_Armor
+    100530: Head
+    100532: Head 1
+    100534: Head 2
+    100536: Hood_1_B_Armor
+    100538: Hood_1_FC_Armor
+    100540: Hood_1_FC_Armor_end
+    100542: Hood_1_FL_Armor
+    100544: Hood_1_FL_Armor_end
+    100546: Hood_1_FR_Armor
+    100548: Hood_1_FR_Armor_end
+    100550: Hood_2_B_Armor
+    100552: Hood_2_B_Armor_end
+    100554: Hood_2_FL_Armor
+    100556: Hood_2_FL_Armor_end
+    100558: Hood_2_FR_Armor
+    100560: Hood_2_FR_Armor_end
+    100562: Hood_A_001_Metal__Mt_Hood_001
+    100564: Hood_A_001_Metal__Mt_Hood_001_001
+    100566: Knee_L
+    100568: Knee_L 1
+    100570: Knee_L_end
+    100572: Knee_L_end 1
+    100574: Knee_R
+    100576: Knee_R 1
+    100578: Knee_R_end
+    100580: Knee_R_end 1
+    100582: Leg_1_L
+    100584: Leg_1_L 1
+    100586: Leg_1_L 2
+    100588: Leg_1_L_end
+    100590: Leg_1_R
+    100592: Leg_1_R 1
+    100594: Leg_1_R 2
+    100596: Leg_1_R_end
+    100598: Leg_2_L
+    100600: Leg_2_L 1
+    100602: Leg_2_R
+    100604: Leg_2_R 1
+    100606: Light
+    100608: //RootNode
+    100610: Lip_D
+    100612: Lip_D_end
+    100614: Lip_D_L_1
+    100616: Lip_D_L_1_end
+    100618: Lip_D_R_1
+    100620: Lip_D_R_1_end
+    100622: Lip_U
+    100624: Lip_U_end
+    100626: Lip_U_L_1
+    100628: Lip_U_L_1_end
+    100630: Lip_U_L_2
+    100632: Lip_U_L_2_end
+    100634: Lip_U_R_1
+    100636: Lip_U_R_1_end
+    100638: Lip_U_R_2
+    100640: Lip_U_R_2_end
+    100642: Mant_1_BC_Armor
+    100644: Mant_1_BL_Armor
+    100646: Mant_1_BR_Armor
+    100648: Mant_2_BC_Armor
+    100650: Mant_2_BL_Armor
+    100652: Mant_2_BR_Armor
+    100654: Mant_3_BC_Armor
+    100656: Mant_3_BL_Armor
+    100658: Mant_3_BR_Armor
+    100660: Mant_4_BC_Armor
+    100662: Mant_4_BC_Armor_end
+    100664: Mant_4_BL_Armor
+    100666: Mant_4_BL_Armor_end
+    100668: Mant_4_BR_Armor
+    100670: Mant_4_BR_Armor_end
+    100672: Metal_001__Mt_Upper_001
+    100674: Model__Mt_Bow_036
+    100676: Momi_A_1_L_Armor
+    100678: Momi_A_1_R_Armor
+    100680: Momi_A_2_L_Armor
+    100682: Momi_A_2_R_Armor
+    100684: Momi_A_3_L_Armor
+    100686: Momi_A_3_L_Armor_end
+    100688: Momi_A_3_R_Armor
+    100690: Momi_A_3_R_Armor_end
+    100692: Neck
+    100694: Neck 1
+    100696: Neck 2
+    100698: Nose
+    100700: Nose_end
+    100702: Poach_A
+    100704: Poach_A_end
+    100706: Pod_A
+    100708: Pod_A 1
+    100710: Pod_A_end
+    100712: Pod_A_end 1
+    100714: Pod_B
+    100716: Pod_B_end
+    100718: Pod_C
+    100720: Pod_C 1
+    100722: Pod_C_end
+    100724: Pod_C_end 1
+    100726: Ponytail_A_1
+    100728: Ponytail_A_1_end
+    100730: Root
+    100732: Root 1
+    100734: Root 2
+    100736: Root 3
+    100738: Root 4
+    100740: Root 5
+    100742: Root 6
+    100744: Root__Mt_Sheath_070
+    100746: Root_end
+    100748: Root_end 1
+    100750: Shoulderpad_L_Armor
+    100752: Shoulderpad_L_Armor_end
+    100754: Skin_001__Mt_Upper_Skin
+    100756: Skin__Mt_Underwear
+    100758: Skirt_1_BC_Armor
+    100760: Skirt_1_BL_Armor
+    100762: Skirt_1_BR_Armor
+    100764: Skirt_1_FC_Armor
+    100766: Skirt_1_FL_Armor
+    100768: Skirt_1_FR_Armor
+    100770: Skirt_2_BC_Armor
+    100772: Skirt_2_BL_Armor
+    100774: Skirt_2_BR_Armor
+    100776: Skirt_2_FC_Armor
+    100778: Skirt_2_FL_Armor
+    100780: Skirt_2_FR_Armor
+    100782: Skirt_3_BC_Armor
+    100784: Skirt_3_BC_Armor_end
+    100786: Skirt_3_BL_Armor
+    100788: Skirt_3_BL_Armor_end
+    100790: Skirt_3_BR_Armor
+    100792: Skirt_3_BR_Armor_end
+    100794: Skirt_3_FC_Armor
+    100796: Skirt_3_FC_Armor_end
+    100798: Skirt_3_FL_Armor
+    100800: Skirt_3_FL_Armor_end
+    100802: Skirt_3_FR_Armor
+    100804: Skirt_3_FR_Armor_end
+    100806: Skl_Root
+    100808: Skl_Root 1
+    100810: Skl_Root 2
+    100812: Skl_Root 3
+    100814: Spine_1
+    100816: Spine_1 1
+    100818: Spine_1 2
+    100820: Spine_1 3
+    100822: Spine_1_end
+    100824: Spine_2
+    100826: Spine_2 1
+    100828: Spine_2 2
+    100830: String_L_1
+    100832: String_L_2
+    100834: String_L_2_end
+    100836: String_R_1
+    100838: String_R_2
+    100840: String_R_2_end
+    100842: Teeth_D
+    100844: Teeth_D_end
+    100846: Teeth_U
+    100848: Teeth_U_end
+    100850: Toe_L
+    100852: Toe_L 1
+    100854: Toe_L_end
+    100856: Toe_L_end 1
+    100858: Toe_R
+    100860: Toe_R 1
+    100862: Toe_R_end
+    100864: Toe_R_end 1
+    100866: Waist
+    100868: Waist 1
+    100870: Waist 2
+    100872: Waist 3
+    100874: Waist_end
+    100876: Weapon_L
+    100878: Weapon_L_end
+    100880: Weapon_R
+    100882: Weapon_R_end
+    100884: Weapon_Root
+    100886: Weapon_Root_end
+    100888: Weapon_Sword_070__Mt_Sword_070
+    100890: Weapon_Sword_070_Blade__Mt_Sword_070_Blade
+    100892: Wrist_Assist_L
+    100894: Wrist_Assist_L 1
+    100896: Wrist_Assist_L_end
+    100898: Wrist_Assist_L_end 1
+    100900: Wrist_Assist_R
+    100902: Wrist_Assist_R 1
+    100904: Wrist_Assist_R_end
+    100906: Wrist_Assist_R_end 1
+    100908: Wrist_L
+    100910: Wrist_L 1
+    100912: Wrist_R
+    100914: Wrist_R 1
+    400000: Ankle_Assist_L
+    400002: Ankle_Assist_L 1
+    400004: Ankle_Assist_L_end
+    400006: Ankle_Assist_L_end 1
+    400008: Ankle_Assist_R
+    400010: Ankle_Assist_R 1
+    400012: Ankle_Assist_R_end
+    400014: Ankle_Assist_R_end 1
+    400016: Ankle_L
+    400018: Ankle_L 1
+    400020: Ankle_R
+    400022: Ankle_R 1
+    400024: Arm_1_Assist_L
+    400026: Arm_1_Assist_L 1
+    400028: Arm_1_Assist_L_end
+    400030: Arm_1_Assist_L_end 1
+    400032: Arm_1_Assist_R
+    400034: Arm_1_Assist_R 1
+    400036: Arm_1_Assist_R_end
+    400038: Arm_1_Assist_R_end 1
+    400040: Arm_1_L
+    400042: Arm_1_L 1
+    400044: Arm_1_L 2
+    400046: Arm_1_R
+    400048: Arm_1_R 1
+    400050: Arm_1_R 2
+    400052: Arm_2_L
+    400054: Arm_2_L 1
+    400056: Arm_2_L 2
+    400058: Arm_2_L_end
+    400060: Arm_2_R
+    400062: Arm_2_R 1
+    400064: Arm_2_R 2
+    400066: Arm_2_R_end
+    400068: Armature
+    400070: Armature.001
+    400072: Armature.002
+    400074: Armature.003
+    400076: Armature.004
+    400078: Armature.005
+    400080: Armature.006
+    400082: Belt_A_1
+    400084: Belt_A_1 1
+    400086: Belt_A_2
+    400088: Belt_A_2 1
+    400090: Belt_A_3
+    400092: Belt_A_3 1
+    400094: Belt_A_3_end
+    400096: Belt_A_3_end 1
+    400098: Belt_A_Buckle__Mt_Belt_A_001_Layer_2
+    400100: Belt_B_001_Buckle__Mt_Belt_B_001
+    400102: Belt_C_1
+    400104: Belt_C_1 1
+    400106: Belt_C_1_end
+    400108: Belt_C_1_end 1
+    400110: Belt_C_2
+    400112: Belt_C_2 1
+    400114: Belt_C_2_end
+    400116: Belt_C_2_end 1
+    400118: Belt_C_3
+    400120: Belt_C_3 1
+    400122: Belt_C_3_end
+    400124: Belt_C_3_end 1
+    400126: Belt_C_4
+    400128: Belt_C_4 1
+    400130: Belt_C_4_end
+    400132: Belt_C_4_end 1
+    400134: Belt_C_5
+    400136: Belt_C_5 1
+    400138: Belt_C_5_end
+    400140: Belt_C_5_end 1
+    400142: Belt_C_6
+    400144: Belt_C_6 1
+    400146: Belt_C_6_end
+    400148: Belt_C_6_end 1
+    400150: Belt_C_7
+    400152: Belt_C_7 1
+    400154: Belt_C_7_end
+    400156: Belt_C_8
+    400158: Belt_C_8 1
+    400160: Belt_C_8_end
+    400162: Belt_C_8_end 1
+    400164: Belt_C_Buckle__Mt_Belt_C
+    400166: Belt_C_Buckle__Mt_Belt_C_001
+    400168: Beltmini_001__Mt_Upper_Belt_001
+    400170: Boots_001__Mt_Lower_001
+    400172: Bow_L_1
+    400174: Bow_L_2
+    400176: Bow_R_1
+    400178: Bow_R_2
+    400180: Bow_Root
+    400182: Camera
+    400184: Chain_001__Mt_Upper_kusari_001
+    400186: Cheek_D_L
+    400188: Cheek_D_L_end
+    400190: Cheek_D_R
+    400192: Cheek_D_R_end
+    400194: Cheek_U_L
+    400196: Cheek_U_L_end
+    400198: Cheek_U_R
+    400200: Cheek_U_R_end
+    400202: Chin
+    400204: Chin 1
+    400206: Chin_end
+    400208: Chin_Point
+    400210: Chin_Point_end
+    400212: Clavicle_Assist_L
+    400214: Clavicle_Assist_L 1
+    400216: Clavicle_Assist_L 2
+    400218: Clavicle_Assist_L_end
+    400220: Clavicle_Assist_L_end 1
+    400222: Clavicle_Assist_L_end 2
+    400224: Clavicle_Assist_R
+    400226: Clavicle_Assist_R 1
+    400228: Clavicle_Assist_R 2
+    400230: Clavicle_Assist_R_end
+    400232: Clavicle_Assist_R_end 1
+    400234: Clavicle_Assist_R_end 2
+    400236: Clavicle_L
+    400238: Clavicle_L 1
+    400240: Clavicle_L 2
+    400242: Clavicle_R
+    400244: Clavicle_R 1
+    400246: Clavicle_R 2
+    400248: Ear_L
+    400250: Ear_L_end
+    400252: Ear_R
+    400254: Ear_R_end
+    400256: Earring__Mt_Earring
+    400258: Elbow_L
+    400260: Elbow_L 1
+    400262: Elbow_L_end
+    400264: Elbow_L_end 1
+    400266: Elbow_R
+    400268: Elbow_R 1
+    400270: Elbow_R_end
+    400272: Elbow_R_end 1
+    400274: Eye_In_L
+    400276: Eye_In_L_end
+    400278: Eye_In_R
+    400280: Eye_In_R_end
+    400282: Eye_L__Mt_Eyeball_L
+    400284: Eye_Out_L
+    400286: Eye_Out_L_end
+    400288: Eye_Out_R
+    400290: Eye_Out_R_end
+    400292: Eye_R__Mt_Eyeball_R
+    400294: Eyeball_L
+    400296: Eyeball_L_end
+    400298: Eyeball_R
+    400300: Eyeball_R_end
+    400302: Eyebrow_In_L
+    400304: Eyebrow_In_L_end
+    400306: Eyebrow_In_R
+    400308: Eyebrow_In_R_end
+    400310: Eyebrow_Mid_L
+    400312: Eyebrow_Mid_L_end
+    400314: Eyebrow_Mid_R
+    400316: Eyebrow_Mid_R_end
+    400318: Eyebrow_Out_L
+    400320: Eyebrow_Out_L_end
+    400322: Eyebrow_Out_R
+    400324: Eyebrow_Out_R_end
+    400326: Eyelashes__Mt_Eyelashes
+    400328: Eyelid_D_L
+    400330: Eyelid_D_L_end
+    400332: Eyelid_D_R
+    400334: Eyelid_D_R_end
+    400336: Eyelid_U_L
+    400338: Eyelid_U_L_end
+    400340: Eyelid_U_R
+    400342: Eyelid_U_R_end
+    400344: Face__Mt_Face
+    400346: Face__Mt_Head
+    400348: Face_Root
+    400350: Face_Root 1
+    400352: Finger_A_1_L
+    400354: Finger_A_1_L 1
+    400356: Finger_A_1_R
+    400358: Finger_A_1_R 1
+    400360: Finger_A_2_L
+    400362: Finger_A_2_L 1
+    400364: Finger_A_2_R
+    400366: Finger_A_2_R 1
+    400368: Finger_A_3_L
+    400370: Finger_A_3_L 1
+    400372: Finger_A_3_L_end
+    400374: Finger_A_3_L_end 1
+    400376: Finger_A_3_R
+    400378: Finger_A_3_R 1
+    400380: Finger_A_3_R_end
+    400382: Finger_A_3_R_end 1
+    400384: Finger_B_1_L
+    400386: Finger_B_1_L 1
+    400388: Finger_B_1_R
+    400390: Finger_B_1_R 1
+    400392: Finger_B_2_L
+    400394: Finger_B_2_L 1
+    400396: Finger_B_2_R
+    400398: Finger_B_2_R 1
+    400400: Finger_B_3_L
+    400402: Finger_B_3_L 1
+    400404: Finger_B_3_L_end
+    400406: Finger_B_3_L_end 1
+    400408: Finger_B_3_R
+    400410: Finger_B_3_R 1
+    400412: Finger_B_3_R_end
+    400414: Finger_B_3_R_end 1
+    400416: Finger_C_1_L
+    400418: Finger_C_1_L 1
+    400420: Finger_C_1_R
+    400422: Finger_C_1_R 1
+    400424: Finger_C_2_L
+    400426: Finger_C_2_L 1
+    400428: Finger_C_2_R
+    400430: Finger_C_2_R 1
+    400432: Finger_C_3_L
+    400434: Finger_C_3_L 1
+    400436: Finger_C_3_L_end
+    400438: Finger_C_3_L_end 1
+    400440: Finger_C_3_R
+    400442: Finger_C_3_R 1
+    400444: Finger_C_3_R_end
+    400446: Finger_C_3_R_end 1
+    400448: Finger_D_1_L
+    400450: Finger_D_1_L 1
+    400452: Finger_D_1_R
+    400454: Finger_D_1_R 1
+    400456: Finger_D_2_L
+    400458: Finger_D_2_L 1
+    400460: Finger_D_2_R
+    400462: Finger_D_2_R 1
+    400464: Finger_D_3_L
+    400466: Finger_D_3_L 1
+    400468: Finger_D_3_L_end
+    400470: Finger_D_3_L_end 1
+    400472: Finger_D_3_R
+    400474: Finger_D_3_R 1
+    400476: Finger_D_3_R_end
+    400478: Finger_D_3_R_end 1
+    400480: Finger_E_1_L
+    400482: Finger_E_1_L 1
+    400484: Finger_E_1_R
+    400486: Finger_E_1_R 1
+    400488: Finger_E_2_L
+    400490: Finger_E_2_L 1
+    400492: Finger_E_2_R
+    400494: Finger_E_2_R 1
+    400496: Finger_E_3_L
+    400498: Finger_E_3_L 1
+    400500: Finger_E_3_L_end
+    400502: Finger_E_3_L_end 1
+    400504: Finger_E_3_R
+    400506: Finger_E_3_R 1
+    400508: Finger_E_3_R_end
+    400510: Finger_E_3_R_end 1
+    400512: Hair_A_001_A__Mt_Hair_001
+    400514: Hair_A_1_Armor
+    400516: Hair_A_2_Armor
+    400518: Hair_A_2_Armor_end
+    400520: Hair_B_1_Armor
+    400522: Hair_B_2_Armor
+    400524: Hair_B_2_Armor_end
+    400526: Hair_Root
+    400528: Hair_Root_Armor
+    400530: Head
+    400532: Head 1
+    400534: Head 2
+    400536: Hood_1_B_Armor
+    400538: Hood_1_FC_Armor
+    400540: Hood_1_FC_Armor_end
+    400542: Hood_1_FL_Armor
+    400544: Hood_1_FL_Armor_end
+    400546: Hood_1_FR_Armor
+    400548: Hood_1_FR_Armor_end
+    400550: Hood_2_B_Armor
+    400552: Hood_2_B_Armor_end
+    400554: Hood_2_FL_Armor
+    400556: Hood_2_FL_Armor_end
+    400558: Hood_2_FR_Armor
+    400560: Hood_2_FR_Armor_end
+    400562: Hood_A_001_Metal__Mt_Hood_001
+    400564: Hood_A_001_Metal__Mt_Hood_001_001
+    400566: Knee_L
+    400568: Knee_L 1
+    400570: Knee_L_end
+    400572: Knee_L_end 1
+    400574: Knee_R
+    400576: Knee_R 1
+    400578: Knee_R_end
+    400580: Knee_R_end 1
+    400582: Leg_1_L
+    400584: Leg_1_L 1
+    400586: Leg_1_L 2
+    400588: Leg_1_L_end
+    400590: Leg_1_R
+    400592: Leg_1_R 1
+    400594: Leg_1_R 2
+    400596: Leg_1_R_end
+    400598: Leg_2_L
+    400600: Leg_2_L 1
+    400602: Leg_2_R
+    400604: Leg_2_R 1
+    400606: Light
+    400608: //RootNode
+    400610: Lip_D
+    400612: Lip_D_end
+    400614: Lip_D_L_1
+    400616: Lip_D_L_1_end
+    400618: Lip_D_R_1
+    400620: Lip_D_R_1_end
+    400622: Lip_U
+    400624: Lip_U_end
+    400626: Lip_U_L_1
+    400628: Lip_U_L_1_end
+    400630: Lip_U_L_2
+    400632: Lip_U_L_2_end
+    400634: Lip_U_R_1
+    400636: Lip_U_R_1_end
+    400638: Lip_U_R_2
+    400640: Lip_U_R_2_end
+    400642: Mant_1_BC_Armor
+    400644: Mant_1_BL_Armor
+    400646: Mant_1_BR_Armor
+    400648: Mant_2_BC_Armor
+    400650: Mant_2_BL_Armor
+    400652: Mant_2_BR_Armor
+    400654: Mant_3_BC_Armor
+    400656: Mant_3_BL_Armor
+    400658: Mant_3_BR_Armor
+    400660: Mant_4_BC_Armor
+    400662: Mant_4_BC_Armor_end
+    400664: Mant_4_BL_Armor
+    400666: Mant_4_BL_Armor_end
+    400668: Mant_4_BR_Armor
+    400670: Mant_4_BR_Armor_end
+    400672: Metal_001__Mt_Upper_001
+    400674: Model__Mt_Bow_036
+    400676: Momi_A_1_L_Armor
+    400678: Momi_A_1_R_Armor
+    400680: Momi_A_2_L_Armor
+    400682: Momi_A_2_R_Armor
+    400684: Momi_A_3_L_Armor
+    400686: Momi_A_3_L_Armor_end
+    400688: Momi_A_3_R_Armor
+    400690: Momi_A_3_R_Armor_end
+    400692: Neck
+    400694: Neck 1
+    400696: Neck 2
+    400698: Nose
+    400700: Nose_end
+    400702: Poach_A
+    400704: Poach_A_end
+    400706: Pod_A
+    400708: Pod_A 1
+    400710: Pod_A_end
+    400712: Pod_A_end 1
+    400714: Pod_B
+    400716: Pod_B_end
+    400718: Pod_C
+    400720: Pod_C 1
+    400722: Pod_C_end
+    400724: Pod_C_end 1
+    400726: Ponytail_A_1
+    400728: Ponytail_A_1_end
+    400730: Root
+    400732: Root 1
+    400734: Root 2
+    400736: Root 3
+    400738: Root 4
+    400740: Root 5
+    400742: Root 6
+    400744: Root__Mt_Sheath_070
+    400746: Root_end
+    400748: Root_end 1
+    400750: Shoulderpad_L_Armor
+    400752: Shoulderpad_L_Armor_end
+    400754: Skin_001__Mt_Upper_Skin
+    400756: Skin__Mt_Underwear
+    400758: Skirt_1_BC_Armor
+    400760: Skirt_1_BL_Armor
+    400762: Skirt_1_BR_Armor
+    400764: Skirt_1_FC_Armor
+    400766: Skirt_1_FL_Armor
+    400768: Skirt_1_FR_Armor
+    400770: Skirt_2_BC_Armor
+    400772: Skirt_2_BL_Armor
+    400774: Skirt_2_BR_Armor
+    400776: Skirt_2_FC_Armor
+    400778: Skirt_2_FL_Armor
+    400780: Skirt_2_FR_Armor
+    400782: Skirt_3_BC_Armor
+    400784: Skirt_3_BC_Armor_end
+    400786: Skirt_3_BL_Armor
+    400788: Skirt_3_BL_Armor_end
+    400790: Skirt_3_BR_Armor
+    400792: Skirt_3_BR_Armor_end
+    400794: Skirt_3_FC_Armor
+    400796: Skirt_3_FC_Armor_end
+    400798: Skirt_3_FL_Armor
+    400800: Skirt_3_FL_Armor_end
+    400802: Skirt_3_FR_Armor
+    400804: Skirt_3_FR_Armor_end
+    400806: Skl_Root
+    400808: Skl_Root 1
+    400810: Skl_Root 2
+    400812: Skl_Root 3
+    400814: Spine_1
+    400816: Spine_1 1
+    400818: Spine_1 2
+    400820: Spine_1 3
+    400822: Spine_1_end
+    400824: Spine_2
+    400826: Spine_2 1
+    400828: Spine_2 2
+    400830: String_L_1
+    400832: String_L_2
+    400834: String_L_2_end
+    400836: String_R_1
+    400838: String_R_2
+    400840: String_R_2_end
+    400842: Teeth_D
+    400844: Teeth_D_end
+    400846: Teeth_U
+    400848: Teeth_U_end
+    400850: Toe_L
+    400852: Toe_L 1
+    400854: Toe_L_end
+    400856: Toe_L_end 1
+    400858: Toe_R
+    400860: Toe_R 1
+    400862: Toe_R_end
+    400864: Toe_R_end 1
+    400866: Waist
+    400868: Waist 1
+    400870: Waist 2
+    400872: Waist 3
+    400874: Waist_end
+    400876: Weapon_L
+    400878: Weapon_L_end
+    400880: Weapon_R
+    400882: Weapon_R_end
+    400884: Weapon_Root
+    400886: Weapon_Root_end
+    400888: Weapon_Sword_070__Mt_Sword_070
+    400890: Weapon_Sword_070_Blade__Mt_Sword_070_Blade
+    400892: Wrist_Assist_L
+    400894: Wrist_Assist_L 1
+    400896: Wrist_Assist_L_end
+    400898: Wrist_Assist_L_end 1
+    400900: Wrist_Assist_R
+    400902: Wrist_Assist_R 1
+    400904: Wrist_Assist_R_end
+    400906: Wrist_Assist_R_end 1
+    400908: Wrist_L
+    400910: Wrist_L 1
+    400912: Wrist_R
+    400914: Wrist_R 1
+    2000000: Camera
+    2100000: Mt_Face_001
+    2100002: Mt_Head
+    2100004: Mt_Eyelashes
+    2100006: Mt_Eyeball_L
+    2100008: Mt_Eyeball_R
+    2100010: Mt_Belt_C
+    2100012: Mt_Underwear
+    2100014: Mt_Earring
+    2100016: Mt_Belt_B_001.001
+    2100018: Mt_Upper_001_001.001
+    2100020: Mt_Belt_C_001.001
+    2100022: Mt_Upper_Belt_001_001.001
+    2100024: Mt_Belt_A_001_001.001
+    2100026: Mt_Upper_kusari_001.001
+    2100028: Mt_Upper_Skin.002
+    2100030: Mt_Lower_001.001
+    2100032: Material.001
+    2100034: Mt_Hair_001.001
+    2100036: Mt_Hood_001.001
+    2100038: Mt_Sword_070_Blade_001
+    2100040: Mt_Sword_070
+    2100042: Mt_Bow_036
+    2100044: Mt_Sheath_070_001
+    4300000: Face__Mt_Face
+    4300002: Face__Mt_Head
+    4300004: Eyelashes__Mt_Eyelashes
+    4300006: Eye_L__Mt_Eyeball_L
+    4300008: Eye_R__Mt_Eyeball_R
+    4300010: Belt_C_Buckle__Mt_Belt_C
+    4300012: Skin__Mt_Underwear
+    4300014: Earring__Mt_Earring
+    4300016: Belt_B_001_Buckle__Mt_Belt_B_001
+    4300018: Metal_001__Mt_Upper_001
+    4300020: Belt_C_Buckle__Mt_Belt_C_001
+    4300022: Beltmini_001__Mt_Upper_Belt_001
+    4300024: Belt_A_Buckle__Mt_Belt_A_001_Layer_2
+    4300026: Chain_001__Mt_Upper_kusari_001
+    4300028: Skin_001__Mt_Upper_Skin
+    4300030: Boots_001__Mt_Lower_001
+    4300032: Hood_A_001_Metal__Mt_Hood_001_001
+    4300034: Hair_A_001_A__Mt_Hair_001
+    4300036: Hood_A_001_Metal__Mt_Hood_001
+    4300038: Weapon_Sword_070_Blade__Mt_Sword_070_Blade
+    4300040: Weapon_Sword_070__Mt_Sword_070
+    4300042: Model__Mt_Bow_036
+    4300044: Root__Mt_Sheath_070
+    7400000: Light|Armature.001Action
+    7400002: Light|Idle
+    7400004: Camera|Armature.001Action
+    7400006: Camera|Idle
+    7400008: Armature|Action
+    7400010: Armature|Action.001
+    7400012: Armature|Action.002
+    7400014: Armature|Action.004
+    7400016: Armature|Action.006
+    7400018: Armature|Action.008
+    7400020: Armature|Armature.001Action
+    7400022: Armature|Armature.003Action
+    7400024: Armature|Armature.004Action.001
+    7400026: Armature|Armature.005Action.001
+    7400028: Armature|Armature.006Action
+    7400030: Armature|Idle
+    7400032: Face__Mt_Face|Armature.001Action
+    7400034: Face__Mt_Face|Idle
+    7400036: Face__Mt_Head|Armature.001Action
+    7400038: Face__Mt_Head|Idle
+    7400040: Eyelashes__Mt_Eyelashes|Armature.001Action
+    7400042: Eyelashes__Mt_Eyelashes|Idle
+    7400044: Eye_L__Mt_Eyeball_L|Armature.001Action
+    7400046: Eye_L__Mt_Eyeball_L|Idle
+    7400048: Eye_R__Mt_Eyeball_R|Armature.001Action
+    7400050: Eye_R__Mt_Eyeball_R|Idle
+    7400052: Belt_C_Buckle__Mt_Belt_C|Armature.001Action
+    7400054: Belt_C_Buckle__Mt_Belt_C|Idle
+    7400056: Skin__Mt_Underwear|Armature.001Action
+    7400058: Skin__Mt_Underwear|Idle
+    7400060: Earring__Mt_Earring|Armature.001Action
+    7400062: Earring__Mt_Earring|Idle
+    7400064: Armature.001|Action
+    7400066: Armature.001|Action.001
+    7400068: Armature.001|Action.003
+    7400070: Armature.001|Action.006
+    7400072: Armature.001|Action.008
+    7400074: Armature.001|Armature.001Action
+    7400076: Armature.001|Armature.003Action
+    7400078: Armature.001|Armature.004Action.001
+    7400080: Armature.001|Armature.005Action.001
+    7400082: Armature.001|Armature.006Action
+    7400084: Armature.001|Idle
+    7400086: Belt_B_001_Buckle__Mt_Belt_B_001|Armature.001Action
+    7400088: Belt_B_001_Buckle__Mt_Belt_B_001|Idle
+    7400090: Metal_001__Mt_Upper_001|Armature.001Action
+    7400092: Metal_001__Mt_Upper_001|Idle
+    7400094: Belt_C_Buckle__Mt_Belt_C_001|Armature.001Action
+    7400096: Belt_C_Buckle__Mt_Belt_C_001|Idle
+    7400098: Beltmini_001__Mt_Upper_Belt_001|Armature.001Action
+    7400100: Beltmini_001__Mt_Upper_Belt_001|Idle
+    7400102: Belt_A_Buckle__Mt_Belt_A_001_Layer_2|Armature.001Action
+    7400104: Belt_A_Buckle__Mt_Belt_A_001_Layer_2|Idle
+    7400106: Chain_001__Mt_Upper_kusari_001|Armature.001Action
+    7400108: Chain_001__Mt_Upper_kusari_001|Idle
+    7400110: Skin_001__Mt_Upper_Skin|Armature.001Action
+    7400112: Skin_001__Mt_Upper_Skin|Idle
+    7400114: Armature.002|Action
+    7400116: Armature.002|Action.001
+    7400118: Armature.002|Action.004
+    7400120: Armature.002|Action.006
+    7400122: Armature.002|Action.008
+    7400124: Armature.002|Armature.001Action
+    7400126: Armature.002|Armature.004Action.001
+    7400128: Armature.002|Armature.005Action.001
+    7400130: Armature.002|Armature.006Action
+    7400132: Armature.002|Idle
+    7400134: Boots_001__Mt_Lower_001|Armature.001Action
+    7400136: Boots_001__Mt_Lower_001|Idle
+    7400138: Armature.003|Action.001
+    7400140: Armature.003|Action.005
+    7400142: Armature.003|Action.006
+    7400144: Armature.003|Action.008
+    7400146: Armature.003|Armature.001Action
+    7400148: Armature.003|Armature.003Action
+    7400150: Armature.003|Armature.004Action.001
+    7400152: Armature.003|Armature.005Action.001
+    7400154: Armature.003|Armature.006Action
+    7400156: Armature.003|Idle
+    7400158: Hood_A_001_Metal__Mt_Hood_001_001|Armature.001Action
+    7400160: Hood_A_001_Metal__Mt_Hood_001_001|Idle
+    7400162: Hair_A_001_A__Mt_Hair_001|Armature.001Action
+    7400164: Hair_A_001_A__Mt_Hair_001|Idle
+    7400166: Hood_A_001_Metal__Mt_Hood_001|Armature.001Action
+    7400168: Hood_A_001_Metal__Mt_Hood_001|Idle
+    7400170: Armature.004|Action.001
+    7400172: Armature.004|Action.006
+    7400174: Armature.004|Action.008
+    7400176: Armature.004|Armature.001Action
+    7400178: Armature.004|Armature.004Action.001
+    7400180: Armature.004|Armature.005Action.001
+    7400182: Armature.004|Armature.006Action
+    7400184: Armature.004|Idle
+    7400186: Weapon_Sword_070_Blade__Mt_Sword_070_Blade|Armature.001Action
+    7400188: Weapon_Sword_070_Blade__Mt_Sword_070_Blade|Idle
+    7400190: Weapon_Sword_070__Mt_Sword_070|Armature.001Action
+    7400192: Weapon_Sword_070__Mt_Sword_070|Idle
+    7400194: Armature.005|Action.001
+    7400196: Armature.005|Action.006
+    7400198: Armature.005|Action.007
+    7400200: Armature.005|Action.008
+    7400202: Armature.005|Armature.001Action
+    7400204: Armature.005|Armature.004Action.001
+    7400206: Armature.005|Armature.005Action.001
+    7400208: Armature.005|Armature.006Action
+    7400210: Armature.005|Idle
+    7400212: Model__Mt_Bow_036|Armature.001Action
+    7400214: Model__Mt_Bow_036|Idle
+    7400216: Armature.006|Action.001
+    7400218: Armature.006|Action.006
+    7400220: Armature.006|Action.008
+    7400222: Armature.006|Armature.001Action
+    7400224: Armature.006|Armature.004Action.001
+    7400226: Armature.006|Armature.005Action.001
+    7400228: Armature.006|Armature.006Action
+    7400230: Armature.006|Idle
+    7400232: Root__Mt_Sheath_070|Armature.001Action
+    7400234: Root__Mt_Sheath_070|Idle
+    9500000: //RootNode
+    10800000: Light
+    13700000: Belt_A_Buckle__Mt_Belt_A_001_Layer_2
+    13700002: Belt_B_001_Buckle__Mt_Belt_B_001
+    13700004: Belt_C_Buckle__Mt_Belt_C
+    13700006: Belt_C_Buckle__Mt_Belt_C_001
+    13700008: Beltmini_001__Mt_Upper_Belt_001
+    13700010: Boots_001__Mt_Lower_001
+    13700012: Chain_001__Mt_Upper_kusari_001
+    13700014: Earring__Mt_Earring
+    13700016: Eye_L__Mt_Eyeball_L
+    13700018: Eye_R__Mt_Eyeball_R
+    13700020: Eyelashes__Mt_Eyelashes
+    13700022: Face__Mt_Face
+    13700024: Face__Mt_Head
+    13700026: Hair_A_001_A__Mt_Hair_001
+    13700028: Hood_A_001_Metal__Mt_Hood_001
+    13700030: Hood_A_001_Metal__Mt_Hood_001_001
+    13700032: Metal_001__Mt_Upper_001
+    13700034: Model__Mt_Bow_036
+    13700036: Root__Mt_Sheath_070
+    13700038: Skin_001__Mt_Upper_Skin
+    13700040: Skin__Mt_Underwear
+    13700042: Weapon_Sword_070__Mt_Sword_070
+    13700044: Weapon_Sword_070_Blade__Mt_Sword_070_Blade
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

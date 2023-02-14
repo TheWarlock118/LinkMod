@@ -72,10 +72,7 @@ namespace HenryMod.Modules
             ProjectileController miphaController = miphaPrefab.GetComponent<ProjectileController>();
             miphaController.ghostPrefab = CreateGhostPrefab("mdlMipha");
             miphaController.startSound = ""; // TODO: Add sounds            
-            miphaController.canImpactOnTrigger = false;
-
-            //ProjectileFuse miphaFuse = miphaPrefab.GetComponent<ProjectileFuse>();
-            //miphaFuse.fuse = 10f;
+            miphaController.canImpactOnTrigger = false;            
         }
 
         private static void CreateUrbosa()
@@ -84,10 +81,7 @@ namespace HenryMod.Modules
             ProjectileController urbosaController = urbosaPrefab.GetComponent<ProjectileController>();            
             urbosaController.ghostPrefab = CreateGhostPrefab("mdlUrbosa");
             urbosaController.startSound = ""; // TODO: Add sounds
-            urbosaController.canImpactOnTrigger = false;
-
-            //ProjectileFuse urbosaFuse = urbosaPrefab.GetComponent<ProjectileFuse>();
-            //urbosaFuse.fuse = 10f;
+            urbosaController.canImpactOnTrigger = false;            
         }
 
         private static void CreateRevali()
@@ -96,10 +90,8 @@ namespace HenryMod.Modules
             ProjectileController revaliController = revaliPrefab.GetComponent<ProjectileController>();
             revaliController.ghostPrefab = CreateGhostPrefab("mdlRevali");
             revaliController.startSound = ""; // TODO: Add sounds
-            revaliController.canImpactOnTrigger = false;
-
-            //ProjectileFuse revaliFuse = revaliPrefab.GetComponent<ProjectileFuse>();
-            //revaliFuse.fuse = 10f;
+            revaliController.canImpactOnTrigger = false;            
+            
         }
 
         private static void CreateDaruk()
@@ -110,8 +102,7 @@ namespace HenryMod.Modules
             darukController.startSound = ""; // TODO: Add sounds
             darukController.canImpactOnTrigger = false;
 
-            //ProjectileFuse darukFuse = darukPrefab.GetComponent<ProjectileFuse>();
-            //darukFuse.fuse = 10f;
+            
         }
 
         private static void InitializeImpactExplosion(ProjectileImpactExplosion projectileImpactExplosion)

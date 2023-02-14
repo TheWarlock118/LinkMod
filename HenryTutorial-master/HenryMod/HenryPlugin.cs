@@ -136,7 +136,7 @@ namespace HenryMod
                     {
                         miphaOnCooldown = true;
                     }
-                    else if (miphaOnCooldown && stopwatch == -1f)
+                    else if (miphaOnCooldown && stopwatch == -1f && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
                     {
                         miphaOnCooldown = false;
                         if (Modules.Config.MiphaReadySound.Value)
@@ -150,7 +150,7 @@ namespace HenryMod
                     {
                         darukOnCooldown = true;
                     }
-                    else if (darukOnCooldown)
+                    else if (darukOnCooldown && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
                     {
                         darukOnCooldown = false;
                         if (Modules.Config.DarukReadySound.Value)
@@ -164,7 +164,7 @@ namespace HenryMod
                     {
                         urbosaOnCooldown = true;
                     }
-                    if (urbosaOnCooldown)
+                    if (urbosaOnCooldown && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
                     {
                         urbosaOnCooldown = false;
                         if (Modules.Config.UrbosaReadySound.Value)
@@ -179,7 +179,7 @@ namespace HenryMod
                     {
                         revaliOnCooldown = true;
                     }
-                    else if (revaliOnCooldown)
+                    else if (revaliOnCooldown && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
                     {
                         revaliOnCooldown = false;
                         if (Modules.Config.RevaliReadySound.Value)
