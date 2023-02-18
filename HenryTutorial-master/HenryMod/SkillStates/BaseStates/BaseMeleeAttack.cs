@@ -131,41 +131,44 @@ namespace HenryMod.SkillStates.BaseStates
 
         private void FireAttack()
         {
-            if (!this.hasFired)
+            if (base.characterMotor.isGrounded)
             {
-                this.hasFired = true;
-                Util.PlayAttackSpeedSound(this.swingSoundString, base.gameObject, this.attackSpeedStat);
-                if (this.characterBody.healthComponent.combinedHealth / this.characterBody.healthComponent.fullCombinedHealth >= .9f)
+                if (!this.hasFired)
                 {
+                    this.hasFired = true;
+                    Util.PlayAttackSpeedSound(this.swingSoundString, base.gameObject, this.attackSpeedStat);
+                    if (this.characterBody.healthComponent.combinedHealth / this.characterBody.healthComponent.fullCombinedHealth >= .9f)
+                    {
+                        if (base.isAuthority)
+                        {
+                            projectileDamageCoef = Modules.StaticValues.swordDamageCoefficient / 2;
+                            Ray aimRay = base.GetAimRay();
+                            ProjectileManager.instance.FireProjectile(EntityStates.Vulture.Weapon.FireWindblade.projectilePrefab, //Placeholder projectile
+                            aimRay.origin,
+                            Util.QuaternionSafeLookRotation(aimRay.direction),
+                            base.gameObject,
+                            this.projectileDamageCoef * this.damageStat,
+                            40f,
+                            base.RollCrit(),
+                            DamageColorIndex.Default,
+                            null,
+                            this.projectileForce);
+                        }
+                    }
+
                     if (base.isAuthority)
                     {
-                        projectileDamageCoef = Modules.StaticValues.swordDamageCoefficient / 2;
-                        Ray aimRay = base.GetAimRay();
-                        ProjectileManager.instance.FireProjectile(EntityStates.Treebot.Weapon.FireSyringe.projectilePrefab, //Placeholder projectile
-                        aimRay.origin,
-                        Util.QuaternionSafeLookRotation(aimRay.direction),
-                        base.gameObject,
-                        this.projectileDamageCoef * this.damageStat,
-                        40f,
-                        base.RollCrit(),
-                        DamageColorIndex.Default,
-                        null,
-                        this.projectileForce);
+                        this.PlaySwingEffect();
+                        base.AddRecoil(-1f * this.attackRecoil, -2f * this.attackRecoil, -0.5f * this.attackRecoil, 0.5f * this.attackRecoil);
                     }
                 }
 
                 if (base.isAuthority)
                 {
-                    this.PlaySwingEffect();                    
-                    base.AddRecoil(-1f * this.attackRecoil, -2f * this.attackRecoil, -0.5f * this.attackRecoil, 0.5f * this.attackRecoil);
-                }
-            }
-
-            if (base.isAuthority)
-            {
-                if (this.attack.Fire())
-                {
-                    this.OnHitEnemyAuthority();
+                    if (this.attack.Fire())
+                    {
+                        this.OnHitEnemyAuthority();
+                    }
                 }
             }
         }

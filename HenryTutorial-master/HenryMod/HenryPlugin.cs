@@ -195,7 +195,7 @@ namespace HenryMod
                     if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "ROB_HENRY_BODY_SPECIAL_URBOSA_NAME" || skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "ROB_HENRY_BODY_SPECIAL_DARUK_NAME" || skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "ROB_HENRY_BODY_SPECIAL_REVALI_NAME" || skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "ROB_HENRY_BODY_SPECIAL_MIPHA_NAME")// Check to make sure only Link is affected
                     {
                         Animator animator = self.modelLocator.modelTransform.GetComponent<Animator>();
-                        if (!self.inputBank.jump.down && enteredParaglider)
+                        if (enteredParaglider && !self.inputBank.skill2.down && (!self.inputBank.jump.down || self.characterMotor.isGrounded))
                         {
                             if (!playedFall)
                             {

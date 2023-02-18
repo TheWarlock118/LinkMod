@@ -30,6 +30,7 @@ namespace HenryMod.Modules
 
         // cache these and use to create our own materials
         internal static Shader hotpoo = RoR2.LegacyResourcesAPI.Load<Shader>("Shaders/Deferred/HGStandard");
+        internal static GameObject blueExplosion = RoR2.LegacyResourcesAPI.Load<GameObject>("prefabs/effects/magelightningbombexplosion");
         internal static Material commandoMat;
         private static string[] assetNames = new string[0];
 
@@ -85,7 +86,9 @@ namespace HenryMod.Modules
 
             swordHitSoundEvent = CreateNetworkSoundEventDef("SwordSwing");
 
-            bombExplosionEffect = LoadEffect("BombExplosionEffect", "HenryBombExplosion");                                
+            // bombExplosionEffect = LoadEffect("BombExplosionEffect", "HenryBombExplosion");
+            // bombExplosionEffect = EntityStates.VagrantMonster.FireMegaNova.novaEffectPrefab;
+            bombExplosionEffect = blueExplosion;
 
 
             if (bombExplosionEffect)

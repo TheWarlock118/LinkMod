@@ -191,7 +191,7 @@ namespace HenryMod.Modules.Survivors
                 cancelSprintingOnActivation = true,
                 rechargeStock = 1,
                 requiredStock = 1,
-                stockToConsume = 1
+                stockToConsume = 1,                
             });
 
             SkillDef passSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
@@ -199,7 +199,7 @@ namespace HenryMod.Modules.Survivors
                 skillName = prefix + "_HENRY_BODY_PASSIVE_NAME",
                 skillNameToken = prefix + "_HENRY_BODY_PASSIVE_NAME",
                 skillDescriptionToken = prefix + "_HENRY_BODY_PASSIVE_DESCRIPTION",
-                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("RemoteBomb"),
+                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("Paraglider"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.ParagliderTest)),
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,

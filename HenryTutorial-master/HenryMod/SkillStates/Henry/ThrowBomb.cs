@@ -10,7 +10,7 @@ namespace HenryMod.SkillStates
         public static float damageCoefficient = 16f;
         public static float procCoefficient = 1f;
         public static float baseDuration = 0.65f;
-        public static float throwForce = 80f;
+        public static float throwForce = 50f;
 
         private float duration;
         private float fireTime;
@@ -38,8 +38,26 @@ namespace HenryMod.SkillStates
             {
                 this.hasFired = true;
                 //Util.PlaySound("HenryBombThrow", base.gameObject);
+                if(base.inputBank.jump.down && base.characterMotor.velocity.y < 0f && !base.characterMotor.isGrounded)
+                {
+                    if (base.isAuthority)
+                    {
+                        Ray aimRay = base.GetAimRay();
+                        Quaternion aimDown = new Quaternion(0, 0, 0, 0);
 
-                if (base.isAuthority)
+                        ProjectileManager.instance.FireProjectile(Modules.Projectiles.bombPrefab,
+                            aimRay.origin,
+                            aimDown,
+                            base.gameObject,
+                            ThrowBomb.damageCoefficient * this.damageStat,
+                            100f,
+                            base.RollCrit(),
+                            DamageColorIndex.Default,
+                            null,
+                            0f);
+                    }
+                }
+                else if (base.isAuthority)
                 {
                     Ray aimRay = base.GetAimRay();
 
@@ -55,6 +73,7 @@ namespace HenryMod.SkillStates
                         ThrowBomb.throwForce);
                 }
                 base.PlayAnimation("Gesture, Override", "ThrowBomb", "ThrowBomb.playbackRate", this.duration);
+                
             }
         }
 
