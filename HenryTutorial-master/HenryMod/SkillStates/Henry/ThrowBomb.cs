@@ -28,7 +28,7 @@ namespace HenryMod.SkillStates
             this.animator = base.GetModelAnimator();
 
             Util.PlaySound("BombDraw", base.gameObject);
-            base.PlayAnimation("Gesture, Override", "ThrowBomb", "ThrowBomb.playbackRate", this.duration);
+            base.PlayAnimation("Gesture, Override", "DrawBomb", "ThrowBomb.playbackRate", this.duration);            
         }
 
         public override void OnExit()
@@ -54,6 +54,7 @@ namespace HenryMod.SkillStates
                         null,
                         ThrowBomb.throwForce);
                 }
+                base.PlayAnimation("Gesture, Override", "ThrowBomb", "ThrowBomb.playbackRate", this.duration);
             }
         }
 

@@ -48,17 +48,17 @@ namespace HenryMod.Modules.Survivors
             {
                 InitializeUnlockables();
 
-                bodyPrefab = Modules.Prefabs.CreatePrefab("LinkBody", "mdlLink", bodyInfo);
+                bodyPrefab = Modules.Prefabs.CreatePrefab("LinkBody", "mdlLinkHylian", bodyInfo);
                 bodyPrefab.GetComponent<EntityStateMachine>().mainStateType = new EntityStates.SerializableEntityStateType(characterMainState);
                 bodyPrefab.GetComponent<CharacterDeathBehavior>().deathState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.BaseStates.DeathState));
 
                 Modules.Prefabs.SetupCharacterModel(bodyPrefab, customRendererInfos, mainRendererIndex);
 
-                displayPrefab = Modules.Prefabs.CreateDisplayPrefab("mdlLinkDisplay", bodyPrefab, bodyInfo);
+                displayPrefab = Modules.Prefabs.CreateDisplayPrefab("mdlLinkHylianDisplay", bodyPrefab, bodyInfo);
 
                 Modules.Prefabs.RegisterNewSurvivor(bodyPrefab, displayPrefab, Color.grey, bodyName.ToUpper(), characterUnlockableDef, sortPosition);                 
                 InitializeSkills();
-                //InitializeSkins();
+                InitializeSkins();
                 InitializeItemDisplays();
                 InitializeDoppelganger();                
             }

@@ -221,7 +221,7 @@ namespace HenryMod.Modules
             }
 
             List<CharacterModel.RendererInfo> rendererInfos = new List<CharacterModel.RendererInfo>();
-            /*
+            
             for (int i = 0; i < rendererInfo.Length; i++)
             {
                 if (!childLocator.FindChild(rendererInfo[i].childName))
@@ -247,7 +247,7 @@ namespace HenryMod.Modules
                     }
                 }
             }
-            */
+            
             
 
             characterModel.baseRendererInfos = rendererInfos.ToArray();
@@ -255,7 +255,7 @@ namespace HenryMod.Modules
             characterModel.autoPopulateLightInfos = true;
             characterModel.invisibilityCount = 0;
             characterModel.temporaryOverlays = new List<TemporaryOverlay>();
-            /*
+            
             if (mainRendererIndex > characterModel.baseRendererInfos.Length)
             {
                 Debug.LogError("mainRendererIndex out of range: not setting mainSkinnedMeshRenderer for " + prefab.name);
@@ -263,7 +263,7 @@ namespace HenryMod.Modules
             }
 
             characterModel.mainSkinnedMeshRenderer = characterModel.baseRendererInfos[mainRendererIndex].renderer.GetComponent<SkinnedMeshRenderer>();
-            */
+            
         }
         #endregion
 

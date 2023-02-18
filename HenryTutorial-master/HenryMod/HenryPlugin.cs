@@ -46,9 +46,9 @@ namespace HenryMod
         private bool urbosaOnCooldown = false;
         private bool revaliOnCooldown = false;
         private bool darukOnCooldown = false;
-
-        // Maybe use this instead of resed?
-        private float stopwatch = -1f;
+        private bool enteredParaglider = false;
+        private bool playedFall = false;
+                
 
         
 
@@ -93,35 +93,28 @@ namespace HenryMod
 
         private void CharacterBody_Update(On.RoR2.CharacterBody.orig_Update orig, CharacterBody self)
         {
+            Log.Init(Logger);
             orig(self);
             SkillLocator skillLocator = self.GetComponent<SkillLocator>();
             //Mipha's Grace Functionality - Remove Consumed Dio's, Start Cooldown on Res
 
-            try
-            {
-                if(stopwatch > -1f)
-                    Log.LogDebug("Stopwatch = " + stopwatch.ToString());
-            } catch { }
             if (skillLocator)
             {
                 if (skillLocator.GetSkill(SkillSlot.Special) != null)
                 {
-                    if (stopwatch > 0f)
-                        stopwatch -= Time.fixedDeltaTime;
-                    else if (stopwatch != -1f && stopwatch < 0f)
+                    if (resed)
                     {
                         if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "ROB_HENRY_BODY_SPECIAL_MIPHA_NAME")
                         {
-                            if (self.healthComponent.alive)
+                            if (!(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
                             {
                                 Log.LogDebug("Removing Stock & Extra Item");
                                 skillLocator.GetSkill(SkillSlot.Special).DeductStock(1);
                                 self.inventory.RemoveItem(ItemCatalog.FindItemIndex("ExtraLifeConsumed"));
-                                stopwatch = -1f;
+                                resed = false;
                             }
-                        }
+                        }                        
                     }
-
                 }
             }
 
@@ -136,7 +129,7 @@ namespace HenryMod
                     {
                         miphaOnCooldown = true;
                     }
-                    else if (miphaOnCooldown && stopwatch == -1f && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
+                    else if (miphaOnCooldown && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
                     {
                         miphaOnCooldown = false;
                         if (Modules.Config.MiphaReadySound.Value)
@@ -190,17 +183,27 @@ namespace HenryMod
             }
 
             #endregion
-            
+
 
             //Paraglider & Slow-Bow Functionality
             
+
             if (self.inputBank)
             {
-                if (skillLocator && skillLocator.GetSkill(SkillSlot.Primary) != null)
+                if (skillLocator && skillLocator.GetSkill(SkillSlot.Special) != null)
                 {
-                    if (skillLocator.GetSkill(SkillSlot.Primary).skillDef.skillName == "ROB_HENRY_BODY_PRIMARY_SWORD_NAME")// Check to make sure only Link is affected
+                    if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "ROB_HENRY_BODY_SPECIAL_URBOSA_NAME" || skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "ROB_HENRY_BODY_SPECIAL_DARUK_NAME" || skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "ROB_HENRY_BODY_SPECIAL_REVALI_NAME" || skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "ROB_HENRY_BODY_SPECIAL_MIPHA_NAME")// Check to make sure only Link is affected
                     {
-                        if (self.inputBank.skill2.down && self.characterMotor.velocity.y < 0f)
+                        Animator animator = self.modelLocator.modelTransform.GetComponent<Animator>();
+                        if (!self.inputBank.jump.down && enteredParaglider)
+                        {
+                            if (!playedFall)
+                            {
+                                animator.Play("Fall", 2);
+                                playedFall = true;
+                            }
+                        }                        
+                        if (self.inputBank.skill2.down && self.characterMotor.velocity.y < 0f && (skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "ROB_HENRY_BODY_SECONDARY_BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "ROB_HENRY_BODY_SECONDARY_3BOW_NAME"))
                         {
                             if (skillLocator.GetSkill(SkillSlot.Secondary).cooldownRemaining == skillLocator.GetSkill(SkillSlot.Secondary).baseRechargeInterval) //If bow is not mid cooldown, allow for extreme slowfall
                             {
@@ -210,6 +213,9 @@ namespace HenryMod
                         }
                         else if (self.inputBank.jump.down && self.characterMotor.velocity.y < 0f && !self.characterMotor.isGrounded)
                         {
+                            enteredParaglider = true;
+                            playedFall = false;
+                            animator.Play("Glide", 2);
                             self.characterMotor.velocity = new Vector3(self.characterMotor.velocity.x, -3f, self.characterMotor.velocity.z);
                             if (self.inputBank.skill2.down)
                             {
@@ -243,8 +249,8 @@ namespace HenryMod
                             {                                
                                 characterBody.inventory.GiveItem(ItemCatalog.FindItemIndex("ExtraLife"), 1);
                                 Util.PlaySound("MiphasGraceUse", characterBody.gameObject);
-                                stopwatch = 0.25f;
-//                                resed = true;                                
+                                skillLocator.GetSkill(SkillSlot.Special).DeductStock(1);
+                                resed = true;                                
                             }
                         }                        
                     }

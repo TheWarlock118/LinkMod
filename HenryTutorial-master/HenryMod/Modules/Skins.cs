@@ -68,5 +68,38 @@ namespace HenryMod.Modules
             internal SkinDef.MinionSkinReplacement[] MinionSkinReplacements;
             internal string Name;
         }
+
+        /// <summary>
+        /// pass in strings for mesh assets in your bundle. pass the same amount and order based on your rendererinfos, filling with null as needed
+        /// <code>
+        /// myskindef.meshReplacements = Modules.Skins.getMeshReplacements(defaultRenderers,
+        ///    "meshHenrySword",
+        ///    null,
+        ///    "meshHenry");
+        /// </code>
+        /// </summary>
+        /// <param name="defaultRendererInfos">your skindef's rendererinfos to access the renderers</param>
+        /// <param name="meshes">name of the mesh assets in your project</param>
+        /// <returns></returns>
+        internal static SkinDef.MeshReplacement[] getMeshReplacements(CharacterModel.RendererInfo[] defaultRendererInfos, params string[] meshes)
+        {
+
+            List<SkinDef.MeshReplacement> meshReplacements = new List<SkinDef.MeshReplacement>();
+
+            for (int i = 0; i < defaultRendererInfos.Length; i++)
+            {
+                if (string.IsNullOrEmpty(meshes[i]))
+                    continue;
+
+                meshReplacements.Add(
+                new SkinDef.MeshReplacement
+                {
+                    renderer = defaultRendererInfos[i].renderer,
+                    mesh = Assets.mainAssetBundle.LoadAsset<Mesh>(meshes[i])
+                });
+            }
+
+            return meshReplacements.ToArray();
+        }
     }
 }

@@ -42,17 +42,7 @@ namespace HenryMod.Modules.Survivors
         internal override CustomRendererInfo[] customRendererInfos { get; set; } = new CustomRendererInfo[] {
                 new CustomRendererInfo
                 {
-                    childName = "SwordModel",
-                    material = henryMat,
-                },
-                new CustomRendererInfo
-                {
-                    childName = "GunModel",
-                    material = henryMat,
-                },
-                new CustomRendererInfo
-                {
-                    childName = "Model",
+                    childName = "Root",
                     material = henryMat
                 }};
 
@@ -351,74 +341,34 @@ namespace HenryMod.Modules.Survivors
             ChildLocator childLocator = model.GetComponent<ChildLocator>();
 
             SkinnedMeshRenderer mainRenderer = characterModel.mainSkinnedMeshRenderer;            
-
+            
             CharacterModel.RendererInfo[] defaultRenderers = characterModel.baseRendererInfos;
 
             List<SkinDef> skins = new List<SkinDef>();
 
             #region DefaultSkin
-            SkinDef defaultSkin = Modules.Skins.CreateSkinDef(HenryPlugin.developerPrefix + "_HENRY_BODY_DEFAULT_SKIN_NAME",
-                Assets.mainAssetBundle.LoadAsset<Sprite>("texMainSkin"),
+            SkinDef defaultSkin = Modules.Skins.CreateSkinDef("Hylian Set",
+                Assets.mainAssetBundle.LoadAsset<Sprite>("Paraglider"),
                 defaultRenderers,
                 mainRenderer,
                 model);
-
-            defaultSkin.meshReplacements = new SkinDef.MeshReplacement[]
-            {
-                new SkinDef.MeshReplacement
-                {
-                    mesh = Modules.Assets.mainAssetBundle.LoadAsset<Mesh>("meshHenrySword"),
-                    renderer = defaultRenderers[0].renderer
-                },
-                new SkinDef.MeshReplacement
-                {
-                    mesh = Modules.Assets.mainAssetBundle.LoadAsset<Mesh>("meshHenryGun"),
-                    renderer = defaultRenderers[1].renderer
-                },
-                new SkinDef.MeshReplacement
-                {
-                    mesh = Modules.Assets.mainAssetBundle.LoadAsset<Mesh>("meshHenry"),
-                    renderer = defaultRenderers[instance.mainRendererIndex].renderer
-                }
-            };
 
             skins.Add(defaultSkin);
             #endregion
 
             #region MasterySkin
-            Material masteryMat = Modules.Assets.CreateMaterial("matHenryAlt");
-            CharacterModel.RendererInfo[] masteryRendererInfos = SkinRendererInfos(defaultRenderers, new Material[]
-            {
-                masteryMat,
-                masteryMat,
-                masteryMat,
-                masteryMat
-            });
-
-            SkinDef masterySkin = Modules.Skins.CreateSkinDef(HenryPlugin.developerPrefix + "_HENRY_BODY_MASTERY_SKIN_NAME",
-                Assets.mainAssetBundle.LoadAsset<Sprite>("texMasteryAchievement"),
-                masteryRendererInfos,
+            
+            SkinDef masterySkin = Modules.Skins.CreateSkinDef("Champion's Tunic",
+                Assets.mainAssetBundle.LoadAsset<Sprite>("Paraglider"),
+                defaultRenderers,
                 mainRenderer,
-                model,
-                masterySkinUnlockableDef);
+                model);
 
-            masterySkin.meshReplacements = new SkinDef.MeshReplacement[]
-            {
-                new SkinDef.MeshReplacement
-                {
-                    mesh = Modules.Assets.mainAssetBundle.LoadAsset<Mesh>("meshHenrySwordAlt"),
-                    renderer = defaultRenderers[0].renderer
-                },
-                new SkinDef.MeshReplacement
-                {
-                    mesh = Modules.Assets.mainAssetBundle.LoadAsset<Mesh>("meshHenryAlt"),
-                    renderer = defaultRenderers[instance.mainRendererIndex].renderer
-                }
-            };
+            masterySkin.meshReplacements = Modules.Skins.getMeshReplacements(defaultRenderers, "meshDante");
 
             skins.Add(masterySkin);
             #endregion
-
+            
             skinController.skins = skins.ToArray();
         }
 

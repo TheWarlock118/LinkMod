@@ -41,54 +41,7 @@ namespace HenryMod.SkillStates.BaseStates
 			PlayDeathAnimation();
 			if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "ROB_HENRY_BODY_SPECIAL_MIPHA_NAME")			
 				SummonMipha();
-			/*
-			if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "ROB_HENRY_BODY_SPECIAL_MIPHA_NAME")
-			{				
-				if (!(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
-				{
-					if (!characterBody.inventory.itemAcquisitionOrder.Contains(ItemCatalog.FindItemIndex("ExtraLife")))
-					{
-						characterBody.inventory.GiveItem(ItemCatalog.FindItemIndex("ExtraLife"), 1);
-						Util.PlaySound("MiphasGraceUse", characterBody.gameObject);
-
-						
-
-						// Both of these implementations cause death screen to play. Above may not be clean but it does seem necessary
-
-						/*
-						CharacterMaster characterMaster = characterBody.master;
-						characterMaster.RespawnExtraLife();
-						*/
-
-
-						/*
-						Vector3 vectorDeathFoot = characterMaster.deathFootPosition;
-						if (characterMaster.killedByUnsafeArea)
-                        {
-							vectorDeathFoot = (TeleportHelper.FindSafeTeleportDestination(characterMaster.deathFootPosition, characterMaster.bodyPrefab.GetComponent<CharacterBody>(), RoR2Application.rng) ?? characterMaster.deathFootPosition);
-                        }
-						characterMaster.Respawn(vectorDeathFoot, Quaternion.Euler(0f, UnityEngine.Random.Range(0f, 360f), 0f));
-						characterMaster.GetBody().AddTimedBuff(RoR2Content.Buffs.Immune, 3f);
-
-						if (characterMaster.bodyInstanceObject)
-                        {
-							foreach (EntityStateMachine entityStateMachine in characterMaster.bodyInstanceObject.GetComponents<EntityStateMachine>())
-                            {
-								entityStateMachine.initialStateType = entityStateMachine.mainStateType;
-                            }
-							EffectManager.SpawnEffect(Modules.Projectiles.miphaPrefab, new EffectData
-							{
-								origin = vectorDeathFoot,
-								rotation = characterMaster.bodyInstanceObject.transform.rotation
-
-							}, true);
-
-						}
-											
-					}
-				}
-			}
-			*/
+			
 		}
 
         public override void OnExit()
