@@ -8,12 +8,14 @@ namespace HenryMod.Modules
     {
         // armor buff gained during roll
         internal static BuffDef armorBuff;
+        internal static BuffDef darukBuff;
 
         internal static List<BuffDef> buffDefs = new List<BuffDef>();
 
         internal static void RegisterBuffs()
         {
             armorBuff = AddNewBuff("HenryArmorBuff", RoR2.LegacyResourcesAPI.Load<Sprite>("Textures/BuffIcons/texBuffGenericShield"), Color.white, false, false);
+            darukBuff = AddNewBuff("DarukBuff", RoR2.LegacyResourcesAPI.Load<Sprite>("Base/Common/texBuffGenericShield"), Color.white, false, false);
         }
 
         // simple helper method

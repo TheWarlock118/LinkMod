@@ -145,7 +145,7 @@ namespace HenryMod.Modules.Survivors
                 skillName = prefix + "_HENRY_BODY_SECONDARY_FASTBOW_NAME",
                 skillNameToken = prefix + "_HENRY_BODY_SECONDARY_FASTBOW_NAME",
                 skillDescriptionToken = prefix + "_HENRY_BODY_SECONDARY_FASTBOW_DESCRIPTION",
-                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("GreatEagleBow"),
+                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("FalconBow"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.ShootFast)),
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,
@@ -170,7 +170,7 @@ namespace HenryMod.Modules.Survivors
                 skillName = prefix + "_HENRY_BODY_SECONDARY_SHIELD_NAME",
                 skillNameToken = prefix + "_HENRY_BODY_SECONDARY_SHIELD_NAME",
                 skillDescriptionToken = prefix + "_HENRY_BODY_SECONDARY_SHIELD_DESCRIPTION",
-                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("GreatEagleBow"),
+                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("HylianShieldIcon"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.Shield)),
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,
@@ -397,8 +397,8 @@ namespace HenryMod.Modules.Survivors
             List<SkinDef> skins = new List<SkinDef>();
 
             #region DefaultSkin
-            SkinDef defaultSkin = Modules.Skins.CreateSkinDef("Hylian Set",
-                Assets.mainAssetBundle.LoadAsset<Sprite>("Paraglider"),
+            SkinDef defaultSkin = Modules.Skins.CreateSkinDef("Hylian Outfit",
+                Assets.mainAssetBundle.LoadAsset<Sprite>("HylianSkin"),
                 defaultRenderers,
                 mainRenderer,
                 model);
@@ -406,10 +406,49 @@ namespace HenryMod.Modules.Survivors
             skins.Add(defaultSkin);
             #endregion
 
-            #region MasterySkin
-            
+            #region RitoSkin            
+            SkinDef ritoSkin = Modules.Skins.CreateSkinDef("Snowquill Outfit",
+                Assets.mainAssetBundle.LoadAsset<Sprite>("RitoSkin"),
+                defaultRenderers,
+                mainRenderer,
+                model);
+
+            skins.Add(ritoSkin);
+            #endregion
+
+            #region GerudoSkin
+            SkinDef gerudoSkin = Modules.Skins.CreateSkinDef("Gerudo Outfit",
+                Assets.mainAssetBundle.LoadAsset<Sprite>("GerudoSkin"),
+                defaultRenderers,
+                mainRenderer,
+                model);
+
+            skins.Add(gerudoSkin);
+            #endregion
+
+            #region WildSkin
+            SkinDef wildSkin = Modules.Skins.CreateSkinDef("Wild Outfit",
+                Assets.mainAssetBundle.LoadAsset<Sprite>("WildSkin"),
+                defaultRenderers,
+                mainRenderer,
+                model);
+
+            skins.Add(wildSkin);
+            #endregion
+
+            #region DarkSkin            
+            SkinDef darkSkin = Modules.Skins.CreateSkinDef("Dark Link",
+                Assets.mainAssetBundle.LoadAsset<Sprite>("DarkSkin"),
+                defaultRenderers,
+                mainRenderer,
+                model);            
+
+            skins.Add(darkSkin);
+            #endregion
+
+            #region MasterySkin            
             SkinDef masterySkin = Modules.Skins.CreateSkinDef("Champion's Tunic",
-                Assets.mainAssetBundle.LoadAsset<Sprite>("Paraglider"),
+                Assets.mainAssetBundle.LoadAsset<Sprite>("MasterySkin"),
                 defaultRenderers,
                 mainRenderer,
                 model);
@@ -418,7 +457,9 @@ namespace HenryMod.Modules.Survivors
 
             skins.Add(masterySkin);
             #endregion
+
             
+
             skinController.skins = skins.ToArray();
         }
 

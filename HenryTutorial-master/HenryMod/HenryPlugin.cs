@@ -48,6 +48,7 @@ namespace HenryMod
         private bool darukOnCooldown = false;
         private bool enteredParaglider = false;
         private bool playedFall = false;
+        private bool blockDaruk = false;
                 
 
         
@@ -96,8 +97,8 @@ namespace HenryMod
             Log.Init(Logger);
             orig(self);
             SkillLocator skillLocator = self.GetComponent<SkillLocator>();
-            //Mipha's Grace Functionality - Remove Consumed Dio's, Start Cooldown on Res
 
+            #region MiphaGraceRemoveDioCooldown
             if (skillLocator)
             {
                 if (skillLocator.GetSkill(SkillSlot.Special) != null)
@@ -117,7 +118,7 @@ namespace HenryMod
                     }
                 }
             }
-
+            #endregion
 
             #region ChampionReady
 
@@ -184,10 +185,7 @@ namespace HenryMod
 
             #endregion
 
-
-            //Paraglider & Slow-Bow Functionality
-            
-
+            #region ParagliderSlow-Bow
             if (self.inputBank)
             {
                 if (skillLocator && skillLocator.GetSkill(SkillSlot.Special) != null)
@@ -225,8 +223,12 @@ namespace HenryMod
                     }
                 }
             }
-            
+            #endregion
 
+            if (self.HasBuff(HenryMod.Modules.Buffs.darukBuff))
+            {
+                self.healthComponent.AddBarrier(1f);
+            }
         }
 
         private void HealthComponent_TakeDamage(On.RoR2.HealthComponent.orig_TakeDamage orig, HealthComponent self, DamageInfo damageInfo)
@@ -234,33 +236,73 @@ namespace HenryMod
 
             //Mipha's Grace Functionality - On death, if using Mipha's Grace and no dio's, add dio to inventory and set res to true
             Log.Init(Logger);
-            orig(self, damageInfo);            
-                        
             if (self)
             {
-                CharacterBody characterBody = self.GetComponent<CharacterBody>();                
-                SkillLocator skillLocator = characterBody.GetComponent<SkillLocator>();                
+                CharacterBody characterBody = self.GetComponent<CharacterBody>();
+                SkillLocator skillLocator = characterBody.GetComponent<SkillLocator>();
+
                 if (skillLocator && characterBody && skillLocator.GetSkill(SkillSlot.Special) != null)
-                {                    
+                {
                     if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "ROB_HENRY_BODY_SPECIAL_MIPHA_NAME")
                     {
-                        if (!(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f)) {
+                        if (!(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
+                        {
                             if (!characterBody.healthComponent.alive && !characterBody.inventory.itemAcquisitionOrder.Contains(ItemCatalog.FindItemIndex("ExtraLife")))
-                            {                                
+                            {
                                 characterBody.inventory.GiveItem(ItemCatalog.FindItemIndex("ExtraLife"), 1);
                                 Util.PlaySound("MiphasGraceUse", characterBody.gameObject);
                                 skillLocator.GetSkill(SkillSlot.Special).DeductStock(1);
-                                resed = true;                                
+                                resed = true;
                             }
+                        }
+                    }
+                    if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "ROB_HENRY_BODY_SPECIAL_DARUK_NAME")
+                    {
+                        if (characterBody.HasBuff(HenryMod.Modules.Buffs.darukBuff))
+                        {
+                            blockDaruk = true;
+                            
                         }                        
                     }
-                    
                 }
-                
+                if (!blockDaruk)
+                {
+                    orig(self, damageInfo);
+                }
+                else
+                {
+                    blockDaruk = false;
+                    characterBody.RemoveBuff(HenryMod.Modules.Buffs.darukBuff);
+                    characterBody.AddTimedBuff(RoR2Content.Buffs.Immune, 3f);
+                    characterBody.healthComponent.barrier = 0f;
+                    skillLocator.GetSkill(SkillSlot.Special).AddOneStock();
+                    skillLocator.GetSkill(SkillSlot.Special).DeductStock(1);
+                    SummonDaruk(characterBody);
+                }
+
             }    
             
         }
-        
+
+        public void SummonDaruk(CharacterBody body)
+        {
+            Ray aimRay = new Ray
+            {
+                direction = body.inputBank.aimDirection,
+                origin = body.inputBank.aimOrigin
+            };    
+            ProjectileManager.instance.FireProjectile(Modules.Projectiles.darukPrefab,
+                aimRay.origin,
+                Util.QuaternionSafeLookRotation(aimRay.direction),
+                body.gameObject,
+                0f,
+                0f,
+                false,
+                DamageColorIndex.Default,
+                null,
+                0f);
+        }
+
         // Deprecated - Left for Animator getting 
         private void PlayDeathAnimation(CharacterBody body)
         {

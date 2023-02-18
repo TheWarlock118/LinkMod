@@ -24,38 +24,22 @@ namespace HenryMod.SkillStates
             this.duration = DaruksProtection.baseDuration;
             this.fireTime = 0.35f;
             this.animator = base.GetModelAnimator();            
-            base.PlayAnimation("Gesture, Override", "ThrowBomb", "ThrowBomb.playbackRate", this.fireTime);            
+            base.PlayAnimation("Gesture, Override", "ThrowBomb", "ThrowBomb.playbackRate", this.fireTime);
+            characterBody.AddBuff(HenryMod.Modules.Buffs.darukBuff);
+            characterBody.healthComponent.AddBarrier(1f);
         }
 
         public override void OnExit()
         {           
-            base.OnExit();
-            characterBody.healthComponent.barrier = 0f;
-            SummonDaruk();
+            base.OnExit();            
         }
 
         public override void FixedUpdate()
         {
-            base.FixedUpdate();            
-            if (base.inputBank.skill4.down)
-            {
-                characterBody.AddTimedBuff(RoR2Content.Buffs.Immune, 0.1f);
-                characterBody.AddTimedBuff(RoR2Content.Buffs.Slow80, 0.1f);
-                characterBody.healthComponent.AddBarrier(100f);
-            }
-            else
-            {
-                this.outer.SetNextStateToMain();
-                return;
-            }
-            if ((base.inputBank.skill1.down || base.inputBank.skill2.down || base.inputBank.skill3.down))
-            {
-                this.outer.SetNextStateToMain();
-                return;
-            }
+            this.outer.SetNextStateToMain();
         }
 
-        private void SummonDaruk()
+        public void SummonDaruk()
         {
             if (base.isAuthority)
             {

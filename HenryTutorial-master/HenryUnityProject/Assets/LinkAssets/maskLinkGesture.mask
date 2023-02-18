@@ -1,0 +1,319 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: maskLinkGesture
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: anim_Clip1_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip2_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip3_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip4_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip5_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip6_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip7_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip8_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip9_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip10_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip11_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip12_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip13_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip14_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip15_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip16_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip17_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip18_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip19_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip20_Relocator
+    m_Weight: 1
+  - m_Path: anim_Clip21_Relocator
+    m_Weight: 1
+  - m_Path: Belt_A_Buckle__Mt_Belt_A
+    m_Weight: 1
+  - m_Path: Belt_C_Buckle__Mt_Belt_C
+    m_Weight: 1
+  - m_Path: Earring__Mt_Earring
+    m_Weight: 1
+  - m_Path: Eye_L__Mt_Eyeball_L
+    m_Weight: 1
+  - m_Path: Eye_R__Mt_Eyeball_R
+    m_Weight: 1
+  - m_Path: Eyelashes__Mt_Eyelashes
+    m_Weight: 1
+  - m_Path: Face__Mt_Face
+    m_Weight: 1
+  - m_Path: Face__Mt_Head
+    m_Weight: 1
+  - m_Path: Root
+    m_Weight: 1
+  - m_Path: Root/Skl_Root
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_1_Assist_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Elbow_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_Assist_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_A_1_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_A_1_L/Finger_A_2_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_A_1_L/Finger_A_2_L/Finger_A_3_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_B_1_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_B_1_L/Finger_B_2_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_B_1_L/Finger_B_2_L/Finger_B_3_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_C_1_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_C_1_L/Finger_C_2_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_C_1_L/Finger_C_2_L/Finger_C_3_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_D_1_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_D_1_L/Finger_D_2_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_D_1_L/Finger_D_2_L/Finger_D_3_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_E_1_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_E_1_L/Finger_E_2_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_E_1_L/Finger_E_2_L/Finger_E_3_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Weapon_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Clavicle_Assist_L
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_1_Assist_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Elbow_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_Assist_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_A_1_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_A_1_R/Finger_A_2_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_A_1_R/Finger_A_2_R/Finger_A_3_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_B_1_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_B_1_R/Finger_B_2_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_B_1_R/Finger_B_2_R/Finger_B_3_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_C_1_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_C_1_R/Finger_C_2_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_C_1_R/Finger_C_2_R/Finger_C_3_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_D_1_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_D_1_R/Finger_D_2_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_D_1_R/Finger_D_2_R/Finger_D_3_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_E_1_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_E_1_R/Finger_E_2_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_E_1_R/Finger_E_2_R/Finger_E_3_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Weapon_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Clavicle_Assist_R
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Ear_L
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Ear_R
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Cheek_D_L
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Cheek_D_R
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Cheek_U_L
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Cheek_U_R
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Chin
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Chin/Chin_Point
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Chin/Lip_D
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Chin/Lip_D_L_1
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Chin/Lip_D_R_1
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Chin/Teeth_D
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Eye_In_L
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Eye_In_R
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Eye_Out_L
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Eye_Out_R
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Eyeball_L
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Eyeball_R
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Eyebrow_In_L
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Eyebrow_In_R
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Eyebrow_Mid_L
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Eyebrow_Mid_R
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Eyebrow_Out_L
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Eyebrow_Out_R
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Eyelid_D_L
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Eyelid_D_R
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Eyelid_U_L
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Eyelid_U_R
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Lip_U
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Lip_U_L_1
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Lip_U_L_2
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Lip_U_R_1
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Lip_U_R_2
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Nose
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Face_Root/Teeth_U
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hair_Root
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hair_Root/Ponytail_A_1
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Pod_A
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Belt_A_1
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Belt_A_1/Belt_A_2
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Waist/Belt_A_1/Belt_A_2/Belt_A_3
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Waist/Belt_C_1
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Belt_C_2
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Belt_C_3
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Belt_C_4
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Belt_C_5
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Belt_C_6
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Belt_C_7
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Belt_C_7/Pod_B
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Belt_C_8
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Leg_1_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Waist/Leg_1_L/Knee_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Waist/Leg_1_L/Leg_2_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Waist/Leg_1_L/Leg_2_L/Ankle_Assist_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Waist/Leg_1_L/Leg_2_L/Ankle_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Waist/Leg_1_L/Leg_2_L/Ankle_L/Toe_L
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Waist/Leg_1_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Waist/Leg_1_R/Knee_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Waist/Leg_1_R/Leg_2_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Waist/Leg_1_R/Leg_2_R/Ankle_Assist_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Waist/Leg_1_R/Leg_2_R/Ankle_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Waist/Leg_1_R/Leg_2_R/Ankle_R/Toe_R
+    m_Weight: 0
+  - m_Path: Root/Skl_Root/Waist/Poach_A
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Pod_C
+    m_Weight: 1
+  - m_Path: Root/Weapon_Root
+    m_Weight: 1
+  - m_Path: Skin__Mt_Lower_Skin
+    m_Weight: 1
+  - m_Path: Skin__Mt_Underwear
+    m_Weight: 1
+  - m_Path: Skin__Mt_Upper_Skin
+    m_Weight: 1
