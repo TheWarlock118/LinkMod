@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 881585929
+CRC: 650608463
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 327932025d74ea7219dd3c2c612aeab4
+    Hash: bd2ca0125395296e8dc7f22a77a140da
   TypeTreeHash:
     serializedVersion: 2
     Hash: 972103ac939f0471d19a07f535135cc4
@@ -182,6 +182,7 @@ Assets:
 - Assets/HenryAssets/Icons/texMainSkin.png
 - Assets/HenryAssets/Icons/texBoxingGlovesIcon.png
 - Assets/HenryAssets/Materials/matVergil.mat
+- Assets/HenryAssets/Icons/texLinkIcon.png
 - Assets/HenryAssets/Materials/matHitboxPreview.mat
 - Assets/HenryAssets/Animations/IdleIn.anim
 - Assets/HenryAssets/VFX/Materials/matSwingShadow.mat

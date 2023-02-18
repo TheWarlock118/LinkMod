@@ -36,11 +36,12 @@ namespace HenryMod.SkillStates
                 characterMotor.Motor.ForceUnground();
                 characterMotor.ApplyForce(Vector3.up * 5000f * (this.characterBody.rigidbody.mass / 100f), false, false);
             }
+            base.PlayAnimation("Gesture, Override", "Glide");
         }
 
         private void Fire()
         {
-            characterBody.AddTimedBuff(RoR2Content.Buffs.Slow80, 0.1f);            
+            base.characterMotor.velocity = new Vector3(0f, 0f, 0f);
         }
 
         private void SummonRevali()
@@ -59,7 +60,7 @@ namespace HenryMod.SkillStates
                     DamageColorIndex.Default,
                     null,
                     0f);
-//                base.PlayAnimation("Base Layer", "RevaliGale");
+                base.PlayAnimation("Gesture, Override", "Crouch");
             }
             revaliSummoned = true;
         }

@@ -140,6 +140,56 @@ namespace HenryMod.Modules.Survivors
                 keywordTokens = new string[] { "KEYWORD_AGILE" }
             });
 
+            SkillDef shootFastSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
+            {
+                skillName = prefix + "_HENRY_BODY_SECONDARY_FASTBOW_NAME",
+                skillNameToken = prefix + "_HENRY_BODY_SECONDARY_FASTBOW_NAME",
+                skillDescriptionToken = prefix + "_HENRY_BODY_SECONDARY_FASTBOW_DESCRIPTION",
+                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("GreatEagleBow"),
+                activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.ShootFast)),
+                activationStateMachineName = "Slide",
+                baseMaxStock = 1,
+                baseRechargeInterval = 0.5f,
+                beginSkillCooldownOnSkillEnd = false,
+                canceledFromSprinting = false,
+                forceSprintDuringState = false,
+                fullRestockOnAssign = true,
+                interruptPriority = EntityStates.InterruptPriority.Skill,
+                resetCooldownTimerOnUse = true,
+                isCombatSkill = true,
+                mustKeyPress = false,
+                cancelSprintingOnActivation = false,
+                rechargeStock = 1,
+                requiredStock = 1,
+                stockToConsume = 1,
+                keywordTokens = new string[] { "KEYWORD_AGILE" }
+            });
+
+            SkillDef shieldSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
+            {
+                skillName = prefix + "_HENRY_BODY_SECONDARY_SHIELD_NAME",
+                skillNameToken = prefix + "_HENRY_BODY_SECONDARY_SHIELD_NAME",
+                skillDescriptionToken = prefix + "_HENRY_BODY_SECONDARY_SHIELD_DESCRIPTION",
+                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("GreatEagleBow"),
+                activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.Shield)),
+                activationStateMachineName = "Slide",
+                baseMaxStock = 1,
+                baseRechargeInterval = 10f,
+                beginSkillCooldownOnSkillEnd = true,
+                canceledFromSprinting = false,
+                forceSprintDuringState = false,
+                fullRestockOnAssign = true,
+                interruptPriority = EntityStates.InterruptPriority.Skill,
+                resetCooldownTimerOnUse = true,
+                isCombatSkill = true,
+                mustKeyPress = false,
+                cancelSprintingOnActivation = true,
+                rechargeStock = 1,
+                requiredStock = 1,
+                stockToConsume = 1,
+                keywordTokens = new string[] { "KEYWORD_AGILE" }
+            });
+
             SkillDef rollSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
             {
                 skillName = prefix + "_HENRY_BODY_SECONDARY_ROLL_NAME",
@@ -164,7 +214,7 @@ namespace HenryMod.Modules.Survivors
                 stockToConsume = 1,
                 keywordTokens = new string[] { "KEYWORD_AGILE" }
             });
-            SkillDef[] secondaries = { shootSkillDef, shootTriSkillDef};
+            SkillDef[] secondaries = { shootSkillDef, shootTriSkillDef, shootFastSkillDef, shieldSkillDef};
 
             Modules.Skills.AddSecondarySkills(bodyPrefab, secondaries);
             #endregion

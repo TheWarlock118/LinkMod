@@ -131,7 +131,7 @@ namespace HenryMod.SkillStates.BaseStates
 
         private void FireAttack()
         {
-            if (base.characterMotor.isGrounded)
+            if (!(base.inputBank.jump.down && base.characterMotor.velocity.y < 0f))
             {
                 if (!this.hasFired)
                 {

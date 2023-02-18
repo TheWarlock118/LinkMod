@@ -187,7 +187,7 @@ namespace HenryMod.Modules
 
         internal static Texture LoadCharacterIcon(string characterName)
         {
-            return mainAssetBundle.LoadAsset<Texture>("tex" + characterName + "Icon");
+            return mainAssetBundle.LoadAsset<Texture>("texLinkIcon");
         }
 
         internal static GameObject LoadCrosshair(string crosshairName)

@@ -50,6 +50,12 @@ namespace HenryMod.Modules
 
             LanguageAPI.Add(prefix + "SECONDARY_3BOW_NAME", "Great Eagle Bow");
             LanguageAPI.Add(prefix + "SECONDARY_3BOW_DESCRIPTION", Helpers.agilePrefix + $"Loose three arrows at once, each dealing <style=cIsDamage>{33f * StaticValues.bowDamageCoefficient}%damage</style>.");
+
+            LanguageAPI.Add(prefix + "SECONDARY_FASTBOW_NAME", "Falcon Bow");
+            LanguageAPI.Add(prefix + "SECONDARY_FASTBOW_DESCRIPTION", Helpers.agilePrefix + $"Loose a hasty arrow with <style=cIsDamage>{50f * StaticValues.bowDamageCoefficient}%damage</style>. The specially engineered bowstring allows for faster drawing and a short cooldown.");
+
+            LanguageAPI.Add(prefix + "SECONDARY_SHIELD_NAME", "Hylian Shield");
+            LanguageAPI.Add(prefix + "SECONDARY_SHIELD_DESCRIPTION", "A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it. Hold to block all damage for a short time. Can attack while blocking.");
             #endregion
 
             #region Utility

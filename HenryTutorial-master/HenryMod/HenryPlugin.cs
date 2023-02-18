@@ -203,7 +203,7 @@ namespace HenryMod
                                 playedFall = true;
                             }
                         }                        
-                        if (self.inputBank.skill2.down && self.characterMotor.velocity.y < 0f && (skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "ROB_HENRY_BODY_SECONDARY_BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "ROB_HENRY_BODY_SECONDARY_3BOW_NAME"))
+                        if (self.inputBank.skill2.down && self.characterMotor.velocity.y < 0f && (skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "ROB_HENRY_BODY_SECONDARY_BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "ROB_HENRY_BODY_SECONDARY_3BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "ROB_HENRY_BODY_SECONDARY_FASTBOW_NAME"))
                         {
                             if (skillLocator.GetSkill(SkillSlot.Secondary).cooldownRemaining == skillLocator.GetSkill(SkillSlot.Secondary).baseRechargeInterval) //If bow is not mid cooldown, allow for extreme slowfall
                             {
@@ -215,7 +215,7 @@ namespace HenryMod
                         {
                             enteredParaglider = true;
                             playedFall = false;
-                            animator.Play("Glide", 2);
+                            animator.CrossFadeInFixedTime("Glide", 0.01f, 2);
                             self.characterMotor.velocity = new Vector3(self.characterMotor.velocity.x, -3f, self.characterMotor.velocity.z);
                             if (self.inputBank.skill2.down)
                             {
