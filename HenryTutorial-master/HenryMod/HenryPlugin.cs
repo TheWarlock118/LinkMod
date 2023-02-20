@@ -276,7 +276,7 @@ namespace HenryMod
                     characterBody.AddTimedBuff(RoR2Content.Buffs.Immune, 3f);
                     characterBody.healthComponent.barrier = 0f;
                     skillLocator.GetSkill(SkillSlot.Special).AddOneStock();
-                    skillLocator.GetSkill(SkillSlot.Special).DeductStock(1);
+                    skillLocator.GetSkill(SkillSlot.Special).RemoveAllStocks();
                     SummonDaruk(characterBody);
                 }
 

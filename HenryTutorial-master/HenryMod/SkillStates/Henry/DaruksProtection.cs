@@ -24,7 +24,8 @@ namespace HenryMod.SkillStates
             this.duration = DaruksProtection.baseDuration;
             this.fireTime = 0.35f;
             this.animator = base.GetModelAnimator();            
-            base.PlayAnimation("Gesture, Override", "ThrowBomb", "ThrowBomb.playbackRate", this.fireTime);
+            base.PlayAnimation("Gesture, Override", "ShieldGuard", "ThrowBomb.playbackRate", this.fireTime);
+            base.PlayCrossfade("Gesture, Override", "ThrowBomb", "ThrowBomb.playbackRate", this.fireTime, this.fireTime);
             characterBody.AddBuff(HenryMod.Modules.Buffs.darukBuff);
             characterBody.healthComponent.AddBarrier(1f);
         }
