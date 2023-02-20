@@ -236,6 +236,7 @@ namespace HenryMod
 
             //Mipha's Grace Functionality - On death, if using Mipha's Grace and no dio's, add dio to inventory and set res to true
             Log.Init(Logger);
+            orig(self, damageInfo);
             if (self)
             {
                 CharacterBody characterBody = self.GetComponent<CharacterBody>();
@@ -264,12 +265,8 @@ namespace HenryMod
                             
                         }                        
                     }
-                }
-                if (!blockDaruk)
-                {
-                    orig(self, damageInfo);
-                }
-                else
+                }                
+                if (blockDaruk)
                 {
                     blockDaruk = false;
                     characterBody.RemoveBuff(HenryMod.Modules.Buffs.darukBuff);

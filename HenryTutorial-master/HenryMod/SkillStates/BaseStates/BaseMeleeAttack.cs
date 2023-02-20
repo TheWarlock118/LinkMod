@@ -16,7 +16,7 @@ namespace HenryMod.SkillStates.BaseStates
         protected string hitboxName = "Sword";
 
         protected DamageType damageType = DamageType.Generic;
-        protected float damageCoefficient = 3.5f;
+        protected float damageCoefficient = 5f;
         protected float procCoefficient = 1f;
         protected float pushForce = 0f;
         protected Vector3 bonusForce = Vector3.zero;
@@ -108,8 +108,7 @@ namespace HenryMod.SkillStates.BaseStates
 
         protected virtual void OnHitEnemyAuthority()
         {
-            Util.PlaySound(this.hitSoundString, base.gameObject);
-            Log.LogDebug("Entering OnHitEnemyAuthority");
+            Util.PlaySound(this.hitSoundString, base.gameObject);            
             if (!this.hasHopped)
             {
                 if (base.characterMotor && !base.characterMotor.isGrounded && this.hitHopVelocity > 0f)

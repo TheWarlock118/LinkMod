@@ -60,7 +60,8 @@ namespace HenryMod.Modules.Survivors
                 InitializeSkills();
                 InitializeSkins();
                 InitializeItemDisplays();
-                InitializeDoppelganger();                
+                InitializeDoppelganger();
+                InitializeHitboxes();
             }
         }        
 
