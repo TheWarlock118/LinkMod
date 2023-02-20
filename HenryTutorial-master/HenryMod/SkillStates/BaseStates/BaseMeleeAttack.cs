@@ -109,7 +109,7 @@ namespace HenryMod.SkillStates.BaseStates
         protected virtual void OnHitEnemyAuthority()
         {
             Util.PlaySound(this.hitSoundString, base.gameObject);
-
+            Log.LogDebug("Entering OnHitEnemyAuthority");
             if (!this.hasHopped)
             {
                 if (base.characterMotor && !base.characterMotor.isGrounded && this.hitHopVelocity > 0f)
@@ -136,6 +136,7 @@ namespace HenryMod.SkillStates.BaseStates
                 if (!this.hasFired)
                 {
                     this.hasFired = true;
+                    
                     Util.PlayAttackSpeedSound(this.swingSoundString, base.gameObject, this.attackSpeedStat);
                     if (this.characterBody.healthComponent.combinedHealth / this.characterBody.healthComponent.fullCombinedHealth >= .9f)
                     {
@@ -161,15 +162,15 @@ namespace HenryMod.SkillStates.BaseStates
                         this.PlaySwingEffect();
                         base.AddRecoil(-1f * this.attackRecoil, -2f * this.attackRecoil, -0.5f * this.attackRecoil, 0.5f * this.attackRecoil);
                     }
-                }
 
-                if (base.isAuthority)
-                {
-                    if (this.attack.Fire())
+                    if (base.isAuthority)
                     {
-                        this.OnHitEnemyAuthority();
+                        if (this.attack.Fire())
+                        {
+                            this.OnHitEnemyAuthority();
+                        }
                     }
-                }
+                }                
             }
         }
 

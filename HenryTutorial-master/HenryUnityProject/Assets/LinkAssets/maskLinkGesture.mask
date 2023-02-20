@@ -11,51 +11,37 @@ AvatarMask:
   m_Elements:
   - m_Path: 
     m_Weight: 1
-  - m_Path: anim_Clip1_Relocator
+  - m_Path: Arrow
     m_Weight: 1
-  - m_Path: anim_Clip2_Relocator
+  - m_Path: Arrow/arrowRoot
     m_Weight: 1
-  - m_Path: anim_Clip3_Relocator
+  - m_Path: Arrow/arrowRoot/Weapon_Arrow_001
     m_Weight: 1
-  - m_Path: anim_Clip4_Relocator
-    m_Weight: 1
-  - m_Path: anim_Clip5_Relocator
-    m_Weight: 1
-  - m_Path: anim_Clip6_Relocator
-    m_Weight: 1
-  - m_Path: anim_Clip7_Relocator
-    m_Weight: 1
-  - m_Path: anim_Clip8_Relocator
-    m_Weight: 1
-  - m_Path: anim_Clip9_Relocator
-    m_Weight: 1
-  - m_Path: anim_Clip10_Relocator
-    m_Weight: 1
-  - m_Path: anim_Clip11_Relocator
-    m_Weight: 1
-  - m_Path: anim_Clip12_Relocator
-    m_Weight: 1
-  - m_Path: anim_Clip13_Relocator
-    m_Weight: 1
-  - m_Path: anim_Clip14_Relocator
-    m_Weight: 1
-  - m_Path: anim_Clip15_Relocator
-    m_Weight: 1
-  - m_Path: anim_Clip16_Relocator
-    m_Weight: 1
-  - m_Path: anim_Clip17_Relocator
-    m_Weight: 1
-  - m_Path: anim_Clip18_Relocator
-    m_Weight: 1
-  - m_Path: anim_Clip19_Relocator
-    m_Weight: 1
-  - m_Path: anim_Clip20_Relocator
-    m_Weight: 1
-  - m_Path: anim_Clip21_Relocator
+  - m_Path: Arrow/Weapon_Arrow_001__Mt_Arrow_001
     m_Weight: 1
   - m_Path: Belt_A_Buckle__Mt_Belt_A
     m_Weight: 1
+  - m_Path: Belt_A_Buckle__Mt_Belt_A_001
+    m_Weight: 1
+  - m_Path: Belt_B_001_Buckle__Mt_Belt_B_001
+    m_Weight: 1
   - m_Path: Belt_C_Buckle__Mt_Belt_C
+    m_Weight: 1
+  - m_Path: Belt_C_Buckle__Mt_Belt_C_001
+    m_Weight: 1
+  - m_Path: Beltmini_001__Mt_Upper_Belt_001
+    m_Weight: 1
+  - m_Path: Bomb
+    m_Weight: 1
+  - m_Path: Bomb/bombRoot
+    m_Weight: 1
+  - m_Path: Bomb/Root__Mt_Body
+    m_Weight: 1
+  - m_Path: Bomb/Root__Mt_Grip
+    m_Weight: 1
+  - m_Path: Boots_001__Mt_Lower_001
+    m_Weight: 1
+  - m_Path: Chain_001__Mt_Upper_kusari_001
     m_Weight: 1
   - m_Path: Earring__Mt_Earring
     m_Weight: 1
@@ -69,9 +55,97 @@ AvatarMask:
     m_Weight: 1
   - m_Path: Face__Mt_Head
     m_Weight: 1
+  - m_Path: Glider
+    m_Weight: 1
+  - m_Path: Glider/Item_Parastole2__Mt_Parastole
+    m_Weight: 1
+  - m_Path: Glider/parasoleJoint
+    m_Weight: 1
+  - m_Path: Hair_A_001_A__Mt_Hair_001
+    m_Weight: 1
+  - m_Path: Hood_A_001_Metal__Mt_Hood_001
+    m_Weight: 1
+  - m_Path: Metal_001__Mt_Upper_001
+    m_Weight: 1
+  - m_Path: Model__Mt_Bow_036
+    m_Weight: 1
+  - m_Path: Relocators
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip1_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip2_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip3_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip4_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip5_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip6_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip7_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip8_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip9_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip10_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip11_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip12_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip13_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip14_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip15_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip16_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip17_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip18_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip19_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip20_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip21_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip22_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip23_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip24_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip25_Relocator
+    m_Weight: 1
+  - m_Path: Relocators/anim_Clip26_Relocator
+    m_Weight: 1
   - m_Path: Root
     m_Weight: 1
+  - m_Path: Root/Bow_Root
+    m_Weight: 1
+  - m_Path: Root/Bow_Root/Bow_L_1
+    m_Weight: 1
+  - m_Path: Root/Bow_Root/Bow_L_1/Bow_L_2
+    m_Weight: 1
+  - m_Path: Root/Bow_Root/Bow_L_1/Bow_L_2/String_L_1
+    m_Weight: 1
+  - m_Path: Root/Bow_Root/Bow_L_1/Bow_L_2/String_L_1/String_L_2
+    m_Weight: 1
+  - m_Path: Root/Bow_Root/Bow_R_1
+    m_Weight: 1
+  - m_Path: Root/Bow_Root/Bow_R_1/Bow_R_2
+    m_Weight: 1
+  - m_Path: Root/Bow_Root/Bow_R_1/Bow_R_2/String_R_1
+    m_Weight: 1
+  - m_Path: Root/Bow_Root/Bow_R_1/Bow_R_2/String_R_1/String_R_2
+    m_Weight: 1
   - m_Path: Root/Skl_Root
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Cloth
     m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1
     m_Weight: 1
@@ -82,47 +156,49 @@ AvatarMask:
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L
     m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_1_Assist_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Elbow_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_Assist_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_A_1_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_A_1_L/Finger_A_2_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_A_1_L/Finger_A_2_L/Finger_A_3_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_B_1_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_B_1_L/Finger_B_2_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_B_1_L/Finger_B_2_L/Finger_B_3_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_C_1_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_C_1_L/Finger_C_2_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_C_1_L/Finger_C_2_L/Finger_C_3_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_D_1_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_D_1_L/Finger_D_2_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_D_1_L/Finger_D_2_L/Finger_D_3_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_E_1_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_E_1_L/Finger_E_2_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Finger_E_1_L/Finger_E_2_L/Finger_E_3_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Arm_2_L/Wrist_L/Weapon_L
-    m_Weight: 0
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Arm_1_L/Shoulderpad_L_Armor
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_L/Clavicle_Assist_L
     m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R
@@ -130,48 +206,72 @@ AvatarMask:
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R
     m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_1_Assist_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Elbow_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_Assist_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_A_1_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_A_1_R/Finger_A_2_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_A_1_R/Finger_A_2_R/Finger_A_3_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_B_1_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_B_1_R/Finger_B_2_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_B_1_R/Finger_B_2_R/Finger_B_3_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_C_1_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_C_1_R/Finger_C_2_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_C_1_R/Finger_C_2_R/Finger_C_3_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_D_1_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_D_1_R/Finger_D_2_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_D_1_R/Finger_D_2_R/Finger_D_3_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_E_1_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_E_1_R/Finger_E_2_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Finger_E_1_R/Finger_E_2_R/Finger_E_3_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Arm_1_R/Arm_2_R/Wrist_R/Weapon_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Clavicle_R/Clavicle_Assist_R
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Mant_1_BC_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Mant_1_BC_Armor/Mant_2_BC_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Mant_1_BC_Armor/Mant_2_BC_Armor/Mant_3_BC_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Mant_1_BC_Armor/Mant_2_BC_Armor/Mant_3_BC_Armor/Mant_4_BC_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Mant_1_BL_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Mant_1_BL_Armor/Mant_2_BL_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Mant_1_BL_Armor/Mant_2_BL_Armor/Mant_3_BL_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Mant_1_BL_Armor/Mant_2_BL_Armor/Mant_3_BL_Armor/Mant_4_BL_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Mant_1_BR_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Mant_1_BR_Armor/Mant_2_BR_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Mant_1_BR_Armor/Mant_2_BR_Armor/Mant_3_BR_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Mant_1_BR_Armor/Mant_2_BR_Armor/Mant_3_BR_Armor/Mant_4_BR_Armor
     m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck
     m_Weight: 1
@@ -253,6 +353,42 @@ AvatarMask:
     m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hair_Root/Ponytail_A_1
     m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hair_Root_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hair_Root_Armor/Hair_A_1_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hair_Root_Armor/Hair_A_1_Armor/Hair_A_2_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hair_Root_Armor/Hair_B_1_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hair_Root_Armor/Hair_B_1_Armor/Hair_B_2_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hair_Root_Armor/Momi_A_1_L_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hair_Root_Armor/Momi_A_1_L_Armor/Momi_A_2_L_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hair_Root_Armor/Momi_A_1_L_Armor/Momi_A_2_L_Armor/Momi_A_3_L_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hair_Root_Armor/Momi_A_1_R_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hair_Root_Armor/Momi_A_1_R_Armor/Momi_A_2_R_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hair_Root_Armor/Momi_A_1_R_Armor/Momi_A_2_R_Armor/Momi_A_3_R_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hood_1_B_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hood_1_B_Armor/Hood_2_B_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hood_1_FC_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hood_1_FL_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hood_1_FR_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hood_2_FL_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Spine_1/Spine_2/Neck/Head/Hood_2_FR_Armor
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Spine_1/Spine_2/Pod_A
     m_Weight: 1
   - m_Path: Root/Skl_Root/Waist
@@ -260,9 +396,9 @@ AvatarMask:
   - m_Path: Root/Skl_Root/Waist/Belt_A_1
     m_Weight: 1
   - m_Path: Root/Skl_Root/Waist/Belt_A_1/Belt_A_2
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Waist/Belt_A_1/Belt_A_2/Belt_A_3
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Waist/Belt_C_1
     m_Weight: 1
   - m_Path: Root/Skl_Root/Waist/Belt_C_2
@@ -282,38 +418,90 @@ AvatarMask:
   - m_Path: Root/Skl_Root/Waist/Belt_C_8
     m_Weight: 1
   - m_Path: Root/Skl_Root/Waist/Leg_1_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Waist/Leg_1_L/Knee_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Waist/Leg_1_L/Leg_2_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Waist/Leg_1_L/Leg_2_L/Ankle_Assist_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Waist/Leg_1_L/Leg_2_L/Ankle_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Waist/Leg_1_L/Leg_2_L/Ankle_L/Toe_L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Waist/Leg_1_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Waist/Leg_1_R/Knee_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Waist/Leg_1_R/Leg_2_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Waist/Leg_1_R/Leg_2_R/Ankle_Assist_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Waist/Leg_1_R/Leg_2_R/Ankle_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Waist/Leg_1_R/Leg_2_R/Ankle_R/Toe_R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Root/Skl_Root/Waist/Poach_A
     m_Weight: 1
   - m_Path: Root/Skl_Root/Waist/Pod_C
     m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Skirt_1_BC_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Skirt_1_BC_Armor/Skirt_2_BC_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Skirt_1_BC_Armor/Skirt_2_BC_Armor/Skirt_3_BC_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Skirt_1_BL_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Skirt_1_BL_Armor/Skirt_2_BL_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Skirt_1_BL_Armor/Skirt_2_BL_Armor/Skirt_3_BL_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Skirt_1_BR_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Skirt_1_BR_Armor/Skirt_2_BR_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Skirt_1_BR_Armor/Skirt_2_BR_Armor/Skirt_3_BR_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Skirt_1_FC_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Skirt_1_FC_Armor/Skirt_2_FC_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Skirt_1_FC_Armor/Skirt_2_FC_Armor/Skirt_3_FC_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Skirt_1_FL_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Skirt_1_FL_Armor/Skirt_2_FL_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Skirt_1_FL_Armor/Skirt_2_FL_Armor/Skirt_3_FL_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Skirt_1_FR_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Skirt_1_FR_Armor/Skirt_2_FR_Armor
+    m_Weight: 1
+  - m_Path: Root/Skl_Root/Waist/Skirt_1_FR_Armor/Skirt_2_FR_Armor/Skirt_3_FR_Armor
+    m_Weight: 1
   - m_Path: Root/Weapon_Root
+    m_Weight: 1
+  - m_Path: Shield
+    m_Weight: 1
+  - m_Path: Shield/Root__Mt_Shield_030
+    m_Weight: 1
+  - m_Path: Shield/shieldRoot
+    m_Weight: 1
+  - m_Path: Skin_001__Mt_Upper_Skin
     m_Weight: 1
   - m_Path: Skin__Mt_Lower_Skin
     m_Weight: 1
   - m_Path: Skin__Mt_Underwear
     m_Weight: 1
   - m_Path: Skin__Mt_Upper_Skin
+    m_Weight: 1
+  - m_Path: Sword
+    m_Weight: 1
+  - m_Path: Sword/swordRoot
+    m_Weight: 1
+  - m_Path: Sword/Weapon_Sword_070__Mt_Sword_070
+    m_Weight: 1
+  - m_Path: Sword/Weapon_Sword_070_Blade__Mt_Sword_070_Blade
     m_Weight: 1

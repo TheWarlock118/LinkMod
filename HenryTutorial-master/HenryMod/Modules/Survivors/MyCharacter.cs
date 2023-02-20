@@ -3092,11 +3092,7 @@ localScale = new Vector3(0.1233F, 0.1233F, 0.1233F),
 
         public void Update()
         {
-            CharacterBody characterBody = PlayerCharacterMasterController.instances[0].master.GetBodyObject().GetComponent<CharacterBody>();
-            if(!characterBody.healthComponent.alive && !characterBody.inventory.itemAcquisitionOrder.Contains(ItemCatalog.FindItemIndex("ExtraLife")))
-            {
-                characterBody.inventory.GiveItem(ItemCatalog.FindItemIndex("ExtraLife"), 1);
-            }
+
         }
 
         private static CharacterModel.RendererInfo[] SkinRendererInfos(CharacterModel.RendererInfo[] defaultRenderers, Material[] materials)
