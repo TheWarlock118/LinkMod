@@ -26,6 +26,7 @@ namespace HenryMod.SkillStates
             this.animator = base.GetModelAnimator();            
             base.PlayAnimation("Gesture, Override", "ShieldGuard", "ThrowBomb.playbackRate", this.fireTime);
             base.PlayCrossfade("Gesture, Override", "ThrowBomb", "ThrowBomb.playbackRate", this.fireTime, this.fireTime);
+            Util.PlaySound("ShieldGuardUp", base.gameObject);
             characterBody.AddBuff(HenryMod.Modules.Buffs.darukBuff);
             characterBody.healthComponent.AddBarrier(1f);
         }

@@ -49,6 +49,11 @@ namespace HenryMod
         private bool enteredParaglider = false;
         private bool playedFall = false;
         private bool blockDaruk = false;
+        private bool playedParaEquipSound = false;
+        private bool playedParaUnEquipSound = false;
+        private bool enteredSlowMo = false;
+        private float SlowMotionStopwatch = 0f;
+        private float DarukSoundStopwatch = 0f;
                 
 
         
@@ -185,7 +190,13 @@ namespace HenryMod
 
             #endregion
 
+
             #region ParagliderSlow-Bow
+
+            string[] paraEquipSounds = { "Pl_Parashawl_Equip00", "Pl_Parashawl_Equip02", "Pl_Parashawl_Equip04" };
+            string[] paraGlideSounds = { "Pl_Parashawl_FlapFast00", "Pl_Parashawl_FlapFast01"};
+            string[] paraUnEquipSounds = { "Pl_Parashawl_UnEquip00", "Pl_Parashawl_UnEquip03", "Pl_Parashawl_UnEquip04" };
+
             if (self.inputBank)
             {
                 if (skillLocator && skillLocator.GetSkill(SkillSlot.Special) != null)
@@ -197,24 +208,63 @@ namespace HenryMod
                         {
                             if (!playedFall)
                             {
+                                
                                 animator.Play("Fall", 2);
                                 playedFall = true;
+                                playedParaEquipSound = false;
+
+                                if (!playedParaUnEquipSound)
+                                {
+                                    Util.PlaySound(paraUnEquipSounds[Random.Range(0, 2)], base.gameObject);
+                                    playedParaUnEquipSound = true;
+                                }
                             }
-                        }                        
+                        }
+                        if(enteredSlowMo && (!self.inputBank.skill2.down || self.characterMotor.velocity.y >= 0f))
+                        {
+                            enteredSlowMo = false;
+                        }
                         if (self.inputBank.skill2.down && self.characterMotor.velocity.y < 0f && (skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "ROB_HENRY_BODY_SECONDARY_BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "ROB_HENRY_BODY_SECONDARY_3BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "ROB_HENRY_BODY_SECONDARY_FASTBOW_NAME"))
                         {
                             if (skillLocator.GetSkill(SkillSlot.Secondary).cooldownRemaining == skillLocator.GetSkill(SkillSlot.Secondary).baseRechargeInterval) //If bow is not mid cooldown, allow for extreme slowfall
                             {
                                 self.characterMotor.velocity = new Vector3(0f, 0f, 0f);
                             }
-
+                            if (!enteredSlowMo)
+                            {
+                                Util.PlaySound("SlowMotionEnter", self.gameObject);
+                                enteredSlowMo = true;
+                            }
+                            if(SlowMotionStopwatch <= 0f)
+                            {
+                                Util.PlaySound("SlowMotionLoop", self.gameObject);
+                                SlowMotionStopwatch = 2f;
+                            }
+                            else
+                            {
+                                SlowMotionStopwatch -= Time.fixedDeltaTime;
+                            }
+                            
                         }
                         else if (self.inputBank.jump.down && self.characterMotor.velocity.y < 0f && !self.characterMotor.isGrounded)
                         {
                             enteredParaglider = true;
                             playedFall = false;
+
+
                             animator.CrossFadeInFixedTime("Glide", 0.01f, 2);
-                            self.characterMotor.velocity = new Vector3(self.characterMotor.velocity.x, -3f, self.characterMotor.velocity.z);
+
+                            // Util.PlaySound(paraGlideSounds[Random.Range(0, 1)], base.gameObject);
+
+                            playedParaUnEquipSound = false;
+                            
+                            if (!playedParaEquipSound)
+                            {
+                                Util.PlaySound(paraEquipSounds[Random.Range(0, 2)], base.gameObject);
+                                playedParaEquipSound = true;
+                            }
+
+                            self.characterMotor.velocity = new Vector3(self.characterMotor.velocity.x, -1f, self.characterMotor.velocity.z);
                             if (self.inputBank.skill2.down)
                             {
                                 self.characterMotor.velocity = new Vector3(self.characterMotor.velocity.x, 0f, self.characterMotor.velocity.z);
@@ -228,6 +278,16 @@ namespace HenryMod
             if (self.HasBuff(HenryMod.Modules.Buffs.darukBuff))
             {
                 self.healthComponent.AddBarrier(1f);
+                if(DarukSoundStopwatch <= 0f)
+                {
+                    Util.PlaySound("Daruk_Shield_Loop", base.gameObject);
+                    DarukSoundStopwatch = 3f;
+                }
+                else
+                {
+                    DarukSoundStopwatch -= Time.fixedDeltaTime;
+                }
+
             }
         }
 
@@ -275,6 +335,8 @@ namespace HenryMod
                     skillLocator.GetSkill(SkillSlot.Special).AddOneStock();
                     skillLocator.GetSkill(SkillSlot.Special).RemoveAllStocks();
                     SummonDaruk(characterBody);
+                    Util.PlaySound("Daruk_Shield_Break", self.gameObject);
+                    Util.PlaySound("Daruk_Yell", self.gameObject);
                 }
 
             }    

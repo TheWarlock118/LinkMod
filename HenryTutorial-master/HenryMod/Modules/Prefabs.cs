@@ -464,7 +464,7 @@ internal class BodyInfo
 
     internal int jumpCount = 1;
 
-    internal Color bodyColor = Color.grey;
+    internal Color bodyColor = Color.green;
 
     internal Vector3 aimOriginPosition = new Vector3(0f, 1.8f, 0f);
     internal Vector3 modelBasePosition = new Vector3(0f, -0.92f, 0f);

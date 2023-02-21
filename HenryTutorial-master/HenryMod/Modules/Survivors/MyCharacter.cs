@@ -24,7 +24,7 @@ namespace HenryMod.Modules.Survivors
             armorGrowth = 0f,
             bodyName = "HenryBody",
             bodyNameToken = HenryPlugin.developerPrefix + "_HENRY_BODY_NAME",
-            bodyColor = Color.grey,
+            bodyColor = Color.green,
             characterPortrait = Modules.Assets.LoadCharacterIcon("Henry"),
             crosshair = Modules.Assets.LoadCrosshair("Standard"),
             damage = 12f,
@@ -377,7 +377,7 @@ namespace HenryMod.Modules.Survivors
             passSkillLocator.passiveSkill.enabled = true;
             passSkillLocator.passiveSkill.skillNameToken = prefix + "_HENRY_BODY_PASSIVE_NAME";
             passSkillLocator.passiveSkill.skillDescriptionToken = prefix + "_HENRY_BODY_PASSIVE_DESCRIPTION";
-            passSkillLocator.passiveSkill.icon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("Paraglider");
+            passSkillLocator.passiveSkill.icon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("Paraglider");            
         }
 
 

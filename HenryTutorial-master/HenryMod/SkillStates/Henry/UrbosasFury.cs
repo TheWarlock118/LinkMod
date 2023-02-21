@@ -19,48 +19,72 @@ namespace HenryMod.SkillStates
         
         private float duration;
         private float fireTime;
+        private bool playedReadySound;
+        private bool shouldFire;
 
 
         public override void OnEnter()
         {
             base.OnEnter();
             this.duration = UrbosasFury.baseDuration;
-            this.fireTime = 0.5f;
-            SummonUrbosa();
+            this.fireTime = 1f;
+            this.shouldFire = false;
+            playedReadySound = false;
         }
 
         public override void OnExit()
         {
             base.OnExit();
+            if (shouldFire)
+            {
+                SummonUrbosa();
+                new BlastAttack
+                {
+                    attacker = base.characterBody.gameObject,
+                    baseDamage = base.characterBody.damage * 16f,
+                    baseForce = 50f,
+                    bonusForce = Vector3.zero,
+                    attackerFiltering = AttackerFiltering.NeverHitSelf,
+                    crit = base.characterBody.RollCrit(),
+                    damageColorIndex = DamageColorIndex.Item,
+                    damageType = DamageType.Generic,
+                    falloffModel = BlastAttack.FalloffModel.None,
+                    inflictor = base.gameObject,
+                    position = characterBody.corePosition,
+                    procChainMask = default(ProcChainMask),
+                    procCoefficient = 1f,
+                    radius = 200f,
+                    losType = BlastAttack.LoSType.NearestHit,
+                    teamIndex = base.characterBody.teamComponent.teamIndex
+                }.Fire();
+                EffectData effectData = new EffectData();
+                effectData.origin = base.characterBody.corePosition;
+                effectData.SetHurtBoxReference(base.characterBody.mainHurtBox);
+                EffectManager.SpawnEffect(FireMegaNova.novaEffectPrefab, effectData, true);
+
+                Util.PlaySound("Urbosa_Lightning", base.gameObject);
+                Util.PlaySound("Urbosa_Yell", base.gameObject);
+                Util.PlaySound(FireMegaNova.novaSoundString, base.gameObject);
+            }
+            else
+            {
+                SkillLocator skillLocator = characterBody.GetComponent<SkillLocator>();
+                skillLocator.GetSkill(SkillSlot.Special).RemoveAllStocks();
+                skillLocator.GetSkill(SkillSlot.Special).AddOneStock();
+                skillLocator.GetSkill(SkillSlot.Special).Reset();
+            }
         }
 
         private void Fire()
         {
-            new BlastAttack
+            if (!shouldFire)
+                shouldFire = true;
+            if (!playedReadySound)
             {
-                attacker = base.characterBody.gameObject,
-                baseDamage = base.characterBody.damage * 16f,
-                baseForce = 50f,
-                bonusForce = Vector3.zero,
-                attackerFiltering = AttackerFiltering.NeverHitSelf,
-                crit = base.characterBody.RollCrit(),
-                damageColorIndex = DamageColorIndex.Item,
-                damageType = DamageType.Generic,
-                falloffModel = BlastAttack.FalloffModel.None,
-                inflictor = base.gameObject,
-                position = characterBody.corePosition,
-                procChainMask = default(ProcChainMask),
-                procCoefficient = 1f,
-                radius = 200f,
-                losType = BlastAttack.LoSType.NearestHit,
-                teamIndex = base.characterBody.teamComponent.teamIndex
-            }.Fire();
-            EffectData effectData = new EffectData();
-            effectData.origin = base.characterBody.corePosition;
-            effectData.SetHurtBoxReference(base.characterBody.mainHurtBox);
-            EffectManager.SpawnEffect(FireMegaNova.novaEffectPrefab, effectData, true);
-
-            Util.PlaySound(FireMegaNova.novaSoundString, base.gameObject);
+                Util.PlaySound("Urbosa_Ready", base.gameObject);
+                Util.PlaySound("AbilityReady", base.gameObject);
+                playedReadySound = true;
+            }
         }
 
         public override void FixedUpdate()
@@ -69,12 +93,12 @@ namespace HenryMod.SkillStates
             if (base.fixedAge >= this.fireTime)
             {
                 this.Fire();
-            }
-            if (base.fixedAge >= this.duration && base.isAuthority)
+            }            
+            if (!base.inputBank.skill4.down)
             {
                 this.outer.SetNextStateToMain();
                 return;
-            }
+            }            
         }
 
         private void SummonUrbosa()

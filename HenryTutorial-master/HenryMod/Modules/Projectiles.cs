@@ -51,7 +51,7 @@ namespace HenryMod.Modules
             bombImpactExplosion.explosionEffect = Modules.Assets.bombExplosionEffect;
             bombImpactExplosion.explosionSoundString = "BombExplode";            
             bombImpactExplosion.timerAfterImpact = true;
-            bombImpactExplosion.lifetimeAfterImpact = 0.1f;            
+            bombImpactExplosion.lifetimeAfterImpact = 0.001f;            
 
             ProjectileController bombController = bombPrefab.GetComponent<ProjectileController>();
             if (Modules.Assets.mainAssetBundle.LoadAsset<GameObject>("LinkBombRound") != null) bombController.ghostPrefab = CreateGhostPrefab("LinkBombRound");

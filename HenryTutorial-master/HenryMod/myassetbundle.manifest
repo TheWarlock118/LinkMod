@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3481419518
+CRC: 1975983249
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b2f4a787fc9d9316570c29f262645aba
+    Hash: f609f9b808253b7cd299a0951bd48316
   TypeTreeHash:
     serializedVersion: 2
     Hash: 740584176fc78b859e604f8258f4482c
@@ -222,6 +222,7 @@ Assets:
 - Assets/HenryAssets/Mesh/meshHenrySword.mesh
 - Assets/HenryAssets/VFX/Materials/matEmbers.mat
 - Assets/HenryAssets/Animations/AimYaw.anim
+- Assets/LinkAssets/LinkBombRound.prefab
 - Assets/HenryAssets/HenryBombGhost.prefab
 - Assets/LinkAssets/Anims/animDaruk.controller
 - Assets/HenryAssets/Mesh/meshPistol.mesh
@@ -267,6 +268,7 @@ Assets:
 - Assets/HenryAssets/Textures/texHenryDanteEmission.png
 - Assets/HenryAssets/Animations/MenuIdleIn.anim
 - Assets/HenryAssets/VFX/ImpactHenryPunch.prefab
+- Assets/LinkAssets/HeroMats/BlueSeeThrough.mat
 - Assets/HenryAssets/Animations/Slash1.anim
 - Assets/HenryAssets/VFX/HenryBazookaExplosionEffect.prefab
 - Assets/HenryAssets/Animations/Roll.anim

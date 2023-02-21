@@ -56,7 +56,7 @@ namespace HenryMod.Modules.Survivors
 
                 displayPrefab = Modules.Prefabs.CreateDisplayPrefab("mdlLinkHylianDisplay", bodyPrefab, bodyInfo);
 
-                Modules.Prefabs.RegisterNewSurvivor(bodyPrefab, displayPrefab, Color.grey, bodyName.ToUpper(), characterUnlockableDef, sortPosition);                 
+                Modules.Prefabs.RegisterNewSurvivor(bodyPrefab, displayPrefab, Color.green, bodyName.ToUpper(), characterUnlockableDef, sortPosition);                 
                 InitializeSkills();
                 InitializeSkins();
                 InitializeItemDisplays();

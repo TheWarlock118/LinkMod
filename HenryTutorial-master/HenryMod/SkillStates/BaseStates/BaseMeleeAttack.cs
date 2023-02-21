@@ -31,9 +31,8 @@ namespace HenryMod.SkillStates.BaseStates
 
         private float projectileForce = 60f;
         private float projectileDamageCoef;
-
-        protected string swingSoundString = "SwordSwing";
-        protected string hitSoundString = "";
+        
+        protected string hitSoundString = "SwordOnHit";
         protected string muzzleString = "SwingCenter";
         protected GameObject swingEffectPrefab;
         protected GameObject hitEffectPrefab;
@@ -71,6 +70,7 @@ namespace HenryMod.SkillStates.BaseStates
             }
 
             this.PlayAttackAnimation();
+            this.PlayAttackSound();
 
             this.attack = new OverlapAttack();
             this.attack.damageType = this.damageType;
@@ -135,8 +135,8 @@ namespace HenryMod.SkillStates.BaseStates
                 if (!this.hasFired)
                 {
                     this.hasFired = true;
+
                     
-                    Util.PlayAttackSpeedSound(this.swingSoundString, base.gameObject, this.attackSpeedStat);
                     if (this.characterBody.healthComponent.combinedHealth / this.characterBody.healthComponent.fullCombinedHealth >= .9f)
                     {
                         if (base.isAuthority)
@@ -173,6 +173,14 @@ namespace HenryMod.SkillStates.BaseStates
             }
         }
 
+        private void PlayAttackSound() 
+        {            
+            Util.PlayAttackSpeedSound("SwordAttack" + (1 + swingIndex) + "_" + UnityEngine.Random.Range(1, 3), base.gameObject, this.attackSpeedStat);
+            Util.PlayAttackSpeedSound("Sword_Swing" + (1 + swingIndex), base.gameObject, this.attackSpeedStat);
+            if (swingIndex == 3)
+                Util.PlayAttackSpeedSound("Sword_Swing2", base.gameObject, this.attackSpeedStat);
+
+        }
         protected virtual void SetNextState()
         {
             int index = this.swingIndex;

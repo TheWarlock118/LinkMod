@@ -14,6 +14,7 @@ namespace HenryMod.SkillStates
         private float duration;
         private float fireTime;
         private float timer;
+        private float animationTimer;
         private bool hasFired;
         private string muzzleString;
 
@@ -24,7 +25,10 @@ namespace HenryMod.SkillStates
             this.fireTime = 0.2f * this.duration;
             base.characterBody.SetAimTimer(2f);
             this.timer = 0f;
-            base.PlayAnimation("Gesture, Override", "ShieldGuard");
+            this.animationTimer = 1f;
+            base.PlayCrossfade("Gesture, Override", "ShieldGuard", this.duration);
+            Util.PlaySound("Weapon_Shield_Metal_Equip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
+            Util.PlaySound("ShieldGuardUp", base.gameObject);
         }
 
         public override void OnExit()
@@ -35,11 +39,23 @@ namespace HenryMod.SkillStates
                 this.hasFired = true;
             }
             base.PlayAnimation("Gesture, Override", "BufferEmpty");
+            Util.PlaySound("Weapon_Shield_Metal_UnEquip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
         }
 
         public override void FixedUpdate()
         {
             base.FixedUpdate();
+            if(animationTimer > 0f)
+            {
+                animationTimer -= Time.fixedDeltaTime;
+            }
+            else
+            {
+                animationTimer = 2f;
+                base.PlayCrossfade("Gesture, Override", "ShieldGuard", this.duration);
+            }
+
+
             this.timer += Time.fixedDeltaTime;
             if (!(base.inputBank.jump.down && base.characterMotor.velocity.y < 0f))
             {

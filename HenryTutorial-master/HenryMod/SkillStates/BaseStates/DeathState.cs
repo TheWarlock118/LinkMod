@@ -39,8 +39,12 @@ namespace HenryMod.SkillStates.BaseStates
 
 
 			PlayDeathAnimation();
-			if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "ROB_HENRY_BODY_SPECIAL_MIPHA_NAME")			
+			if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "ROB_HENRY_BODY_SPECIAL_MIPHA_NAME" && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
 				SummonMipha();
+            else
+            {
+				Util.PlaySound("GameOver", base.gameObject);
+            }
 			
 		}
 

@@ -15,33 +15,55 @@ namespace HenryMod.SkillStates
         private float duration;
         private float fireTime;
         private bool fired;
-        private bool revaliSummoned;
+        private bool readySoundPlayed;
+        private bool shouldLaunch;
         private Animator animator;
 
         public override void OnEnter()
         {
             base.OnEnter();
             this.duration = RevalisGale.baseDuration;
-            this.fireTime = 0f;
-            revaliSummoned = false;
-            
+            this.fireTime = 1f;
+            readySoundPlayed = false;
+            fired = false;
+            shouldLaunch = false;
+            base.PlayAnimation("Gesture, Override", "Crouch");
         }
 
         public override void OnExit()
         {
             base.OnExit();
-            if (fired)
+            if (shouldLaunch)
             {
-                CharacterMotor characterMotor = this.characterBody.characterMotor;
-                characterMotor.Motor.ForceUnground();
-                characterMotor.ApplyForce(Vector3.up * 5000f * (this.characterBody.rigidbody.mass / 100f), false, false);
+                if (fired)
+                {
+                    CharacterMotor characterMotor = this.characterBody.characterMotor;
+                    characterMotor.Motor.ForceUnground();
+                    characterMotor.ApplyForce(Vector3.up * 5000f * (this.characterBody.rigidbody.mass / 100f), false, false);
+                }
+                base.PlayAnimation("Gesture, Override", "Glide");
+                Util.PlaySound("Revali_Wind2", base.gameObject);
+                SummonRevali();
             }
-            base.PlayAnimation("Gesture, Override", "Glide");
+            else
+            {
+                SkillLocator skillLocator = characterBody.GetComponent<SkillLocator>();
+                skillLocator.GetSkill(SkillSlot.Special).RemoveAllStocks();
+                skillLocator.GetSkill(SkillSlot.Special).AddOneStock();
+                skillLocator.GetSkill(SkillSlot.Special).Reset();
+            }
         }
 
         private void Fire()
         {
-            base.characterMotor.velocity = new Vector3(0f, 0f, 0f);
+            if (!shouldLaunch)
+                shouldLaunch = true;
+            if (!readySoundPlayed)
+            {
+                Util.PlaySound("AbilityReady", base.gameObject);
+                Util.PlaySound("Revali_Wind", base.gameObject);
+                readySoundPlayed = true;
+            }
         }
 
         private void SummonRevali()
@@ -60,26 +82,22 @@ namespace HenryMod.SkillStates
                     DamageColorIndex.Default,
                     null,
                     0f);
-                base.PlayAnimation("Gesture, Override", "Crouch");
-            }
-            revaliSummoned = true;
+                
+            }            
         }
 
         public override void FixedUpdate()
         {
             base.FixedUpdate();
-            fired = false;
+            base.characterMotor.velocity = new Vector3(0f, 0f, 0f);
             if (characterBody.characterMotor.isGrounded)
-            {
-                if (!revaliSummoned)
-                    SummonRevali();
+            {                
                 if (base.fixedAge >= this.fireTime)
                 {
                     this.Fire();
                     fired = true;
                 }
-
-                if (base.fixedAge >= this.duration && base.isAuthority)
+                if (!base.inputBank.skill4.down)
                 {
                     this.outer.SetNextStateToMain();
                     return;
@@ -87,8 +105,8 @@ namespace HenryMod.SkillStates
             }
             else
             {
-                SkillLocator skillLocator = PlayerCharacterMasterController.instances[0].master.GetBodyObject().GetComponent<SkillLocator>();
-                //skillLocator.GetSkill(SkillSlot.Special).RestockSteplike();
+                SkillLocator skillLocator = characterBody.GetComponent<SkillLocator>();
+                skillLocator.GetSkill(SkillSlot.Special).RemoveAllStocks();
                 skillLocator.GetSkill(SkillSlot.Special).AddOneStock();
                 fired = false;
                 this.outer.SetNextStateToMain();

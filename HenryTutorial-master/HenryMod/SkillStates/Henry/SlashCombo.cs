@@ -22,8 +22,7 @@ namespace HenryMod.SkillStates
             this.hitStopDuration = 0.012f;
             this.attackRecoil = 0.5f;
             this.hitHopVelocity = 4f;
-
-            this.swingSoundString = "SwordSwing";
+            
             this.hitSoundString = "";
             this.muzzleString = swingIndex % 2 == 0 ? "SwingLeft" : "SwingRight";
             this.swingEffectPrefab = Modules.Assets.swordSwingEffect;
