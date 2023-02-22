@@ -24,7 +24,7 @@ namespace HenryMod.Modules.Survivors
             armorGrowth = 0f,
             bodyName = "HenryBody",
             bodyNameToken = HenryPlugin.developerPrefix + "_HENRY_BODY_NAME",
-            bodyColor = Color.green,
+            bodyColor = new Color(0.12f, 0.39f, 0.25f, 1),
             characterPortrait = Modules.Assets.LoadCharacterIcon("Henry"),
             crosshair = Modules.Assets.LoadCrosshair("Standard"),
             damage = 12f,
@@ -42,9 +42,10 @@ namespace HenryMod.Modules.Survivors
         internal override CustomRendererInfo[] customRendererInfos { get; set; } = new CustomRendererInfo[] {
                 new CustomRendererInfo
                 {
-                    childName = "Root",
-                    material = henryMat
-                }};
+                    childName = "Boots_001_Mt__Lower_001",
+                },
+        };
+
 
         internal override Type characterMainState { get; set; } = typeof(EntityStates.GenericCharacterMain);
 
@@ -355,7 +356,7 @@ namespace HenryMod.Modules.Survivors
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,
                 baseRechargeInterval = 12f,
-                beginSkillCooldownOnSkillEnd = false,
+                beginSkillCooldownOnSkillEnd = true,
                 canceledFromSprinting = false,
                 forceSprintDuringState = false,
                 fullRestockOnAssign = false,
@@ -390,8 +391,8 @@ namespace HenryMod.Modules.Survivors
             ModelSkinController skinController = model.AddComponent<ModelSkinController>();
             ChildLocator childLocator = model.GetComponent<ChildLocator>();
 
-            SkinnedMeshRenderer mainRenderer = characterModel.mainSkinnedMeshRenderer;            
-            
+            SkinnedMeshRenderer mainRenderer = characterModel.mainSkinnedMeshRenderer;
+
             CharacterModel.RendererInfo[] defaultRenderers = characterModel.baseRendererInfos;
 
             List<SkinDef> skins = new List<SkinDef>();
@@ -441,7 +442,7 @@ namespace HenryMod.Modules.Survivors
                 Assets.mainAssetBundle.LoadAsset<Sprite>("DarkSkin"),
                 defaultRenderers,
                 mainRenderer,
-                model);            
+                model);
 
             skins.Add(darkSkin);
             #endregion
@@ -453,7 +454,13 @@ namespace HenryMod.Modules.Survivors
                 mainRenderer,
                 model);
 
-            masterySkin.meshReplacements = Modules.Skins.getMeshReplacements(defaultRenderers, "meshDante");
+            masterySkin.meshReplacements = new SkinDef.MeshReplacement[] {
+                new SkinDef.MeshReplacement
+                {
+                    mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Boots_160__Mt_Lower_160"),
+                    renderer = mainRenderer,
+                },
+            };
 
             skins.Add(masterySkin);
             #endregion

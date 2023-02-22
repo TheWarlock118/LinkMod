@@ -38,7 +38,7 @@ namespace HenryMod.Modules
 
             #region Primary
             LanguageAPI.Add(prefix + "PRIMARY_SWORD_NAME", "The Master Sword");
-            LanguageAPI.Add(prefix + "PRIMARY_SWORD_DESCRIPTION", "The legendary sword that seals the darkness." + Helpers.agilePrefix + $"Swing forward for <style=cIsDamage>{100f * StaticValues.swordDamageCoefficient}% damage</style>.");
+            LanguageAPI.Add(prefix + "PRIMARY_SWORD_DESCRIPTION", "The legendary sword that seals the darkness. " + $"Swing forward for <style=cIsDamage>{100f * StaticValues.swordDamageCoefficient}% damage</style>.");
             #endregion
 
             #region Secondary
@@ -60,7 +60,7 @@ namespace HenryMod.Modules
 
             #region Utility
             LanguageAPI.Add(prefix + "UTILITY_BOMB_NAME", "Remote Bomb");
-            LanguageAPI.Add(prefix + "UTILITY_BOMB_DESCRIPTION", $"A bomb that can be detonated remotely. After throwing, press again to detonate for <style=cIsDamage>{100f * StaticValues.bombDamageCoefficient}% damage</style>");
+            LanguageAPI.Add(prefix + "UTILITY_BOMB_DESCRIPTION", $"Hold to draw a bomb and let go to throw. Explodes on impact for <style=cIsDamage>{100f * StaticValues.bombDamageCoefficient}% damage</style>. While gliding, bombs will drop straight down.");
 
             LanguageAPI.Add(prefix + "UTILITY_MAG_NAME", "Magnesis");
             LanguageAPI.Add(prefix + "UTILITY_MAG_DESCRIPTION", "Manipulate metallic objects using magnetism.");
@@ -74,16 +74,16 @@ namespace HenryMod.Modules
 
             #region Special
             LanguageAPI.Add(prefix + "SPECIAL_MIPHA_NAME", "Mipha's Grace");
-            LanguageAPI.Add(prefix + "SPECIAL_MIPHA_DESCRIPTION", "When your hearts run out, you'll automatically be resurrected with full health and three seconds of invincibility.");
+            LanguageAPI.Add(prefix + "SPECIAL_MIPHA_DESCRIPTION", "When your hearts run out, call on the Champion Mipha to bring you back to life.");
 
             LanguageAPI.Add(prefix + "SPECIAL_DARUK_NAME", "Daruk's Protection");
-            LanguageAPI.Add(prefix + "SPECIAL_DARUK_DESCRIPTION", "It will automatically protect you from all manner of attacks while you're holding R.");
+            LanguageAPI.Add(prefix + "SPECIAL_DARUK_DESCRIPTION", "Call on the Champion Daruk to enforce your defenses. The next attack is automatically deflected.");
 
             LanguageAPI.Add(prefix + "SPECIAL_REVALI_NAME", "Revali's Gale");
-            LanguageAPI.Add(prefix + "SPECIAL_REVALI_DESCRIPTION", "Creates an upward draft that carries you into the sky.");
+            LanguageAPI.Add(prefix + "SPECIAL_REVALI_DESCRIPTION", "Hold to crouch. After a short time, release to call on the Champion Revali and soar into the sky.");
 
             LanguageAPI.Add(prefix + "SPECIAL_URBOSA_NAME", "Urbosa's Fury");
-            LanguageAPI.Add(prefix + "SPECIAL_URBOSA_DESCRIPTION", $"Summons powerful lightning to the surrounding area.");
+            LanguageAPI.Add(prefix + "SPECIAL_URBOSA_DESCRIPTION", "Hold to prepare. After a short time, release to call on the Champion Urbosa to summon powerful lightning and damage your foes.");
             #endregion
 
             #region Achievements

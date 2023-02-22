@@ -56,7 +56,7 @@ namespace HenryMod.Modules.Survivors
 
                 displayPrefab = Modules.Prefabs.CreateDisplayPrefab("mdlLinkHylianDisplay", bodyPrefab, bodyInfo);
 
-                Modules.Prefabs.RegisterNewSurvivor(bodyPrefab, displayPrefab, Color.green, bodyName.ToUpper(), characterUnlockableDef, sortPosition);                 
+                Modules.Prefabs.RegisterNewSurvivor(bodyPrefab, displayPrefab, new Color(0.12f, 0.39f, 0.25f, 1), bodyName.ToUpper(), characterUnlockableDef, sortPosition);                 
                 InitializeSkills();
                 InitializeSkins();
                 InitializeItemDisplays();
@@ -70,9 +70,7 @@ namespace HenryMod.Modules.Survivors
         }
 
         internal virtual void InitializeSkills()
-        {
-            //CharacterDeathBehavior deathBehavior = PlayerCharacterMasterController.instances[0].master.GetBodyObject().GetComponent<CharacterBody>().GetComponent<CharacterDeathBehavior>();
-            //deathBehavior.deathState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.BaseStates.DeathState));
+        {            
         }
 
         internal virtual void InitializeHitboxes()

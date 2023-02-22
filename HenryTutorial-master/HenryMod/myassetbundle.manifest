@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1975983249
+CRC: 3971956428
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f609f9b808253b7cd299a0951bd48316
+    Hash: c385731bd677043b4068d1252ef9c7c8
   TypeTreeHash:
     serializedVersion: 2
     Hash: 740584176fc78b859e604f8258f4482c
@@ -69,6 +69,7 @@ SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/HenryAssets/Animations/maskAimBazooka.mask
 - Assets/LinkAssets/Icons/Magnesis.png
+- Assets/LinkAssets/Link Mats/Dark/Mt_Dark3.mat
 - Assets/LinkAssets/Icons/RitoSkin.png
 - Assets/HenryAssets/mdlHenry 1.prefab
 - Assets/HenryAssets/Icons/texShotgunIcon.png
@@ -101,7 +102,7 @@ Assets:
 - Assets/HenryAssets/Materials/matRebellion.mat
 - Assets/HenryAssets/VFX/Materials/matSmoke.mat
 - Assets/LinkAssets/Icons/MasterySkin.png
-- Assets/LinkAssets/FBXs/LinkHylianSet.fbx
+- Assets/LinkAssets/FBXs/LinkHylianSet/LinkHylianSet.fbx
 - Assets/HenryAssets/VFX/Textures/texSwingEffect.png
 - Assets/HenryAssets/Textures/texBoxingGlove.png
 - Assets/HenryAssets/Animations/maskAimYaw.mask
@@ -152,9 +153,11 @@ Assets:
 - Assets/HenryAssets/Materials/matBoxingGlove.mat
 - Assets/HenryAssets/Materials/matHenryAlt.mat
 - Assets/HenryAssets/Animations/WalkF.anim
+- Assets/LinkAssets/FBXs/LinkFinalAnimationDarkSet/Meshes/Boots_160__Mt_Lower_160.mesh
 - Assets/HenryAssets/VFX/Materials/matPunchImpactShadow.mat
 - Assets/HenryAssets/ZeldaDisplay.prefab
 - Assets/HenryAssets/Materials/matDante.mat
+- Assets/LinkAssets/FBXs/ChampionMesh/Meshes/meshChampion.mesh
 - Assets/HenryAssets/Animations/maskLeftArm.mask
 - Assets/HenryAssets/Mesh/MeshHenryGun.mesh
 - Assets/LinkAssets/Icons/DaruksProtection.png
@@ -170,6 +173,7 @@ Assets:
 - Assets/LinkAssets/Icons/FalconBow.png
 - Assets/HenryAssets/Mesh/meshNeoCoat.mesh
 - Assets/LinkAssets/Icons/RevalisGale.png
+- Assets/LinkAssets/Link Mats/Mt_armor_lower.mat
 - Assets/HenryAssets/Icons/UrbosasFury.png
 - Assets/HenryAssets/Animations/ShootGun.anim
 - Assets/HenryAssets/Animations/SprintF.anim
@@ -219,6 +223,7 @@ Assets:
 - Assets/LinkAssets/mdlRevali.prefab
 - Assets/HenryAssets/VFX/Materials/matSwingEffect.mat
 - Assets/LinkAssets/Anims/animMipha.controller
+- Assets/LinkAssets/FBXs/LinkFinalAnimationDarkSet/Meshes/Arm_160__Mt_Upper_160.mesh
 - Assets/HenryAssets/Mesh/meshHenrySword.mesh
 - Assets/HenryAssets/VFX/Materials/matEmbers.mat
 - Assets/HenryAssets/Animations/AimYaw.anim
