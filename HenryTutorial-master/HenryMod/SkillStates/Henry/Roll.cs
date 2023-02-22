@@ -3,7 +3,7 @@ using RoR2;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace HenryMod.SkillStates
+namespace LinkMod.SkillStates
 {
     public class Roll : BaseSkillState
     {
@@ -11,7 +11,7 @@ namespace HenryMod.SkillStates
         public static float initialSpeedCoefficient = 5f;
         public static float finalSpeedCoefficient = 2.5f;
 
-        public static string dodgeSoundString = "HenryRoll";
+        public static string dodgeSoundString = "LinkRoll";
         public static float dodgeFOV = EntityStates.Commando.DodgeState.dodgeFOV;
 
         private float rollSpeed;

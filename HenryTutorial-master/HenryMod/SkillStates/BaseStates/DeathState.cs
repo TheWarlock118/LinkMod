@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using EntityStates;
 
-namespace HenryMod.SkillStates.BaseStates
+namespace LinkMod.SkillStates.BaseStates
 {
 	public class DeathState : GenericCharacterDeath
 	{
@@ -39,7 +39,7 @@ namespace HenryMod.SkillStates.BaseStates
 
 
 			PlayDeathAnimation();
-			if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "ROB_HENRY_BODY_SPECIAL_MIPHA_NAME" && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
+			if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_MIPHA_NAME" && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
 			{
 				SummonMipha();
 			}

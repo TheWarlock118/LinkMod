@@ -3,7 +3,7 @@ using RoR2;
 using RoR2.Projectile;
 using UnityEngine;
 
-namespace HenryMod.SkillStates
+namespace LinkMod.SkillStates
 {
     public class DaruksProtection : BaseSkillState
     {
@@ -27,7 +27,7 @@ namespace HenryMod.SkillStates
             base.PlayAnimation("Gesture, Override", "ShieldGuard", "ThrowBomb.playbackRate", this.fireTime);
             base.PlayCrossfade("Gesture, Override", "ThrowBomb", "ThrowBomb.playbackRate", this.fireTime, this.fireTime);
             Util.PlaySound("ShieldGuardUp", base.gameObject);
-            characterBody.AddBuff(HenryMod.Modules.Buffs.darukBuff);
+            characterBody.AddBuff(LinkMod.Modules.Buffs.darukBuff);
             characterBody.healthComponent.AddBarrier(1f);
         }
 

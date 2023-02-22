@@ -1,14 +1,14 @@
 ﻿using R2API;
 using System;
 
-namespace HenryMod.Modules
+namespace LinkMod.Modules
 {
     internal static class Tokens
     {
         internal static void AddTokens()
         {
-            #region Henry
-            string prefix = HenryPlugin.developerPrefix + "_HENRY_BODY_";
+            #region Link
+            string prefix = LinkPlugin.developerPrefix + "_LINK_BODY_";
 
             string desc = "Link is the Hero of Hyrule, weilder of the Triforce of Courage.<color=#CCD3E0>" + Environment.NewLine + Environment.NewLine;
             desc = desc + "< ! > The Master Sword is Link's primary weapon against the forces of evil." + Environment.NewLine + Environment.NewLine;

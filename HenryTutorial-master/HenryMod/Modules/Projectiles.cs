@@ -4,7 +4,7 @@ using RoR2.Projectile;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace HenryMod.Modules
+namespace LinkMod.Modules
 {
     internal static class Projectiles
     {
@@ -39,7 +39,7 @@ namespace HenryMod.Modules
 
         private static void CreateBomb()
         {
-            bombPrefab = CloneProjectilePrefab("CommandoGrenadeProjectile", "HenryBombProjectile");
+            bombPrefab = CloneProjectilePrefab("CommandoGrenadeProjectile", "LinkBombProjectile");
 
             ProjectileImpactExplosion bombImpactExplosion = bombPrefab.GetComponent<ProjectileImpactExplosion>();
             InitializeImpactExplosion(bombImpactExplosion);

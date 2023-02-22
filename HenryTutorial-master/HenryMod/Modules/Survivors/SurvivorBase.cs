@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace HenryMod.Modules.Survivors
+namespace LinkMod.Modules.Survivors
 {
     internal abstract class SurvivorBase
     {

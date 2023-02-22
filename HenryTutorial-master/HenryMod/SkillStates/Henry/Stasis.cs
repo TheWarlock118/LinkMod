@@ -3,7 +3,7 @@ using RoR2;
 using RoR2.Projectile;
 using UnityEngine;
 
-namespace HenryMod.SkillStates
+namespace LinkMod.SkillStates
 {
     public class Stasis : BaseSkillState
     {
@@ -38,7 +38,7 @@ namespace HenryMod.SkillStates
             if (!this.hasFired)
             {
                 this.hasFired = true;
-                //Util.PlaySound("HenryBombThrow", base.gameObject);
+                //Util.PlaySound("LinkBombThrow", base.gameObject);
 
                 if (base.isAuthority)
                 {

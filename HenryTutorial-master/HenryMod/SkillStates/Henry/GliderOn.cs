@@ -4,7 +4,7 @@ using System.Text;
 using UnityEngine;
 using EntityStates;
 
-namespace HenryMod.SkillStates
+namespace LinkMod.SkillStates
 {
     public class GliderOn : BaseState
     {        

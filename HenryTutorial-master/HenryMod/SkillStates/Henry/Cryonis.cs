@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HenryMod.SkillStates.Henry
+namespace LinkMod.SkillStates.Link
 {
     class Cryonis
     {

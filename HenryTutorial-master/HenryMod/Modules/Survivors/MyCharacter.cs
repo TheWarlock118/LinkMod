@@ -5,11 +5,11 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace HenryMod.Modules.Survivors
+namespace LinkMod.Modules.Survivors
 {
     internal class MyCharacter : SurvivorBase
     {
-        internal override string bodyName { get; set; } = "Henry";
+        internal override string bodyName { get; set; } = "Link";
 
         internal override GameObject bodyPrefab { get; set; }
         internal override GameObject displayPrefab { get; set; }
@@ -22,21 +22,21 @@ namespace HenryMod.Modules.Survivors
         {
             armor = 20f,
             armorGrowth = 0f,
-            bodyName = "HenryBody",
-            bodyNameToken = HenryPlugin.developerPrefix + "_HENRY_BODY_NAME",
+            bodyName = "LinkBody",
+            bodyNameToken = LinkPlugin.developerPrefix + "_LINK_BODY_NAME",
             bodyColor = new Color(0.12f, 0.39f, 0.25f, 1),
-            characterPortrait = Modules.Assets.LoadCharacterIcon("Henry"),
+            characterPortrait = Modules.Assets.LoadCharacterIcon("Link"),
             crosshair = Modules.Assets.LoadCrosshair("Standard"),
             damage = 12f,
             healthGrowth = 33f,
             healthRegen = 1.5f,
             jumpCount = 1,
             maxHealth = 110f,
-            subtitleNameToken = HenryPlugin.developerPrefix + "_HENRY_BODY_SUBTITLE",
+            subtitleNameToken = LinkPlugin.developerPrefix + "_LINK_BODY_SUBTITLE",
             podPrefab = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/NetworkedObjects/SurvivorPod")
         };
 
-        internal static Material henryMat = Modules.Assets.CreateMaterial("matHenry");
+        internal static Material LinkMat = Modules.Assets.CreateMaterial("matLink");
         internal override int mainRendererIndex { get; set; } = 2;
 
         internal override CustomRendererInfo[] customRendererInfos { get; set; } = new CustomRendererInfo[] {
@@ -84,18 +84,18 @@ namespace HenryMod.Modules.Survivors
         {
             Modules.Skills.CreateSkillFamilies(bodyPrefab);
 
-            string prefix = HenryPlugin.developerPrefix;
+            string prefix = LinkPlugin.developerPrefix;
 
             #region Primary
-            Modules.Skills.AddPrimarySkill(bodyPrefab, Modules.Skills.CreatePrimarySkillDef(new EntityStates.SerializableEntityStateType(typeof(SkillStates.SlashCombo)), "Weapon", prefix + "_HENRY_BODY_PRIMARY_SWORD_NAME", prefix + "_HENRY_BODY_PRIMARY_SWORD_DESCRIPTION", Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("MasterSword"), true));
+            Modules.Skills.AddPrimarySkill(bodyPrefab, Modules.Skills.CreatePrimarySkillDef(new EntityStates.SerializableEntityStateType(typeof(SkillStates.SlashCombo)), "Weapon", prefix + "_LINK_BODY_PRIMARY_SWORD_NAME", prefix + "_LINK_BODY_PRIMARY_SWORD_DESCRIPTION", Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("MasterSword"), true));
             #endregion
 
             #region Secondary
             SkillDef shootSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
             {
-                skillName = prefix + "_HENRY_BODY_SECONDARY_BOW_NAME",
-                skillNameToken = prefix + "_HENRY_BODY_SECONDARY_BOW_NAME",
-                skillDescriptionToken = prefix + "_HENRY_BODY_SECONDARY_BOW_DESCRIPTION",
+                skillName = prefix + "_LINK_BODY_SECONDARY_BOW_NAME",
+                skillNameToken = prefix + "_LINK_BODY_SECONDARY_BOW_NAME",
+                skillDescriptionToken = prefix + "_LINK_BODY_SECONDARY_BOW_DESCRIPTION",
                 skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("RoyalGuardBow"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.Shoot)),
                 activationStateMachineName = "Slide",
@@ -118,9 +118,9 @@ namespace HenryMod.Modules.Survivors
 
             SkillDef shootTriSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
             {
-                skillName = prefix + "_HENRY_BODY_SECONDARY_3BOW_NAME",
-                skillNameToken = prefix + "_HENRY_BODY_SECONDARY_3BOW_NAME",
-                skillDescriptionToken = prefix + "_HENRY_BODY_SECONDARY_3BOW_DESCRIPTION",
+                skillName = prefix + "_LINK_BODY_SECONDARY_3BOW_NAME",
+                skillNameToken = prefix + "_LINK_BODY_SECONDARY_3BOW_NAME",
+                skillDescriptionToken = prefix + "_LINK_BODY_SECONDARY_3BOW_DESCRIPTION",
                 skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("GreatEagleBow"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.ShootTri)),
                 activationStateMachineName = "Slide",
@@ -143,9 +143,9 @@ namespace HenryMod.Modules.Survivors
 
             SkillDef shootFastSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
             {
-                skillName = prefix + "_HENRY_BODY_SECONDARY_FASTBOW_NAME",
-                skillNameToken = prefix + "_HENRY_BODY_SECONDARY_FASTBOW_NAME",
-                skillDescriptionToken = prefix + "_HENRY_BODY_SECONDARY_FASTBOW_DESCRIPTION",
+                skillName = prefix + "_LINK_BODY_SECONDARY_FASTBOW_NAME",
+                skillNameToken = prefix + "_LINK_BODY_SECONDARY_FASTBOW_NAME",
+                skillDescriptionToken = prefix + "_LINK_BODY_SECONDARY_FASTBOW_DESCRIPTION",
                 skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("FalconBow"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.ShootFast)),
                 activationStateMachineName = "Slide",
@@ -168,9 +168,9 @@ namespace HenryMod.Modules.Survivors
 
             SkillDef shieldSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
             {
-                skillName = prefix + "_HENRY_BODY_SECONDARY_SHIELD_NAME",
-                skillNameToken = prefix + "_HENRY_BODY_SECONDARY_SHIELD_NAME",
-                skillDescriptionToken = prefix + "_HENRY_BODY_SECONDARY_SHIELD_DESCRIPTION",
+                skillName = prefix + "_LINK_BODY_SECONDARY_SHIELD_NAME",
+                skillNameToken = prefix + "_LINK_BODY_SECONDARY_SHIELD_NAME",
+                skillDescriptionToken = prefix + "_LINK_BODY_SECONDARY_SHIELD_DESCRIPTION",
                 skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("HylianShieldIcon"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.Shield)),
                 activationStateMachineName = "Slide",
@@ -193,9 +193,9 @@ namespace HenryMod.Modules.Survivors
 
             SkillDef rollSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
             {
-                skillName = prefix + "_HENRY_BODY_SECONDARY_ROLL_NAME",
-                skillNameToken = prefix + "_HENRY_BODY_SECONDARY_ROLL_NAME",
-                skillDescriptionToken = prefix + "_HENRY_BODY_SECONDARY_ROLL_DESCRIPTION",
+                skillName = prefix + "_LINK_BODY_SECONDARY_ROLL_NAME",
+                skillNameToken = prefix + "_LINK_BODY_SECONDARY_ROLL_NAME",
+                skillDescriptionToken = prefix + "_LINK_BODY_SECONDARY_ROLL_DESCRIPTION",
                 skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("GreatEagleBow"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.Roll)),
                 activationStateMachineName = "Slide",
@@ -223,9 +223,9 @@ namespace HenryMod.Modules.Survivors
             #region Utility
             SkillDef bombSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
             {
-                skillName = prefix + "_HENRY_BODY_UTILITY_BOMB_NAME",
-                skillNameToken = prefix + "_HENRY_BODY_UTILITY_BOMB_NAME",
-                skillDescriptionToken = prefix + "_HENRY_BODY_UTILITY_BOMB_DESCRIPTION",
+                skillName = prefix + "_LINK_BODY_UTILITY_BOMB_NAME",
+                skillNameToken = prefix + "_LINK_BODY_UTILITY_BOMB_NAME",
+                skillDescriptionToken = prefix + "_LINK_BODY_UTILITY_BOMB_DESCRIPTION",
                 skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("RemoteBomb"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.ThrowBomb)),
                 activationStateMachineName = "Slide",
@@ -247,9 +247,9 @@ namespace HenryMod.Modules.Survivors
 
             SkillDef passSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
             {
-                skillName = prefix + "_HENRY_BODY_PASSIVE_NAME",
-                skillNameToken = prefix + "_HENRY_BODY_PASSIVE_NAME",
-                skillDescriptionToken = prefix + "_HENRY_BODY_PASSIVE_DESCRIPTION",
+                skillName = prefix + "_LINK_BODY_PASSIVE_NAME",
+                skillNameToken = prefix + "_LINK_BODY_PASSIVE_NAME",
+                skillDescriptionToken = prefix + "_LINK_BODY_PASSIVE_DESCRIPTION",
                 skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("Paraglider"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.ParagliderTest)),
                 activationStateMachineName = "Slide",
@@ -276,9 +276,9 @@ namespace HenryMod.Modules.Survivors
             #region Special
             SkillDef miphaSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
             {
-                skillName = prefix + "_HENRY_BODY_SPECIAL_MIPHA_NAME",
-                skillNameToken = prefix + "_HENRY_BODY_SPECIAL_MIPHA_NAME",
-                skillDescriptionToken = prefix + "_HENRY_BODY_SPECIAL_MIPHA_DESCRIPTION",
+                skillName = prefix + "_LINK_BODY_SPECIAL_MIPHA_NAME",
+                skillNameToken = prefix + "_LINK_BODY_SPECIAL_MIPHA_NAME",
+                skillDescriptionToken = prefix + "_LINK_BODY_SPECIAL_MIPHA_DESCRIPTION",
                 skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("MiphasGrace"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.MiphasGrace)),
                 activationStateMachineName = "Slide",
@@ -300,9 +300,9 @@ namespace HenryMod.Modules.Survivors
 
             SkillDef darukSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
             {
-                skillName = prefix + "_HENRY_BODY_SPECIAL_DARUK_NAME",
-                skillNameToken = prefix + "_HENRY_BODY_SPECIAL_DARUK_NAME",
-                skillDescriptionToken = prefix + "_HENRY_BODY_SPECIAL_DARUK_DESCRIPTION",
+                skillName = prefix + "_LINK_BODY_SPECIAL_DARUK_NAME",
+                skillNameToken = prefix + "_LINK_BODY_SPECIAL_DARUK_NAME",
+                skillDescriptionToken = prefix + "_LINK_BODY_SPECIAL_DARUK_DESCRIPTION",
                 skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("DaruksProtection"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.DaruksProtection)),
                 activationStateMachineName = "Slide",
@@ -324,9 +324,9 @@ namespace HenryMod.Modules.Survivors
 
             SkillDef revaliSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
             {
-                skillName = prefix + "_HENRY_BODY_SPECIAL_REVALI_NAME",
-                skillNameToken = prefix + "_HENRY_BODY_SPECIAL_REVALI_NAME",
-                skillDescriptionToken = prefix + "_HENRY_BODY_SPECIAL_REVALI_DESCRIPTION",
+                skillName = prefix + "_LINK_BODY_SPECIAL_REVALI_NAME",
+                skillNameToken = prefix + "_LINK_BODY_SPECIAL_REVALI_NAME",
+                skillDescriptionToken = prefix + "_LINK_BODY_SPECIAL_REVALI_DESCRIPTION",
                 skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("RevalisGale"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.RevalisGale)),
                 activationStateMachineName = "Slide",
@@ -348,9 +348,9 @@ namespace HenryMod.Modules.Survivors
 
             SkillDef urbosaSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
             {
-                skillName = prefix + "_HENRY_BODY_SPECIAL_URBOSA_NAME",
-                skillNameToken = prefix + "_HENRY_BODY_SPECIAL_URBOSA_NAME",
-                skillDescriptionToken = prefix + "_HENRY_BODY_SPECIAL_URBOSA_DESCRIPTION",
+                skillName = prefix + "_LINK_BODY_SPECIAL_URBOSA_NAME",
+                skillNameToken = prefix + "_LINK_BODY_SPECIAL_URBOSA_NAME",
+                skillDescriptionToken = prefix + "_LINK_BODY_SPECIAL_URBOSA_DESCRIPTION",
                 skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("UrbosasFury"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.UrbosasFury)),
                 activationStateMachineName = "Slide",
@@ -376,8 +376,8 @@ namespace HenryMod.Modules.Survivors
 
             SkillLocator passSkillLocator = bodyPrefab.GetComponent<SkillLocator>();
             passSkillLocator.passiveSkill.enabled = true;
-            passSkillLocator.passiveSkill.skillNameToken = prefix + "_HENRY_BODY_PASSIVE_NAME";
-            passSkillLocator.passiveSkill.skillDescriptionToken = prefix + "_HENRY_BODY_PASSIVE_DESCRIPTION";
+            passSkillLocator.passiveSkill.skillNameToken = prefix + "_LINK_BODY_PASSIVE_NAME";
+            passSkillLocator.passiveSkill.skillDescriptionToken = prefix + "_LINK_BODY_PASSIVE_DESCRIPTION";
             passSkillLocator.passiveSkill.icon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("Paraglider");            
         }
 

@@ -1,9 +1,9 @@
-﻿using HenryMod.SkillStates;
-using HenryMod.SkillStates.BaseStates;
+﻿using LinkMod.SkillStates;
+using LinkMod.SkillStates.BaseStates;
 using System.Collections.Generic;
 using System;
 
-namespace HenryMod.Modules
+namespace LinkMod.Modules
 {
     public static class States
     {
@@ -11,7 +11,7 @@ namespace HenryMod.Modules
 
         internal static void RegisterStates()
         {
-            entityStates.Add(typeof(HenryMain));
+            entityStates.Add(typeof(LinkMain));
             entityStates.Add(typeof(DeathState));
             entityStates.Add(typeof(BaseMeleeAttack));
             entityStates.Add(typeof(SlashCombo));

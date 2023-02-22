@@ -7,7 +7,7 @@ using System.IO;
 using System.Collections.Generic;
 using RoR2.UI;
 
-namespace HenryMod.Modules
+namespace LinkMod.Modules
 {
     internal static class Assets
     {
@@ -54,7 +54,7 @@ namespace HenryMod.Modules
         {
             if (mainAssetBundle == null)
             {
-                using (var assetStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("HenryMod." + assetbundleName))
+                using (var assetStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("LinkMod." + assetbundleName))
                 {
                     mainAssetBundle = AssetBundle.LoadFromStream(assetStream);
                 }
@@ -65,7 +65,7 @@ namespace HenryMod.Modules
 
         internal static void LoadSoundbank()
         {
-            using (Stream manifestResourceStream2 = Assembly.GetExecutingAssembly().GetManifestResourceStream("HenryMod.Link.bnk"))
+            using (Stream manifestResourceStream2 = Assembly.GetExecutingAssembly().GetManifestResourceStream("LinkMod.Link.bnk"))
             {
                 byte[] array = new byte[manifestResourceStream2.Length];
                 manifestResourceStream2.Read(array, 0, array.Length);
@@ -86,7 +86,7 @@ namespace HenryMod.Modules
 
             swordHitSoundEvent = CreateNetworkSoundEventDef("SwordSwing");
 
-            // bombExplosionEffect = LoadEffect("BombExplosionEffect", "HenryBombExplosion");
+            // bombExplosionEffect = LoadEffect("BombExplosionEffect", "LinkBombExplosion");
             // bombExplosionEffect = EntityStates.VagrantMonster.FireMegaNova.novaEffectPrefab;
             bombExplosionEffect = blueExplosion;
 
@@ -106,8 +106,8 @@ namespace HenryMod.Modules
                 };
             }
 
-            swordSwingEffect = Assets.LoadEffect("HenrySwordSwingEffect", true);
-            swordHitImpactEffect = Assets.LoadEffect("ImpactHenrySlash");
+            swordSwingEffect = Assets.LoadEffect("LinkSwordSwingEffect", true);
+            swordHitImpactEffect = Assets.LoadEffect("ImpactLinkSlash");
         }
 
         private static GameObject CreateTracer(string originalTracerName, string newTracerName)
@@ -187,7 +187,7 @@ namespace HenryMod.Modules
 
         internal static Texture LoadCharacterIcon(string characterName)
         {
-            return mainAssetBundle.LoadAsset<Texture>("texLinkIcon");
+            return mainAssetBundle.LoadAsset<Texture>("LinkIcon");
         }
 
         internal static GameObject LoadCrosshair(string crosshairName)

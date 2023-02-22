@@ -4,7 +4,7 @@ using RoR2.Projectile;
 using UnityEngine;
 using EntityStates;
 
-namespace HenryMod.SkillStates
+namespace LinkMod.SkillStates
 {
     public class Shield : BaseSkillState
     {
@@ -26,7 +26,7 @@ namespace HenryMod.SkillStates
             base.characterBody.SetAimTimer(2f);
             this.timer = 0f;
             this.animationTimer = 1f;
-            base.PlayCrossfade("Gesture, Override", "ShieldGuard", this.duration);
+            base.PlayAnimation("Gesture, Override", "ShieldGuard");
             Util.PlaySound("Weapon_Shield_Metal_Equip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
             Util.PlaySound("ShieldGuardUp", base.gameObject);
         }
@@ -52,7 +52,7 @@ namespace HenryMod.SkillStates
             else
             {
                 animationTimer = 2f;
-                base.PlayCrossfade("Gesture, Override", "ShieldGuard", this.duration);
+                base.PlayAnimation("Gesture, Override", "ShieldGuard");
             }
 
 

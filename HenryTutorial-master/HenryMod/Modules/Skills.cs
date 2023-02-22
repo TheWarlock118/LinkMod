@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace HenryMod.Modules
+namespace LinkMod.Modules
 {
     internal static class Skills
     {
@@ -16,7 +16,7 @@ namespace HenryMod.Modules
         {
             foreach (GenericSkill obj in targetPrefab.GetComponentsInChildren<GenericSkill>())
             {
-                HenryPlugin.DestroyImmediate(obj);
+                LinkPlugin.DestroyImmediate(obj);
             }
 
             SkillLocator skillLocator = targetPrefab.GetComponent<SkillLocator>();

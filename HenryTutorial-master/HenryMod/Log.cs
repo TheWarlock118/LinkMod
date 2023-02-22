@@ -1,6 +1,6 @@
 ﻿using BepInEx.Logging;
 
-namespace HenryMod
+namespace LinkMod
 {
     internal static class Log
     {

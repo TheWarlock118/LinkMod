@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 
-namespace HenryMod.Modules
+namespace LinkMod.Modules
 {
     internal static class Unlockables
     {

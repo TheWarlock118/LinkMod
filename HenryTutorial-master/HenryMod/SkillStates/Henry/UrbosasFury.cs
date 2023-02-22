@@ -4,7 +4,7 @@ using RoR2.Projectile;
 using UnityEngine;
 using EntityStates.VagrantMonster;
 
-namespace HenryMod.SkillStates
+namespace LinkMod.SkillStates
 {
     public class UrbosasFury : BaseSkillState
     {

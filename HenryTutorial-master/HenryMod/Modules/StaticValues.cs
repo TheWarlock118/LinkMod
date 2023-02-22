@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HenryMod.Modules
+namespace LinkMod.Modules
 {
     internal static class StaticValues
     {

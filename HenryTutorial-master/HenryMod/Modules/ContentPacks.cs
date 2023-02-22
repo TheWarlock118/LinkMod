@@ -1,11 +1,11 @@
 ﻿using RoR2.ContentManagement;
 
-namespace HenryMod.Modules
+namespace LinkMod.Modules
 {
     internal class ContentPacks : IContentPackProvider
     {
         internal ContentPack contentPack = new ContentPack();
-        public string identifier => HenryPlugin.MODUID;
+        public string identifier => LinkPlugin.MODUID;
 
         public void Initialize()
         {

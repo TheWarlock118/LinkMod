@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3971956428
+CRC: 2845651397
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c385731bd677043b4068d1252ef9c7c8
+    Hash: 2d48f0e7addfea4d4a0e7b702933e7c7
   TypeTreeHash:
     serializedVersion: 2
     Hash: 740584176fc78b859e604f8258f4482c
@@ -197,7 +197,6 @@ Assets:
 - Assets/HenryAssets/Icons/texMainSkin.png
 - Assets/HenryAssets/Icons/texBoxingGlovesIcon.png
 - Assets/HenryAssets/Materials/matVergil.mat
-- Assets/HenryAssets/Icons/texLinkIcon.png
 - Assets/HenryAssets/Materials/matHitboxPreview.mat
 - Assets/HenryAssets/Animations/IdleIn.anim
 - Assets/HenryAssets/VFX/Materials/matSwingShadow.mat
@@ -261,6 +260,7 @@ Assets:
 - Assets/HenryAssets/Animations/mdlHenry.controller
 - Assets/HenryAssets/Materials/matBazooka.mat
 - Assets/LinkAssets/mdlLinkHylianDisplay.prefab
+- Assets/LinkAssets/Icons/LinkIcon.png
 - Assets/HenryAssets/VFX/HenrySwordSwingEffect.prefab
 - Assets/HenryAssets/Animations/Descend.anim
 - Assets/HenryAssets/Textures/texHenryDante.png
