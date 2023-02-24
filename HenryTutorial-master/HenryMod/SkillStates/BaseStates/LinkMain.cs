@@ -5,14 +5,15 @@ using EntityStates;
 using RoR2;
 using UnityEngine;
 
-namespace LinkMod.SkillStates
+namespace LinkMod.SkillStates.BaseStates
 {
     public class LinkMain : GenericCharacterMain
     {
         public override void OnEnter()
         {
             base.OnEnter();
-            this.gliderStateMachine = EntityStateMachine.FindByCustomName(base.gameObject, "Jet");
+            //this.gliderStateMachine = EntityStateMachine.FindByCustomName(base.gameObject, "Jet");
+            this.characterBody.gameObject.AddComponent<Modules.UpdateValues>();
         }
 
         public override void Update()
@@ -26,6 +27,6 @@ namespace LinkMod.SkillStates
         }
 
 
-        private EntityStateMachine gliderStateMachine;
+        //private EntityStateMachine gliderStateMachine;
     }
 }

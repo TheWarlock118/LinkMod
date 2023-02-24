@@ -51,17 +51,19 @@ namespace LinkMod.Modules.Survivors
                 bodyPrefab = Modules.Prefabs.CreatePrefab("LinkBody", "mdlLinkHylian", bodyInfo);
                 bodyPrefab.GetComponent<EntityStateMachine>().mainStateType = new EntityStates.SerializableEntityStateType(characterMainState);
                 bodyPrefab.GetComponent<CharacterDeathBehavior>().deathState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.BaseStates.DeathState));
+                
 
                 Modules.Prefabs.SetupCharacterModel(bodyPrefab, customRendererInfos, mainRendererIndex);
 
                 displayPrefab = Modules.Prefabs.CreateDisplayPrefab("mdlLinkHylianDisplay", bodyPrefab, bodyInfo);
 
-                Modules.Prefabs.RegisterNewSurvivor(bodyPrefab, displayPrefab, new Color(0.12f, 0.39f, 0.25f, 1), bodyName.ToUpper(), characterUnlockableDef, sortPosition);                 
+                Modules.Prefabs.RegisterNewSurvivor(bodyPrefab, displayPrefab, new Color(0.12f, 0.39f, 0.25f, 1), bodyName.ToUpper(), characterUnlockableDef, sortPosition);                
                 InitializeSkills();
                 InitializeSkins();
                 InitializeItemDisplays();
                 InitializeDoppelganger();
                 InitializeHitboxes();
+                Modules.Survivors.MyCharacter.instance.SetItemDisplays();
             }
         }        
 

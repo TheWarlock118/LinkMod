@@ -39,27 +39,7 @@ namespace LinkMod
 
         internal List<SurvivorBase> Survivors = new List<SurvivorBase>();
 
-        public static LinkPlugin instance;
-
-        private bool resed = false;
-        private bool miphaOnCooldown = false;
-        private bool urbosaOnCooldown = false;
-        private bool revaliOnCooldown = false;
-        private bool darukOnCooldown = false;
-        private bool enteredParaglider = false;
-        private bool playedFall = false;
-        private bool blockDaruk = false;
-        private bool playedParaEquipSound = false;
-        private bool playedParaUnEquipSound = false;
-        private bool enteredSlowMo = false;
-        private float SlowMotionStopwatch = 0f;
-        private float DarukSoundStopwatch = 0f;
-        private uint slowMotionPlayID;
-        private uint darukShiedlPlayID;
-        private bool playedLowHealth = false;
-                
-
-        
+        public static LinkPlugin instance;                      
 
 
         private void Awake()
@@ -94,7 +74,7 @@ namespace LinkMod
 
         private void Hook()
         {
-            // run hooks here, disabling one is as simple as commenting out the line
+            // run hooks here, disabling one is as simple as commenting out the line         
             On.RoR2.CharacterBody.RecalculateStats += CharacterBody_RecalculateStats;
             On.RoR2.HealthComponent.TakeDamage += HealthComponent_TakeDamage;
             On.RoR2.CharacterBody.Update += CharacterBody_Update;                     
@@ -104,246 +84,253 @@ namespace LinkMod
         {
             Log.Init(Logger);
             orig(self);
-            SkillLocator skillLocator = self.GetComponent<SkillLocator>();            
-
-            #region MiphaGraceRemoveDioCooldown
-            if (skillLocator)
+            Modules.UpdateValues updateValues = self.gameObject.GetComponent<Modules.UpdateValues>();
+            if (updateValues)
             {
-                if (skillLocator.GetSkill(SkillSlot.Special) != null)
+                SkillLocator skillLocator = self.GetComponent<SkillLocator>();
+
+                #region MiphaGraceRemoveDioCooldown
+                if (skillLocator)
                 {
-                    if (resed)
+                    if (skillLocator.GetSkill(SkillSlot.Special) != null)
                     {
-                        if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_MIPHA_NAME")
+                        if (updateValues.resed)
                         {
-                            if (!(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
+                            if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_MIPHA_NAME")
                             {
-                                Log.LogDebug("Removing Stock & Extra Item");
-                                skillLocator.GetSkill(SkillSlot.Special).DeductStock(1);
-                                self.inventory.RemoveItem(ItemCatalog.FindItemIndex("ExtraLifeConsumed"));
-                                resed = false;
-                            }
-                        }                        
-                    }
-                }
-            }
-            #endregion
-
-            #region ChampionReady
-
-            if (skillLocator && skillLocator.GetSkill(SkillSlot.Special) != null)
-            {
-                if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_MIPHA_NAME")
-                {
-                    if ((skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
-                    {
-                        miphaOnCooldown = true;
-                    }
-                    else if (miphaOnCooldown && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
-                    {
-                        miphaOnCooldown = false;
-                        if (Modules.Config.MiphaReadySound.Value)
-                            Util.PlaySound("MiphasGraceReady", self.gameObject);
-                    }
-                }
-
-                if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_DARUK_NAME")
-                {
-                    if ((skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
-                    {
-                        darukOnCooldown = true;
-                    }
-                    else if (darukOnCooldown && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
-                    {
-                        darukOnCooldown = false;
-                        if (Modules.Config.DarukReadySound.Value)
-                            Util.PlaySound("DaruksProtectionReady", self.gameObject);
-                    }
-                }
-
-                if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_URBOSA_NAME")
-                {
-                    if ((skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
-                    {
-                        urbosaOnCooldown = true;
-                    }
-                    if (urbosaOnCooldown && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
-                    {
-                        urbosaOnCooldown = false;
-                        if (Modules.Config.UrbosaReadySound.Value)
-                            Util.PlaySound("UrbosasFuryReady", self.gameObject);
-                    }
-
-                }
-           
-                if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_REVALI_NAME")
-                {
-                    if ((skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
-                    {
-                        revaliOnCooldown = true;
-                    }
-                    else if (revaliOnCooldown && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
-                    {
-                        revaliOnCooldown = false;
-                        if (Modules.Config.RevaliReadySound.Value)
-                            Util.PlaySound("RevalisGaleReady", self.gameObject);
-                    }
-
-                }
-            }
-
-            #endregion
-
-            #region ParagliderSlow-Bow
-
-            string[] paraEquipSounds = { "Pl_Parashawl_Equip00", "Pl_Parashawl_Equip02", "Pl_Parashawl_Equip04" };
-            string[] paraGlideSounds = { "Pl_Parashawl_FlapFast00", "Pl_Parashawl_FlapFast01"};
-            string[] paraUnEquipSounds = { "Pl_Parashawl_UnEquip00", "Pl_Parashawl_UnEquip03", "Pl_Parashawl_UnEquip04" };
-
-
-            if (skillLocator && skillLocator.GetSkill(SkillSlot.Special) != null)
-            {
-                if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_URBOSA_NAME" || skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_DARUK_NAME" || skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_REVALI_NAME" || skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_MIPHA_NAME" || skillLocator.GetSkill(SkillSlot.Primary).skillDef.skillName == "CASEY_LINK_BODY_PRIMARY_SWORD_NAME")// Check to make sure only Link is affected
-                {
-                    // Add swordBuff - currently laggy and unresponsive - not sure why
-                    /*
-                    if ((self.healthComponent.combinedHealth / self.healthComponent.fullCombinedHealth) >= 0.9f)
-                    {
-                        self.AddBuff(Modules.Buffs.swordProjectileBuff);
-                    }
-                    else
-                    {
-                        self.RemoveBuff(Modules.Buffs.swordProjectileBuff);
-                    }
-                    */
-
-                    // Reset playedLowHealth sound
-                    if (playedLowHealth && (self.healthComponent.combinedHealth / self.healthComponent.fullCombinedHealth >= .2f))
-                    {
-                        playedLowHealth = false;
-                    }
-
-                    Animator animator = self.modelLocator.modelTransform.GetComponent<Animator>();
-
-                    // Stop playing Slow-Motion loop
-                    if (!self.inputBank.skill2.down || self.characterMotor.isGrounded)
-                    {
-                        AkSoundEngine.StopPlayingID(slowMotionPlayID);
-                        SlowMotionStopwatch = 0f;
-                    }
-
-                    // Play low HP sound
-                    if (!playedLowHealth && (self.healthComponent.combinedHealth / self.healthComponent.fullCombinedHealth < .2f))
-                    {
-                        Util.PlaySound("LowHP", self.gameObject);
-                        playedLowHealth = true;
-                    }
-
-                    // Unequip paraglider - play sound, fall animation
-                    if (enteredParaglider && !self.inputBank.skill2.down && (!self.inputBank.jump.down || self.characterMotor.isGrounded))
-                    {
-                        if (!playedFall)
-                        {
-
-                            animator.Play("Fall", 2);
-                            playedFall = true;
-                            playedParaEquipSound = false;
-
-                            if (!playedParaUnEquipSound)
-                            {
-                                Util.PlaySound(paraUnEquipSounds[Random.Range(0, 2)], self.gameObject);
-                                playedParaUnEquipSound = true;
+                                if (!(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
+                                {
+                                    Log.LogDebug("Removing Stock & Extra Item");
+                                    skillLocator.GetSkill(SkillSlot.Special).DeductStock(1);
+                                    self.inventory.RemoveItem(ItemCatalog.FindItemIndex("ExtraLifeConsumed"));
+                                    updateValues.resed = false;
+                                }
                             }
                         }
                     }
+                }
+                #endregion
 
-                    // Reset enteredSlowMo
-                    if (enteredSlowMo && (!self.inputBank.skill2.down || self.characterMotor.velocity.y >= 0f))
+                #region ChampionReady
+
+                if (skillLocator && skillLocator.GetSkill(SkillSlot.Special) != null)
+                {
+                    if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_MIPHA_NAME")
                     {
-                        enteredSlowMo = false;
+                        if ((skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
+                        {
+                            updateValues.miphaOnCooldown = true;
+                        }
+                        else if (updateValues.miphaOnCooldown && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
+                        {
+                            updateValues.miphaOnCooldown = false;
+                            if (Modules.Config.MiphaReadySound.Value)
+                                Util.PlaySound("MiphasGraceReady", self.gameObject);
+                        }
                     }
 
-                    // Handle bow slow-mo
-                    if (self.inputBank.skill2.down && self.characterMotor.velocity.y < 0f && (skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_3BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_FASTBOW_NAME"))
+                    if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_DARUK_NAME")
                     {
-                        if (skillLocator.GetSkill(SkillSlot.Secondary).cooldownRemaining == skillLocator.GetSkill(SkillSlot.Secondary).baseRechargeInterval) //If bow is not mid cooldown, allow for extreme slowfall
+                        if ((skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
                         {
-                            self.characterMotor.velocity = new Vector3(0f, 0f, 0f);
+                            updateValues.darukOnCooldown = true;
                         }
-                        if (!enteredSlowMo)
+                        else if (updateValues.darukOnCooldown && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
                         {
-                            Util.PlaySound("SlowMotionEnter", self.gameObject);
-                            enteredSlowMo = true;
+                            updateValues.darukOnCooldown = false;
+                            if (Modules.Config.DarukReadySound.Value)
+                                Util.PlaySound("DaruksProtectionReady", self.gameObject);
                         }
-                        if (SlowMotionStopwatch <= 0f)
-                        {
-                            slowMotionPlayID = Util.PlaySound("SlowMotionLoop", self.gameObject);
-                            SlowMotionStopwatch = 2f;
-                        }
-                        else
-                        {
-                            SlowMotionStopwatch -= Time.fixedDeltaTime;
-                        }
+                    }
 
-                    } // Handle paraglider gliding and equipping
-                    else if (self.inputBank.jump.down && self.characterMotor.velocity.y < 0f && !self.characterMotor.isGrounded)
+                    if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_URBOSA_NAME")
                     {
-                        enteredParaglider = true;
-                        playedFall = false;
-
-
-                        //animator.CrossFadeInFixedTime("Glide", 0.01f, 2);
-                        animator.Play("Glide", 2);
-
-                        // Util.PlaySound(paraGlideSounds[Random.Range(0, 1)], base.gameObject);
-
-                        playedParaUnEquipSound = false;
-
-                        if (!playedParaEquipSound)
+                        if ((skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
                         {
-                            Util.PlaySound(paraEquipSounds[Random.Range(0, 2)], self.gameObject);
-                            playedParaEquipSound = true;
+                            updateValues.urbosaOnCooldown = true;
+                        }
+                        if (updateValues.urbosaOnCooldown && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
+                        {
+                            updateValues.urbosaOnCooldown = false;
+                            if (Modules.Config.UrbosaReadySound.Value)
+                                Util.PlaySound("UrbosasFuryReady", self.gameObject);
                         }
 
-                        self.characterMotor.velocity = new Vector3(self.characterMotor.velocity.x, -1f, self.characterMotor.velocity.z);
-                        if (self.inputBank.skill2.down)
+                    }
+
+                    if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_REVALI_NAME")
+                    {
+                        if ((skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
                         {
-                            self.characterMotor.velocity = new Vector3(self.characterMotor.velocity.x, 0f, self.characterMotor.velocity.z);
+                            updateValues.revaliOnCooldown = true;
                         }
+                        else if (updateValues.revaliOnCooldown && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
+                        {
+                            updateValues.revaliOnCooldown = false;
+                            if (Modules.Config.RevaliReadySound.Value)
+                                Util.PlaySound("RevalisGaleReady", self.gameObject);
+                        }
+
                     }
                 }
-            }
-            #endregion
 
-            #region DarukShield
-            if (self.HasBuff(LinkMod.Modules.Buffs.darukBuff))
-            {
-                self.healthComponent.AddBarrier(1f);
-                if(DarukSoundStopwatch <= 0f)
+                #endregion
+
+                #region ParagliderSlow-Bow
+
+                string[] paraEquipSounds = { "Pl_Parashawl_Equip00", "Pl_Parashawl_Equip02", "Pl_Parashawl_Equip04" };
+                string[] paraGlideSounds = { "Pl_Parashawl_FlapFast00", "Pl_Parashawl_FlapFast01" };
+                string[] paraUnEquipSounds = { "Pl_Parashawl_UnEquip00", "Pl_Parashawl_UnEquip03", "Pl_Parashawl_UnEquip04" };
+
+
+
+
+
+
+
+
+                // Add swordBuff - currently laggy and unresponsive - not sure why
+                /*
+                if ((self.healthComponent.combinedHealth / self.healthComponent.fullCombinedHealth) >= 0.9f)
                 {
-                    darukShiedlPlayID = Util.PlaySound("Daruk_Shield_Loop", self.gameObject);
-                    DarukSoundStopwatch = 3f;
+                    self.AddBuff(Modules.Buffs.swordProjectileBuff);
                 }
                 else
                 {
-                    DarukSoundStopwatch -= Time.fixedDeltaTime;
+                    self.RemoveBuff(Modules.Buffs.swordProjectileBuff);
                 }
+                */
+
+
+                // Reset playedLowHealth sound
+                if (updateValues.playedLowHealth && (self.healthComponent.combinedHealth / self.healthComponent.fullCombinedHealth >= .2f))
+                {
+                    updateValues.playedLowHealth = false;
+                }
+
+                Animator animator = self.modelLocator.modelTransform.GetComponent<Animator>();
+
+                // Stop playing Slow-Motion loop
+                if (!self.inputBank.skill2.down || self.characterMotor.isGrounded)
+                {
+                    AkSoundEngine.StopPlayingID(updateValues.slowMotionPlayID);
+                    updateValues.SlowMotionStopwatch = 0f;
+                }
+
+                // Play low HP sound
+                if (!updateValues.playedLowHealth && (self.healthComponent.combinedHealth / self.healthComponent.fullCombinedHealth < .2f))
+                {
+                    Util.PlaySound("LowHP", self.gameObject);
+                    updateValues.playedLowHealth = true;
+                }
+
+                // Unequip paraglider - play sound, fall animation
+                if (updateValues.enteredParaglider && !self.inputBank.skill2.down && (!self.inputBank.jump.down || self.characterMotor.isGrounded))
+                {
+                    if (!updateValues.playedFall)
+                    {
+
+                        animator.Play("Fall", 2);
+                        updateValues.playedFall = true;
+                        updateValues.playedParaEquipSound = false;
+
+                        if (!updateValues.playedParaUnEquipSound)
+                        {
+                            Util.PlaySound(paraUnEquipSounds[Random.Range(0, 2)], self.gameObject);
+                            updateValues.playedParaUnEquipSound = true;
+                        }
+                    }
+                }
+
+                // Reset enteredSlowMo
+                if (updateValues.enteredSlowMo && (!self.inputBank.skill2.down || self.characterMotor.velocity.y >= 0f))
+                {
+                    updateValues.enteredSlowMo = false;
+                }
+
+                // Handle bow slow-mo
+                if (self.inputBank.skill2.down && self.characterMotor.velocity.y < 0f && (skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_3BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_FASTBOW_NAME"))
+                {
+                    if (skillLocator.GetSkill(SkillSlot.Secondary).cooldownRemaining == skillLocator.GetSkill(SkillSlot.Secondary).baseRechargeInterval) //If bow is not mid cooldown, allow for extreme slowfall
+                    {
+                        self.characterMotor.velocity = new Vector3(0f, 0f, 0f);
+                    }
+                    if (!updateValues.enteredSlowMo)
+                    {
+                        Util.PlaySound("SlowMotionEnter", self.gameObject);
+                        updateValues.enteredSlowMo = true;
+                    }
+                    if (updateValues.SlowMotionStopwatch <= 0f)
+                    {
+                        updateValues.slowMotionPlayID = Util.PlaySound("SlowMotionLoop", self.gameObject);
+                        updateValues.SlowMotionStopwatch = 2f;
+                    }
+                    else
+                    {
+                        updateValues.SlowMotionStopwatch -= Time.fixedDeltaTime;
+                    }
+
+                } // Handle paraglider gliding and equipping
+                else if (self.inputBank.jump.down && self.characterMotor.velocity.y < 0f && !self.characterMotor.isGrounded)
+                {
+                    updateValues.enteredParaglider = true;
+                    updateValues.playedFall = false;
+
+
+                    //animator.CrossFadeInFixedTime("Glide", 0.01f, 2);
+                    animator.Play("Glide", 2);
+
+                    // Util.PlaySound(paraGlideSounds[Random.Range(0, 1)], base.gameObject);
+
+                    updateValues.playedParaUnEquipSound = false;
+
+                    if (!updateValues.playedParaEquipSound)
+                    {
+                        Util.PlaySound(paraEquipSounds[Random.Range(0, 2)], self.gameObject);
+                        updateValues.playedParaEquipSound = true;
+                    }
+
+                    self.characterMotor.velocity = new Vector3(self.characterMotor.velocity.x, -1f, self.characterMotor.velocity.z);
+                    if (self.inputBank.skill2.down)
+                    {
+                        self.characterMotor.velocity = new Vector3(self.characterMotor.velocity.x, 0f, self.characterMotor.velocity.z);
+                    }
+                }
+
+                #endregion
+
+                #region DarukShield
+                if (self.HasBuff(LinkMod.Modules.Buffs.darukBuff))
+                {
+                    self.healthComponent.AddBarrier(1f);
+                    if (updateValues.DarukSoundStopwatch <= 0f)
+                    {
+                        updateValues.darukShiedlPlayID = Util.PlaySound("Daruk_Shield_Loop", self.gameObject);
+                        updateValues.DarukSoundStopwatch = 3f;
+                    }
+                    else
+                    {
+                        updateValues.DarukSoundStopwatch -= Time.fixedDeltaTime;
+                    }
+                }
+                #endregion
             }
-            #endregion
         }
 
         private void HealthComponent_TakeDamage(On.RoR2.HealthComponent.orig_TakeDamage orig, HealthComponent self, DamageInfo damageInfo)
         {
-
             //Mipha's Grace Functionality - On death, if using Mipha's Grace and no dio's, add dio to inventory and set res to true
             Log.Init(Logger);
             orig(self, damageInfo);
-            if (self)
+            Modules.UpdateValues updateValues = self.gameObject.GetComponent<Modules.UpdateValues>();
+            if (self && updateValues)
             {
                 CharacterBody characterBody = self.GetComponent<CharacterBody>();
                 SkillLocator skillLocator = characterBody.GetComponent<SkillLocator>();
 
                 if (skillLocator && characterBody && skillLocator.GetSkill(SkillSlot.Special) != null)
                 {
+
                     if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_MIPHA_NAME")
                     {
                         if (!(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
@@ -353,7 +340,7 @@ namespace LinkMod
                                 characterBody.inventory.GiveItem(ItemCatalog.FindItemIndex("ExtraLife"), 1);
                                 Util.PlaySound("MiphasGraceUse", characterBody.gameObject);
                                 skillLocator.GetSkill(SkillSlot.Special).DeductStock(1);
-                                resed = true;
+                                updateValues.resed = true;
                             }
                         }
                     }
@@ -361,14 +348,16 @@ namespace LinkMod
                     {
                         if (characterBody.HasBuff(LinkMod.Modules.Buffs.darukBuff))
                         {
-                            blockDaruk = true;
+                            updateValues.blockDaruk = true;
                             
                         }                        
                     }
-                }                
-                if (blockDaruk)
+                }   
+                
+                // Daruk shield break
+                if (updateValues.blockDaruk)
                 {
-                    blockDaruk = false;
+                    updateValues.blockDaruk = false;
                     characterBody.RemoveBuff(LinkMod.Modules.Buffs.darukBuff);
                     characterBody.AddTimedBuff(RoR2Content.Buffs.Immune, 3f);
                     characterBody.healthComponent.barrier = 0f;
@@ -377,7 +366,7 @@ namespace LinkMod
                     SummonDaruk(characterBody);
                     Util.PlaySound("Daruk_Shield_Break", self.gameObject);
                     Util.PlaySound("Daruk_Yell", self.gameObject);
-                    AkSoundEngine.StopPlayingID(darukShiedlPlayID);
+                    AkSoundEngine.StopPlayingID(updateValues.darukShiedlPlayID);
                 }
 
             }    

@@ -47,7 +47,7 @@ namespace LinkMod.Modules.Survivors
         };
 
 
-        internal override Type characterMainState { get; set; } = typeof(EntityStates.GenericCharacterMain);
+        internal override Type characterMainState { get; set; } = typeof(SkillStates.BaseStates.LinkMain);
 
         // item display stuffs
         internal override ItemDisplayRuleSet itemDisplayRuleSet { get; set; }
