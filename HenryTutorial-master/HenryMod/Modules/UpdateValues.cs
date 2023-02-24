@@ -9,7 +9,7 @@ namespace LinkMod.Modules
     {
         public string testString = "YEAH BABY";
 
-        public bool resed = false;
+        
         public bool miphaOnCooldown = false;
         public bool urbosaOnCooldown = false;
         public bool revaliOnCooldown = false;

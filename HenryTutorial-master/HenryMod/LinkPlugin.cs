@@ -89,21 +89,21 @@ namespace LinkMod
             {
                 SkillLocator skillLocator = self.GetComponent<SkillLocator>();
 
-                #region MiphaGraceRemoveDioCooldown
+                #region MiphaGraceRemoveDioAndSetCooldown
                 if (skillLocator)
                 {
                     if (skillLocator.GetSkill(SkillSlot.Special) != null)
                     {
-                        if (updateValues.resed)
-                        {
+                        if (self.inventory.itemAcquisitionOrder.Contains(ItemCatalog.FindItemIndex("UseAmbientLevel")))
+                        {                            
                             if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_MIPHA_NAME")
-                            {
+                            {                                
                                 if (!(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
                                 {
                                     Log.LogDebug("Removing Stock & Extra Item");
                                     skillLocator.GetSkill(SkillSlot.Special).DeductStock(1);
                                     self.inventory.RemoveItem(ItemCatalog.FindItemIndex("ExtraLifeConsumed"));
-                                    updateValues.resed = false;
+                                    self.inventory.RemoveItem(ItemCatalog.FindItemIndex("UseAmbientLevel")); // UpdateValues reset on respawn, so this is used in place of UpdateValues.resed                                    
                                 }
                             }
                         }
@@ -257,12 +257,18 @@ namespace LinkMod
                     }
                     if (!updateValues.enteredSlowMo)
                     {
-                        Util.PlaySound("SlowMotionEnter", self.gameObject);
+                        if (Modules.Config.SlowBowSound.Value)
+                        {
+                            Util.PlaySound("SlowMotionEnter", self.gameObject);
+                        }
                         updateValues.enteredSlowMo = true;
                     }
                     if (updateValues.SlowMotionStopwatch <= 0f)
                     {
-                        updateValues.slowMotionPlayID = Util.PlaySound("SlowMotionLoop", self.gameObject);
+                        if (Modules.Config.SlowBowSound.Value)
+                        {
+                            updateValues.slowMotionPlayID = Util.PlaySound("SlowMotionLoop", self.gameObject);
+                        }
                         updateValues.SlowMotionStopwatch = 2f;
                     }
                     else
@@ -305,7 +311,10 @@ namespace LinkMod
                     self.healthComponent.AddBarrier(1f);
                     if (updateValues.DarukSoundStopwatch <= 0f)
                     {
-                        updateValues.darukShiedlPlayID = Util.PlaySound("Daruk_Shield_Loop", self.gameObject);
+                        if (Modules.Config.DarukShieldSound.Value)
+                        {
+                            updateValues.darukShiedlPlayID = Util.PlaySound("Daruk_Shield_Loop", self.gameObject);
+                        }
                         updateValues.DarukSoundStopwatch = 3f;
                     }
                     else
@@ -326,8 +335,7 @@ namespace LinkMod
             if (self && updateValues)
             {
                 CharacterBody characterBody = self.GetComponent<CharacterBody>();
-                SkillLocator skillLocator = characterBody.GetComponent<SkillLocator>();
-
+                SkillLocator skillLocator = characterBody.GetComponent<SkillLocator>();                
                 if (skillLocator && characterBody && skillLocator.GetSkill(SkillSlot.Special) != null)
                 {
 
@@ -338,9 +346,9 @@ namespace LinkMod
                             if (!characterBody.healthComponent.alive && !characterBody.inventory.itemAcquisitionOrder.Contains(ItemCatalog.FindItemIndex("ExtraLife")))
                             {
                                 characterBody.inventory.GiveItem(ItemCatalog.FindItemIndex("ExtraLife"), 1);
+                                characterBody.inventory.GiveItem(ItemCatalog.FindItemIndex("UseAmbientLevel"), 1);
                                 Util.PlaySound("MiphasGraceUse", characterBody.gameObject);
-                                skillLocator.GetSkill(SkillSlot.Special).DeductStock(1);
-                                updateValues.resed = true;
+                                skillLocator.GetSkill(SkillSlot.Special).DeductStock(1);                                                                                              
                             }
                         }
                     }
@@ -348,8 +356,7 @@ namespace LinkMod
                     {
                         if (characterBody.HasBuff(LinkMod.Modules.Buffs.darukBuff))
                         {
-                            updateValues.blockDaruk = true;
-                            
+                            updateValues.blockDaruk = true;                            
                         }                        
                     }
                 }   
