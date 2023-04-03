@@ -23,7 +23,7 @@ namespace LinkMod.SkillStates
         {
             base.OnEnter();
             this.duration = RevalisGale.baseDuration;
-            this.fireTime = 1f;
+            this.fireTime = 0.10f;
             readySoundPlayed = false;
             fired = false;
             shouldLaunch = false;

@@ -27,7 +27,7 @@ namespace LinkMod.SkillStates
         {
             base.OnEnter();
             this.duration = UrbosasFury.baseDuration;
-            this.fireTime = 1f;
+            this.fireTime = 0.10f;
             this.shouldFire = false;
             playedReadySound = false;
         }

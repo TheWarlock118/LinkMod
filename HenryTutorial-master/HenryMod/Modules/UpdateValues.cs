@@ -21,6 +21,7 @@ namespace LinkMod.Modules
         public bool playedParaUnEquipSound = false;
         public bool enteredSlowMo = false;
         public bool playedLowHealth = false;
+        
 
         public float SlowMotionStopwatch = 0f;
         public float DarukSoundStopwatch = 0f;

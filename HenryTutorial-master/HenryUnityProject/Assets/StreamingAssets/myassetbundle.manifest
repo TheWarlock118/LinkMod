@@ -1,0 +1,108 @@
+ManifestFileVersion: 0
+CRC: 188928848
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1190147ce3c98ee7b6f7c87ad35fce19
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ef8be66ffa8ad622648e9c7269f4ad01
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 261c50d8a80898e4ebf2e8e415ea6766, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 751bd37d2e55f5f448dbb0d97812d9ba, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 319
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/LinkAssets/Icons/Magnesis.png
+- Assets/LinkAssets/Link Mats/Dark/Mt_Dark3.mat
+- Assets/LinkAssets/Icons/RitoSkin.png
+- Assets/LinkAssets/Icons/GerudoSkin.png
+- Assets/LinkAssets/Prefabs/mdlUrbosa.prefab
+- Assets/LinkAssets/Icons/MasterSword.png
+- Assets/LinkAssets/Icons/HylianSkin.png
+- Assets/LinkAssets/Icons/MiphasGrace.png
+- Assets/LinkAssets/Icons/MasterySkin.png
+- Assets/LinkAssets/Icons/GreatEagleBow.png
+- Assets/LinkAssets/Anims/animUrbosa.controller
+- Assets/LinkAssets/Icons/DarkSkin.png
+- Assets/LinkAssets/Prefabs/mdlLinkChampion.prefab
+- Assets/LinkAssets/Icons/WildSkin.png
+- Assets/LinkAssets/DarukProtection.fbx
+- Assets/LinkAssets/Link Mats/link_head_alb.png
+- Assets/LinkAssets/Prefabs/mdlLinkDark.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkDarkDisplay.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkGerudoDisplay.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkChampionDisplay.prefab
+- Assets/LinkAssets/Icons/HylianShieldIcon.png
+- Assets/LinkAssets/Prefabs/mdlDaruk.prefab
+- Assets/LinkAssets/Icons/DaruksProtection.png
+- Assets/LinkAssets/Icons/FalconBow.png
+- Assets/LinkAssets/Icons/RevalisGale.png
+- Assets/LinkAssets/Link Mats/Mt_armor_lower.mat
+- Assets/LinkAssets/Anims/animLinkFinal.controller
+- Assets/LinkAssets/Anims/animLinkDisplayFinal.controller
+- Assets/LinkAssets/UrbosaFuryAnimation.fbx
+- Assets/LinkAssets/Icons/Paraglider.png
+- Assets/LinkAssets/Prefabs/mdlMipha.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkRitoDisplay.prefab
+- Assets/LinkAssets/MiphaGraceAnimation.fbx
+- Assets/LinkAssets/Prefabs/mdlLinkWild.prefab
+- Assets/LinkAssets/Icons/Cryonis.png
+- Assets/LinkAssets/Anims/animRevali.controller
+- Assets/LinkAssets/Icons/RoyalGuardBow.png
+- Assets/LinkAssets/Prefabs/mdlLinkWildDisplay.prefab
+- Assets/LinkAssets/linkArrow.prefab
+- Assets/LinkAssets/Icons/FireRod.png
+- Assets/LinkAssets/Prefabs/mdlRevali.prefab
+- Assets/LinkAssets/Anims/animMipha.controller
+- Assets/LinkAssets/Prefabs/LinkBombRound.prefab
+- Assets/LinkAssets/Anims/animDaruk.controller
+- Assets/LinkAssets/RevaliGaleAnimation.fbx
+- Assets/LinkAssets/Icons/BowOfLight.png
+- Assets/LinkAssets/Icons/Stasis.png
+- Assets/LinkAssets/Prefabs/mdlLinkRito.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkHylian.prefab
+- Assets/LinkAssets/Icons/RemoteBomb.png
+- Assets/LinkAssets/Prefabs/mdlLinkHylianDisplay.prefab
+- Assets/LinkAssets/Icons/LinkIcon.png
+- Assets/LinkAssets/Prefabs/mdlLinkGerudo.prefab
+- Assets/LinkAssets/Icons/IceRod.png
+- Assets/LinkAssets/maskLinkGesture.mask
+- Assets/LinkAssets/HeroMats/BlueSeeThrough.mat
+Dependencies: []
