@@ -19,6 +19,7 @@ namespace LinkMod.SkillStates
         private bool shouldLaunch;
         private Animator animator;
 
+        public static AnimationCurve speedCoefficientCurve;
         public override void OnEnter()
         {
             base.OnEnter();
@@ -27,7 +28,7 @@ namespace LinkMod.SkillStates
             readySoundPlayed = false;
             fired = false;
             shouldLaunch = false;
-            base.PlayAnimation("Gesture, Override", "Crouch");
+            // base.PlayAnimation("Gesture, Override", "Crouch");
         }
 
         public override void OnExit()
@@ -39,10 +40,10 @@ namespace LinkMod.SkillStates
                 {
                     CharacterMotor characterMotor = this.characterBody.characterMotor;
                     characterMotor.Motor.ForceUnground();
-                    characterMotor.ApplyForce(Vector3.up * 500f * this.moveSpeedStat * (this.characterBody.rigidbody.mass / 100f), false, false);
+                    characterMotor.ApplyForce(Vector3.up * 2500f * (this.moveSpeedStat / 5f) * (this.characterBody.rigidbody.mass / 100f), false, false);                    
                 }
-                base.PlayAnimation("Gesture, Override", "Glide");
-                Util.PlaySound("Revali_Wind2", base.gameObject);
+                // base.PlayAnimation("Gesture, Override", "Glide");
+                // Util.PlaySound("Revali_Wind2", base.gameObject);
                 SummonRevali();
             }
             else
@@ -61,7 +62,7 @@ namespace LinkMod.SkillStates
             if (!readySoundPlayed)
             {
                 Util.PlaySound("AbilityReady", base.gameObject);
-                Util.PlaySound("Revali_Wind", base.gameObject);
+                // Util.PlaySound("Revali_Wind", base.gameObject);
                 readySoundPlayed = true;
             }
         }
@@ -88,30 +89,13 @@ namespace LinkMod.SkillStates
 
         public override void FixedUpdate()
         {
-            base.FixedUpdate();
-            base.characterMotor.velocity = new Vector3(0f, 0f, 0f);
-            if (characterBody.characterMotor.isGrounded)
-            {                
-                if (base.fixedAge >= this.fireTime)
-                {
-                    this.Fire();
-                    fired = true;
-                }
-                if (!base.inputBank.skill4.down)
-                {
-                    this.outer.SetNextStateToMain();
-                    return;
-                }
-            }
-            else
-            {
-                SkillLocator skillLocator = characterBody.GetComponent<SkillLocator>();
-                skillLocator.GetSkill(SkillSlot.Special).RemoveAllStocks();
-                skillLocator.GetSkill(SkillSlot.Special).AddOneStock();
-                fired = false;
-                this.outer.SetNextStateToMain();
-                return;
-            }
+            base.FixedUpdate();             
+            this.Fire();
+            fired = true;
+
+            this.outer.SetNextStateToMain();
+            return;
+
         }
 
         public override InterruptPriority GetMinimumInterruptPriority()
