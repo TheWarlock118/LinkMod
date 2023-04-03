@@ -39,7 +39,7 @@ namespace LinkMod.SkillStates
                 {
                     CharacterMotor characterMotor = this.characterBody.characterMotor;
                     characterMotor.Motor.ForceUnground();
-                    characterMotor.ApplyForce(Vector3.up * 5000f * (this.characterBody.rigidbody.mass / 100f), false, false);
+                    characterMotor.ApplyForce(Vector3.up * 500f * this.moveSpeedStat * (this.characterBody.rigidbody.mass / 100f), false, false);
                 }
                 base.PlayAnimation("Gesture, Override", "Glide");
                 Util.PlaySound("Revali_Wind2", base.gameObject);

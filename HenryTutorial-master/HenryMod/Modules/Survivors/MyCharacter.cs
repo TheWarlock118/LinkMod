@@ -293,9 +293,9 @@ namespace LinkMod.Modules.Survivors
                 isCombatSkill = true,
                 mustKeyPress = false,
                 cancelSprintingOnActivation = false,
-                rechargeStock = 1,
+                rechargeStock = 0,
                 requiredStock = 1,
-                stockToConsume = 1
+                stockToConsume = 1            
             });
 
             SkillDef darukSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo

@@ -51,7 +51,7 @@ namespace LinkMod.SkillStates
                 return;
             }
         }
-
+        
         private void SummonMipha()
         {
             if (base.isAuthority)

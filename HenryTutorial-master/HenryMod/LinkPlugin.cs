@@ -98,7 +98,7 @@ namespace LinkMod
                         {                            
                             if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_MIPHA_NAME")
                             {                                
-                                if (!(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
+                                if (!(skillLocator.GetSkill(SkillSlot.Special).stock < 1))
                                 {
                                     Log.LogDebug("Removing Stock & Extra Item");
                                     skillLocator.GetSkill(SkillSlot.Special).DeductStock(1);
@@ -117,11 +117,11 @@ namespace LinkMod
                 {
                     if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_MIPHA_NAME")
                     {
-                        if ((skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
+                        if ((skillLocator.GetSkill(SkillSlot.Special).stock < 1))
                         {
                             updateValues.miphaOnCooldown = true;
                         }
-                        else if (updateValues.miphaOnCooldown && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
+                        else if (updateValues.miphaOnCooldown && !(skillLocator.GetSkill(SkillSlot.Special).stock < 1))
                         {
                             updateValues.miphaOnCooldown = false;
                             if (Modules.Config.MiphaReadySound.Value)
@@ -349,7 +349,7 @@ namespace LinkMod
 
                     if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_MIPHA_NAME")
                     {
-                        if (!(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
+                        if (!(skillLocator.GetSkill(SkillSlot.Special).stock < 1))
                         {
                             if (!characterBody.healthComponent.alive && !characterBody.inventory.itemAcquisitionOrder.Contains(ItemCatalog.FindItemIndex("ExtraLife")))
                             {

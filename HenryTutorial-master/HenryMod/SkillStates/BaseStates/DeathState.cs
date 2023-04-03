@@ -39,7 +39,7 @@ namespace LinkMod.SkillStates.BaseStates
 
 
 			PlayDeathAnimation();
-			if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_MIPHA_NAME" && !(skillLocator.GetSkill(SkillSlot.Special).cooldownRemaining > 0f))
+			if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_MIPHA_NAME" && !(skillLocator.GetSkill(SkillSlot.Special).stock < 1))
 			{
 				SummonMipha();
 			}
