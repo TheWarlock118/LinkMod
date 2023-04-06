@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 913991379
+CRC: 1153748931
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d885dffcbdba3f936e03b390600fd8a7
+    Hash: 2c37384f4d6bd8ad8a911a0199045a71
   TypeTreeHash:
     serializedVersion: 2
     Hash: 740584176fc78b859e604f8258f4482c
@@ -142,7 +142,6 @@ Assets:
 - Assets/HenryAssets/Textures/texShotgun.png
 - Assets/HenryAssets/Animations/WalkL.anim
 - Assets/HenryAssets/Animations/maskImpact.mask
-- Assets/LinkAssets/mdlLinkHylian.prefab
 - Assets/LinkAssets/Icons/HylianShieldIcon.png
 - Assets/HenryAssets/Animations/Idle.anim
 - Assets/HenryAssets/VFX/BombExplosionEffect.prefab
