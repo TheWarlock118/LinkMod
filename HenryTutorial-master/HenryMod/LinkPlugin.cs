@@ -101,7 +101,7 @@ namespace LinkMod
                                 if (!(skillLocator.GetSkill(SkillSlot.Special).stock < 1))
                                 {
                                     Log.LogDebug("Removing Stock & Extra Item");
-                                    skillLocator.GetSkill(SkillSlot.Special).DeductStock(1);
+                                    skillLocator.GetSkill(SkillSlot.Special).RemoveAllStocks();
                                     self.inventory.RemoveItem(ItemCatalog.FindItemIndex("ExtraLifeConsumed"));
                                     self.inventory.RemoveItem(ItemCatalog.FindItemIndex("UseAmbientLevel")); // UpdateValues reset on respawn, so this is used in place of UpdateValues.resed                                    
                                 }
@@ -355,7 +355,7 @@ namespace LinkMod
                                 characterBody.inventory.GiveItem(ItemCatalog.FindItemIndex("ExtraLife"), 1);
                                 characterBody.inventory.GiveItem(ItemCatalog.FindItemIndex("UseAmbientLevel"), 1);
                                 Util.PlaySound("MiphasGraceUse", characterBody.gameObject);
-                                skillLocator.GetSkill(SkillSlot.Special).DeductStock(1);                                                                                              
+                                skillLocator.GetSkill(SkillSlot.Special).RemoveAllStocks();                                                                                              
                             }
                         }
                     }

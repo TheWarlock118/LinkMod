@@ -1044,10 +1044,10 @@ localScale = new Vector3(-0.00689F, -0.00689F, -0.00689F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayWarhammer"),
-childName = "Root",
-localPos = new Vector3(0.0513F, 0.0652F, -0.0792F),
-localAngles = new Vector3(64.189F, 90F, 90F),
-localScale = new Vector3(0.1722F, 0.1722F, 0.1722F),
+childName = "Head",
+localPos = new Vector3(-0.002F, -0.00008F, 0F),
+localAngles = new Vector3(330.4154F, 90.10216F, 90.07761F),
+localScale = new Vector3(0.0026F, 0.0026F, 0.0026F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -1673,10 +1673,10 @@ localScale = new Vector3(0.1511F, 0.1511F, 0.1511F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayFossil"),
-childName = "Root",
-localPos = new Vector3(-0.0722F, 0.0921F, 0F),
-localAngles = new Vector3(0F, 0F, 0F),
-localScale = new Vector3(0.4208F, 0.4208F, 0.4208F),
+childName = "Leg_1_R",
+localPos = new Vector3(0.00341F, -0.00013F, -0.00003F),
+localAngles = new Vector3(7.38151F, 0.04676F, 17.87387F),
+localScale = new Vector3(-0.00502F, -0.00502F, -0.00502F),
                             limbMask = LimbFlags.None
                         }
                     }
