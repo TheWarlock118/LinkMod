@@ -370,7 +370,7 @@ namespace LinkMod.Modules.Survivors
                 stockToConsume = 1
             });
 
-            SkillDef[] specials = { miphaSkillDef, darukSkillDef, revaliSkillDef, urbosaSkillDef };
+            SkillDef[] specials = { urbosaSkillDef, revaliSkillDef, darukSkillDef, miphaSkillDef};
             Modules.Skills.AddSpecialSkills(bodyPrefab, specials);
             #endregion
 
