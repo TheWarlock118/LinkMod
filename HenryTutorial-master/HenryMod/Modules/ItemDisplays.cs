@@ -9,10 +9,9 @@ namespace LinkMod.Modules
         private static Dictionary<string, GameObject> itemDisplayPrefabs = new Dictionary<string, GameObject>();
 
         internal static void PopulateDisplays()
-        {
-            PopulateFromBody("Commando");
-            PopulateFromBody("Croco");
+        {            
             PopulateFromBody("Mage");
+            PopulateFromBody("LunarExploder");
         }
 
         private static void PopulateFromBody(string bodyName)

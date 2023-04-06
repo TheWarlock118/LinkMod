@@ -26,16 +26,16 @@ namespace LinkMod.SkillStates.BaseStates
 			}
 
 			// RagDoll code - implement ragdoll controller?
-			/*
+			
 			if (base.cachedModelTransform)
 			{
 				RagdollController component = base.cachedModelTransform.GetComponent<RagdollController>();
 				if (component)
-				{
+				{					
 					component.BeginRagdoll(vector);
 				}
 			}
-			*/
+		
 
 
 			PlayDeathAnimation();

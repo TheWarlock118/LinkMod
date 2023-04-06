@@ -27,6 +27,7 @@ namespace LinkMod.SkillStates
             base.PlayAnimation("Gesture, Override", "ShieldGuard", "ThrowBomb.playbackRate", this.fireTime);
             base.PlayCrossfade("Gesture, Override", "ThrowBomb", "ThrowBomb.playbackRate", this.fireTime, this.fireTime);
             Util.PlaySound("ShieldGuardUp", base.gameObject);
+            Util.PlaySound("AbilityReady", base.gameObject);
             characterBody.AddBuff(LinkMod.Modules.Buffs.darukBuff);
             characterBody.healthComponent.AddBarrier(1f);
         }

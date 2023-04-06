@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2845651397
+CRC: 913991379
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 2d48f0e7addfea4d4a0e7b702933e7c7
+    Hash: d885dffcbdba3f936e03b390600fd8a7
   TypeTreeHash:
     serializedVersion: 2
     Hash: 740584176fc78b859e604f8258f4482c
@@ -82,7 +82,7 @@ Assets:
 - Assets/HenryAssets/Icons/texMasteryAchievement.png
 - Assets/LinkAssets/Icons/GerudoSkin.png
 - Assets/HenryAssets/Mesh/meshHenry.mesh
-- Assets/LinkAssets/mdlUrbosa.prefab
+- Assets/LinkAssets/Prefabs/mdlUrbosa.prefab
 - Assets/HenryAssets/HenryDisplay.prefab
 - Assets/LinkAssets/Icons/MasterSword.png
 - Assets/HenryAssets/VFX/Mesh/meshBoxingGlove.mesh
@@ -117,7 +117,7 @@ Assets:
 - Assets/LinkAssets/Anims/animUrbosa.controller
 - Assets/LinkAssets/Icons/DarkSkin.png
 - Assets/HenryAssets/VFX/Mesh/meshSwing.asset
-- Assets/LinkAssets/mdlLinkChampion.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkChampion.prefab
 - Assets/LinkAssets/Icons/WildSkin.png
 - Assets/HenryAssets/VFX/HenryBazookaMuzzleFlash.prefab
 - Assets/HenryAssets/VFX/HenryFistSwingEffect.prefab
@@ -128,12 +128,12 @@ Assets:
 - Assets/HenryAssets/Animations/LightImpact.anim
 - Assets/HenryAssets/Icons/texHenryAchievement.png
 - Assets/HenryAssets/Animations/WalkB.anim
-- Assets/LinkAssets/mdlLinkDark.prefab
-- Assets/LinkAssets/mdlLinkDarkDisplay.prefab
-- Assets/LinkAssets/mdlLinkGerudoDisplay.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkDark.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkDarkDisplay.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkGerudoDisplay.prefab
 - Assets/HenryAssets/Animations/maskGesture.mask
 - Assets/HenryAssets/VFX/Materials/matPunchImpact.mat
-- Assets/LinkAssets/mdlLinkChampionDisplay.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkChampionDisplay.prefab
 - Assets/HenryAssets/Mesh/meshHenryAlt.mesh
 - Assets/HenryAssets/Textures/texHenryJedi.png
 - Assets/HenryAssets/Animations/SprintR.anim
@@ -142,13 +142,14 @@ Assets:
 - Assets/HenryAssets/Textures/texShotgun.png
 - Assets/HenryAssets/Animations/WalkL.anim
 - Assets/HenryAssets/Animations/maskImpact.mask
+- Assets/LinkAssets/mdlLinkHylian.prefab
 - Assets/LinkAssets/Icons/HylianShieldIcon.png
 - Assets/HenryAssets/Animations/Idle.anim
 - Assets/HenryAssets/VFX/BombExplosionEffect.prefab
 - Assets/HenryAssets/Animations/Slash2.anim
 - Assets/HenryAssets/Mesh/meshYamato.mesh
 - Assets/HenryAssets/VFX/Textures/texDust.png
-- Assets/LinkAssets/mdlDaruk.prefab
+- Assets/LinkAssets/Prefabs/mdlDaruk.prefab
 - Assets/HenryAssets/VFX/Textures/texHitSpark.png
 - Assets/HenryAssets/Materials/matBoxingGlove.mat
 - Assets/HenryAssets/Materials/matHenryAlt.mat
@@ -188,9 +189,9 @@ Assets:
 - Assets/HenryAssets/Materials/matHenryNeo.mat
 - Assets/LinkAssets/Icons/Paraglider.png
 - Assets/HenryAssets/VFX/Mesh/meshPunchShockwave.mesh
-- Assets/LinkAssets/mdlMipha.prefab
+- Assets/LinkAssets/Prefabs/mdlMipha.prefab
 - Assets/HenryAssets/Materials/matRoy.mat
-- Assets/LinkAssets/mdlLinkRitoDisplay.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkRitoDisplay.prefab
 - Assets/HenryAssets/Icons/texBazookaIconScepter.png
 - Assets/LinkAssets/MiphaGraceAnimation.fbx
 - Assets/HenryAssets/Textures/texHenryNeo.png
@@ -201,7 +202,7 @@ Assets:
 - Assets/HenryAssets/Animations/IdleIn.anim
 - Assets/HenryAssets/VFX/Materials/matSwingShadow.mat
 - Assets/HenryAssets/Textures/texHenryJediEmission.png
-- Assets/LinkAssets/mdlLinkWild.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkWild.prefab
 - Assets/HenryAssets/Mesh/meshDanteCoat.mesh
 - Assets/HenryAssets/Animations/RestIdle.anim
 - Assets/LinkAssets/Icons/Cryonis.png
@@ -213,20 +214,20 @@ Assets:
 - Assets/HenryAssets/VFX/Materials/matPunchEffect.mat
 - Assets/LinkAssets/Icons/RoyalGuardBow.png
 - Assets/HenryAssets/VFX/Textures/texPunchImpact.png
-- Assets/LinkAssets/mdlLinkWildDisplay.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkWildDisplay.prefab
 - Assets/LinkAssets/linkArrow.prefab
 - Assets/HenryAssets/mdlHenry.prefab
 - Assets/HenryAssets/Mesh/meshRebellion.mesh
 - Assets/HenryAssets/VFX/Materials/matHitSparkPunch.mat
 - Assets/LinkAssets/Icons/FireRod.png
-- Assets/LinkAssets/mdlRevali.prefab
+- Assets/LinkAssets/Prefabs/mdlRevali.prefab
 - Assets/HenryAssets/VFX/Materials/matSwingEffect.mat
 - Assets/LinkAssets/Anims/animMipha.controller
 - Assets/LinkAssets/FBXs/LinkFinalAnimationDarkSet/Meshes/Arm_160__Mt_Upper_160.mesh
 - Assets/HenryAssets/Mesh/meshHenrySword.mesh
 - Assets/HenryAssets/VFX/Materials/matEmbers.mat
 - Assets/HenryAssets/Animations/AimYaw.anim
-- Assets/LinkAssets/LinkBombRound.prefab
+- Assets/LinkAssets/Prefabs/LinkBombRound.prefab
 - Assets/HenryAssets/HenryBombGhost.prefab
 - Assets/LinkAssets/Anims/animDaruk.controller
 - Assets/HenryAssets/Mesh/meshPistol.mesh
@@ -248,9 +249,9 @@ Assets:
 - Assets/HenryAssets/Animations/DefaultPose.anim
 - Assets/HenryAssets/Materials/matShotgun.mat
 - Assets/LinkAssets/Icons/Stasis.png
-- Assets/LinkAssets/mdlLinkRito.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkRito.prefab
 - Assets/HenryAssets/Animations/IdleAdditive.anim
-- Assets/LinkAssets/mdlLinkHylian.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkHylian.prefab
 - Assets/HenryAssets/Icons/texBazookaFireIcon.png
 - Assets/HenryAssets/VFX/Materials/matFire.mat
 - Assets/HenryAssets/Icons/texGrandMasteryAchievement.png
@@ -259,12 +260,12 @@ Assets:
 - Assets/HenryAssets/Animations/MenuIdle.anim
 - Assets/HenryAssets/Animations/mdlHenry.controller
 - Assets/HenryAssets/Materials/matBazooka.mat
-- Assets/LinkAssets/mdlLinkHylianDisplay.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkHylianDisplay.prefab
 - Assets/LinkAssets/Icons/LinkIcon.png
 - Assets/HenryAssets/VFX/HenrySwordSwingEffect.prefab
 - Assets/HenryAssets/Animations/Descend.anim
 - Assets/HenryAssets/Textures/texHenryDante.png
-- Assets/LinkAssets/mdlLinkGerudo.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkGerudo.prefab
 - Assets/HenryAssets/Animations/AimPitch.anim
 - Assets/LinkAssets/Icons/IceRod.png
 - Assets/LinkAssets/maskLinkGesture.mask
