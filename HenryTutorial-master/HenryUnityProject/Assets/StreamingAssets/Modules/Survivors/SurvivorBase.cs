@@ -31,6 +31,8 @@ namespace LinkMod.Modules.Survivors
         internal abstract Type characterMainState { get; set; }
 
         internal abstract ItemDisplayRuleSet itemDisplayRuleSet { get; set; }
+
+        public virtual ItemDisplaysBase itemDisplays { get; } = null;
         internal abstract List<ItemDisplayRuleSet.KeyAssetRuleGroup> itemDisplayRules { get; set; }
 
         internal virtual void Initialize()

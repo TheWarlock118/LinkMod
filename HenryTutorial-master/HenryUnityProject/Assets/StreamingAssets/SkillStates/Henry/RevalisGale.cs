@@ -83,7 +83,26 @@ namespace LinkMod.SkillStates
                     DamageColorIndex.Default,
                     null,
                     0f);
-                
+
+                new BlastAttack
+                {
+                    attacker = base.characterBody.gameObject,
+                    baseDamage = base.characterBody.damage * 1f,
+                    baseForce = 5000f,
+                    bonusForce = Vector3.zero,
+                    attackerFiltering = AttackerFiltering.NeverHitSelf,
+                    crit = base.characterBody.RollCrit(),
+                    damageColorIndex = DamageColorIndex.Item,
+                    damageType = DamageType.Generic,
+                    falloffModel = BlastAttack.FalloffModel.None,
+                    inflictor = base.gameObject,
+                    position = characterBody.corePosition,
+                    procChainMask = default(ProcChainMask),
+                    procCoefficient = 1f,
+                    radius = 10f,
+                    losType = BlastAttack.LoSType.NearestHit,
+                    teamIndex = base.characterBody.teamComponent.teamIndex
+                }.Fire();                
             }            
         }
 

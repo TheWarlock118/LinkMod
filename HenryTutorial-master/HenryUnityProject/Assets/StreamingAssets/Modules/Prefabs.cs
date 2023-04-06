@@ -1,5 +1,6 @@
 ﻿using R2API;
 using RoR2;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -224,12 +225,14 @@ namespace LinkMod.Modules
             
             for (int i = 0; i < rendererInfo.Length; i++)
             {
+                
                 if (!childLocator.FindChild(rendererInfo[i].childName))
                 {
                     Debug.LogError("Trying to add a RendererInfo for a renderer that does not exist: " + rendererInfo[i].childName);
                 }
                 else
                 {
+                    Log.LogDebug("Adding" + rendererInfo[i].childName);
                     Renderer j = childLocator.FindChild(rendererInfo[i].childName).GetComponent<Renderer>();
                     if (!j)
                     {
@@ -258,12 +261,93 @@ namespace LinkMod.Modules
             
             if (mainRendererIndex > characterModel.baseRendererInfos.Length)
             {
+                Debug.LogError("Main render index length:" + characterModel.baseRendererInfos.Length);
                 Debug.LogError("mainRendererIndex out of range: not setting mainSkinnedMeshRenderer for " + prefab.name);
                 return;
             }
 
             characterModel.mainSkinnedMeshRenderer = characterModel.baseRendererInfos[mainRendererIndex].renderer.GetComponent<SkinnedMeshRenderer>();
             
+        }
+
+        public static CharacterModel SetupCharacterModelNew(GameObject prefab, CustomRendererInfo[] customInfos)
+        {
+
+            CharacterModel characterModel = prefab.GetComponent<ModelLocator>().modelTransform.gameObject.GetComponent<CharacterModel>();
+            bool preattached = characterModel != null;
+            if (!preattached)
+                characterModel = prefab.GetComponent<ModelLocator>().modelTransform.gameObject.AddComponent<CharacterModel>();
+
+            characterModel.body = prefab.GetComponent<CharacterBody>();
+
+            characterModel.autoPopulateLightInfos = true;
+            characterModel.invisibilityCount = 0;
+            characterModel.temporaryOverlays = new List<TemporaryOverlay>();
+
+            if (!preattached)
+            {
+                SetupCustomRendererInfos(characterModel, customInfos);
+            }
+            else
+            {
+                SetupPreAttachedRendererInfos(characterModel);
+            }
+            return characterModel;
+        }
+
+        public static void SetupPreAttachedRendererInfos(CharacterModel characterModel)
+        {
+            for (int i = 0; i < characterModel.baseRendererInfos.Length; i++)
+            {
+                if (characterModel.baseRendererInfos[i].defaultMaterial == null)
+                    characterModel.baseRendererInfos[i].defaultMaterial = characterModel.baseRendererInfos[i].renderer.sharedMaterial;
+                characterModel.baseRendererInfos[i].defaultMaterial.SetHopooMaterial();
+            }
+        }
+
+        public static void SetupCustomRendererInfos(CharacterModel characterModel, CustomRendererInfo[] customInfos)
+        {
+
+            ChildLocator childLocator = characterModel.GetComponent<ChildLocator>();
+            if (!childLocator)
+            {
+                Log.LogError("Failed CharacterModel setup: ChildLocator component does not exist on the model");
+                return;
+            }
+
+            List<CharacterModel.RendererInfo> rendererInfos = new List<CharacterModel.RendererInfo>();
+
+            for (int i = 0; i < customInfos.Length; i++)
+            {
+                if (!childLocator.FindChild(customInfos[i].childName))
+                {
+                    Log.LogError("Trying to add a RendererInfo for a renderer that does not exist: " + customInfos[i].childName);
+                }
+                else
+                {
+                    Renderer rend = childLocator.FindChild(customInfos[i].childName).GetComponent<Renderer>();
+                    if (rend)
+                    {
+
+                        Material mat = customInfos[i].material;
+
+                        if (mat == null)
+                        {
+                            mat = rend.material.SetHopooMaterial();                           
+                        }
+
+                        rendererInfos.Add(new CharacterModel.RendererInfo
+                        {
+                            renderer = rend,
+                            defaultMaterial = mat,
+                            ignoreOverlays = customInfos[i].ignoreOverlays,
+                            defaultShadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On
+                        });
+                    }
+                }
+            }
+
+            characterModel.baseRendererInfos = rendererInfos.ToArray();
         }
         #endregion
 

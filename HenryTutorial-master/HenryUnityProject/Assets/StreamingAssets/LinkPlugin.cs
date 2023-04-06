@@ -88,6 +88,7 @@ namespace LinkMod
             if (updateValues)
             {
                 SkillLocator skillLocator = self.GetComponent<SkillLocator>();
+                ChildLocator childLocator = self.GetComponent<ChildLocator>();
 
                 #region MiphaGraceRemoveDioAndSetCooldown
                 if (skillLocator)

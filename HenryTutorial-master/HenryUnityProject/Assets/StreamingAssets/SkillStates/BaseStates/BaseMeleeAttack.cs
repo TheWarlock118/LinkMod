@@ -70,7 +70,6 @@ namespace LinkMod.SkillStates.BaseStates
             }
 
             this.PlayAttackAnimation();
-            this.PlayAttackSound();
 
             this.attack = new OverlapAttack();
             this.attack.damageType = this.damageType;
@@ -135,8 +134,9 @@ namespace LinkMod.SkillStates.BaseStates
                 if (!this.hasFired)
                 {
                     this.hasFired = true;
-
                     
+                    this.PlayAttackSound();
+
                     if (this.characterBody.healthComponent.combinedHealth / this.characterBody.healthComponent.fullCombinedHealth >= .9f)
                     {
                         if (base.isAuthority)

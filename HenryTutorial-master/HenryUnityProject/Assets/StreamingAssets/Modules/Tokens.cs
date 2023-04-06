@@ -74,16 +74,16 @@ namespace LinkMod.Modules
 
             #region Special
             LanguageAPI.Add(prefix + "SPECIAL_MIPHA_NAME", "Mipha's Grace");
-            LanguageAPI.Add(prefix + "SPECIAL_MIPHA_DESCRIPTION", "When your hearts run out, call on the Champion Mipha to bring you back to life.");
+            LanguageAPI.Add(prefix + "SPECIAL_MIPHA_DESCRIPTION", "When your hearts run out, call on the Champion Mipha to bring you back to life. Usable once per stage.");
 
             LanguageAPI.Add(prefix + "SPECIAL_DARUK_NAME", "Daruk's Protection");
-            LanguageAPI.Add(prefix + "SPECIAL_DARUK_DESCRIPTION", "Call on the Champion Daruk to enforce your defenses. The next attack is automatically deflected.");
+            LanguageAPI.Add(prefix + "SPECIAL_DARUK_DESCRIPTION", "Call on the Champion Daruk to enforce your defenses. The next attack is automatically deflected. Cooldown begins after attack deflection.");
 
             LanguageAPI.Add(prefix + "SPECIAL_REVALI_NAME", "Revali's Gale");
-            LanguageAPI.Add(prefix + "SPECIAL_REVALI_DESCRIPTION", "Hold to crouch. After a short time, release to call on the Champion Revali and soar into the sky.");
+            LanguageAPI.Add(prefix + "SPECIAL_REVALI_DESCRIPTION", "Call on the Champion Revali and soar into the sky, dealing a small amount of damage and pushing back enemies around you.");
 
             LanguageAPI.Add(prefix + "SPECIAL_URBOSA_NAME", "Urbosa's Fury");
-            LanguageAPI.Add(prefix + "SPECIAL_URBOSA_DESCRIPTION", "Hold to prepare. After a short time, release to call on the Champion Urbosa to summon powerful lightning and damage your foes.");
+            LanguageAPI.Add(prefix + "SPECIAL_URBOSA_DESCRIPTION", "Call on the Champion Urbosa to summon powerful lightning and damage your foes.");
             #endregion
 
             #region Achievements

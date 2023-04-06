@@ -31,14 +31,14 @@ namespace LinkMod.SkillStates.BaseStates
 			{
 				RagdollController component = base.cachedModelTransform.GetComponent<RagdollController>();
 				if (component)
-				{
+				{					
 					component.BeginRagdoll(vector);
 				}
 			}
-			
+		
 
 
-			// PlayDeathAnimation();
+			PlayDeathAnimation();
 			if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_MIPHA_NAME" && !(skillLocator.GetSkill(SkillSlot.Special).stock < 1))
 			{
 				SummonMipha();
