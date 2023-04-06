@@ -215,7 +215,7 @@ namespace LinkMod.Modules.Survivors
                 stockToConsume = 1,
                 keywordTokens = new string[] { "KEYWORD_AGILE" }
             });
-            SkillDef[] secondaries = { shootSkillDef, shootTriSkillDef, shootFastSkillDef, shieldSkillDef};
+            SkillDef[] secondaries = { shieldSkillDef, shootSkillDef, shootTriSkillDef, shootFastSkillDef};
 
             Modules.Skills.AddSecondarySkills(bodyPrefab, secondaries);
             #endregion
