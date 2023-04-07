@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1527948353
+CRC: 1515584955
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9dee910f713d02fa8793b609581248d7
+    Hash: 250fb6d83fe1958dac4bb19b5faab02a
   TypeTreeHash:
     serializedVersion: 2
     Hash: 740584176fc78b859e604f8258f4482c
@@ -70,6 +70,7 @@ Assets:
 - Assets/HenryAssets/Animations/maskAimBazooka.mask
 - Assets/LinkAssets/Icons/Magnesis.png
 - Assets/LinkAssets/Link Mats/Dark/Mt_Dark3.mat
+- Assets/LinkAssets/Prefabs/mdlLinkHylian.prefab
 - Assets/LinkAssets/Icons/RitoSkin.png
 - Assets/HenryAssets/mdlHenry 1.prefab
 - Assets/HenryAssets/Icons/texShotgunIcon.png
@@ -250,7 +251,6 @@ Assets:
 - Assets/LinkAssets/Icons/Stasis.png
 - Assets/LinkAssets/Prefabs/mdlLinkRito.prefab
 - Assets/HenryAssets/Animations/IdleAdditive.anim
-- Assets/LinkAssets/Prefabs/mdlLinkHylian.prefab
 - Assets/HenryAssets/Icons/texBazookaFireIcon.png
 - Assets/HenryAssets/VFX/Materials/matFire.mat
 - Assets/HenryAssets/Icons/texGrandMasteryAchievement.png

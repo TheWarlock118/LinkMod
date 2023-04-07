@@ -26,7 +26,7 @@ namespace LinkMod.SkillStates.BaseStates
 			}
 
 			// RagDoll code - implement ragdoll controller?
-			
+			PlayDeathAnimation();
 			if (base.cachedModelTransform)
 			{
 				RagdollController component = base.cachedModelTransform.GetComponent<RagdollController>();
@@ -38,7 +38,7 @@ namespace LinkMod.SkillStates.BaseStates
 		
 
 
-			PlayDeathAnimation();
+			
 			if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_MIPHA_NAME" && !(skillLocator.GetSkill(SkillSlot.Special).stock < 1))
 			{
 				SummonMipha();
