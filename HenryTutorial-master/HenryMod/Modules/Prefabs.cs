@@ -258,11 +258,17 @@ namespace LinkMod.Modules
             
             if (mainRendererIndex > characterModel.baseRendererInfos.Length)
             {
+                Debug.LogError("Base Renderer Info Length = " + characterModel.baseRendererInfos.Length);
+                Debug.LogError("Main Renderer Index = " + mainRendererIndex);
                 Debug.LogError("mainRendererIndex out of range: not setting mainSkinnedMeshRenderer for " + prefab.name);
                 return;
             }
 
             characterModel.mainSkinnedMeshRenderer = characterModel.baseRendererInfos[mainRendererIndex].renderer.GetComponent<SkinnedMeshRenderer>();
+            if(characterModel.mainSkinnedMeshRenderer == null)
+            {
+                Log.LogError("Main Skinned Mesh Render is null");
+            }
             
         }
         #endregion

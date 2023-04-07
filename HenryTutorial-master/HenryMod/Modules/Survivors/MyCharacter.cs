@@ -36,13 +36,13 @@ namespace LinkMod.Modules.Survivors
             podPrefab = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/NetworkedObjects/SurvivorPod")
         };
 
-        internal static Material LinkMat = Modules.Assets.CreateMaterial("matLink");
+        // internal static Material LinkMat = Modules.Assets.CreateMaterial("matLink");
         internal override int mainRendererIndex { get; set; } = 2;
 
         internal override CustomRendererInfo[] customRendererInfos { get; set; } = new CustomRendererInfo[] {
                 new CustomRendererInfo
                 {
-                    childName = "Boots_001_Mt__Lower_001",
+                    childName = "Boots_001__Mt_Lower_001",
                 },
         };
 
@@ -393,7 +393,7 @@ namespace LinkMod.Modules.Survivors
 
             SkinnedMeshRenderer mainRenderer = characterModel.mainSkinnedMeshRenderer;
 
-            CharacterModel.RendererInfo[] defaultRenderers = characterModel.baseRendererInfos;
+            CharacterModel.RendererInfo[] defaultRenderers = characterModel.baseRendererInfos;            
 
             List<SkinDef> skins = new List<SkinDef>();
 
@@ -402,7 +402,43 @@ namespace LinkMod.Modules.Survivors
                 Assets.mainAssetBundle.LoadAsset<Sprite>("HylianSkin"),
                 defaultRenderers,
                 mainRenderer,
-                model);
+                model.gameObject);
+
+            defaultSkin.meshReplacements = Modules.Skins.getMeshReplacements(bodyPrefab, mainRenderer,
+                "Boots_001__Mt_Lower_001",
+                "Boots_001__Mt_Lower_001",
+                "Face__Mt_Face",
+                "Boots_001_Mt_Lower_001",
+                "Metal_001__Mt_Upper_001");
+
+
+            //defaultSkin.meshReplacements = new SkinDef.MeshReplacement[] {
+            //    new SkinDef.MeshReplacement
+            //    {
+            //        mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Boots_001__Mt_Lower_001"),
+            //        renderer = mainRenderer,
+            //    },
+            //    new SkinDef.MeshReplacement
+            //    {
+            //        mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Boots_001__Mt_Lower_001"),
+            //        renderer = mainRenderer,
+            //    },
+            //    new SkinDef.MeshReplacement
+            //    {
+            //        mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Face__Mt_Face"),
+            //        renderer = mainRenderer,
+            //    },
+            //    new SkinDef.MeshReplacement
+            //    {
+            //        mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Boots_001__Mt_Lower_001"),
+            //        renderer = mainRenderer,
+            //    },
+            //    new SkinDef.MeshReplacement
+            //    {
+            //        mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Metal_001__Mt_Upper_001"),
+            //        renderer = mainRenderer,
+            //    },
+            //};
 
             skins.Add(defaultSkin);
             #endregion
@@ -452,15 +488,32 @@ namespace LinkMod.Modules.Survivors
                 Assets.mainAssetBundle.LoadAsset<Sprite>("MasterySkin"),
                 defaultRenderers,
                 mainRenderer,
-                model);
+                model.gameObject);
 
-            masterySkin.meshReplacements = new SkinDef.MeshReplacement[] {
-                new SkinDef.MeshReplacement
-                {
-                    mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Boots_160__Mt_Lower_160"),
-                    renderer = mainRenderer,
-                },
-            };
+            //masterySkin.meshReplacements = Modules.Skins.getMeshReplacements(characterModel, mainRenderer,
+            //    "Boots_160__Mt_Lower_160",
+            //    "Boots_160__Mt_Lower_160",
+            //    "Face__Mt_Face",
+            //    "Boots_160_Mt_Lower_160",
+            //    "Metal_001__Mt_Upper_001");
+
+            //masterySkin.meshReplacements = new SkinDef.MeshReplacement[] {
+            //    new SkinDef.MeshReplacement
+            //    {
+            //        mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Boots_160__Mt_Lower_160"),
+            //        renderer = mainRenderer,
+            //    },
+            //    new SkinDef.MeshReplacement
+            //    {
+            //        mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Boots_160__Mt_Lower_160"),
+            //        renderer = mainRenderer,
+            //    },
+            //    new SkinDef.MeshReplacement
+            //    {
+            //        mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Boots_160__Mt_Lower_160"),
+            //        renderer = mainRenderer,
+            //    },
+            //};
 
             skins.Add(masterySkin);
             #endregion

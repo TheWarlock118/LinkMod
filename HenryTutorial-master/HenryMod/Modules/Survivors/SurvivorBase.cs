@@ -51,9 +51,35 @@ namespace LinkMod.Modules.Survivors
                 bodyPrefab = Modules.Prefabs.CreatePrefab("LinkBody", "mdlLinkHylian", bodyInfo);
                 bodyPrefab.GetComponent<EntityStateMachine>().mainStateType = new EntityStates.SerializableEntityStateType(characterMainState);
                 bodyPrefab.GetComponent<CharacterDeathBehavior>().deathState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.BaseStates.DeathState));
-                
 
-                Modules.Prefabs.SetupCharacterModel(bodyPrefab, customRendererInfos, mainRendererIndex);
+                CustomRendererInfo[] customRendererInfosManual = new CustomRendererInfo[] {
+                    new CustomRendererInfo
+                    {
+                        childName = "Boots_001__Mt_Lower_001",
+                        material = Modules.Assets.CreateMaterial("Mt_armor_lower"),
+                    },
+                    new CustomRendererInfo
+                    {
+                        childName = "Metal_001__Mt_Upper_001",
+                        material = Modules.Assets.CreateMaterial("Mt_armor_upper"),
+                    },
+                    new CustomRendererInfo
+                    {
+                        childName = "Face__Mt_Face",
+                        material = Modules.Assets.CreateMaterial("Mt_Face"),
+                    },
+                    new CustomRendererInfo
+                    {
+                        childName = "Boots_001__Mt_Lower_001",
+                        material = Modules.Assets.CreateMaterial("Mt_armor_lower"),
+                    },
+                    new CustomRendererInfo
+                    {
+                        childName = "Metal_001__Mt_Upper_001",
+                        material = Modules.Assets.CreateMaterial("Mt_armor_upper"),
+                    },
+                };
+                Modules.Prefabs.SetupCharacterModel(bodyPrefab, customRendererInfosManual, mainRendererIndex);
 
                 displayPrefab = Modules.Prefabs.CreateDisplayPrefab("mdlLinkHylianDisplay", bodyPrefab, bodyInfo);
 

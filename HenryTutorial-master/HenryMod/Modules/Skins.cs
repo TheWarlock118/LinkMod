@@ -25,7 +25,7 @@ namespace LinkMod.Modules
                 Name = skinName,
                 NameToken = skinName,
                 ProjectileGhostReplacements = new SkinDef.ProjectileGhostReplacement[0],
-                RendererInfos = rendererInfos,
+                RendererInfos = new CharacterModel.RendererInfo[rendererInfos.Length],
                 RootObject = root,
                 UnlockableDef = unlockableDef
             };
@@ -69,6 +69,26 @@ namespace LinkMod.Modules
             internal string Name;
         }
 
+        public static CharacterModel.RendererInfo[] getRendererMaterials(CharacterModel.RendererInfo[] defaultRenderers, params Material[] materials)
+        {
+            CharacterModel.RendererInfo[] newRendererInfos = new CharacterModel.RendererInfo[defaultRenderers.Length];
+            defaultRenderers.CopyTo(newRendererInfos, 0);
+
+            for (int i = 0; i < newRendererInfos.Length; i++)
+            {
+                try
+                {
+                    newRendererInfos[i].defaultMaterial = materials[i];
+                }
+                catch
+                {
+                    Log.LogError("error adding skin rendererinfo material. make sure you're not passing in too many");
+                }
+            }
+
+            return newRendererInfos;
+        }
+
         /// <summary>
         /// pass in strings for mesh assets in your bundle. pass the same amount and order based on your rendererinfos, filling with null as needed
         /// <code>
@@ -81,12 +101,12 @@ namespace LinkMod.Modules
         /// <param name="defaultRendererInfos">your skindef's rendererinfos to access the renderers</param>
         /// <param name="meshes">name of the mesh assets in your project</param>
         /// <returns></returns>
-        internal static SkinDef.MeshReplacement[] getMeshReplacements(CharacterModel.RendererInfo[] defaultRendererInfos, params string[] meshes)
+        internal static SkinDef.MeshReplacement[] getMeshReplacements(CharacterModel model, Renderer mainRenderer, params string[] meshes)
         {
 
             List<SkinDef.MeshReplacement> meshReplacements = new List<SkinDef.MeshReplacement>();
 
-            for (int i = 0; i < defaultRendererInfos.Length; i++)
+            for (int i = 0; i < meshes.Length; i++)
             {
                 if (string.IsNullOrEmpty(meshes[i]))
                     continue;
@@ -94,8 +114,8 @@ namespace LinkMod.Modules
                 meshReplacements.Add(
                 new SkinDef.MeshReplacement
                 {
-                    renderer = defaultRendererInfos[i].renderer,
-                    mesh = Assets.mainAssetBundle.LoadAsset<Mesh>(meshes[i])
+                    renderer = model.baseRendererInfos[i].renderer.GetComponent<SkinnedMeshRenderer>(),
+                mesh = Assets.mainAssetBundle.LoadAsset<Mesh>(meshes[i])
                 });
             }
 
