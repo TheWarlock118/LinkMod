@@ -48,35 +48,15 @@ namespace LinkMod.Modules.Survivors
             {
                 InitializeUnlockables();
 
-                bodyPrefab = Modules.Prefabs.CreatePrefab("LinkBody", "mdlLinkHylian", bodyInfo);
+                bodyPrefab = Modules.Prefabs.CreatePrefab("LinkBody", "mdlLinkAllArmors", bodyInfo);
                 bodyPrefab.GetComponent<EntityStateMachine>().mainStateType = new EntityStates.SerializableEntityStateType(characterMainState);
                 bodyPrefab.GetComponent<CharacterDeathBehavior>().deathState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.BaseStates.DeathState));
 
                 CustomRendererInfo[] customRendererInfosManual = new CustomRendererInfo[] {
                     new CustomRendererInfo
                     {
-                        childName = "Boots_001__Mt_Lower_001",
-                        material = Modules.Assets.CreateMaterial("Mt_armor_lower"),
-                    },
-                    new CustomRendererInfo
-                    {
                         childName = "Metal_001__Mt_Upper_001",
-                        material = Modules.Assets.CreateMaterial("Mt_armor_upper"),
-                    },
-                    new CustomRendererInfo
-                    {
-                        childName = "Face__Mt_Face",
-                        material = Modules.Assets.CreateMaterial("Mt_Face"),
-                    },
-                    new CustomRendererInfo
-                    {
-                        childName = "Boots_001__Mt_Lower_001",
-                        material = Modules.Assets.CreateMaterial("Mt_armor_lower"),
-                    },
-                    new CustomRendererInfo
-                    {
-                        childName = "Metal_001__Mt_Upper_001",
-                        material = Modules.Assets.CreateMaterial("Mt_armor_upper"),
+                        material = Modules.Materials.CreateHopooMaterial("Mt_armor_upper"),
                     },
                 };
                 Modules.Prefabs.SetupCharacterModel(bodyPrefab, customRendererInfosManual, mainRendererIndex);

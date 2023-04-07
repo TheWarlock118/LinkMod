@@ -37,7 +37,7 @@ namespace LinkMod.Modules.Survivors
         };
 
         // internal static Material LinkMat = Modules.Assets.CreateMaterial("matLink");
-        internal override int mainRendererIndex { get; set; } = 2;
+        internal override int mainRendererIndex { get; set; } = 0;
 
         internal override CustomRendererInfo[] customRendererInfos { get; set; } = new CustomRendererInfo[] {
                 new CustomRendererInfo
@@ -400,39 +400,14 @@ namespace LinkMod.Modules.Survivors
             #region DefaultSkin
             SkinDef defaultSkin = Modules.Skins.CreateSkinDef("Hylian Outfit",
                 Assets.mainAssetBundle.LoadAsset<Sprite>("HylianSkin"),
-                defaultRenderers,
-                mainRenderer,
+                defaultRenderers,                
                 model.gameObject);
 
-            defaultSkin.meshReplacements = Modules.Skins.getMeshReplacements(bodyPrefab, mainRenderer,
-                "Boots_001__Mt_Lower_001",
-                "Boots_001__Mt_Lower_001",
-                "Face__Mt_Face",
-                "Boots_001_Mt_Lower_001",
-                "Metal_001__Mt_Upper_001");
-
+            defaultSkin.rendererInfos = Modules.Skins.getRendererMaterials(defaultSkin.rendererInfos, Modules.Materials.CreateHopooMaterial("Mt_armor_upper"));
+            defaultSkin.meshReplacements = Modules.Skins.getMeshReplacements(defaultSkin.rendererInfos, "Metal_001__Mt_Upper_001");
+            
 
             //defaultSkin.meshReplacements = new SkinDef.MeshReplacement[] {
-            //    new SkinDef.MeshReplacement
-            //    {
-            //        mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Boots_001__Mt_Lower_001"),
-            //        renderer = mainRenderer,
-            //    },
-            //    new SkinDef.MeshReplacement
-            //    {
-            //        mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Boots_001__Mt_Lower_001"),
-            //        renderer = mainRenderer,
-            //    },
-            //    new SkinDef.MeshReplacement
-            //    {
-            //        mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Face__Mt_Face"),
-            //        renderer = mainRenderer,
-            //    },
-            //    new SkinDef.MeshReplacement
-            //    {
-            //        mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Boots_001__Mt_Lower_001"),
-            //        renderer = mainRenderer,
-            //    },
             //    new SkinDef.MeshReplacement
             //    {
             //        mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Metal_001__Mt_Upper_001"),
@@ -446,9 +421,8 @@ namespace LinkMod.Modules.Survivors
             #region RitoSkin            
             SkinDef ritoSkin = Modules.Skins.CreateSkinDef("Snowquill Outfit",
                 Assets.mainAssetBundle.LoadAsset<Sprite>("RitoSkin"),
-                defaultRenderers,
-                mainRenderer,
-                model);
+                defaultRenderers,                
+                model.gameObject);
 
             skins.Add(ritoSkin);
             #endregion
@@ -456,8 +430,7 @@ namespace LinkMod.Modules.Survivors
             #region GerudoSkin
             SkinDef gerudoSkin = Modules.Skins.CreateSkinDef("Gerudo Outfit",
                 Assets.mainAssetBundle.LoadAsset<Sprite>("GerudoSkin"),
-                defaultRenderers,
-                mainRenderer,
+                defaultRenderers,                
                 model);
 
             skins.Add(gerudoSkin);
@@ -466,8 +439,7 @@ namespace LinkMod.Modules.Survivors
             #region WildSkin
             SkinDef wildSkin = Modules.Skins.CreateSkinDef("Wild Outfit",
                 Assets.mainAssetBundle.LoadAsset<Sprite>("WildSkin"),
-                defaultRenderers,
-                mainRenderer,
+                defaultRenderers,                
                 model);
 
             skins.Add(wildSkin);
@@ -476,8 +448,7 @@ namespace LinkMod.Modules.Survivors
             #region DarkSkin            
             SkinDef darkSkin = Modules.Skins.CreateSkinDef("Dark Link",
                 Assets.mainAssetBundle.LoadAsset<Sprite>("DarkSkin"),
-                defaultRenderers,
-                mainRenderer,
+                defaultRenderers,                
                 model);
 
             skins.Add(darkSkin);
@@ -486,31 +457,18 @@ namespace LinkMod.Modules.Survivors
             #region MasterySkin            
             SkinDef masterySkin = Modules.Skins.CreateSkinDef("Champion's Tunic",
                 Assets.mainAssetBundle.LoadAsset<Sprite>("MasterySkin"),
-                defaultRenderers,
-                mainRenderer,
+                defaultRenderers,                
                 model.gameObject);
 
-            //masterySkin.meshReplacements = Modules.Skins.getMeshReplacements(characterModel, mainRenderer,
-            //    "Boots_160__Mt_Lower_160",
-            //    "Boots_160__Mt_Lower_160",
-            //    "Face__Mt_Face",
-            //    "Boots_160_Mt_Lower_160",
-            //    "Metal_001__Mt_Upper_001");
+            masterySkin.rendererInfos = Modules.Skins.getRendererMaterials(masterySkin.rendererInfos, Modules.Materials.CreateHopooMaterial("Mt_Armor_116"));            
+            masterySkin.meshReplacements = Modules.Skins.getMeshReplacements(masterySkin.rendererInfos, "Code_116__Mt_Tunic_116");
+
+            
 
             //masterySkin.meshReplacements = new SkinDef.MeshReplacement[] {
             //    new SkinDef.MeshReplacement
             //    {
-            //        mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Boots_160__Mt_Lower_160"),
-            //        renderer = mainRenderer,
-            //    },
-            //    new SkinDef.MeshReplacement
-            //    {
-            //        mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Boots_160__Mt_Lower_160"),
-            //        renderer = mainRenderer,
-            //    },
-            //    new SkinDef.MeshReplacement
-            //    {
-            //        mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Boots_160__Mt_Lower_160"),
+            //        mesh = Assets.mainAssetBundle.LoadAsset<Mesh>("Arm_160__Mt_Upper_160"),
             //        renderer = mainRenderer,
             //    },
             //};

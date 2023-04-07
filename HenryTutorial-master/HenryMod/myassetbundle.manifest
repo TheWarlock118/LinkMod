@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2536196051
+CRC: 3802395748
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 4edb2c70bddfe1f41b70c83613460a85
+    Hash: f575020430f8a712df0abe31a5504b9f
   TypeTreeHash:
     serializedVersion: 2
     Hash: 740584176fc78b859e604f8258f4482c
@@ -117,6 +117,7 @@ Assets:
 - Assets/HenryAssets/Textures/texBazooka.png
 - Assets/HenryAssets/VFX/Textures/texRipple.png
 - Assets/HenryAssets/VFX/ImpactHenrySlash.prefab
+- Assets/LinkAssets/FBXs/LinkFinalAnimationHylianSet/Meshes/Boots_001__Mt_Lower_001.mesh
 - Assets/LinkAssets/Anims/animUrbosa.controller
 - Assets/LinkAssets/Icons/DarkSkin.png
 - Assets/HenryAssets/VFX/Mesh/meshSwing.asset
@@ -124,6 +125,7 @@ Assets:
 - Assets/LinkAssets/Icons/WildSkin.png
 - Assets/HenryAssets/VFX/HenryBazookaMuzzleFlash.prefab
 - Assets/HenryAssets/VFX/HenryFistSwingEffect.prefab
+- Assets/LinkAssets/FBXs/LinkFinalAnimationHylianSet/LinkFinalAnimationHylianSet.fbx
 - Assets/LinkAssets/DarukProtection.fbx
 - Assets/LinkAssets/Link Mats/link_head_alb.png
 - Assets/HenryAssets/Mesh/meshVergil.mesh
@@ -145,6 +147,7 @@ Assets:
 - Assets/HenryAssets/Textures/texShotgun.png
 - Assets/HenryAssets/Animations/WalkL.anim
 - Assets/HenryAssets/Animations/maskImpact.mask
+- Assets/LinkAssets/FBXs/LinkFinalAnimationHylianSet/Meshes/Metal_001__Mt_Upper_001.mesh
 - Assets/LinkAssets/Icons/HylianShieldIcon.png
 - Assets/HenryAssets/Animations/Idle.anim
 - Assets/HenryAssets/VFX/BombExplosionEffect.prefab
@@ -184,6 +187,7 @@ Assets:
 - Assets/HenryAssets/Animations/SprintF.anim
 - Assets/HenryAssets/Mesh/meshHenrySwordAlt.mesh
 - Assets/LinkAssets/Link Mats/Mt_Earring.mat
+- Assets/LinkAssets/Link Mats/Champion Set/Mt_Armor_116.mat
 - Assets/HenryAssets/Textures/texHenry.png
 - Assets/HenryAssets/Icons/texBazookaOutIcon.png
 - Assets/LinkAssets/Anims/animLinkFinal.controller
@@ -221,6 +225,7 @@ Assets:
 - Assets/LinkAssets/Icons/RoyalGuardBow.png
 - Assets/HenryAssets/VFX/Textures/texPunchImpact.png
 - Assets/LinkAssets/Prefabs/mdlLinkWildDisplay.prefab
+- Assets/LinkAssets/FBXs/LinkFinalAnimationChampionSet/Meshes/Code_116__Mt_Tunic_116.mesh
 - Assets/LinkAssets/linkArrow.prefab
 - Assets/LinkAssets/Link Mats/Mt_Face.mat
 - Assets/HenryAssets/mdlHenry.prefab
@@ -278,7 +283,9 @@ Assets:
 - Assets/LinkAssets/Link Mats/Mt_armor_hood.mat
 - Assets/HenryAssets/Animations/AimPitch.anim
 - Assets/LinkAssets/Icons/IceRod.png
+- Assets/LinkAssets/FBXs/LinkFinalAnimationHylianSet/Meshes/Face__Mt_Face.mesh
 - Assets/LinkAssets/maskLinkGesture.mask
+- Assets/LinkAssets/Prefabs/mdlLinkAllArmors.prefab
 - Assets/HenryAssets/VFX/Textures/texSlash.png
 - Assets/HenryAssets/Icons/texSpecialIcon.png
 - Assets/HenryAssets/Textures/texHenryDanteEmission.png
