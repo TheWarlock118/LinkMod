@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 514685515
+CRC: 4014508461
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 44292b506ce747c5eb027ddcc2bd5a62
+    Hash: bd74d855df78b15814a31e9f62f98e72
   TypeTreeHash:
     serializedVersion: 2
     Hash: 740584176fc78b859e604f8258f4482c
@@ -259,6 +259,7 @@ Assets:
 - Assets/HenryAssets/VFX/Textures/texLightning.tif
 - Assets/HenryAssets/Animations/RestIdleIn.anim
 - Assets/HenryAssets/VFX/Materials/matRipple.mat
+- Assets/LinkAssets/Link Mats/Dark/Mt_DarkEyes.mat
 - Assets/LinkAssets/Link Mats/Mt_Hair.mat
 - Assets/HenryAssets/Animations/DefaultPose.anim
 - Assets/HenryAssets/Materials/matShotgun.mat

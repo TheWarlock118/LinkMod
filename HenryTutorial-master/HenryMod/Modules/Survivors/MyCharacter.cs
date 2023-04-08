@@ -741,6 +741,11 @@ namespace LinkMod.Modules.Survivors
             {
                 new SkinDef.GameObjectActivation
                 {
+                    gameObject = childLocator.FindChildGameObject("DarkEyes"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
                     gameObject = childLocator.FindChildGameObject("MainUpperSkin"),
                     shouldActivate = false
                 },
@@ -978,6 +983,11 @@ namespace LinkMod.Modules.Survivors
 
             ritoSkin.gameObjectActivations = new SkinDef.GameObjectActivation[]
             {
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("DarkEyes"),
+                    shouldActivate = false
+                },
                 new SkinDef.GameObjectActivation
                 {
                     gameObject = childLocator.FindChildGameObject("HylianHair2"),
@@ -1242,6 +1252,11 @@ namespace LinkMod.Modules.Survivors
 
             gerudoSkin.gameObjectActivations = new SkinDef.GameObjectActivation[]
             {
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("DarkEyes"),
+                    shouldActivate = false
+                },
                 new SkinDef.GameObjectActivation
                 {
                     gameObject = childLocator.FindChildGameObject("HylianHair2"),
@@ -1518,6 +1533,11 @@ namespace LinkMod.Modules.Survivors
             {
                 new SkinDef.GameObjectActivation
                 {
+                    gameObject = childLocator.FindChildGameObject("DarkEyes"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
                     gameObject = childLocator.FindChildGameObject("HylianHair2"),
                     shouldActivate = false
                 },
@@ -1784,6 +1804,16 @@ namespace LinkMod.Modules.Survivors
 
             darkSkin.gameObjectActivations = new SkinDef.GameObjectActivation[]
             {
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("Eye_L__Mt_Eyeball_L"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("Eye_R__Mt_Eyeball_R"),
+                    shouldActivate = false
+                },
                 new SkinDef.GameObjectActivation
                 {
                     gameObject = childLocator.FindChildGameObject("HylianHair2"),
@@ -2070,6 +2100,11 @@ namespace LinkMod.Modules.Survivors
 
             masterySkin.gameObjectActivations = new SkinDef.GameObjectActivation[]
             {
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("DarkEyes"),
+                    shouldActivate = false
+                },
                 new SkinDef.GameObjectActivation
                 {
                     gameObject = childLocator.FindChildGameObject("Belt_A_Buckle__Mt_Belt_A_001"),
