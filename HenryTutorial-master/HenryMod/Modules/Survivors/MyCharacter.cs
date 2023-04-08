@@ -231,14 +231,14 @@ namespace LinkMod.Modules.Survivors
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,
                 baseRechargeInterval = 6f,
-                beginSkillCooldownOnSkillEnd = false,
+                beginSkillCooldownOnSkillEnd = true,
                 canceledFromSprinting = false,
                 forceSprintDuringState = false,
                 fullRestockOnAssign = true,
                 interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
                 resetCooldownTimerOnUse = false,
                 isCombatSkill = true,
-                mustKeyPress = false,
+                mustKeyPress = true,
                 cancelSprintingOnActivation = true,
                 rechargeStock = 1,
                 requiredStock = 1,
@@ -409,6 +409,11 @@ namespace LinkMod.Modules.Survivors
             /* ALL gameObjectActivations - copy and remove the ones you want to keep for each skin
              * defaultSkin.gameObjectActivations = new SkinDef.GameObjectActivation[]
             {
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("HylianHair2"),
+                    shouldActivate = false
+                },
                 new SkinDef.GameObjectActivation
                 {
                     gameObject = childLocator.FindChildGameObject("Belt_A_Buckle__Mt_Belt_A"),
@@ -975,6 +980,11 @@ namespace LinkMod.Modules.Survivors
             {
                 new SkinDef.GameObjectActivation
                 {
+                    gameObject = childLocator.FindChildGameObject("HylianHair2"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
                     gameObject = childLocator.FindChildGameObject("MainUpperSkin"),
                     shouldActivate = false
                 },
@@ -1232,6 +1242,11 @@ namespace LinkMod.Modules.Survivors
 
             gerudoSkin.gameObjectActivations = new SkinDef.GameObjectActivation[]
             {
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("HylianHair2"),
+                    shouldActivate = false
+                },
                 new SkinDef.GameObjectActivation
                 {
                     gameObject = childLocator.FindChildGameObject("MainUpperSkin"),
@@ -1503,6 +1518,11 @@ namespace LinkMod.Modules.Survivors
             {
                 new SkinDef.GameObjectActivation
                 {
+                    gameObject = childLocator.FindChildGameObject("HylianHair2"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
                     gameObject = childLocator.FindChildGameObject("Belt_A_Buckle__Mt_Belt_A_001"),
                     shouldActivate = false
                 },
@@ -1764,6 +1784,11 @@ namespace LinkMod.Modules.Survivors
 
             darkSkin.gameObjectActivations = new SkinDef.GameObjectActivation[]
             {
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("HylianHair2"),
+                    shouldActivate = false
+                },
                 new SkinDef.GameObjectActivation
                 {
                     gameObject = childLocator.FindChildGameObject("Belt_A_Buckle__Mt_Belt_A"),

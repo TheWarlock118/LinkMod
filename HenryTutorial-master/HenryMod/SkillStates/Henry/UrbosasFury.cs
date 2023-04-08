@@ -3,6 +3,7 @@ using RoR2;
 using RoR2.Projectile;
 using UnityEngine;
 using EntityStates.VagrantMonster;
+using R2API;
 
 namespace LinkMod.SkillStates
 {
@@ -58,7 +59,13 @@ namespace LinkMod.SkillStates
             EffectData effectData = new EffectData();
             effectData.origin = base.characterBody.corePosition;
             effectData.SetHurtBoxReference(base.characterBody.mainHurtBox);
-            EffectManager.SpawnEffect(FireMegaNova.novaEffectPrefab, effectData, true);
+
+            GameObject urbosaExplosion = PrefabAPI.InstantiateClone(FireMegaNova.novaEffectPrefab, "urbosaExplosion");
+            ShakeEmitter urbosaEmitter = urbosaExplosion.AddComponent<ShakeEmitter>();
+            urbosaEmitter.duration = 0f;
+
+
+            EffectManager.SpawnEffect(urbosaExplosion, effectData, true);
 
             Util.PlaySound("Urbosa_Lightning", base.gameObject);
             Util.PlaySound("Urbosa_Yell", base.gameObject);

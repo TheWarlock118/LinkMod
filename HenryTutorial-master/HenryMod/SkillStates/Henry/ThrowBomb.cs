@@ -15,12 +15,14 @@ namespace LinkMod.SkillStates
         private float duration;
         private float fireTime;
         private bool hasFired;
+        private bool isHolding = true;
         
         private Animator animator;
 
 
         public override void OnEnter()
         {
+
             base.OnEnter();
             this.duration = ThrowBomb.baseDuration / this.attackSpeedStat;
             this.fireTime = 0.35f * this.duration;
@@ -28,15 +30,17 @@ namespace LinkMod.SkillStates
             this.animator = base.GetModelAnimator();
 
             Util.PlaySound("BombDraw", base.gameObject);
-            base.PlayAnimation("Gesture, Override", "DrawBomb", "ThrowBomb.playbackRate", this.duration);            
+            base.PlayAnimation("Gesture, Override", "DrawBomb", "ThrowBomb.playbackRate", this.duration);
         }
 
-        public override void OnExit()
+        public void MyOnExit()
         {
+            this.outer.SetNextStateToMain();
             base.OnExit();
             if (!this.hasFired)
             {
                 this.hasFired = true;
+                this.isHolding = false;
                 //Util.PlaySound("LinkBombThrow", base.gameObject);
                 if(base.inputBank.jump.down && base.characterMotor.velocity.y < 0f && !base.characterMotor.isGrounded)
                 {
@@ -80,9 +84,10 @@ namespace LinkMod.SkillStates
         public override void FixedUpdate()
         {
             base.FixedUpdate();
+            this.isHolding = true;
             if (!base.inputBank.skill3.down)
             {
-                this.outer.SetNextStateToMain();
+                MyOnExit();                
                 return;
             }            
         }
