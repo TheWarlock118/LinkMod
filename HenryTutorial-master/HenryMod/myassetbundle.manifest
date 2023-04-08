@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3802395748
+CRC: 514685515
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f575020430f8a712df0abe31a5504b9f
+    Hash: 44292b506ce747c5eb027ddcc2bd5a62
   TypeTreeHash:
     serializedVersion: 2
     Hash: 740584176fc78b859e604f8258f4482c
@@ -104,6 +104,7 @@ Assets:
 - Assets/HenryAssets/Animations/SprintL.anim
 - Assets/HenryAssets/Materials/matRebellion.mat
 - Assets/HenryAssets/VFX/Materials/matSmoke.mat
+- Assets/LinkAssets/Prefabs/mdlLinkAllArmorsDisplayReal.prefab
 - Assets/LinkAssets/Icons/MasterySkin.png
 - Assets/LinkAssets/FBXs/LinkHylianSet/LinkHylianSet.fbx
 - Assets/HenryAssets/VFX/Textures/texSwingEffect.png

@@ -55,13 +55,12 @@ namespace LinkMod.Modules.Survivors
                 CustomRendererInfo[] customRendererInfosManual = new CustomRendererInfo[] {
                     new CustomRendererInfo
                     {
-                        childName = "Metal_001__Mt_Upper_001",
-                        material = Modules.Materials.CreateHopooMaterial("Mt_armor_upper"),
+                        childName = "Skin__Mt_Underwear",
                     },
                 };
                 Modules.Prefabs.SetupCharacterModel(bodyPrefab, customRendererInfosManual, mainRendererIndex);
 
-                displayPrefab = Modules.Prefabs.CreateDisplayPrefab("mdlLinkHylianDisplay", bodyPrefab, bodyInfo);
+                displayPrefab = Modules.Prefabs.CreateDisplayPrefab("mdlLinkAllArmorsDisplayReal", bodyPrefab, bodyInfo);
 
                 Modules.Prefabs.RegisterNewSurvivor(bodyPrefab, displayPrefab, new Color(0.12f, 0.39f, 0.25f, 1), bodyName.ToUpper(), characterUnlockableDef, sortPosition);                
                 InitializeSkills();
