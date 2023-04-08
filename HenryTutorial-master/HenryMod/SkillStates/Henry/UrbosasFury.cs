@@ -39,7 +39,7 @@ namespace LinkMod.SkillStates
             new BlastAttack
             {
                 attacker = base.characterBody.gameObject,
-                baseDamage = base.characterBody.damage * 64f,
+                baseDamage = base.characterBody.damage * 16f,
                 baseForce = 50f,
                 bonusForce = Vector3.zero,
                 attackerFiltering = AttackerFiltering.NeverHitSelf,

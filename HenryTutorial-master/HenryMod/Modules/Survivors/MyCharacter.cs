@@ -1110,11 +1110,6 @@ namespace LinkMod.Modules.Survivors
                 },
                 new SkinDef.GameObjectActivation
                 {
-                    gameObject = childLocator.FindChildGameObject("Face__Mt_Head"),
-                    shouldActivate = false
-                },
-                new SkinDef.GameObjectActivation
-                {
                     gameObject = childLocator.FindChildGameObject("WildHair"),
                     shouldActivate = false
                 },
