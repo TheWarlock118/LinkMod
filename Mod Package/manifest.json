@@ -1,0 +1,9 @@
+{
+    "name": "Link",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/thunderstore-io",
+    "description": "Adds Link from The Legend of Zelda: Breath of the Wild as a playable character.",
+    "dependencies": [
+        "KingEnderBrine-LobbySkinsFix-1.2.0"
+    ]
+}
