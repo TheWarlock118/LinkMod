@@ -26,11 +26,7 @@ namespace LinkMod.Modules
                 DifficultyIndex difficultyIndex = runReport.ruleBook.FindDifficulty();
                 DifficultyDef runDifficulty = DifficultyCatalog.GetDifficultyDef(runReport.ruleBook.FindDifficulty());
                 //checking run difficulty
-                if ((runDifficulty.countsAsHardMode && runDifficulty.scalingValue >= RequiredDifficultyCoefficient) ||
-                    //checking for eclipse
-                    (difficultyIndex >= DifficultyIndex.Eclipse1 && difficultyIndex <= DifficultyIndex.Eclipse8) ||
-                    //checking for modded difficulty Inferno
-                    (runDifficulty.nameToken == "INFERNO_NAME"))
+                if ((runDifficulty.countsAsHardMode && runDifficulty.scalingValue >= RequiredDifficultyCoefficient) || (difficultyIndex >= DifficultyIndex.Eclipse1 && difficultyIndex <= DifficultyIndex.Eclipse8) || (runDifficulty.nameToken == "INFERNO_NAME"))
                 {
                     Grant();
                     Log.LogDebug("Mastery Granted");

@@ -9,11 +9,13 @@ namespace LinkMod.SkillStates
     {
         public static float damageCoefficient = 16f;
         public static float procCoefficient = 1f;
-        public static float baseDuration = 2f;
+        public static float baseDuration = 0.5f;
         public static float throwForce = 80f;       
        
         private float duration;
         private float fireTime;
+        private float timer;
+        private float movementSpeedCoefficient;
         private bool fired;
         private bool readySoundPlayed;
         private bool shouldLaunch;
@@ -25,10 +27,12 @@ namespace LinkMod.SkillStates
             base.OnEnter();
             this.duration = RevalisGale.baseDuration;
             this.fireTime = 0.10f;
+            this.timer = 0f;
             readySoundPlayed = false;
             fired = false;
             shouldLaunch = false;
             // base.PlayAnimation("Gesture, Override", "Crouch");
+            movementSpeedCoefficient = (this.moveSpeedStat / 100f);
         }
 
         public override void OnExit()
@@ -36,22 +40,7 @@ namespace LinkMod.SkillStates
             base.OnExit();
             if (shouldLaunch)
             {
-                if (fired)
-                {
-                    CharacterMotor characterMotor = this.characterBody.characterMotor;
-                    characterMotor.Motor.ForceUnground();
-                    characterMotor.ApplyForce(Vector3.up * 2500f * (this.moveSpeedStat / 5f) * (this.characterBody.rigidbody.mass / 100f), false, false);                    
-                }
-                // base.PlayAnimation("Gesture, Override", "Glide");
-                // Util.PlaySound("Revali_Wind2", base.gameObject);
                 SummonRevali();
-            }
-            else
-            {
-                SkillLocator skillLocator = characterBody.GetComponent<SkillLocator>();
-                skillLocator.GetSkill(SkillSlot.Special).RemoveAllStocks();
-                skillLocator.GetSkill(SkillSlot.Special).AddOneStock();
-                skillLocator.GetSkill(SkillSlot.Special).Reset();
             }
         }
 
@@ -65,6 +54,7 @@ namespace LinkMod.SkillStates
                 // Util.PlaySound("Revali_Wind", base.gameObject);
                 readySoundPlayed = true;
             }
+
         }
 
         private void SummonRevali()
@@ -111,8 +101,17 @@ namespace LinkMod.SkillStates
             base.FixedUpdate();             
             this.Fire();
             fired = true;
-
-            this.outer.SetNextStateToMain();
+            this.timer += Time.fixedDeltaTime;
+            if (timer < duration)
+            {
+                CharacterMotor characterMotor = this.characterBody.characterMotor;
+                characterMotor.Motor.ForceUnground();
+                characterMotor.ApplyForce(Vector3.up * 2500f * movementSpeedCoefficient * (this.characterBody.rigidbody.mass / 100f), true, false);
+            }
+            else
+            {
+                this.outer.SetNextStateToMain();
+            }
             return;
 
         }

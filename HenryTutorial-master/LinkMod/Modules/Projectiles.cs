@@ -16,8 +16,7 @@ namespace LinkMod.Modules
         internal static GameObject revaliPrefab;
 
         internal static void RegisterProjectiles()
-        {
-            // only separating into separate methods for my sanity
+        {            
             CreateBomb();
             CreateArrow();
             CreateMipha();
@@ -60,7 +59,7 @@ namespace LinkMod.Modules
         
         private static void CreateArrow()
         {
-            arrowPrefab = CloneProjectilePrefab("WindbladeProjectile", "LinkArrowProjectile");
+            arrowPrefab = CloneProjectilePrefab("Arrow", "LinkArrowProjectile");
             ProjectileController arrowController = arrowPrefab.GetComponent<ProjectileController>();
             arrowController.ghostPrefab = CreateGhostPrefab("linkArrow");
             arrowController.startSound = "";
@@ -68,38 +67,39 @@ namespace LinkMod.Modules
         
         private static void CreateMipha()
         {
-            miphaPrefab = CloneProjectilePrefab("WindbladeProjectile", "MiphaProjectile");
+            miphaPrefab = CloneProjectilePrefab("FMJRamping", "MiphaProjectile");
             ProjectileController miphaController = miphaPrefab.GetComponent<ProjectileController>();
             miphaController.ghostPrefab = CreateGhostPrefab("mdlMipha");
-            miphaController.startSound = ""; // TODO: Add sounds            
-            miphaController.canImpactOnTrigger = false;            
+            miphaController.startSound = "";            
+            miphaController.canImpactOnTrigger = false;
+            
         }
 
         private static void CreateUrbosa()
         {
-            urbosaPrefab = CloneProjectilePrefab("WindbladeProjectile", "urbosaProjectile");            
+            urbosaPrefab = CloneProjectilePrefab("FMJRamping", "urbosaProjectile");            
             ProjectileController urbosaController = urbosaPrefab.GetComponent<ProjectileController>();            
             urbosaController.ghostPrefab = CreateGhostPrefab("mdlUrbosa");
-            urbosaController.startSound = ""; // TODO: Add sounds
-            urbosaController.canImpactOnTrigger = false;            
+            urbosaController.startSound = "";
+            urbosaController.canImpactOnTrigger = false;
         }
 
         private static void CreateRevali()
         {
-            revaliPrefab = CloneProjectilePrefab("WindbladeProjectile", "revaliProjectile");
+            revaliPrefab = CloneProjectilePrefab("FMJRamping", "revaliProjectile");
             ProjectileController revaliController = revaliPrefab.GetComponent<ProjectileController>();
             revaliController.ghostPrefab = CreateGhostPrefab("mdlRevali");
-            revaliController.startSound = ""; // TODO: Add sounds
+            revaliController.startSound = "";
             revaliController.canImpactOnTrigger = false;            
             
         }
 
         private static void CreateDaruk()
         {
-            darukPrefab = CloneProjectilePrefab("WindbladeProjectile", "darukProjectile");
+            darukPrefab = CloneProjectilePrefab("FMJRamping", "darukProjectile");
             ProjectileController darukController = darukPrefab.GetComponent<ProjectileController>();
             darukController.ghostPrefab = CreateGhostPrefab("mdlDaruk");
-            darukController.startSound = ""; // TODO: Add sounds
+            darukController.startSound = ""; 
             darukController.canImpactOnTrigger = false;
 
             
@@ -144,6 +144,7 @@ namespace LinkMod.Modules
         private static GameObject CloneProjectilePrefab(string prefabName, string newPrefabName)
         {
             GameObject newPrefab = PrefabAPI.InstantiateClone(RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/Projectiles/" + prefabName), newPrefabName);
+
             return newPrefab;
         }
     }

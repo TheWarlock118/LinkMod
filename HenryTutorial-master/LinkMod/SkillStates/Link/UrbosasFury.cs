@@ -118,7 +118,8 @@ namespace LinkMod.SkillStates
                     speedOverride = 0f,
                     fuseOverride = 0.00001f,
                 };
-                urbosaInfo.useFuseOverride = true;                
+                urbosaInfo.useFuseOverride = true;
+                urbosaInfo.useSpeedOverride = true;
                 ProjectileManager.instance.FireProjectile(urbosaInfo);                    
             }          
             

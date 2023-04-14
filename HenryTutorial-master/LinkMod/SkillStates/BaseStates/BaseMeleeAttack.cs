@@ -3,6 +3,7 @@ using EntityStates;
 using RoR2;
 using RoR2.Projectile;
 using RoR2.Audio;
+using R2API;
 using System;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -83,7 +84,7 @@ namespace LinkMod.SkillStates.BaseStates
             this.attack.pushAwayForce = this.pushForce;
             this.attack.hitBoxGroup = hitBoxGroup;
             this.attack.isCrit = base.RollCrit();
-            this.attack.impactSound = this.impactSound;
+            this.attack.impactSound = this.impactSound;            
         }
 
         protected virtual void PlayAttackAnimation()
@@ -135,8 +136,7 @@ namespace LinkMod.SkillStates.BaseStates
                 {
                     this.hasFired = true;
                     
-                    this.PlayAttackSound();
-
+                    this.PlayAttackSound();                    
                     if (this.characterBody.healthComponent.combinedHealth / this.characterBody.healthComponent.fullCombinedHealth >= .9f)
                     {
                         if (base.isAuthority)
