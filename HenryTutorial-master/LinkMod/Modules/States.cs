@@ -18,10 +18,7 @@ namespace LinkMod.Modules
 
             entityStates.Add(typeof(Shoot));
             entityStates.Add(typeof(ShootTri));
-            entityStates.Add(typeof(ShootFast));
-
-
-            entityStates.Add(typeof(Roll));
+            entityStates.Add(typeof(ShootFast));            
 
             entityStates.Add(typeof(ThrowBomb));
             entityStates.Add(typeof(Shield));
@@ -30,10 +27,6 @@ namespace LinkMod.Modules
             entityStates.Add(typeof(DaruksProtection));
             entityStates.Add(typeof(RevalisGale));
             entityStates.Add(typeof(UrbosasFury));
-
-            entityStates.Add(typeof(GliderOn));
-            
-            entityStates.Add(typeof(ParagliderTest));
         }
     }
 }
