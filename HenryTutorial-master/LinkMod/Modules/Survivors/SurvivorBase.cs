@@ -67,7 +67,7 @@ namespace LinkMod.Modules.Survivors
                 InitializeSkins();
                 InitializeItemDisplays();
                 InitializeDoppelganger();
-                InitializeHitboxes();
+                InitializeHitboxes();                
                 Modules.Survivors.MyCharacter.instance.SetItemDisplays();
             }
         }        

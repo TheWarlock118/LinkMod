@@ -78,7 +78,7 @@ namespace LinkMod.Modules.Survivors
 
             Transform hitboxTransform = childLocator.FindChild("SwordHitbox");
             Modules.Prefabs.SetupHitbox(model, hitboxTransform, "Sword");            
-        }       
+        }               
 
         internal override void InitializeSkills()
         {
@@ -187,7 +187,7 @@ namespace LinkMod.Modules.Survivors
                 cancelSprintingOnActivation = true,
                 rechargeStock = 1,
                 requiredStock = 1,
-                stockToConsume = 1,
+                stockToConsume = 0,
                 keywordTokens = new string[] { "KEYWORD_AGILE" }
             });
 

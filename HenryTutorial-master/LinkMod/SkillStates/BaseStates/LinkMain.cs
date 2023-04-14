@@ -14,6 +14,8 @@ namespace LinkMod.SkillStates.BaseStates
             base.OnEnter();
             //this.gliderStateMachine = EntityStateMachine.FindByCustomName(base.gameObject, "Jet");
             this.characterBody.gameObject.AddComponent<Modules.UpdateValues>();
+            ChildLocator childLocator = base.GetModelChildLocator();
+            childLocator.FindChild("ShieldHitbox").gameObject.SetActive(false);
         }
 
         public override void Update()

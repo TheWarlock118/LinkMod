@@ -337,12 +337,22 @@ namespace LinkMod.Modules
             mainHurtbox.hurtBoxGroup = hurtBoxGroup;
             mainHurtbox.indexInGroup = 0;
 
+            
+            HurtBox shieldHurtbox = childLocator.FindChild("ShieldHitbox").gameObject.AddComponent<HurtBox>();
+            shieldHurtbox.gameObject.layer = LayerIndex.entityPrecise.intVal;
+            shieldHurtbox.healthComponent = new HealthComponent();
+            shieldHurtbox.isBullseye = false;
+            shieldHurtbox.damageModifier = HurtBox.DamageModifier.Barrier;
+            shieldHurtbox.hurtBoxGroup = hurtBoxGroup;
+            shieldHurtbox.indexInGroup = 1;
+            
             hurtBoxGroup.hurtBoxes = new HurtBox[]
             {
-                mainHurtbox
+                mainHurtbox,
+                shieldHurtbox,
             };
 
-            hurtBoxGroup.mainHurtBox = mainHurtbox;
+            hurtBoxGroup.mainHurtBox = mainHurtbox;            
             hurtBoxGroup.bullseyeCount = 1;
         }
 

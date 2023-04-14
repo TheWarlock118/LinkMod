@@ -353,7 +353,7 @@ namespace LinkMod
                     Util.PlaySound("Daruk_Yell", self.gameObject);
                     AkSoundEngine.StopPlayingID(updateValues.darukShiedlPlayID);
                 }
-
+                 
             }    
             
         }

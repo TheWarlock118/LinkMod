@@ -17,7 +17,10 @@ namespace LinkMod.SkillStates
         private float timer;
         private float animationTimer;
         private bool hasFired;
-        private string muzzleString;        
+        private string muzzleString;
+
+        private ChildLocator childLocator;
+        private HurtBoxGroup hurtBoxGroup;
 
         public override void OnEnter()
         {
@@ -30,6 +33,10 @@ namespace LinkMod.SkillStates
             base.PlayAnimation("Gesture, Override", "ShieldGuard");
             Util.PlaySound("Weapon_Shield_Metal_Equip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
             Util.PlaySound("ShieldGuardUp", base.gameObject);
+            this.childLocator = base.GetModelChildLocator();
+            this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(true);
+
+            
         }
 
         public override void OnExit()
@@ -41,6 +48,7 @@ namespace LinkMod.SkillStates
             }
             base.PlayAnimation("Gesture, Override", "BufferEmpty");
             Util.PlaySound("Weapon_Shield_Metal_UnEquip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
+            this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(false);
         }
 
         public override void FixedUpdate()
@@ -62,8 +70,8 @@ namespace LinkMod.SkillStates
             {
                 if (base.inputBank.skill2.down && timer<this.duration)
                 {
-                    base.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Immune.buffIndex, 0.1f);
-                    base.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Slow80.buffIndex, 0.1f);
+                    // base.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Immune.buffIndex, 0.1f);
+                    // base.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Slow80.buffIndex, 0.1f);
                 }
                 else
                 {
