@@ -746,6 +746,11 @@ namespace LinkMod.Modules.Survivors
                 },
                 new SkinDef.GameObjectActivation
                 {
+                    gameObject = childLocator.FindChildGameObject("DarkBody2"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
                     gameObject = childLocator.FindChildGameObject("MainUpperSkin"),
                     shouldActivate = false
                 },
@@ -986,6 +991,11 @@ namespace LinkMod.Modules.Survivors
                 new SkinDef.GameObjectActivation
                 {
                     gameObject = childLocator.FindChildGameObject("DarkEyes"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("DarkBody2"),
                     shouldActivate = false
                 },
                 new SkinDef.GameObjectActivation
@@ -1255,6 +1265,11 @@ namespace LinkMod.Modules.Survivors
                 new SkinDef.GameObjectActivation
                 {
                     gameObject = childLocator.FindChildGameObject("DarkEyes"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("DarkBody2"),
                     shouldActivate = false
                 },
                 new SkinDef.GameObjectActivation
@@ -1623,6 +1638,11 @@ namespace LinkMod.Modules.Survivors
                 },
                 new SkinDef.GameObjectActivation
                 {
+                    gameObject = childLocator.FindChildGameObject("DarkBody2"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
                     gameObject = childLocator.FindChildGameObject("DarkBoots"),
                     shouldActivate = false
                 },
@@ -1804,6 +1824,11 @@ namespace LinkMod.Modules.Survivors
 
             darkSkin.gameObjectActivations = new SkinDef.GameObjectActivation[]
             {
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("DarkBody2"),
+                    shouldActivate = false
+                },
                 new SkinDef.GameObjectActivation
                 {
                     gameObject = childLocator.FindChildGameObject("Eye_L__Mt_Eyeball_L"),
@@ -2174,6 +2199,11 @@ namespace LinkMod.Modules.Survivors
                 new SkinDef.GameObjectActivation
                 {
                     gameObject = childLocator.FindChildGameObject("DarkBody"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("DarkBody2"),
                     shouldActivate = false
                 },
                 new SkinDef.GameObjectActivation

@@ -82,7 +82,7 @@ namespace LinkMod.SkillStates
                     Shoot.damageCoefficient += (this.timer * 0.1f);
                     Shoot.force += (this.timer * 5f);
                 }
-                this.characterBody.AddTimedBuff(RoR2Content.Buffs.Slow80, 0.1f);
+                this.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Slow80.buffIndex, 0.1f);
             }          
             else
             {

@@ -2,6 +2,7 @@
 using RoR2;
 using RoR2.Projectile;
 using UnityEngine;
+using UnityEngine.Networking;
 using EntityStates;
 
 namespace LinkMod.SkillStates
@@ -16,7 +17,7 @@ namespace LinkMod.SkillStates
         private float timer;
         private float animationTimer;
         private bool hasFired;
-        private string muzzleString;
+        private string muzzleString;        
 
         public override void OnEnter()
         {
@@ -52,7 +53,7 @@ namespace LinkMod.SkillStates
             else
             {
                 animationTimer = 2f;
-                base.PlayAnimation("Gesture, Override", "ShieldGuard");
+                base.PlayAnimation("Gesture, Override", "ShieldGuard");                
             }
 
 
@@ -61,8 +62,8 @@ namespace LinkMod.SkillStates
             {
                 if (base.inputBank.skill2.down && timer<this.duration)
                 {
-                    this.characterBody.AddTimedBuff(RoR2Content.Buffs.Immune, 0.1f);
-                    this.characterBody.AddTimedBuff(RoR2Content.Buffs.Slow80, 0.1f);
+                    base.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Immune.buffIndex, 0.1f);
+                    base.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Slow80.buffIndex, 0.1f);
                 }
                 else
                 {

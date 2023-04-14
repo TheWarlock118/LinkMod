@@ -132,15 +132,13 @@ namespace LinkMod.SkillStates
                     ShootTri.damageCoefficient += (this.timer * 0.1f);
                     ShootTri.force += (this.timer * 5f);
                 }
-                this.characterBody.AddTimedBuff(RoR2Content.Buffs.Slow80, 0.1f);
+                this.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Slow80.buffIndex, 0.1f);
             }          
             else
             {
                 this.outer.SetNextStateToMain();
                 return;
-            }
-
-            
+            }            
         }
 
         public override InterruptPriority GetMinimumInterruptPriority()

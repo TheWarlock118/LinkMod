@@ -17,7 +17,7 @@ namespace LinkMod.Modules
         {
             armorBuff = AddNewBuff("LinkArmorBuff", RoR2.LegacyResourcesAPI.Load<Sprite>("Textures/BuffIcons/texBuffGenericShield"), Color.white, false, false);
             darukBuff = AddNewBuff("DarukBuff", RoR2.LegacyResourcesAPI.Load<BuffDef>("BuffDefs/HiddenInvincibility").iconSprite, Color.red, false, false);
-            //swordProjectileBuff = AddNewBuff("SwordProjectileBuff", RoR2.LegacyResourcesAPI.Load<BuffDef>("BuffDefs/HiddenInvincibility").iconSprite, Color.white, false, false);            
+            swordProjectileBuff = AddNewBuff("SwordProjectileBuff", RoR2.LegacyResourcesAPI.Load<BuffDef>("BuffDefs/HiddenInvincibility").iconSprite, Color.white, false, false);            
         }
 
         // simple helper method

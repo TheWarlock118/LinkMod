@@ -18,10 +18,13 @@ namespace LinkMod.Modules
 
             entityStates.Add(typeof(Shoot));
             entityStates.Add(typeof(ShootTri));
+            entityStates.Add(typeof(ShootFast));
+
 
             entityStates.Add(typeof(Roll));
 
             entityStates.Add(typeof(ThrowBomb));
+            entityStates.Add(typeof(Shield));
 
             entityStates.Add(typeof(MiphasGrace));
             entityStates.Add(typeof(DaruksProtection));

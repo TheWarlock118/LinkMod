@@ -18,7 +18,16 @@ namespace LinkMod.SkillStates.BaseStates
 
         public override void Update()
         {
-            base.Update();            
+            base.Update();
+            if ((this.healthComponent.combinedHealth / this.healthComponent.fullCombinedHealth) >= 0.9f && !this.HasBuff(Modules.Buffs.swordProjectileBuff))
+            {
+                this.characterBody.AddBuff(Modules.Buffs.swordProjectileBuff);
+            }
+            else if(this.HasBuff(Modules.Buffs.swordProjectileBuff))
+            {
+                this.characterBody.RemoveBuff(Modules.Buffs.swordProjectileBuff);
+            }
+
         }
 
         public override void FixedUpdate()

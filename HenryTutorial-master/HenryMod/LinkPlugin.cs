@@ -61,8 +61,10 @@ namespace LinkMod
             // now make a content pack and add it- this part will change with the next update
             new Modules.ContentPacks().Initialize();
 
-            RoR2.ContentManagement.ContentManager.onContentPacksAssigned += LateSetup;            
+            RoR2.ContentManagement.ContentManager.onContentPacksAssigned += LateSetup;
 
+            // For Multiplayer Testing - comment this out before Uploading
+            On.RoR2.Networking.NetworkManagerSystemSteam.OnClientConnect += (s, u, t) => { };
             Hook();
         }
 
@@ -182,24 +184,10 @@ namespace LinkMod
                 string[] paraGlideSounds = { "Pl_Parashawl_FlapFast00", "Pl_Parashawl_FlapFast01" };
                 string[] paraUnEquipSounds = { "Pl_Parashawl_UnEquip00", "Pl_Parashawl_UnEquip03", "Pl_Parashawl_UnEquip04" };
 
-
-
-
-
-
-
-
                 // Add swordBuff - currently laggy and unresponsive - not sure why
-                /*
-                if ((self.healthComponent.combinedHealth / self.healthComponent.fullCombinedHealth) >= 0.9f)
-                {
-                    self.AddBuff(Modules.Buffs.swordProjectileBuff);
-                }
-                else
-                {
-                    self.RemoveBuff(Modules.Buffs.swordProjectileBuff);
-                }
-                */
+                
+                
+  
 
 
                 // Reset playedLowHealth sound
@@ -215,6 +203,7 @@ namespace LinkMod
                 {
                     AkSoundEngine.StopPlayingID(updateValues.slowMotionPlayID);
                     updateValues.SlowMotionStopwatch = 0f;
+                    updateValues.enteredSlowMo = false;
                 }
 
                 // Play low HP sound
@@ -242,14 +231,6 @@ namespace LinkMod
                     }
                 }
 
-                // Reset enteredSlowMo
-                if (updateValues.enteredSlowMo && (!self.inputBank.skill2.down || self.characterMotor.velocity.y >= 0f))
-                {
-                    updateValues.enteredSlowMo = false;
-                }
-                // Log.LogDebug(skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName);
-                // Log.LogDebug("CASEY_LINK_BODY_SECONDARY_FASTBOW_NAME");
-                // Log.LogDebug(skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_FASTBOW_NAME");
                 // Handle bow slow-mo
                 if (self.inputBank.skill2.down && self.characterMotor.velocity.y < 0f && (skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_3BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_FASTBOW_NAME"))
                 {                    
@@ -373,7 +354,7 @@ namespace LinkMod
                 {
                     updateValues.blockDaruk = false;
                     characterBody.RemoveBuff(LinkMod.Modules.Buffs.darukBuff);
-                    characterBody.AddTimedBuff(RoR2Content.Buffs.Immune, 3f);
+                    characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Immune.buffIndex, 3f);
                     characterBody.healthComponent.barrier = 0f;
                     skillLocator.GetSkill(SkillSlot.Special).AddOneStock();
                     skillLocator.GetSkill(SkillSlot.Special).RemoveAllStocks();

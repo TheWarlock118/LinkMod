@@ -24,8 +24,7 @@ namespace LinkMod.SkillStates.BaseStates
 				vector += base.characterMotor.velocity;
 				base.characterMotor.enabled = false;
 			}
-
-			// RagDoll code - implement ragdoll controller?
+			
 			PlayDeathAnimation();
 			if (base.cachedModelTransform)
 			{
@@ -39,7 +38,7 @@ namespace LinkMod.SkillStates.BaseStates
 
 
 			
-			if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_MIPHA_NAME" && !(skillLocator.GetSkill(SkillSlot.Special).stock < 1))
+			if (base.skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_MIPHA_NAME" && !(base.skillLocator.GetSkill(SkillSlot.Special).stock < 1))
 			{
 				SummonMipha();
 			}
