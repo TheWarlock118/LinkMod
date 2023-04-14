@@ -27,11 +27,8 @@ namespace LinkMod
 
     public class LinkPlugin : BaseUnityPlugin
     {
-        // if you don't change these you're giving permission to deprecate the mod-
-        //  please change the names to your own stuff, thanks
-        //   this shouldn't even have to be said
-        public const string MODUID = "com.DeveloperName.MyCharacterMod";
-        public const string MODNAME = "MyCharacterMod";
+        public const string MODUID = "com.TheWarlock117.LinkMod";
+        public const string MODNAME = "LinkMod";
         public const string MODVERSION = "1.0.0";
 
         // a prefix for name tokens to prevent conflicts- please capitalize all name tokens for convention
@@ -76,8 +73,7 @@ namespace LinkMod
 
         private void Hook()
         {
-            // run hooks here, disabling one is as simple as commenting out the line         
-            On.RoR2.CharacterBody.RecalculateStats += CharacterBody_RecalculateStats;
+            // run hooks here, disabling one is as simple as commenting out the line                     
             On.RoR2.HealthComponent.TakeDamage += HealthComponent_TakeDamage;
             On.RoR2.CharacterBody.Update += CharacterBody_Update;                     
         }
@@ -183,13 +179,7 @@ namespace LinkMod
                 string[] paraEquipSounds = { "Pl_Parashawl_Equip00", "Pl_Parashawl_Equip02", "Pl_Parashawl_Equip04" };
                 string[] paraGlideSounds = { "Pl_Parashawl_FlapFast00", "Pl_Parashawl_FlapFast01" };
                 string[] paraUnEquipSounds = { "Pl_Parashawl_UnEquip00", "Pl_Parashawl_UnEquip03", "Pl_Parashawl_UnEquip04" };
-
-                // Add swordBuff - currently laggy and unresponsive - not sure why
-                
-                
   
-
-
                 // Reset playedLowHealth sound
                 if (updateValues.playedLowHealth && (self.healthComponent.combinedHealth / self.healthComponent.fullCombinedHealth >= .2f))
                 {
@@ -397,18 +387,6 @@ namespace LinkMod
             bodyAnimator.PlayInFixedTime("Die", layerIndex, 0f);
             Log.LogDebug("Playing Death Animation, or Trying to anyway");
         }
-        private void CharacterBody_RecalculateStats(On.RoR2.CharacterBody.orig_RecalculateStats orig, CharacterBody self)
-        {
-            orig(self);
 
-            // a simple stat hook, adds armor after stats are recalculated
-            if (self)
-            {
-                if (self.HasBuff(Modules.Buffs.armorBuff))
-                {
-                    self.armor += 300f;
-                }
-            }
-        }
     }
 }

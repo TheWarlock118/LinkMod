@@ -10,11 +10,13 @@ namespace LinkMod.Modules
         public override void OnBodyRequirementMet()
         {
             base.OnBodyRequirementMet();
+            Log.LogDebug("Body Requirement Met");
             Run.onClientGameOverGlobal += OnClientGameOverGlobal;
         }
         public override void OnBodyRequirementBroken()
         {
             Run.onClientGameOverGlobal -= OnClientGameOverGlobal;
+            Log.LogDebug("Body Requirement Broken");
             base.OnBodyRequirementBroken();
         }
         private void OnClientGameOverGlobal(Run run, RunReport runReport)
@@ -31,6 +33,7 @@ namespace LinkMod.Modules
                     (runDifficulty.nameToken == "INFERNO_NAME"))
                 {
                     Grant();
+                    Log.LogDebug("Mastery Granted");
                 }
             }
         }

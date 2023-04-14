@@ -106,8 +106,6 @@ namespace LinkMod.Modules
                 };
             }
 
-            swordSwingEffect = Assets.LoadEffect("LinkSwordSwingEffect", true);
-            swordHitImpactEffect = Assets.LoadEffect("ImpactLinkSlash");
         }
 
         private static GameObject CreateTracer(string originalTracerName, string newTracerName)

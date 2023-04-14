@@ -23,11 +23,10 @@ namespace LinkMod.SkillStates.BaseStates
             {
                 this.characterBody.AddBuff(Modules.Buffs.swordProjectileBuff);
             }
-            else if(this.HasBuff(Modules.Buffs.swordProjectileBuff))
+            else if(this.HasBuff(Modules.Buffs.swordProjectileBuff) && (this.healthComponent.combinedHealth / this.healthComponent.fullCombinedHealth) < 0.9f)
             {
                 this.characterBody.RemoveBuff(Modules.Buffs.swordProjectileBuff);
-            }
-
+            }            
         }
 
         public override void FixedUpdate()
