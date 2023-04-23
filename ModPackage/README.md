@@ -51,17 +51,17 @@ TheWarlock117 - Everything
 ### Skins
 | Skin | |
 |:-|-|
-| Hylian Outfit | ![]() |
-| Snowquill Outfit | ![]() | 
-| Gerudo Outfit | ![]() |
-| Wild Outfit | ![]() |
-| Dark Link | ![]() |
-| Champion's Tunic | ![]() |
+| Hylian Outfit | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817644149973134/Hylian.png) |
+| Snowquill Outfit | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817644397445220/Snowquill.png) | 
+| Gerudo Outfit | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817643919282336/Gerudo.png) |
+| Wild Outfit | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817644607148042/Wild.png) |
+| Dark Link | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817643726356521/Dark.png) |
+| Champion's Tunic | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817643478884423/Champion.png) |
 
 ## Known Issues
 - Some animations are unsynced in Multiplayer - Bomb Throw, Paraglider, Shielding, etc.
 - Mipha's Grace stock not correctly showing used in Multiplayer - should be visual only
-- Hylian Outfit and Champion's Tunic skirt ruffled. This is caused by the way the skins were made, and is likely unavoidable without a breakthrough and massive overhaul.
+- Hylian Outfit and Champion's Tunic skirts are ruffled. I believe this is caused by the way the skins had to be implemented, and is likely unavoidable without a breakthrough and massive overhaul.
 
 ## Future Plans
 - Unlockables
