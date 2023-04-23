@@ -10,9 +10,13 @@ PM me on Discord @TheWarlock117#6226 with any bugs, complaints, or suggestions!
 |-|-|
 | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837408129855608/Daruk.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837408725446747/Paraglider.png) |
 
-![](https://cdn.discordapp.com/attachments/1099804589684969593/1099838130565152819/LinkIcon.png)
+<img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099838130565152819/LinkIcon.png" width="100" height="100"/>
 ## Credits
 TheWarlock117 - Everything
+
+### Acknowledgements
+Rob & TheTimeSweeper for their incredible Henry Tutorial survivor, on which this is based
+Risk of Rain 2 Modding discord for their unending help and patience
 
 ## Skills
 
