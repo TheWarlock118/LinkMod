@@ -16,8 +16,8 @@ PM me on Discord @TheWarlock117#6226 with any bugs, complaints, or suggestions!
 TheWarlock117 - Everything
 
 ### Acknowledgements
-Rob & TheTimeSweeper for their incredible Henry Tutorial survivor, on which this is based
-Risk of Rain 2 Modding discord for their unending help and patience
+- Rob & TheTimeSweeper for their incredible Henry Tutorial survivor, on which this is based
+- Risk of Rain 2 Modding discord for their unending help and patience
 
 ## Skills
 
