@@ -12,8 +12,8 @@ namespace LinkMod.Modules
 
             string desc = "Link is the Hero of Hyrule, weilder of the Triforce of Courage.<color=#CCD3E0>" + Environment.NewLine + Environment.NewLine;
             desc = desc + "< ! > The Master Sword is Link's primary weapon against the forces of evil." + Environment.NewLine + Environment.NewLine;
-            desc = desc + "< ! > His bow allows Link to deal high damage at range." + Environment.NewLine + Environment.NewLine;
-            desc = desc + "< ! > Link's Sheikah Runes allow for a wide variety of utility options." + Environment.NewLine + Environment.NewLine;
+            desc = desc + "< ! > His shield allows Link to block projectiles, while his bows allows him to deal high damage at range." + Environment.NewLine + Environment.NewLine;
+            desc = desc + "< ! > Link's Sheikah Bombs allow for high-damage crowd control." + Environment.NewLine + Environment.NewLine;
             desc = desc + "< ! > Link's Champion Abilities offer extra mobility, protection, high damage, or a second life." + Environment.NewLine + Environment.NewLine;
 
             string outro = "..and so he rested, the Kingdom of Hyrule saved.";
@@ -49,13 +49,13 @@ namespace LinkMod.Modules
             LanguageAPI.Add(prefix + "SECONDARY_ROLL_DESCRIPTION", Helpers.agilePrefix + "Become immune to damage and roll for a quick get away.");
 
             LanguageAPI.Add(prefix + "SECONDARY_3BOW_NAME", "Great Eagle Bow");
-            LanguageAPI.Add(prefix + "SECONDARY_3BOW_DESCRIPTION", Helpers.agilePrefix + $"Loose three arrows at once, each dealing <style=cIsDamage>{33f * StaticValues.bowDamageCoefficient}%damage</style>.");
+            LanguageAPI.Add(prefix + "SECONDARY_3BOW_DESCRIPTION", Helpers.agilePrefix + $"Loose three arrows at once, each dealing <style=cIsDamage>{100f * StaticValues.bowDamageCoefficient / 3}%damage</style>.");
 
             LanguageAPI.Add(prefix + "SECONDARY_FASTBOW_NAME", "Falcon Bow");
-            LanguageAPI.Add(prefix + "SECONDARY_FASTBOW_DESCRIPTION", Helpers.agilePrefix + $"Loose a hasty arrow with <style=cIsDamage>{50f * StaticValues.bowDamageCoefficient}%damage</style>. The specially engineered bowstring allows for faster drawing and a short cooldown.");
+            LanguageAPI.Add(prefix + "SECONDARY_FASTBOW_DESCRIPTION", Helpers.agilePrefix + $"Loose a hasty arrow for <style=cIsDamage>{50f * StaticValues.bowDamageCoefficient}%damage</style>. The specially engineered bowstring allows for faster drawing and a short cooldown.");
 
             LanguageAPI.Add(prefix + "SECONDARY_SHIELD_NAME", "Hylian Shield");
-            LanguageAPI.Add(prefix + "SECONDARY_SHIELD_DESCRIPTION", "A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it. Hold to block all damage for a short time. Can attack while blocking.");
+            LanguageAPI.Add(prefix + "SECONDARY_SHIELD_DESCRIPTION", "A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it. Hold to block most projectiles. Can attack while blocking.");
             #endregion
 
             #region Utility

@@ -26,7 +26,7 @@ namespace LinkMod.SkillStates
         {
             base.OnEnter();
             this.duration = Shield.baseDuration;
-            this.fireTime = 0.2f * this.duration;
+            this.fireTime = 20f * this.duration;
             base.characterBody.SetAimTimer(2f);
             this.timer = 0f;
             this.animationTimer = 1f;
@@ -34,9 +34,7 @@ namespace LinkMod.SkillStates
             Util.PlaySound("Weapon_Shield_Metal_Equip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
             Util.PlaySound("ShieldGuardUp", base.gameObject);
             this.childLocator = base.GetModelChildLocator();
-            this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(true);
-
-            
+            this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(true);                        
         }
 
         public override void OnExit()
@@ -48,7 +46,7 @@ namespace LinkMod.SkillStates
             }
             base.PlayAnimation("Gesture, Override", "BufferEmpty");
             Util.PlaySound("Weapon_Shield_Metal_UnEquip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
-            this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(false);
+            this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(false);            
         }
 
         public override void FixedUpdate()
@@ -61,26 +59,25 @@ namespace LinkMod.SkillStates
             else
             {
                 animationTimer = 2f;
-                base.PlayAnimation("Gesture, Override", "ShieldGuard");                
+                base.PlayAnimation("Gesture, Override", "ShieldGuard");
+                base.OnEnter();
             }
 
 
             this.timer += Time.fixedDeltaTime;
             if (!(base.inputBank.jump.down && base.characterMotor.velocity.y < 0f))
             {
-                if (base.inputBank.skill2.down && timer<this.duration)
+                if (base.inputBank.skill2.down)
                 {
                     // base.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Immune.buffIndex, 0.1f);
-                    // base.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Slow80.buffIndex, 0.1f);
+                    base.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Slow80.buffIndex, 0.1f);
                 }
                 else
                 {
                     this.outer.SetNextStateToMain();
                     return;
                 }
-            }
-
-            
+            }            
         }
 
         public override InterruptPriority GetMinimumInterruptPriority()

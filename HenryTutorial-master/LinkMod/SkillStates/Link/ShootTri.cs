@@ -8,7 +8,7 @@ namespace LinkMod.SkillStates
 {
     public class ShootTri : BaseSkillState
     {
-        public static float damageCoefficient = Modules.StaticValues.bowDamageCoefficient * 0.3f;
+        public static float damageCoefficient = Modules.StaticValues.bowDamageCoefficient / 3;
         public static float procCoefficient = 1f;
         public static float baseDuration = 1.5f;
         public static float force = 30f;
