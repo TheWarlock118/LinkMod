@@ -11,6 +11,7 @@ PM me on Discord @TheWarlock117#6226 with any bugs, complaints, or suggestions!
 | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837408129855608/Daruk.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837408725446747/Paraglider.png) |
 
 <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099838130565152819/LinkIcon.png" width="100" height="100"/>
+
 ## Credits
 TheWarlock117 - Everything
 
