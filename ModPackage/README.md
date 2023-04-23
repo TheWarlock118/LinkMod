@@ -20,7 +20,7 @@ TheWarlock117 - Everything
 ### Passive
 | Skill | | Description |
 |:-|-|------|
-| Paraglider | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804887358914630/Paraglider.png) | An item that you received from the king on the Great Plateau.\nIt allows you to sail through the sky.\nHold space while you're in the air to use it. |
+| Paraglider | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804887358914630/Paraglider.png) | An item that you received from the king on the Great Plateau. It allows you to sail through the sky. Hold space while you're in the air to use it. |
 
 ### Primary
 | Skill | | Description |
