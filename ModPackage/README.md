@@ -5,7 +5,7 @@
 
 PM me on Discord @TheWarlock117#6226 with any bugs, complaints, or suggestions!
 
-[![]()]()
+[![](https://cdn.discordapp.com/attachments/1099804589684969593/1099811837639413820/Risk_of_Rain_2_Screenshot_2023.04.23_-_14.24.24.15.png)]()
 
 [![]()]()
 [![]()]()
@@ -61,6 +61,7 @@ TheWarlock117 - Everything
 ## Known Issues
 - Some animations are unsynced in Multiplayer - Bomb Throw, Paraglider, Shielding, etc.
 - Mipha's Grace stock not correctly showing used in Multiplayer - should be visual only
+- Hylian Outfit and Champion's Tunic skirt ruffled. This is caused by the way the skins were made, and is likely unavoidable without a breakthrough and massive overhaul.
 
 ## Future Plans
 - Unlockables

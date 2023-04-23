@@ -2070,8 +2070,7 @@ namespace LinkMod.Modules.Survivors
             SkinDef masterySkin = Modules.Skins.CreateSkinDef("Champion's Tunic",
                 Assets.mainAssetBundle.LoadAsset<Sprite>("MasterySkin"),
                 defaultRenderers,                
-                model.gameObject,
-                masterySkinUnlockableDef);
+                model.gameObject);
 
             // masterySkin.rendererInfos = Modules.Skins.getRendererMaterials(masterySkin.rendererInfos, Modules.Materials.CreateHopooMaterial("Mt_Armor_116"));            
             // masterySkin.meshReplacements = Modules.Skins.getMeshReplacements(masterySkin.rendererInfos, "Code_116__Mt_Tunic_116");
