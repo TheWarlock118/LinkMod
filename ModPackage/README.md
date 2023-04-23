@@ -5,14 +5,12 @@
 
 PM me on Discord @TheWarlock117#6226 with any bugs, complaints, or suggestions!
 
-[![](https://cdn.discordapp.com/attachments/469291841859092488/782484337379246110/unknown.png)]()
+[![]()]()
 
-[![](https://cdn.discordapp.com/attachments/739704939671978024/787500376793677844/screen1.png)]()
-[![](https://cdn.discordapp.com/attachments/739704939671978024/787500388198514728/screen2.png)]()
+[![]()]()
+[![]()]()
 
-[![](https://cdn.discordapp.com/attachments/469291841859092488/782568907009425418/texEnforcerIcon.png)]()
-
-Join the discord server to share any feedback/bugs/suggestions- https://discord.gg/HpQB9fC
+[![]()]()
 
 ## Credits
 TheWarlock117 - Everything
@@ -22,36 +20,51 @@ TheWarlock117 - Everything
 ### Passive
 | Skill | | Description |
 |:-|-|------|
-| Paraglider | ![]() | An item that you received from the king on the Great Plateau.\nIt allows you to sail through the sky.\nHold space while you're in the air to use it. |
+| Paraglider | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804887358914630/Paraglider.png) | An item that you received from the king on the Great Plateau.\nIt allows you to sail through the sky.\nHold space while you're in the air to use it. |
 
 ### Primary
 | Skill | | Description |
 |:-|-|------|
-| The Master Sword | ![]() | The legendary sword that seals the darkness. Swing forward for `500%` damage. |
+| The Master Sword | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804836582658168/MasterSword.png) | The legendary sword that seals the darkness. Swing forward for `500%` damage. |
 
 ### Secondary
 | Skill | | Description | Cooldown |
 |:-|-|------|-|
-| Hylian Shield | ![]() | A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it. Hold to block most projectiles. Can attack while blocking. | None |
-| Royal Guard Bow | ![]() | Loose an arrow for `90%` damage | 1s |
-| Great Eagle Bow | ![]() | Loose three arrows at once, each dealing `30%` damage | 2s |
-| Falcon Bow | ![]() | Loose a hasty arrow for `45%` damage. The specially engineered bowstring allows for faster drawing and a short cooldown. | 0.5s |
+| Hylian Shield | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804788134248458/HylianShieldIcon.png) | A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it. Hold to block most projectiles. Can attack while blocking. | None |
+| Royal Guard Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804748112212088/RoyalGuardBow.png) | Loose an arrow for `90%` damage | 1s |
+| Great Eagle Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804714373222501/GreatEagleBow.png) | Loose three arrows at once, each dealing `30%` damage | 2s |
+| Falcon Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804708685750292/FalconBow.png) | Loose a hasty arrow for `45%` damage. The specially engineered bowstring allows for faster drawing and a short cooldown. | 0.5s |
 
-### Unlockable Alts (spoiler alert)
-
-| Skill | | Description | Stats |
+### Utility
+| Skill | | Description | Cooldown |
 |:-|-|------|-|
-| Super Shotgun | ![](https://cdn.discordapp.com/attachments/739696016755785859/782468767124815902/enforcer_primary2V2.png) | Fire a powerful short range blast for `16x80%` damage. Has harsh damage falloff. | Proc: `0.75` |
-| Assault Rifle | ![](https://cdn.discordapp.com/attachments/739696016755785859/782468797017227304/enforcer_primary3V2.png) | Fire a burst of bullets bullets dealing `3x75%` damage. Fires 6 bullets instead during Protect and Serve. | Proc: `0.75` |
-| Stun Grenade | ![](https://cdn.discordapp.com/attachments/739696016755785859/782468931159457832/enforcer_utility2V2.png) | `Stunning`. Launch a stun grenade, dealing `400%` damage. Store up to 3 grenades. | Proc: `0.6`, CD: `8 sec` |
+| Remote Bomb | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804877707812974/RemoteBomb.png) | Hold to draw a bomb and let go to throw. Explodes on impact for `1600%` damage. While gliding, bombs will drop straight down. | 6s |
+
+### Special
+| Skill | | Description | Cooldown |
+|:-|-|------|-|
+| Urbosa's Fury | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804902382899220/UrbosasFury.png) | Call on the Champion Urbosa to summon powerful lightning and damage your foes. | 12s |
+| Revali's Gale | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804910859599965/RevalisGale.png) | Call on the Champion Revali and soar into the sky, dealing a small amount of damage and pushing back enemies around you. | 8s |
+| Daruk's Protection | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804924352663662/DaruksProtection.png) | Call on the Champion Daruk to enforce your defenses. The next attack is automatically deflected. Cooldown begins after attack deflection. | 24s |
+| Mipha's Grace | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804935039754360/MiphasGrace.png) | When your hearts run out, call on the Champion Mipha to bring you back to life. Usable once per stage. | 1/Stage |
+
+### Skins
+| Skin | |
+|:-|-|
+| Hylian Outfit | ![]() |
+| Snowquill Outfit | ![]() | 
+| Gerudo Outfit | ![]() |
+| Wild Outfit | ![]() |
+| Dark Link | ![]() |
+| Champion's Tunic | ![]() |
 
 ## Known Issues
 - Some animations are unsynced in Multiplayer - Bomb Throw, Paraglider, Shielding, etc.
 - Mipha's Grace stock not correctly showing used in Multiplayer - should be visual only
-- 
 
 ## Future Plans
 - Unlockables
+- Other Sheikah Slate abilities as alternate utilities
 ___
 ## Changelog
 
