@@ -51,7 +51,7 @@ TheWarlock117 - Everything
 ### Skins
 |   Hylian Outfit  | Snowquill Outfit |   Gerudo Outfit  |    Wild Outfit   |    Dark Link     | Champion's Tunic |
 |--|--|--|--|--|--|
-| ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817644149973134/Hylian.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817644397445220/Snowquill.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817643919282336/Gerudo.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817644607148042/Wild.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817643726356521/Dark.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817643478884423/Champion.png) |
+| <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644149973134/Hylian.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644397445220/Snowquill.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643919282336/Gerudo.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644607148042/Wild.png" width="110" height="195"/> | <img src="(https://cdn.discordapp.com/attachments/1099804589684969593/1099817643726356521/Dark.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643478884423/Champion.png" width="110" height="195"/> |
 
 ## Known Issues
 - Some animations are unsynced in Multiplayer - Bomb Throw, Paraglider, Shielding, etc.
