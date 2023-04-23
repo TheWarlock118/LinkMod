@@ -1,7 +1,6 @@
 # Link #
 - Adds Link from The Legend of Zelda: Breath of the Wild as a playable character.
 - Multiplayer compatible
-- Skins
 
 PM me on Discord @TheWarlock117#6226 with any bugs, complaints, or suggestions!
 
