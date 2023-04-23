@@ -49,9 +49,9 @@ TheWarlock117 - Everything
 | Mipha's Grace | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804935039754360/MiphasGrace.png) | When your hearts run out, call on the Champion Mipha to bring you back to life. Usable once per stage. | 1/Stage |
 
 ### Skins
-| Hylian Outfit | Snowquill Outfit | Gerudo Outfit | Wild Outfit | Dark Link | Champion's Tunic |
+|   Hylian Outfit  | Snowquill Outfit |   Gerudo Outfit  |    Wild Outfit   |    Dark Link     | Champion's Tunic |
 |-|-|-|-|-|-|
-| <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644149973134/Hylian.png"  width="100%" height="100%"> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644397445220/Snowquill.png"  width="100%" height="100%"> | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817643919282336/Gerudo.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817644607148042/Wild.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817643726356521/Dark.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817643478884423/Champion.png) |
+| ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817644149973134/Hylian.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817644397445220/Snowquill.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817643919282336/Gerudo.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817644607148042/Wild.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817643726356521/Dark.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817643478884423/Champion.png) |
 
 ## Known Issues
 - Some animations are unsynced in Multiplayer - Bomb Throw, Paraglider, Shielding, etc.
