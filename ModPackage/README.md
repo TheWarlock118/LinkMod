@@ -50,7 +50,7 @@ TheWarlock117 - Everything
 
 ### Skins
 | Hylian Outfit | Snowquill Outfit | Gerudo Outfit | Wild Outfit | Dark Link | Champion's Tunic |
-|:-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817644149973134/Hylian.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817644397445220/Snowquill.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817643919282336/Gerudo.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817644607148042/Wild.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817643726356521/Dark.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099817643478884423/Champion.png) |
 
 ## Known Issues
