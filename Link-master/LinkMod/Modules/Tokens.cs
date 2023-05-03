@@ -106,6 +106,11 @@ namespace LinkMod.Modules
             LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, glide for thirty seconds");
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Windrider");
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, glide for thirty seconds");
+
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_WILD_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: Reborn");
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_WILD_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, call on Mipha's Grace to be reborn");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_WILD_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Reborn");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_WILD_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, call on Mipha's Grace to be reborn");
             #endregion
             #endregion
         }

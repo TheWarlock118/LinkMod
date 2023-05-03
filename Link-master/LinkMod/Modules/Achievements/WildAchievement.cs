@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace LinkMod.Modules.Achievements
 {
-    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_REWARD_ID", null, null)]    
-    internal class RitoAchievement : GenericModdedUnlockable
+    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_WILD_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_WILD_UNLOCKABLE_REWARD_ID", null, null)]    
+    internal class WildAchievement : GenericModdedUnlockable
     {
-        public override string AchievementTokenPrefix => "ACHIEVEMENT_LINK_BODY_RITO_";        
-        public override string AchievementSpriteName => "RitoSkin";        
+        public override string AchievementTokenPrefix => "ACHIEVEMENT_LINK_BODY_WILD_";        
+        public override string AchievementSpriteName => "WildSkin";        
         public override string PrerequisiteUnlockableIdentifier => LinkPlugin.developerPrefix + "_LINK_BODY_UNLOCKABLE_REWARD_ID";
 
         private float glideTime;
@@ -31,17 +31,9 @@ namespace LinkMod.Modules.Achievements
         {
             if (base.localUser.cachedBody.bodyIndex == BodyCatalog.FindBodyIndex(RequiredCharacterBody))
             {
-                if (base.localUser.cachedBody.characterMotor.isGrounded && !base.localUser.cachedBody.inputBank.jump.down)
+                if (base.localUser.cachedBody.inventory.itemAcquisitionOrder.Contains(ItemCatalog.FindItemIndex("UseAmbientLevel")))
                 {
-                    glideTime = 0f;
-                }
-                else
-                {
-                    glideTime += Time.fixedDeltaTime;
-                    if (glideTime > 30f)
-                    {
-                        Grant();
-                    }
+                    Grant();
                 }
             }
         }        

@@ -59,6 +59,7 @@ namespace LinkMod.Modules.Survivors
         private static UnlockableDef darkSkinUnlockableDef;
         private static UnlockableDef gerudoSkinUnlockableDef;
         private static UnlockableDef ritoSkinUnlockableDef;
+        private static UnlockableDef wildSkinUnlockableDef;
 
         internal override void InitializeCharacter()
         {
@@ -71,6 +72,7 @@ namespace LinkMod.Modules.Survivors
             darkSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.DarkAchievement>(true);
             gerudoSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.GerudoAchievement>(true);
             ritoSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.RitoAchievement>(true);
+            wildSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.WildAchievement>(true);
         }
 
         internal override void InitializeDoppelganger()
@@ -1503,7 +1505,8 @@ namespace LinkMod.Modules.Survivors
             SkinDef wildSkin = Modules.Skins.CreateSkinDef("Wild Outfit",
                 Assets.mainAssetBundle.LoadAsset<Sprite>("WildSkin"),
                 defaultRenderers,                
-                model);
+                model,
+                wildSkinUnlockableDef);
 
             wildSkin.gameObjectActivations = new SkinDef.GameObjectActivation[]
             {
