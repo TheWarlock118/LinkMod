@@ -25,18 +25,21 @@ namespace LinkMod.SkillStates
 
         public override void OnEnter()
         {
-            base.OnEnter();
+            base.OnEnter();            
             this.duration = Shield.baseDuration;
             this.fireTime = 20f * this.duration;
             base.characterBody.SetAimTimer(1000000f);
             this.timer = 0f;
             this.animationTimer = 1f;
-            base.PlayAnimation("Gesture, Override", "ShieldGuard");
-            Util.PlaySound("Weapon_Shield_Metal_Equip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
-            Util.PlaySound("ShieldGuardUp", base.gameObject);
             this.childLocator = base.GetModelChildLocator();
-            this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(true);
-            this.GetComponent<UpdateValues>().isBlocking = true;
+            if (characterMotor.isGrounded)
+            {
+                base.PlayAnimation("Gesture, Override", "ShieldGuard");
+                Util.PlaySound("Weapon_Shield_Metal_Equip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
+                Util.PlaySound("ShieldGuardUp", base.gameObject);                
+                this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(true);
+                this.GetComponent<UpdateValues>().isBlocking = true;
+            }
         }
 
         public override void OnExit()
@@ -46,15 +49,20 @@ namespace LinkMod.SkillStates
             {
                 this.hasFired = true;
             }
+            
             base.PlayAnimation("Gesture, Override", "BufferEmpty");
-            Util.PlaySound("Weapon_Shield_Metal_UnEquip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
+            if (characterMotor.isGrounded)
+            {
+                Util.PlaySound("Weapon_Shield_Metal_UnEquip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
+            }
             this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(false);
             this.GetComponent<UpdateValues>().isBlocking = false;
         }
 
         public override void FixedUpdate()
         {
-            base.FixedUpdate();
+            base.FixedUpdate();     
+            
             if(animationTimer > 0f)
             {
                 animationTimer -= Time.fixedDeltaTime;
@@ -71,9 +79,9 @@ namespace LinkMod.SkillStates
             if (!(base.inputBank.jump.down && base.characterMotor.velocity.y < 0f))
             {
                 if (base.inputBank.skill2.down)
-                {
-                    // base.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Immune.buffIndex, 0.1f);
+                {                    
                     base.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Slow80.buffIndex, 0.1f);
+                    this.GetComponent<UpdateValues>().isBlocking = true;
                 }
                 else
                 {

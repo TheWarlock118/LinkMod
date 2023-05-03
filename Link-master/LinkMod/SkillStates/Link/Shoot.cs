@@ -28,7 +28,7 @@ namespace LinkMod.SkillStates
             base.OnEnter();
             this.duration = Shoot.baseDuration;
             this.fireTime = 0.2f * this.duration;
-            base.characterBody.SetAimTimer(2f);
+            base.characterBody.SetAimTimer(1000000f);
             this.muzzleString = "Muzzle";
             this.timer = 0f;
             Shoot.damageCoefficient = Modules.StaticValues.bowDamageCoefficient;

@@ -26,7 +26,7 @@ namespace LinkMod.SkillStates
             base.OnEnter();
             this.duration = ThrowBomb.baseDuration / this.attackSpeedStat;
             this.fireTime = 0.35f * this.duration;
-            base.characterBody.SetAimTimer(2f);
+            base.characterBody.SetAimTimer(1000000f);
             this.animator = base.GetModelAnimator();
 
             Util.PlaySound("BombDraw", base.gameObject);
