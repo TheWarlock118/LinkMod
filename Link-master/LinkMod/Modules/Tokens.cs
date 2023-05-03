@@ -90,6 +90,9 @@ namespace LinkMod.Modules
             LanguageAPI.Add(prefix + "MASTERYUNLOCKABLE_ACHIEVEMENT_NAME", "Link: Mastery");
             LanguageAPI.Add(prefix + "MASTERYUNLOCKABLE_ACHIEVEMENT_DESC", "As Link, beat the game or obliterate on Monsoon.");
             LanguageAPI.Add(prefix + "MASTERYUNLOCKABLE_UNLOCKABLE_NAME", "Link: Mastery");
+            LanguageAPI.Add("ACHIEVEMENT_" + prefix + "MASTERY_NAME", "Link: Mastery");
+            LanguageAPI.Add("ACHIEVEMENT_" + prefix + "MASTERY_DESCRIPTION", "As Link, beat the game or obliterate on Monsoon");
+
             #endregion
             #endregion
         }
