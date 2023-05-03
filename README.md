@@ -4,7 +4,7 @@
 
 PM me on Discord @TheWarlock117#6226 with any bugs, complaints, or suggestions!
 
-[![](https://media.discordapp.net/attachments/1099804589684969593/1103354248038727891/Risk_of_Rain_2_Screenshot_2023.05.03_-_09.15.07.97.png)]()
+[![](https://cdn.discordapp.com/attachments/1099804589684969593/1103355560889425992/Risk_of_Rain_2_Screenshot_2023.05.03_-_09.20.58.38.png)]()
 
 | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837409102942339/Bow.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837408461193217/Shielding.png) |
 |-|-|
