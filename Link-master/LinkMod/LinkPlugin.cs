@@ -345,6 +345,7 @@ namespace LinkMod
                 if (updateValues.blockDaruk)
                 {
                     updateValues.blockDaruk = false;
+                    updateValues.darukBlockedAttacks++;
                     characterBody.RemoveBuff(LinkMod.Modules.Buffs.darukBuff);
                     characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Immune.buffIndex, 3f);
                     damageInfo.damage = 0f;
@@ -358,6 +359,7 @@ namespace LinkMod
                     AkSoundEngine.StopPlayingID(updateValues.darukShieldPlayID);
                 }
 
+                // Shield Guarding
                 if (damageInfo.attacker)
                 {
                     CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
@@ -366,6 +368,7 @@ namespace LinkMod
                     {
                         damageInfo.damage = 0f;
                         damageInfo.rejected = true;
+                        updateValues.blockedAttacks += 1;
                         Util.PlaySound("Guard_" + UnityEngine.Random.Range(0, 3), characterBody.gameObject);
                     }
                 }

@@ -61,18 +61,26 @@ namespace LinkMod.Modules.Survivors
         private static UnlockableDef ritoSkinUnlockableDef;
         private static UnlockableDef wildSkinUnlockableDef;
 
+        private static UnlockableDef revaliUnlockableDef;
+        private static UnlockableDef darukUnlockableDef;
+        private static UnlockableDef miphaUnlockableDef;
+
         internal override void InitializeCharacter()
         {
             base.InitializeCharacter();
         }
 
         internal override void InitializeUnlockables()
-        {
+        {            
             masterySkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.MasteryAchievement>(true);
             darkSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.DarkAchievement>(true);
             gerudoSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.GerudoAchievement>(true);
             ritoSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.RitoAchievement>(true);
             wildSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.WildAchievement>(true);
+
+            revaliUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.RevaliAchievement>(true);
+            darukUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.DarukAchievement>(true);
+            miphaUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.MiphaAchievement>(true);
         }
 
         internal override void InitializeDoppelganger()
@@ -96,7 +104,7 @@ namespace LinkMod.Modules.Survivors
             string prefix = LinkPlugin.developerPrefix;
 
             #region Primary
-            Modules.Skills.AddPrimarySkill(bodyPrefab, Modules.Skills.CreatePrimarySkillDef(new EntityStates.SerializableEntityStateType(typeof(SkillStates.SlashCombo)), "Weapon", prefix + "_LINK_BODY_PRIMARY_SWORD_NAME", prefix + "_LINK_BODY_PRIMARY_SWORD_DESCRIPTION", Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("MasterSword"), true));
+            Modules.Skills.AddPrimarySkill(bodyPrefab, Modules.Skills.CreatePrimarySkillDef(new EntityStates.SerializableEntityStateType(typeof(SkillStates.SlashCombo)), "Weapon", prefix + "_LINK_BODY_PRIMARY_SWORD_NAME", prefix + "_LINK_BODY_PRIMARY_SWORD_DESCRIPTION", Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("MasterSword"), true), null);
             #endregion
 
             #region Secondary
@@ -201,8 +209,8 @@ namespace LinkMod.Modules.Survivors
             });
 
             SkillDef[] secondaries = { shieldSkillDef, shootSkillDef, shootTriSkillDef, shootFastSkillDef};
-
-            Modules.Skills.AddSecondarySkills(bodyPrefab, secondaries);
+            UnlockableDef[] secondaryUnlockables = { null, null, null, null };
+            Modules.Skills.AddSecondarySkills(bodyPrefab, secondaryUnlockables, secondaries);
             #endregion
 
             #region Utility
@@ -231,7 +239,8 @@ namespace LinkMod.Modules.Survivors
             });
 
             SkillDef[] utilities = { bombSkillDef};
-            Modules.Skills.AddUtilitySkills(bodyPrefab, utilities);
+            UnlockableDef[] utilityUnlockables = { null };
+            Modules.Skills.AddUtilitySkills(bodyPrefab, utilityUnlockables, utilities);
             #endregion
 
             #region Special
@@ -332,7 +341,8 @@ namespace LinkMod.Modules.Survivors
             });
 
             SkillDef[] specials = { urbosaSkillDef, revaliSkillDef, darukSkillDef, miphaSkillDef};
-            Modules.Skills.AddSpecialSkills(bodyPrefab, specials);
+            UnlockableDef[] specialUnlockables = { null, revaliUnlockableDef, darukUnlockableDef, miphaUnlockableDef };
+            Modules.Skills.AddSpecialSkills(bodyPrefab, specialUnlockables, specials);
             #endregion
 
             SkillLocator passSkillLocator = bodyPrefab.GetComponent<SkillLocator>();

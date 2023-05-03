@@ -27,6 +27,9 @@ namespace LinkMod.Modules
         public uint slowMotionPlayID;
         public uint darukShieldPlayID;
 
+        public int blockedAttacks = 0;
+        public int darukBlockedAttacks = 0;
+
 
         // I have to give credit to the Enforcer mod for some heavy "inspiration". https://github.com/TheTimeSweeper/EnforcerMod/blob/61376500e7edc007e3998bc9e72eaeffeb173ab6/EnforcerMod_VS/Components/Enforcer/EnforcerComponent.cs
         public bool ShouldBlock(Vector3 attackPos, float blockAngle)

@@ -52,7 +52,7 @@ namespace LinkMod.Modules
         }
 
         // this could all be a lot cleaner but at least it's simple and easy to work with
-        internal static void AddPrimarySkill(GameObject targetPrefab, SkillDef skillDef)
+        internal static void AddPrimarySkill(GameObject targetPrefab, SkillDef skillDef, UnlockableDef unlockableDef)
         {
             SkillLocator skillLocator = targetPrefab.GetComponent<SkillLocator>();
 
@@ -62,11 +62,12 @@ namespace LinkMod.Modules
             skillFamily.variants[skillFamily.variants.Length - 1] = new SkillFamily.Variant
             {
                 skillDef = skillDef,
+                unlockableDef = unlockableDef,
                 viewableNode = new ViewablesCatalog.Node(skillDef.skillNameToken, false, null)
             };
         }
 
-        internal static void AddSecondarySkill(GameObject targetPrefab, SkillDef skillDef)
+        internal static void AddSecondarySkill(GameObject targetPrefab, SkillDef skillDef, UnlockableDef unlockableDef)
         {
             SkillLocator skillLocator = targetPrefab.GetComponent<SkillLocator>();
 
@@ -76,19 +77,20 @@ namespace LinkMod.Modules
             skillFamily.variants[skillFamily.variants.Length - 1] = new SkillFamily.Variant
             {
                 skillDef = skillDef,
+                unlockableDef = unlockableDef,
                 viewableNode = new ViewablesCatalog.Node(skillDef.skillNameToken, false, null)
             };
         }
 
-        internal static void AddSecondarySkills(GameObject targetPrefab, params SkillDef[] skillDefs)
+        internal static void AddSecondarySkills(GameObject targetPrefab, UnlockableDef[] unlockableDefs, params SkillDef[] skillDefs)
         {
-            foreach (SkillDef i in skillDefs)
+            for (int i = 0; i < skillDefs.Length; i++)
             {
-                AddSecondarySkill(targetPrefab, i);
+                AddSecondarySkill(targetPrefab, skillDefs[i], unlockableDefs[i]);
             }
         }
 
-        internal static void AddUtilitySkill(GameObject targetPrefab, SkillDef skillDef)
+        internal static void AddUtilitySkill(GameObject targetPrefab, SkillDef skillDef, UnlockableDef unlockableDef)
         {
             SkillLocator skillLocator = targetPrefab.GetComponent<SkillLocator>();
 
@@ -98,19 +100,20 @@ namespace LinkMod.Modules
             skillFamily.variants[skillFamily.variants.Length - 1] = new SkillFamily.Variant
             {
                 skillDef = skillDef,
+                unlockableDef = unlockableDef,
                 viewableNode = new ViewablesCatalog.Node(skillDef.skillNameToken, false, null)
             };
         }
 
-        internal static void AddUtilitySkills(GameObject targetPrefab, params SkillDef[] skillDefs)
+        internal static void AddUtilitySkills(GameObject targetPrefab, UnlockableDef[] unlockableDefs, params SkillDef[] skillDefs)
         {
-            foreach (SkillDef i in skillDefs)
+            for (int i = 0; i < skillDefs.Length; i++)
             {
-                AddUtilitySkill(targetPrefab, i);
+                AddUtilitySkill(targetPrefab, skillDefs[i], unlockableDefs[i]);
             }
         }
 
-        internal static void AddSpecialSkill(GameObject targetPrefab, SkillDef skillDef)
+        internal static void AddSpecialSkill(GameObject targetPrefab, SkillDef skillDef, UnlockableDef unlockableDef)
         {
             SkillLocator skillLocator = targetPrefab.GetComponent<SkillLocator>();
 
@@ -119,17 +122,18 @@ namespace LinkMod.Modules
             Array.Resize(ref skillFamily.variants, skillFamily.variants.Length + 1);
             skillFamily.variants[skillFamily.variants.Length - 1] = new SkillFamily.Variant
             {
-                skillDef = skillDef,
+                skillDef = skillDef, 
+                unlockableDef = unlockableDef,
                 viewableNode = new ViewablesCatalog.Node(skillDef.skillNameToken, false, null)
             };
         }
 
-        internal static void AddSpecialSkills(GameObject targetPrefab, params SkillDef[] skillDefs)
-        {
-            foreach (SkillDef i in skillDefs)
+        internal static void AddSpecialSkills(GameObject targetPrefab, UnlockableDef[] unlockableDefs, params SkillDef[] skillDefs)
+        {            
+            for(int i = 0; i < skillDefs.Length; i++)
             {
-                AddSpecialSkill(targetPrefab, i);
-            }
+                AddSpecialSkill(targetPrefab, skillDefs[i], unlockableDefs[i]);
+            }            
         }
 
 
