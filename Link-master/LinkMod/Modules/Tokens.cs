@@ -89,9 +89,13 @@ namespace LinkMod.Modules
             #region Achievements            
             LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_MASTERY_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: Mastery");
             LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_MASTERY_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, beat the game or obliterate on Monsoon.");
-
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_MASTERY_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Mastery");
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_MASTERY_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, beat the game or obliterate on Monsoon.");
+
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_DARK_UNLOCKABLE_ACHIEVEMENT_NAME", "The Water Temple's secret");
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_DARK_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "Find and defeat the Hero's Shade");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_DARK_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "The Water Temple's secret");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_DARK_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "Find and defeat the Hero's Shade");
             #endregion
             #endregion
         }

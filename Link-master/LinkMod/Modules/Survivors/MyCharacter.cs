@@ -56,6 +56,7 @@ namespace LinkMod.Modules.Survivors
 
         internal override UnlockableDef characterUnlockableDef { get; set; }
         private static UnlockableDef masterySkinUnlockableDef;
+        private static UnlockableDef darkSkinUnlockableDef;
 
         internal override void InitializeCharacter()
         {
@@ -65,6 +66,7 @@ namespace LinkMod.Modules.Survivors
         internal override void InitializeUnlockables()
         {
             masterySkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.MasteryAchievement>(true);
+            darkSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.DarkAchievement>(true);
         }
 
         internal override void InitializeDoppelganger()
@@ -1773,7 +1775,8 @@ namespace LinkMod.Modules.Survivors
             SkinDef darkSkin = Modules.Skins.CreateSkinDef("Dark Link",
                 Assets.mainAssetBundle.LoadAsset<Sprite>("DarkSkin"),
                 defaultRenderers,                
-                model);
+                model,
+                darkSkinUnlockableDef);
 
             darkSkin.gameObjectActivations = new SkinDef.GameObjectActivation[]
             {
