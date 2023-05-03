@@ -86,13 +86,12 @@ namespace LinkMod.Modules
             LanguageAPI.Add(prefix + "SPECIAL_URBOSA_DESCRIPTION", "Call on the Champion Urbosa to summon powerful lightning and damage your foes.");
             #endregion
 
-            #region Achievements
-            LanguageAPI.Add(prefix + "MASTERYUNLOCKABLE_ACHIEVEMENT_NAME", "Link: Mastery");
-            LanguageAPI.Add(prefix + "MASTERYUNLOCKABLE_ACHIEVEMENT_DESC", "As Link, beat the game or obliterate on Monsoon.");
-            LanguageAPI.Add(prefix + "MASTERYUNLOCKABLE_UNLOCKABLE_NAME", "Link: Mastery");
-            LanguageAPI.Add("ACHIEVEMENT_" + prefix + "MASTERY_NAME", "Link: Mastery");
-            LanguageAPI.Add("ACHIEVEMENT_" + prefix + "MASTERY_DESCRIPTION", "As Link, beat the game or obliterate on Monsoon");
+            #region Achievements            
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_MASTERY_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: Mastery");
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_MASTERY_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, beat the game or obliterate on Monsoon.");
 
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_MASTERY_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Mastery");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_MASTERY_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, beat the game or obliterate on Monsoon.");
             #endregion
             #endregion
         }

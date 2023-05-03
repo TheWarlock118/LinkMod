@@ -9,7 +9,7 @@ namespace LinkMod.Modules
 
         public override void OnBodyRequirementMet()
         {
-            base.OnBodyRequirementMet();
+            base.OnBodyRequirementMet();            
             Log.LogDebug("Body Requirement Met");
             Run.onClientGameOverGlobal += OnClientGameOverGlobal;
         }
@@ -21,7 +21,7 @@ namespace LinkMod.Modules
         }
         private void OnClientGameOverGlobal(Run run, RunReport runReport)
         {
-            if ((bool)runReport.gameEnding && runReport.gameEnding.isWin)
+            if ((bool)runReport.gameEnding && (runReport.gameEnding.isWin))
             {
                 DifficultyIndex difficultyIndex = runReport.ruleBook.FindDifficulty();
                 DifficultyDef runDifficulty = DifficultyCatalog.GetDifficultyDef(runReport.ruleBook.FindDifficulty());

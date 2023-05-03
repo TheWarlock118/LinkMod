@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace LinkMod.Modules.Achievements
 {
-    [RegisterAchievement(LinkPlugin.developerPrefix + "_LINK_BODY_MASTERY", null, null, null)]    
+    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_MASTERY_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_MASTERY_UNLOCKABLE_REWARD_ID", null, null)]    
     internal class MasteryAchievement : BaseMasteryUnlockable
     {
-        public override string AchievementTokenPrefix => LinkPlugin.developerPrefix + "_LINK_BODY_MASTERY";
+        public override string AchievementTokenPrefix => "ACHIEVEMENT_LINK_BODY_MASTERY_";
         //the name of the sprite in your bundle
         public override string AchievementSpriteName => "MasterySkin";
         //the token of your character's unlock achievement if you have one

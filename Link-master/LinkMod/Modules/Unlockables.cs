@@ -28,6 +28,7 @@ namespace LinkMod.Modules
             newUnlockableDef.getHowToUnlockString = unlockableInfo.HowToUnlockString;
             newUnlockableDef.getUnlockedString = unlockableInfo.UnlockedString;
             newUnlockableDef.sortScore = unlockableInfo.SortScore;
+            newUnlockableDef.achievementIcon = unlockableInfo.sprite;
 
             return newUnlockableDef;
         }
@@ -47,17 +48,19 @@ namespace LinkMod.Modules
                 prerequisiteAchievementIdentifier = instance.PrerequisiteUnlockableIdentifier,
                 nameToken = instance.AchievementNameToken,
                 descriptionToken = instance.AchievementDescToken,      
-                // achievedIcon = instance.Sprite,
+                achievedIcon = instance.Sprite,
                 type = instance.GetType(),
                 serverTrackerType = (serverTracked ? instance.GetType() : null),
             };
+            Log.LogDebug("Achievement Identifier: " + instance.AchievementIdentifier.ToString());
 
             UnlockableDef unlockableDef = CreateNewUnlockable(new UnlockableInfo
             {
                 Name = instance.UnlockableIdentifier,
                 HowToUnlockString = instance.GetHowToUnlock,
                 UnlockedString = instance.GetUnlocked,
-                SortScore = 200
+                SortScore = 200,
+                sprite = instance.Sprite
             });
 
             unlockableDefs.Add(unlockableDef);
@@ -123,6 +126,7 @@ where TDelegate : Delegate
             internal Func<string> HowToUnlockString;
             internal Func<string> UnlockedString;
             internal int SortScore;
+            internal Sprite sprite;
         }
     }
 

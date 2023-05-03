@@ -41,6 +41,7 @@ namespace LinkMod
 
         private void Awake()
         {
+            Log.Init(Logger);
             instance = this;
             
             // load assets and read config
@@ -80,7 +81,7 @@ namespace LinkMod
 
         private void CharacterBody_Update(On.RoR2.CharacterBody.orig_Update orig, CharacterBody self)
         {
-            Log.Init(Logger);
+            
             orig(self);
             Modules.UpdateValues updateValues = self.gameObject.GetComponent<Modules.UpdateValues>();
                         
