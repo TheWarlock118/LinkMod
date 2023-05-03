@@ -40,10 +40,11 @@ namespace LinkMod.Modules.Survivors
         internal override int mainRendererIndex { get; set; } = 0;
 
         internal override CustomRendererInfo[] customRendererInfos { get; set; } = new CustomRendererInfo[] {
-                new CustomRendererInfo
-                {
-                    childName = "Boots_001__Mt_Lower_001",
-                },
+                //Too convoluted with a model made of up of this many meshes
+                //new CustomRendererInfo
+                //{
+                //    childName = "Boots_001__Mt_Lower_001",
+                //},
         };
 
 
@@ -2070,10 +2071,8 @@ namespace LinkMod.Modules.Survivors
             SkinDef masterySkin = Modules.Skins.CreateSkinDef("Champion's Tunic",
                 Assets.mainAssetBundle.LoadAsset<Sprite>("MasterySkin"),
                 defaultRenderers,                
-                model.gameObject);
-
-            // masterySkin.rendererInfos = Modules.Skins.getRendererMaterials(masterySkin.rendererInfos, Modules.Materials.CreateHopooMaterial("Mt_Armor_116"));            
-            // masterySkin.meshReplacements = Modules.Skins.getMeshReplacements(masterySkin.rendererInfos, "Code_116__Mt_Tunic_116");
+                model.gameObject,
+                masterySkinUnlockableDef);
 
             masterySkin.gameObjectActivations = new SkinDef.GameObjectActivation[]
             {
@@ -2311,9 +2310,7 @@ namespace LinkMod.Modules.Survivors
 
             skins.Add(masterySkin);
             #endregion
-
             
-
             skinController.skins = skins.ToArray();
         }
 
@@ -2321,8 +2318,6 @@ namespace LinkMod.Modules.Survivors
         {
             itemDisplayRules = new List<ItemDisplayRuleSet.KeyAssetRuleGroup>();
 
-            // add item displays here
-            //  HIGHLY recommend using KingEnderBrine's ItemDisplayPlacementHelper mod for this
             #region Item Displays
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {

@@ -37,6 +37,6 @@ namespace LinkMod.Modules
         public override BodyIndex LookUpRequiredBodyIndex()
         {
             return BodyCatalog.FindBodyIndex(RequiredCharacterBody);
-        }
+        }        
     }
 }

@@ -83,8 +83,9 @@ namespace LinkMod
             Log.Init(Logger);
             orig(self);
             Modules.UpdateValues updateValues = self.gameObject.GetComponent<Modules.UpdateValues>();
+                        
             if (updateValues)
-            {
+            {                
                 SkillLocator skillLocator = self.GetComponent<SkillLocator>();
 
                 #region MiphaGraceRemoveDioAndSetCooldown
@@ -356,13 +357,15 @@ namespace LinkMod
                     AkSoundEngine.StopPlayingID(updateValues.darukShieldPlayID);
                 }
 
-                
-                CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
-                
-                if (updateValues.isBlocking && updateValues.ShouldBlock(attackerBody.corePosition, 40f))
+                if (damageInfo.attacker)
                 {
-                    damageInfo.damage = 0f;
-                    damageInfo.rejected = true;
+                    CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
+
+                    if (updateValues.isBlocking && updateValues.ShouldBlock(attackerBody.corePosition, 40f))
+                    {
+                        damageInfo.damage = 0f;
+                        damageInfo.rejected = true;
+                    }
                 }
                  
             }

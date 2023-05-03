@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace LinkMod.Modules.Achievements
 {
+    [RegisterAchievement(LinkPlugin.developerPrefix + "_LINK_BODY_MASTERY", null, null, null)]    
     internal class MasteryAchievement : BaseMasteryUnlockable
     {
         public override string AchievementTokenPrefix => LinkPlugin.developerPrefix + "_LINK_BODY_MASTERY";
