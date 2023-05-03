@@ -34,7 +34,7 @@ TheWarlock117 - Everything
 ### Secondary
 | Skill | | Description | Cooldown |
 |:-|-|------|-|
-| Hylian Shield | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804788134248458/HylianShieldIcon.png) | A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it. Hold to block all damage from the front. Can attack with your sword while blocking. | None |
+| Hylian Shield | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1103354683235516517/HylianShieldIcon.png) | A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it. Hold to block all damage from the front. Can attack with your sword while blocking. | None |
 | Royal Guard Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804748112212088/RoyalGuardBow.png) | Loose an arrow for `90%` damage | 1s |
 | Great Eagle Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804714373222501/GreatEagleBow.png) | Loose three arrows at once, each dealing `30%` damage | 2s |
 | Falcon Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804708685750292/FalconBow.png) | Loose a hasty arrow for `45%` damage. The specially engineered bowstring allows for faster drawing and a short cooldown. | 0.5s |
