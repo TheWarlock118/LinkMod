@@ -365,6 +365,7 @@ namespace LinkMod
                     {
                         damageInfo.damage = 0f;
                         damageInfo.rejected = true;
+                        Util.PlaySound("Guard_" + UnityEngine.Random.Range(0, 3), characterBody.gameObject);
                     }
                 }
                  

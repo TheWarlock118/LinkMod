@@ -22,7 +22,6 @@
 
   <ItemGroup>
     <EmbeddedResource Include="assetbundle" />
-    <EmbeddedResource Include="HenryBank.bnk" />
     <EmbeddedResource Include="Link.bnk" />
   </ItemGroup>
 
