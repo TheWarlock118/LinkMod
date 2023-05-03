@@ -60,7 +60,7 @@ namespace LinkMod.SkillStates
                         Util.QuaternionSafeLookRotation(aimRay.direction),
                         base.gameObject,
                         Shoot.damageCoefficient * this.damageStat,
-                        40f,
+                        39f,
                         base.RollCrit(),
                         DamageColorIndex.Default,
                         null,

@@ -65,6 +65,9 @@ namespace LinkMod.Modules.Survivors
         private static UnlockableDef darukUnlockableDef;
         private static UnlockableDef miphaUnlockableDef;
 
+        private static UnlockableDef fastBowUnlockableDef;
+        private static UnlockableDef triBowUnlockableDef;
+
         internal override void InitializeCharacter()
         {
             base.InitializeCharacter();
@@ -81,6 +84,9 @@ namespace LinkMod.Modules.Survivors
             revaliUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.RevaliAchievement>(true);
             darukUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.DarukAchievement>(true);
             miphaUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.MiphaAchievement>(true);
+
+            fastBowUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.FastBowAchievement>(true);
+            triBowUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.TriBowAchievement>(true);
         }
 
         internal override void InitializeDoppelganger()
@@ -209,7 +215,7 @@ namespace LinkMod.Modules.Survivors
             });
 
             SkillDef[] secondaries = { shieldSkillDef, shootSkillDef, shootTriSkillDef, shootFastSkillDef};
-            UnlockableDef[] secondaryUnlockables = { null, null, null, null };
+            UnlockableDef[] secondaryUnlockables = { null, null, triBowUnlockableDef, fastBowUnlockableDef };
             Modules.Skills.AddSecondarySkills(bodyPrefab, secondaryUnlockables, secondaries);
             #endregion
 

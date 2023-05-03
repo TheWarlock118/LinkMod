@@ -32,7 +32,7 @@ namespace LinkMod.SkillStates
             this.muzzleString = "Muzzle";
             this.timer = 0f;
             ShootTri.damageCoefficient = Modules.StaticValues.bowDamageCoefficient;
-            ShootTri.force = 30f;
+            ShootTri.force = 31f;
             string[] sounds = { "Bow_Draw0", "Bow_Draw1", "Bow_Draw2", "Bow_Draw3", "Bow_Draw4", "Bow_Draw5" };
             Util.PlayAttackSpeedSound(sounds[Random.Range(0, 5)], base.gameObject, this.timer);
             base.PlayAnimation("Gesture, Override", "BowEquip", "ShootGun.playbackRate", 1.8f);
@@ -60,7 +60,7 @@ namespace LinkMod.SkillStates
                         Util.QuaternionSafeLookRotation(aimRay.direction),
                         base.gameObject,
                         ShootTri.damageCoefficient * this.damageStat,
-                        40f,
+                        41f,
                         base.RollCrit(),
                         DamageColorIndex.Default,
                         null,
@@ -81,7 +81,7 @@ namespace LinkMod.SkillStates
                         Util.QuaternionSafeLookRotation(arrow2Direction),
                         base.gameObject,
                         ShootTri.damageCoefficient * this.damageStat,
-                        4000f,
+                        41f,
                         base.RollCrit(),
                         DamageColorIndex.Default,
                         null,
@@ -102,7 +102,7 @@ namespace LinkMod.SkillStates
                         Util.QuaternionSafeLookRotation(arrow3Direction),
                         base.gameObject,
                         ShootTri.damageCoefficient * this.damageStat,
-                        4000f,
+                        41f,
                         base.RollCrit(),
                         DamageColorIndex.Default,
                         null,

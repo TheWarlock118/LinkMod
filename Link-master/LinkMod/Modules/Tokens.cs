@@ -98,24 +98,24 @@ namespace LinkMod.Modules
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_DARK_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, find and defeat the Hero's Shade");
 
             LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_GERUDO_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: Stormcaller");
-            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_GERUDO_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, kill twenty enemies at once with Urbosa's Fury");
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_GERUDO_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, kill 20 enemies at once with Urbosa's Fury");
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_GERUDO_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Stormcaller");
-            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_GERUDO_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, kill twenty enemies at once with Urbosa's Fury");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_GERUDO_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, kill 20 enemies at once with Urbosa's Fury");
 
             LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: Windrider");
-            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, glide for thirty seconds");
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, glide for 30 seconds");
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Windrider");
-            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, glide for thirty seconds");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, glide for 30 seconds");
 
             LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_WILD_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: Reborn");
             LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_WILD_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, call on Mipha's Grace to be reborn");
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_WILD_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Reborn");
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_WILD_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, call on Mipha's Grace to be reborn");
 
-            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_REVALI_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: Max Pain");
-            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_REVALI_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, hold an arrow drawn for ten seconds while falling");
-            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_REVALI_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Max Pain");
-            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_REVALI_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, hold an arrow drawn for ten seconds while falling");
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_REVALI_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: The Slow-mo Guy");
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_REVALI_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, hold an arrow drawn for 10 seconds while falling");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_REVALI_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: The Slow-mo Guy");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_REVALI_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, hold an arrow drawn for 10 seconds while falling");
 
             LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_DARUK_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: Great Protector");
             LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_DARUK_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, block 50 attacks with your Hylian Shield in one life");
@@ -126,6 +126,16 @@ namespace LinkMod.Modules
             LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_MIPHA_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, block 5 attacks with Daruk's Protection in one life");
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_MIPHA_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Protected");
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_MIPHA_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, block 5 attacks with Daruk's Protection in one life");
+
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_FASTBOW_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: Triple Threat");
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_FASTBOW_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, kill 3 enemies with a single Great Eagle Bow shot");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_FASTBOW_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Triple Threat");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_FASTBOW_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, kill 3 enemies with a single Great Eagle Bow shot");
+
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: Max Pain");
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, kill 3 enemies with your bow without touching the ground");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Max Pain");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, kill 3 enemies with your bow without touching the ground");
             #endregion
             #endregion
         }
