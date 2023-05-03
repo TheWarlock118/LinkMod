@@ -88,9 +88,9 @@ namespace LinkMod.Modules
 
             #region Achievements            
             LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_MASTERY_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: Mastery");
-            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_MASTERY_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, beat the game or obliterate on Monsoon.");
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_MASTERY_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, beat the game or obliterate on Monsoon");
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_MASTERY_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Mastery");
-            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_MASTERY_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, beat the game or obliterate on Monsoon.");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_MASTERY_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, beat the game or obliterate on Monsoon");
 
             LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_DARK_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: Inner Conflict");
             LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_DARK_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, find and defeat the Hero's Shade");
@@ -101,6 +101,11 @@ namespace LinkMod.Modules
             LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_GERUDO_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, kill twenty enemies at once with Urbosa's Fury");
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_GERUDO_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Stormcaller");
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_GERUDO_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, kill twenty enemies at once with Urbosa's Fury");
+
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: Windrider");
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, glide for thirty seconds");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Windrider");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, glide for thirty seconds");
             #endregion
             #endregion
         }

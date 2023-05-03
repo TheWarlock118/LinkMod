@@ -58,6 +58,7 @@ namespace LinkMod.Modules.Survivors
         private static UnlockableDef masterySkinUnlockableDef;
         private static UnlockableDef darkSkinUnlockableDef;
         private static UnlockableDef gerudoSkinUnlockableDef;
+        private static UnlockableDef ritoSkinUnlockableDef;
 
         internal override void InitializeCharacter()
         {
@@ -69,6 +70,7 @@ namespace LinkMod.Modules.Survivors
             masterySkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.MasteryAchievement>(true);
             darkSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.DarkAchievement>(true);
             gerudoSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.GerudoAchievement>(true);
+            ritoSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.RitoAchievement>(true);
         }
 
         internal override void InitializeDoppelganger()
@@ -941,7 +943,8 @@ namespace LinkMod.Modules.Survivors
             SkinDef ritoSkin = Modules.Skins.CreateSkinDef("Snowquill Outfit",
                 Assets.mainAssetBundle.LoadAsset<Sprite>("RitoSkin"),
                 defaultRenderers,                
-                model.gameObject);
+                model.gameObject,
+                ritoSkinUnlockableDef);
 
             ritoSkin.gameObjectActivations = new SkinDef.GameObjectActivation[]
             {
