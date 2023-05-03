@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using RoR2;
 
 namespace LinkMod.Modules
 {
     class UpdateValues : MonoBehaviour
-    {
-        public string testString = "YEAH BABY";
-
-        
+    {                
         public bool miphaOnCooldown = false;
         public bool urbosaOnCooldown = false;
         public bool revaliOnCooldown = false;
@@ -21,13 +19,29 @@ namespace LinkMod.Modules
         public bool playedParaUnEquipSound = false;
         public bool enteredSlowMo = false;
         public bool playedLowHealth = false;
-        
+        public bool isBlocking;
 
         public float SlowMotionStopwatch = 0f;
         public float DarukSoundStopwatch = 0f;
 
         public uint slowMotionPlayID;
-        public uint darukShiedlPlayID;
+        public uint darukShieldPlayID;
+
+
+        // I have to give credit to the Enforcer mod for some heavy "inspiration". https://github.com/TheTimeSweeper/EnforcerMod/blob/61376500e7edc007e3998bc9e72eaeffeb173ab6/EnforcerMod_VS/Components/Enforcer/EnforcerComponent.cs
+        public bool ShouldBlock(Vector3 attackPos, float blockAngle)
+        {
+            bool shouldBlock = false;
+
+            Vector3 aimDirection = GetComponent<CharacterBody>().inputBank.aimDirection;
+            Vector3 enemyDirection = attackPos - GetComponent<CharacterBody>().corePosition;
+
+            float enemyAngle = Vector3.Angle(aimDirection, enemyDirection);
+            if (enemyAngle < blockAngle)
+                shouldBlock = true;
+
+            return shouldBlock;
+        }
         
     }
 }

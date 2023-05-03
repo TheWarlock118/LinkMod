@@ -4,6 +4,7 @@ using RoR2.Projectile;
 using UnityEngine;
 using UnityEngine.Networking;
 using EntityStates;
+using LinkMod.Modules;
 
 namespace LinkMod.SkillStates
 {
@@ -27,14 +28,15 @@ namespace LinkMod.SkillStates
             base.OnEnter();
             this.duration = Shield.baseDuration;
             this.fireTime = 20f * this.duration;
-            base.characterBody.SetAimTimer(2f);
+            base.characterBody.SetAimTimer(1000000f);
             this.timer = 0f;
             this.animationTimer = 1f;
             base.PlayAnimation("Gesture, Override", "ShieldGuard");
             Util.PlaySound("Weapon_Shield_Metal_Equip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
             Util.PlaySound("ShieldGuardUp", base.gameObject);
             this.childLocator = base.GetModelChildLocator();
-            this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(true);                        
+            this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(true);
+            this.GetComponent<UpdateValues>().isBlocking = true;
         }
 
         public override void OnExit()
@@ -46,7 +48,8 @@ namespace LinkMod.SkillStates
             }
             base.PlayAnimation("Gesture, Override", "BufferEmpty");
             Util.PlaySound("Weapon_Shield_Metal_UnEquip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
-            this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(false);            
+            this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(false);
+            this.GetComponent<UpdateValues>().isBlocking = false;
         }
 
         public override void FixedUpdate()

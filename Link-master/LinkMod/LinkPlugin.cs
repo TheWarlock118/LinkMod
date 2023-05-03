@@ -291,7 +291,7 @@ namespace LinkMod
                     {
                         if (Modules.Config.DarukShieldSound.Value)
                         {
-                            updateValues.darukShiedlPlayID = Util.PlaySound("Daruk_Shield_Loop", self.gameObject);
+                            updateValues.darukShieldPlayID = Util.PlaySound("Daruk_Shield_Loop", self.gameObject);
                         }
                         updateValues.DarukSoundStopwatch = 3f;
                     }
@@ -308,7 +308,7 @@ namespace LinkMod
         {
             //Mipha's Grace Functionality - On death, if using Mipha's Grace and no dio's, add dio to inventory and set res to true
             Log.Init(Logger);
-            orig(self, damageInfo);
+            
             Modules.UpdateValues updateValues = self.gameObject.GetComponent<Modules.UpdateValues>();
             if (self && updateValues)
             {
@@ -345,17 +345,29 @@ namespace LinkMod
                     updateValues.blockDaruk = false;
                     characterBody.RemoveBuff(LinkMod.Modules.Buffs.darukBuff);
                     characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Immune.buffIndex, 3f);
+                    damageInfo.damage = 0f;
+                    damageInfo.rejected = true;
                     characterBody.healthComponent.barrier = 0f;
                     skillLocator.GetSkill(SkillSlot.Special).AddOneStock();
                     skillLocator.GetSkill(SkillSlot.Special).RemoveAllStocks();
                     SummonDaruk(characterBody);
                     Util.PlaySound("Daruk_Shield_Break", self.gameObject);
                     Util.PlaySound("Daruk_Yell", self.gameObject);
-                    AkSoundEngine.StopPlayingID(updateValues.darukShiedlPlayID);
+                    AkSoundEngine.StopPlayingID(updateValues.darukShieldPlayID);
+                }
+
+                
+                CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
+                
+                if (updateValues.isBlocking && updateValues.ShouldBlock(attackerBody.corePosition, 40f))
+                {
+                    damageInfo.damage = 0f;
+                    damageInfo.rejected = true;
                 }
                  
-            }    
-            
+            }
+
+            orig(self, damageInfo);
         }
 
         public void SummonDaruk(CharacterBody body)
