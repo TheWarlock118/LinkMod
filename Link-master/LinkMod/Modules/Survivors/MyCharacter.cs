@@ -57,6 +57,7 @@ namespace LinkMod.Modules.Survivors
         internal override UnlockableDef characterUnlockableDef { get; set; }
         private static UnlockableDef masterySkinUnlockableDef;
         private static UnlockableDef darkSkinUnlockableDef;
+        private static UnlockableDef gerudoSkinUnlockableDef;
 
         internal override void InitializeCharacter()
         {
@@ -67,6 +68,7 @@ namespace LinkMod.Modules.Survivors
         {
             masterySkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.MasteryAchievement>(true);
             darkSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.DarkAchievement>(true);
+            gerudoSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.GerudoAchievement>(true);
         }
 
         internal override void InitializeDoppelganger()
@@ -1213,7 +1215,8 @@ namespace LinkMod.Modules.Survivors
             SkinDef gerudoSkin = Modules.Skins.CreateSkinDef("Gerudo Outfit",
                 Assets.mainAssetBundle.LoadAsset<Sprite>("GerudoSkin"),
                 defaultRenderers,                
-                model);
+                model,
+                gerudoSkinUnlockableDef);
 
             gerudoSkin.gameObjectActivations = new SkinDef.GameObjectActivation[]
             {

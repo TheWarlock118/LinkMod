@@ -28,11 +28,6 @@ namespace LinkMod.Modules.Achievements
         
         private void OnCharacterDeath(DamageReport damageReport)
         {
-            Log.LogDebug("Checking character death.");
-            Log.LogDebug("Victim Index = " + damageReport.victimBodyIndex.ToString());            
-            Log.LogDebug("Umbra Index = " + BodyCatalog.FindBodyIndex("LinkBody").ToString());
-            
-
             if (damageReport.attackerBodyIndex == BodyCatalog.FindBodyIndex("LinkBody") && damageReport.victimBodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
             {
                 Grant();

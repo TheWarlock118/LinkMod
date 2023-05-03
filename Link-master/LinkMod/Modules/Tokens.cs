@@ -92,10 +92,15 @@ namespace LinkMod.Modules
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_MASTERY_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Mastery");
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_MASTERY_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, beat the game or obliterate on Monsoon.");
 
-            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_DARK_UNLOCKABLE_ACHIEVEMENT_NAME", "The Water Temple's secret");
-            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_DARK_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "Find and defeat the Hero's Shade");
-            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_DARK_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "The Water Temple's secret");
-            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_DARK_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "Find and defeat the Hero's Shade");
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_DARK_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: Inner Conflict");
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_DARK_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, find and defeat the Hero's Shade");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_DARK_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Inner Conflict");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_DARK_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, find and defeat the Hero's Shade");
+
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_GERUDO_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: Stormcaller");
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_GERUDO_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, kill twenty enemies at once with Urbosa's Fury");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_GERUDO_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Stormcaller");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_GERUDO_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, kill twenty enemies at once with Urbosa's Fury");
             #endregion
             #endregion
         }
