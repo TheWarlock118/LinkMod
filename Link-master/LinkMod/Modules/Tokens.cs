@@ -16,8 +16,8 @@ namespace LinkMod.Modules
             desc = desc + "< ! > Link's Sheikah Bombs allow for high-damage crowd control." + Environment.NewLine + Environment.NewLine;
             desc = desc + "< ! > Link's Champion Abilities offer extra mobility, protection, high damage, or a second life." + Environment.NewLine + Environment.NewLine;
 
-            string outro = "..and so he rested, the Kingdom of Hyrule saved.";
-            string outroFailure = "..and so he vanished, the Kingdom of Hyrule left to ruin.";
+            string outro = "..and so he left for Hyrule, another kingdom saved.";
+            string outroFailure = "..and so he perished, another kingdom left to ruin.";
 
             LanguageAPI.Add(prefix + "NAME", "Link");
             LanguageAPI.Add(prefix + "DESCRIPTION", desc);
@@ -55,7 +55,7 @@ namespace LinkMod.Modules
             LanguageAPI.Add(prefix + "SECONDARY_FASTBOW_DESCRIPTION", Helpers.agilePrefix + $"Loose a hasty arrow for <style=cIsDamage>{50f * StaticValues.bowDamageCoefficient}%damage</style>. The specially engineered bowstring allows for faster drawing and a short cooldown.");
 
             LanguageAPI.Add(prefix + "SECONDARY_SHIELD_NAME", "Hylian Shield");
-            LanguageAPI.Add(prefix + "SECONDARY_SHIELD_DESCRIPTION", "A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it. Hold to block most projectiles. Can attack while blocking.");
+            LanguageAPI.Add(prefix + "SECONDARY_SHIELD_DESCRIPTION", "A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it. Hold to block all damage from the front. Can attack with your sword while blocking.");
             #endregion
 
             #region Utility
