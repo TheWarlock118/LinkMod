@@ -59,12 +59,11 @@ TheWarlock117 - Everything
 
 ## Known Issues
 - Some animations are unsynced in Multiplayer - Bomb Throw, Paraglider, Shielding, etc.
-- Mipha's Grace stock not correctly showing used in Multiplayer - should be visual only
+- Mipha's Grace stock not correctly showing used for non-host players in Multiplayer - should be visual only
 - Hylian Outfit and Champion's Tunic skirts are ruffled. I believe this is caused by the way the skins had to be implemented, and is likely unavoidable without a breakthrough and massive overhaul.
 
 ## Future Plans
-- Unlockables
-- Other Sheikah Slate abilities as alternate utilities
+- Other Sheikah Slate abilities (Cryonis, Magnesis, Stasis) as alternate utilities
 ___
 ## Changelog
 
