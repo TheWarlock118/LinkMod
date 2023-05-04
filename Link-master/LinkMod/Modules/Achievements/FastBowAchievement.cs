@@ -35,12 +35,10 @@ namespace LinkMod.Modules.Achievements
         }
 
         private void OnCharacterDeath(DamageReport damageReport)
-        {
-            Log.LogDebug("Force magnitude: " + damageReport.damageInfo.force.magnitude.ToString());
+        {            
             if ((int)damageReport.damageInfo.force.magnitude == 41 && damageReport.attackerBodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
             {                
-                killCount++;
-                Log.LogDebug("Kill Count: " + killCount.ToString());
+                killCount++;                
             }
             if (killCount >= 3)
             {
