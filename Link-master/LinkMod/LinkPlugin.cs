@@ -315,7 +315,30 @@ namespace LinkMod
             if (self && updateValues)
             {
                 CharacterBody characterBody = self.GetComponent<CharacterBody>();
-                SkillLocator skillLocator = characterBody.GetComponent<SkillLocator>();                
+                SkillLocator skillLocator = characterBody.GetComponent<SkillLocator>();
+
+                // Shield Guarding
+                if (damageInfo.attacker)
+                {
+                    CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
+
+                    if (updateValues.isBlocking && updateValues.ShouldBlock(attackerBody.corePosition, 40f))
+                    {
+                        damageInfo.damage = 0f;
+                        damageInfo.rejected = true;
+                        updateValues.blockedAttacks += 1;
+                        Util.PlaySound("Guard_" + UnityEngine.Random.Range(0, 3), characterBody.gameObject);
+                    }
+                }
+            }
+            // Orig needs to be called here to work both with shielding and mipha's, and allow normal damage to function properly
+            // There's a cleaner way to do this. I don't care.
+            orig(self, damageInfo);
+
+            if (self && updateValues) 
+            {
+                CharacterBody characterBody = self.GetComponent<CharacterBody>();
+                SkillLocator skillLocator = characterBody.GetComponent<SkillLocator>();
                 if (skillLocator && characterBody && skillLocator.GetSkill(SkillSlot.Special) != null)
                 {
 
@@ -323,7 +346,7 @@ namespace LinkMod
                     {
                         if (!(skillLocator.GetSkill(SkillSlot.Special).stock < 1))
                         {
-                            if (!characterBody.healthComponent.alive && !characterBody.inventory.itemAcquisitionOrder.Contains(ItemCatalog.FindItemIndex("ExtraLife")))
+                            if (!characterBody.healthComponent.alive)
                             {
                                 characterBody.inventory.GiveItem(ItemCatalog.FindItemIndex("ExtraLife"), 1);
                                 characterBody.inventory.GiveItem(ItemCatalog.FindItemIndex("UseAmbientLevel"), 1);
@@ -357,25 +380,8 @@ namespace LinkMod
                     Util.PlaySound("Daruk_Shield_Break", self.gameObject);
                     Util.PlaySound("Daruk_Yell", self.gameObject);
                     AkSoundEngine.StopPlayingID(updateValues.darukShieldPlayID);
-                }
-
-                // Shield Guarding
-                if (damageInfo.attacker)
-                {
-                    CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
-
-                    if (updateValues.isBlocking && updateValues.ShouldBlock(attackerBody.corePosition, 40f))
-                    {
-                        damageInfo.damage = 0f;
-                        damageInfo.rejected = true;
-                        updateValues.blockedAttacks += 1;
-                        Util.PlaySound("Guard_" + UnityEngine.Random.Range(0, 3), characterBody.gameObject);
-                    }
-                }
-                 
-            }
-
-            orig(self, damageInfo);
+                }                                 
+            }            
         }
 
         public void SummonDaruk(CharacterBody body)
