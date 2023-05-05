@@ -5,6 +5,8 @@
 
 PM me on Discord @TheWarlock117#6226 with any bugs, complaints, or suggestions!
 Please check known issues first!
+Also be aware that I am unlikely to add any more skins than are already included. 
+Due to the nature of BOTW's assets, adding new skins is incredibly time-consuming and tedious, and if I add any more, it will be further down the road, when I am feeling particularly masochistic.
 
 [![](https://cdn.discordapp.com/attachments/1099804589684969593/1103858994172411945/Risk_of_Rain_2_Screenshot_2023.05.04_-_18.38.40.40.png)]()
 
