@@ -1,8 +1,10 @@
 # Link #
 - Adds Link from The Legend of Zelda: Breath of the Wild as a playable character.
+- Unlockable alternative skills and skins
 - Multiplayer compatible
 
 PM me on Discord @TheWarlock117#6226 with any bugs, complaints, or suggestions!
+Please check known issues first!
 
 [![](https://cdn.discordapp.com/attachments/1099804589684969593/1103858994172411945/Risk_of_Rain_2_Screenshot_2023.05.04_-_18.38.40.40.png)]()
 
@@ -60,6 +62,9 @@ TheWarlock117 - Everything
 ## Known Issues
 - Some animations are unsynced in Multiplayer - Bomb Throw, Paraglider, Shielding, etc.
 - Mipha's Grace stock not correctly showing used for non-host players in Multiplayer - should be visual only
+- Animation masking issues (Legs not moving while attacking, etc.) - Seems to be limited by BOTW's animations and model skeleton
+- Some particles are unreasonably large (Teleporter particles, etc.). I believe this is caused by the model's initial scale, and as it takes an incredible amount of tedious work to get the model ready in-game, is likely not be patched anytime soon.
+- Some achievements are not properly tracked by the server
 
 ## Future Plans
 - Other Sheikah Slate abilities (Cryonis, Magnesis, Stasis) as alternate utilities
