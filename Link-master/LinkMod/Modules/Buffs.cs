@@ -16,7 +16,7 @@ namespace LinkMod.Modules
         internal static void RegisterBuffs()
         {            
             darukBuff = AddNewBuff("DarukBuff", RoR2.LegacyResourcesAPI.Load<BuffDef>("BuffDefs/HiddenInvincibility").iconSprite, Color.red, false, false);
-            swordProjectileBuff = AddNewBuff("SwordProjectileBuff", RoR2.LegacyResourcesAPI.Load<BuffDef>("BuffDefs/HiddenInvincibility").iconSprite, Color.white, false, false);            
+            swordProjectileBuff = AddNewBuff("SwordProjectileBuff", Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("SwordBuff"), Color.white, false, false);            
         }
 
         // simple helper method

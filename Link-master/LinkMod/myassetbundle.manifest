@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 16729787
+CRC: 1212896482
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: fec4311fb6ce59a12d00e8e59a0156c2
+    Hash: ed434638ba53bc6b55db6b9d2fa1b066
   TypeTreeHash:
     serializedVersion: 2
     Hash: 84319299fcd0178f8edc4dff3fc0bc6d
@@ -89,11 +89,9 @@ Assets:
 - Assets/LinkAssets/Prefabs/mdlDaruk.prefab
 - Assets/LinkAssets/Link Mats/Mt_Skin.mat
 - Assets/LinkAssets/FBXs/LinkFinalAnimationDarkSet/Meshes/Boots_160__Mt_Lower_160.mesh
-- Assets/HenryAssets/ZeldaDisplay.prefab
 - Assets/LinkAssets/FBXs/ChampionMesh/Meshes/meshChampion.mesh
 - Assets/LinkAssets/Icons/DaruksProtection.png
 - Assets/LinkAssets/Link Mats/Mt_belt_a.mat
-- Assets/HenryAssets/Mesh/meshDante.mesh
 - Assets/LinkAssets/Icons/FalconBow.png
 - Assets/LinkAssets/Icons/RevalisGale.png
 - Assets/LinkAssets/Link Mats/Mt_armor_lower.mat
@@ -137,6 +135,7 @@ Assets:
 - Assets/LinkAssets/Link Mats/Mt_armor_hood.mat
 - Assets/LinkAssets/Icons/IceRod.png
 - Assets/LinkAssets/FBXs/LinkFinalAnimationHylianSet/Meshes/Face__Mt_Face.mesh
+- Assets/LinkAssets/Icons/SwordBuff.png
 - Assets/LinkAssets/maskLinkGesture.mask
 - Assets/LinkAssets/Prefabs/mdlLinkAllArmors.prefab
 - Assets/LinkAssets/HeroMats/BlueSeeThrough.mat

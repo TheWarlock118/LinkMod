@@ -41,6 +41,7 @@ namespace LinkMod.SkillStates
         public override void OnExit()
         {
             base.OnExit();
+            base.characterBody.SetAimTimer(1f);
             if (!this.hasFired)
             {
                 this.hasFired = true;

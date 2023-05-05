@@ -37,6 +37,7 @@ namespace LinkMod.SkillStates
         {
             this.outer.SetNextStateToMain();
             base.OnExit();
+            base.characterBody.SetAimTimer(1f);
             if (!this.hasFired)
             {
                 this.hasFired = true;

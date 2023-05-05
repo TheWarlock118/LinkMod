@@ -32,11 +32,9 @@ namespace LinkMod.Modules.Achievements
             if (base.localUser.cachedBody.bodyIndex == BodyCatalog.FindBodyIndex(RequiredCharacterBody))
             {
                 SkillLocator skillLocator = base.localUser.cachedBody.skillLocator;
-                if ((base.localUser.cachedBody.characterMotor.isGrounded || !base.localUser.cachedBody.inputBank.skill2.down) && (skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_3BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_FASTBOW_NAME"))
-                {
-                    bowTime = 0f;
-                }
-                else
+                
+                
+                if (!base.localUser.cachedBody.characterMotor.isGrounded && base.localUser.cachedBody.inputBank.skill2.down && (skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_3BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_FASTBOW_NAME"))
                 {
                     bowTime += Time.fixedDeltaTime;
                     if (bowTime > 10f)
@@ -44,9 +42,13 @@ namespace LinkMod.Modules.Achievements
                         Grant();
                     }
                 }
+                else                
+                {
+                    bowTime = 0f;
+                }                
             }
         }        
-
+            
         public override BodyIndex LookUpRequiredBodyIndex()
         {
             return BodyCatalog.FindBodyIndex(RequiredCharacterBody);

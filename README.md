@@ -4,7 +4,7 @@
 
 PM me on Discord @TheWarlock117#6226 with any bugs, complaints, or suggestions!
 
-[![](https://cdn.discordapp.com/attachments/1099804589684969593/1103355560889425992/Risk_of_Rain_2_Screenshot_2023.05.03_-_09.20.58.38.png)]()
+[![](https://cdn.discordapp.com/attachments/1099804589684969593/1103858994172411945/Risk_of_Rain_2_Screenshot_2023.05.04_-_18.38.40.40.png)]()
 
 | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837409102942339/Bow.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837408461193217/Shielding.png) |
 |-|-|
@@ -55,12 +55,11 @@ TheWarlock117 - Everything
 ### Skins
 |   Hylian Outfit  | Snowquill Outfit |   Gerudo Outfit  |    Wild Outfit   |    Dark Link     | Champion's Tunic |
 |--|--|--|--|--|--|
-| <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644149973134/Hylian.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644397445220/Snowquill.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643919282336/Gerudo.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644607148042/Wild.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643726356521/Dark.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643478884423/Champion.png" width="110" height="195"/> |
+| <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1103865066480210010/Hylian.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644397445220/Snowquill.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643919282336/Gerudo.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644607148042/Wild.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643726356521/Dark.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1103865066794778634/Champion.png" width="110" height="195"/> |
 
 ## Known Issues
 - Some animations are unsynced in Multiplayer - Bomb Throw, Paraglider, Shielding, etc.
 - Mipha's Grace stock not correctly showing used for non-host players in Multiplayer - should be visual only
-- Hylian Outfit and Champion's Tunic skirts are ruffled. I believe this is caused by the way the skins had to be implemented, and is likely unavoidable without a breakthrough and massive overhaul.
 
 ## Future Plans
 - Other Sheikah Slate abilities (Cryonis, Magnesis, Stasis) as alternate utilities

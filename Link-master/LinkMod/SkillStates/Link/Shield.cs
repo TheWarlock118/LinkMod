@@ -49,7 +49,7 @@ namespace LinkMod.SkillStates
             {
                 this.hasFired = true;
             }
-            
+            base.characterBody.SetAimTimer(1f);
             base.PlayAnimation("Gesture, Override", "BufferEmpty");
             if (characterMotor.isGrounded)
             {
