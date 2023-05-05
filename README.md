@@ -4,6 +4,7 @@
 - Multiplayer compatible
 
 PM me on Discord @TheWarlock117#6226 with any bugs, complaints, or suggestions!
+
 Please check known issues first!
 Also be aware that I am unlikely to add any more skins than are already included. 
 Due to the nature of BOTW's assets, adding new skins is incredibly time-consuming and tedious, and if I add any more, it will be further down the road, when I am feeling particularly masochistic.
