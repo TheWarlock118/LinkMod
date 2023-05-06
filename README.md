@@ -70,6 +70,7 @@ TheWarlock117 - Everything
 - Some sounds don't play for non-host players in Multiplayer
 
 ## Future Plans
+- Add item displays for SOTV items
 - Other Sheikah Slate abilities (Cryonis, Magnesis, Stasis) as alternate utilities
 ___
 ## Changelog
