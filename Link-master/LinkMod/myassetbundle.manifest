@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3878589777
+CRC: 3266243856
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: e09db82c1c5b61ffe74410221644c3cd
+    Hash: 063ad971b8e29152d69c5184a99b47fc
   TypeTreeHash:
     serializedVersion: 2
     Hash: 84319299fcd0178f8edc4dff3fc0bc6d
@@ -98,6 +98,7 @@ Assets:
 - Assets/LinkAssets/Icons/UrbosasFury.png
 - Assets/LinkAssets/Link Mats/Mt_Earring.mat
 - Assets/LinkAssets/Link Mats/Champion Set/Mt_Armor_116.mat
+- Assets/LinkAssets/Icons/ParagliderBuff.png
 - Assets/LinkAssets/Anims/animLinkFinal.controller
 - Assets/LinkAssets/Anims/animLinkDisplayFinal.controller
 - Assets/LinkAssets/UrbosaFuryAnimation.fbx

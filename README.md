@@ -67,7 +67,6 @@ TheWarlock117 - Everything
 - Mipha's Grace stock not correctly showing used for non-host players in Multiplayer - should be visual only
 - Animation masking issues (Legs not moving while attacking, etc.) - Seems to be limited by BOTW's animations and model skeleton
 - Some particles are unreasonably large (Teleporter particles, etc.). I believe this is caused by the model's initial scale, and as it takes an incredible amount of tedious work to get the model ready in-game, is likely not be patched anytime soon
-- Some achievements are not properly tracked by the server
 - Some sounds don't play for non-host players in Multiplayer
 
 ## Future Plans

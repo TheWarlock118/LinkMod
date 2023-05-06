@@ -263,6 +263,7 @@ namespace LinkMod
                     updateValues.enteredParaglider = true;
                     updateValues.playedFall = false;
 
+                    self.AddTimedBuffAuthority(Modules.Buffs.paragliderBuff.buffIndex, 0.1f);
 
                     //animator.CrossFadeInFixedTime("Glide", 0.01f, 2);
                     animator.Play("Glide", 2);

@@ -9,6 +9,7 @@ namespace LinkMod.Modules
         internal static BuffDef shieldBuff;
         internal static BuffDef darukBuff;
         internal static BuffDef swordProjectileBuff;
+        internal static BuffDef paragliderBuff;
 
         internal static List<BuffDef> buffDefs = new List<BuffDef>();
 
@@ -17,6 +18,7 @@ namespace LinkMod.Modules
             darukBuff = AddNewBuff("DarukBuff", RoR2.LegacyResourcesAPI.Load<BuffDef>("BuffDefs/HiddenInvincibility").iconSprite, new Color(0.79f, 0.41f, 0.08f, 1), false, false);
             shieldBuff = AddNewBuff("ShieldBuff", RoR2.LegacyResourcesAPI.Load<BuffDef>("BuffDefs/HiddenInvincibility").iconSprite, Color.blue, false, false);
             swordProjectileBuff = AddNewBuff("SwordProjectileBuff", Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("SwordBuff"), Color.white, false, false);            
+            paragliderBuff = AddNewBuff("ParagliderBuff", Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("ParagliderBuff"), Color.white, false, false);
         }
 
         // simple helper method

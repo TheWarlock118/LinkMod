@@ -46,9 +46,10 @@ namespace LinkMod.Modules.Achievements
                 {
                     if (currentBody.bodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
                     {
-                        if (!currentBody.characterMotor.isGrounded && currentBody.inputBank.jump.down)
+                        if (currentBody.HasBuff(Modules.Buffs.paragliderBuff))
                         {
                             glideTime += Time.fixedDeltaTime;
+                            Log.LogDebug("GlideTime: " + glideTime.ToString());
                             if (glideTime > 30f)
                             {
                                 Grant();
