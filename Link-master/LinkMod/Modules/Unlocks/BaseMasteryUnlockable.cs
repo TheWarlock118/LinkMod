@@ -9,14 +9,12 @@ namespace LinkMod.Modules
 
         public override void OnBodyRequirementMet()
         {
-            base.OnBodyRequirementMet();            
-            Log.LogDebug("Body Requirement Met");
+            base.OnBodyRequirementMet();                        
             Run.onClientGameOverGlobal += OnClientGameOverGlobal;
         }
         public override void OnBodyRequirementBroken()
         {
-            Run.onClientGameOverGlobal -= OnClientGameOverGlobal;
-            Log.LogDebug("Body Requirement Broken");
+            Run.onClientGameOverGlobal -= OnClientGameOverGlobal;            
             base.OnBodyRequirementBroken();
         }
         private void OnClientGameOverGlobal(Run run, RunReport runReport)
@@ -28,8 +26,7 @@ namespace LinkMod.Modules
                 //checking run difficulty
                 if ((runDifficulty.countsAsHardMode && runDifficulty.scalingValue >= RequiredDifficultyCoefficient) || (difficultyIndex >= DifficultyIndex.Eclipse1 && difficultyIndex <= DifficultyIndex.Eclipse8) || (runDifficulty.nameToken == "INFERNO_NAME"))
                 {
-                    Grant();
-                    Log.LogDebug("Mastery Granted");
+                    Grant();                    
                 }
             }
         }

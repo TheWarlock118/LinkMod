@@ -51,8 +51,7 @@ namespace LinkMod.Modules
                 achievedIcon = instance.Sprite,
                 type = instance.GetType(),
                 serverTrackerType = (serverTracked ? instance.GetType() : null),
-            };
-            Log.LogDebug("Achievement Identifier: " + instance.AchievementIdentifier.ToString());
+            };            
 
             UnlockableDef unlockableDef = CreateNewUnlockable(new UnlockableInfo
             {

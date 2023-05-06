@@ -36,9 +36,7 @@ namespace LinkMod
 
         internal List<SurvivorBase> Survivors = new List<SurvivorBase>();
 
-        public static LinkPlugin instance;
-
-        private bool savedValue;
+        public static LinkPlugin instance;        
         private void Awake()
         {
             Log.Init(Logger);
@@ -62,8 +60,7 @@ namespace LinkMod
             RoR2.ContentManagement.ContentManager.onContentPacksAssigned += LateSetup;
 
             // TO-DO: For Multiplayer Testing - comment this out before Uploading
-            On.RoR2.Networking.NetworkManagerSystemSteam.OnClientConnect += (s, u, t) => { };
-            savedValue = true;
+            // On.RoR2.Networking.NetworkManagerSystemSteam.OnClientConnect += (s, u, t) => { };            
             Hook();
         }
 
@@ -100,8 +97,7 @@ namespace LinkMod
                             if (skillLocator.GetSkill(SkillSlot.Special).skillDef.skillName == "CASEY_LINK_BODY_SPECIAL_MIPHA_NAME")
                             {                                
                                 if (!(skillLocator.GetSkill(SkillSlot.Special).stock < 1))
-                                {
-                                    Log.LogDebug("Removing Stock & Extra Item");
+                                {                                    
                                     skillLocator.GetSkill(SkillSlot.Special).RemoveAllStocks();
                                     self.inventory.RemoveItem(ItemCatalog.FindItemIndex("ExtraLifeConsumed"));
                                     self.inventory.RemoveItem(ItemCatalog.FindItemIndex("UseAmbientLevel")); // UpdateValues reset on respawn, so this is used in place of UpdateValues.resed                                    
@@ -409,8 +405,7 @@ namespace LinkMod
             bodyAnimator.speed = 1f;
             bodyAnimator.Update(0f);
             int layerIndex = bodyAnimator.GetLayerIndex("Gesture, Override");
-            bodyAnimator.PlayInFixedTime("Die", layerIndex, 0f);
-            Log.LogDebug("Playing Death Animation, or Trying to anyway");
+            bodyAnimator.PlayInFixedTime("Die", layerIndex, 0f);            
         }
 
     }

@@ -16,8 +16,7 @@ namespace LinkMod.SkillStates.BaseStates
 
 		public override void OnEnter()
 		{
-			base.OnEnter();
-			Log.LogDebug("Entering Death State");
+			base.OnEnter();			
 			Vector3 vector = Vector3.up * 3f;
 			if (base.characterMotor)
 			{
@@ -80,8 +79,7 @@ namespace LinkMod.SkillStates.BaseStates
 		}
 
 		public override void PlayDeathAnimation(float crossfadeDuration = 0.1f)
-		{
-			Log.LogDebug("Playing Link Death Animation");
+		{			
 			base.PlayAnimation("Gesture, Ovveride", "Die");
 		}
 		public override bool shouldAutoDestroy

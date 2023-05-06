@@ -48,8 +48,7 @@ namespace LinkMod.Modules.Achievements
                     {
                         if (currentBody.HasBuff(Modules.Buffs.paragliderBuff))
                         {
-                            glideTime += Time.fixedDeltaTime;
-                            Log.LogDebug("GlideTime: " + glideTime.ToString());
+                            glideTime += Time.fixedDeltaTime;                            
                             if (glideTime > 30f)
                             {
                                 Grant();
