@@ -1,49 +1,54 @@
 ﻿using RoR2;
+using RoR2.Achievements;
 using System;
 using UnityEngine;
 
 namespace LinkMod.Modules.Achievements
 {
-    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_DARUK_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_DARUK_UNLOCKABLE_REWARD_ID", null, null)]    
+    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_DARUK_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_DARUK_UNLOCKABLE_REWARD_ID", null, typeof(DarukServerAchievement))]    
     internal class DarukAchievement : GenericModdedUnlockable
     {
         public override string AchievementTokenPrefix => "ACHIEVEMENT_LINK_BODY_DARUK_";
         public override string AchievementSpriteName => "DaruksProtection";        
         public override string PrerequisiteUnlockableIdentifier => LinkPlugin.developerPrefix + "_LINK_BODY_UNLOCKABLE_REWARD_ID";        
 
-        public string RequiredCharacterBody = "LinkBody";                
+        public string RequiredCharacterBody = "LinkBody";
+        public override void OnInstall()
+        {
+            base.OnInstall();
+            base.SetServerTracked(true);
+        }
+        public override void OnUninstall()
+        {
+            base.OnUninstall();
+        }
 
-        public override void OnBodyRequirementMet()
+        private class DarukServerAchievement : BaseServerAchievement
         {
-            base.OnBodyRequirementMet();            
-            RoR2Application.onFixedUpdate += OnFixedUpdate;
-        }
-        public override void OnBodyRequirementBroken()
-        {            
-            base.OnBodyRequirementBroken();            
-            RoR2Application.onFixedUpdate -= OnFixedUpdate;
-        }
-        
-        private void OnFixedUpdate()
-        {
-            if (base.localUser.cachedBody)
+            public override void OnInstall()
             {
-                if (base.localUser.cachedBody.bodyIndex == BodyCatalog.FindBodyIndex(RequiredCharacterBody))
+                base.OnInstall();
+                RoR2Application.onFixedUpdate += OnFixedUpdate;
+            }
+            public override void OnUninstall()
+            {
+                base.OnUninstall();
+                RoR2Application.onFixedUpdate -= OnFixedUpdate;
+            }
+            private void OnFixedUpdate()
+            {
+                CharacterBody currentBody = serverAchievementTracker.networkUser.GetCurrentBody();
+                if (currentBody.bodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
                 {
-                    if (base.localUser.cachedBody.GetComponent<UpdateValues>())
+                    if (currentBody.GetComponent<UpdateValues>())
                     {
-                        if (base.localUser.cachedBody.GetComponent<UpdateValues>().blockedAttacks >= 50)
+                        if (currentBody.GetComponent<UpdateValues>().blockedAttacks >= 50)
                         {
                             Grant();
                         }
                     }
-                }
+                }                
             }
-        }        
-
-        public override BodyIndex LookUpRequiredBodyIndex()
-        {
-            return BodyCatalog.FindBodyIndex(RequiredCharacterBody);
         }
         
     }

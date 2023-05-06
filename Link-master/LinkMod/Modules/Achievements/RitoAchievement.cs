@@ -1,54 +1,63 @@
 ﻿using RoR2;
+using RoR2.Achievements;
 using System;
 using UnityEngine;
 
 namespace LinkMod.Modules.Achievements
 {
-    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_REWARD_ID", null, null)]    
+    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_RITO_UNLOCKABLE_REWARD_ID", null, typeof(RitoServerAchievement))]    
     internal class RitoAchievement : GenericModdedUnlockable
     {
         public override string AchievementTokenPrefix => "ACHIEVEMENT_LINK_BODY_RITO_";        
         public override string AchievementSpriteName => "RitoSkin";        
         public override string PrerequisiteUnlockableIdentifier => LinkPlugin.developerPrefix + "_LINK_BODY_UNLOCKABLE_REWARD_ID";
-
-        private float glideTime;
-
-        public string RequiredCharacterBody = "LinkBody";                
-
-        public override void OnBodyRequirementMet()
-        {
-            base.OnBodyRequirementMet();
-            glideTime = 0f;
-            RoR2Application.onFixedUpdate += OnFixedUpdate;
-        }
-        public override void OnBodyRequirementBroken()
-        {            
-            base.OnBodyRequirementBroken();            
-            RoR2Application.onFixedUpdate -= OnFixedUpdate;
-        }
         
-        private void OnFixedUpdate()
+        public string RequiredCharacterBody = "LinkBody";
+
+        public override void OnInstall()
         {
-            if (base.localUser.cachedBody.bodyIndex == BodyCatalog.FindBodyIndex(RequiredCharacterBody))
+            base.OnInstall();
+            base.SetServerTracked(true);
+        }
+        public override void OnUninstall()
+        {
+            base.OnUninstall();
+        }                     
+
+        private class RitoServerAchievement : BaseServerAchievement
+        {
+            private float glideTime;
+            public override void OnInstall()
             {
-                if (base.localUser.cachedBody.characterMotor.isGrounded && !base.localUser.cachedBody.inputBank.jump.down)
+                base.OnInstall();
+                glideTime = 0f;
+                RoR2Application.onFixedUpdate += OnFixedUpdate;
+            }
+            public override void OnUninstall()
+            {
+                base.OnUninstall();
+                RoR2Application.onFixedUpdate -= OnFixedUpdate;
+            }
+
+            private void OnFixedUpdate()
+            {
+                CharacterBody currentBody = serverAchievementTracker.networkUser.GetCurrentBody();
+                if (currentBody.bodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
                 {
-                    glideTime = 0f;
-                }
-                else
-                {
-                    glideTime += Time.fixedDeltaTime;
-                    if (glideTime > 30f)
+                    if (currentBody.characterMotor.isGrounded && !currentBody.inputBank.jump.down)
                     {
-                        Grant();
+                        glideTime = 0f;
+                    }
+                    else
+                    {
+                        glideTime += Time.fixedDeltaTime;
+                        if (glideTime > 30f)
+                        {
+                            Grant();
+                        }
                     }
                 }
             }
-        }        
-
-        public override BodyIndex LookUpRequiredBodyIndex()
-        {
-            return BodyCatalog.FindBodyIndex(RequiredCharacterBody);
         }
         
     }
