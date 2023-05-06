@@ -42,18 +42,21 @@ namespace LinkMod.Modules.Achievements
             private void OnFixedUpdate()
             {
                 CharacterBody currentBody = serverAchievementTracker.networkUser.GetCurrentBody();
-                if (currentBody.bodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
+                if (currentBody)
                 {
-                    if (currentBody.characterMotor.isGrounded && !currentBody.inputBank.jump.down)
+                    if (currentBody.bodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
                     {
-                        glideTime = 0f;
-                    }
-                    else
-                    {
-                        glideTime += Time.fixedDeltaTime;
-                        if (glideTime > 30f)
+                        if (!currentBody.characterMotor.isGrounded && currentBody.inputBank.jump.down)
                         {
-                            Grant();
+                            glideTime += Time.fixedDeltaTime;
+                            if (glideTime > 30f)
+                            {
+                                Grant();
+                            }
+                        }
+                        else
+                        {
+                            glideTime = 0f;
                         }
                     }
                 }

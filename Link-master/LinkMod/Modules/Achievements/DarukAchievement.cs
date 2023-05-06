@@ -38,16 +38,19 @@ namespace LinkMod.Modules.Achievements
             private void OnFixedUpdate()
             {
                 CharacterBody currentBody = serverAchievementTracker.networkUser.GetCurrentBody();
-                if (currentBody.bodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
+                if (currentBody)
                 {
-                    if (currentBody.GetComponent<UpdateValues>())
+                    if (currentBody.bodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
                     {
-                        if (currentBody.GetComponent<UpdateValues>().blockedAttacks >= 50)
+                        if (currentBody.GetComponent<UpdateValues>())
                         {
-                            Grant();
+                            if (currentBody.GetComponent<UpdateValues>().blockedAttacks >= 50)
+                            {
+                                Grant();
+                            }
                         }
                     }
-                }                
+                }
             }
         }
         

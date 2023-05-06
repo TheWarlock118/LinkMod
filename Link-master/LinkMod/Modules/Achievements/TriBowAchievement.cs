@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace LinkMod.Modules.Achievements
 {
-    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_REWARD_ID", null, typeof(TriBowAchievement))]    
+    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_REWARD_ID", null, typeof(TriBowServerAchievement))]    
     internal class TriBowAchievement : GenericModdedUnlockable
     {
         public override string AchievementTokenPrefix => "ACHIEVEMENT_LINK_BODY_TRIBOW_";
@@ -45,9 +45,13 @@ namespace LinkMod.Modules.Achievements
 
             private void OnFixedUpdate()
             {
-                if (serverAchievementTracker.networkUser.GetCurrentBody().characterMotor.isGrounded)
+                CharacterBody currentBody = serverAchievementTracker.networkUser.GetCurrentBody();
+                if (currentBody)
                 {
-                    killCount = 0;
+                    if (currentBody.characterMotor.isGrounded && currentBody.bodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
+                    {
+                        killCount = 0;
+                    }
                 }
             }
 
