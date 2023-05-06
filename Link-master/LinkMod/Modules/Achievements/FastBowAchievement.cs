@@ -1,4 +1,5 @@
 ﻿using RoR2;
+using RoR2.Achievements;
 using System;
 using UnityEngine;
 
@@ -11,45 +12,56 @@ namespace LinkMod.Modules.Achievements
         public override string AchievementSpriteName => "FalconBow";        
         public override string PrerequisiteUnlockableIdentifier => LinkPlugin.developerPrefix + "_LINK_BODY_UNLOCKABLE_REWARD_ID";        
 
-        public string RequiredCharacterBody = "LinkBody";
+        public string RequiredCharacterBody = "LinkBody";        
 
-        private int killCount;
-
-        public override void OnBodyRequirementMet()
+        public override void OnInstall()
         {
-            base.OnBodyRequirementMet();
-            killCount = 0;
-            RoR2Application.onFixedUpdate += OnFixedUpdate;
-            GlobalEventManager.onCharacterDeathGlobal += OnCharacterDeath;
+            base.OnInstall();
+            base.SetServerTracked(true);
         }
-        public override void OnBodyRequirementBroken()
-        {            
-            base.OnBodyRequirementBroken();            
-            RoR2Application.onFixedUpdate -= OnFixedUpdate;
-            GlobalEventManager.onCharacterDeathGlobal -= OnCharacterDeath;
-        }
-        
-        private void OnFixedUpdate()
+        public override void OnUninstall()
         {
-            killCount = 0;
-        }
-
-        private void OnCharacterDeath(DamageReport damageReport)
-        {            
-            if ((int)damageReport.damageInfo.force.magnitude == 41 && damageReport.attackerBodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
-            {                
-                killCount++;                
-            }
-            if (killCount >= 3)
-            {
-                Grant();
-            }
-        }
+            base.OnUninstall();
+        }                        
 
         public override BodyIndex LookUpRequiredBodyIndex()
         {
             return BodyCatalog.FindBodyIndex(RequiredCharacterBody);
         }
         
+        private class FastBowServerAchievement : BaseServerAchievement
+        {
+            private int killCount;
+            public override void OnInstall()
+            {
+                base.OnInstall();
+                killCount = 0;
+                RoR2Application.onFixedUpdate += OnFixedUpdate;
+                GlobalEventManager.onCharacterDeathGlobal += OnCharacterDeath;
+            }
+            public override void OnUninstall()
+            {
+                base.OnUninstall();
+                RoR2Application.onFixedUpdate -= OnFixedUpdate;
+                GlobalEventManager.onCharacterDeathGlobal -= OnCharacterDeath;
+            }
+
+            private void OnFixedUpdate()
+            {
+                killCount = 0;
+            }
+
+            private void OnCharacterDeath(DamageReport damageReport)
+            {
+                if ((int)damageReport.damageInfo.force.magnitude == 41 && damageReport.attackerBody == this.serverAchievementTracker.networkUser.GetCurrentBody() && damageReport.attackerBodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
+                {
+                    killCount++;
+                }
+                if (killCount >= 3)
+                {
+                    Grant();
+                }
+            }
+        }
     }
 }
