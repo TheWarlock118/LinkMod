@@ -26,13 +26,16 @@ namespace LinkMod.Modules.Achievements
         
         private void OnFixedUpdate()
         {
-            if (base.localUser.cachedBody.bodyIndex == BodyCatalog.FindBodyIndex(RequiredCharacterBody))
+            if (base.localUser.cachedBody)
             {
-                if (base.localUser.cachedBody.GetComponent<UpdateValues>())
+                if (base.localUser.cachedBody.bodyIndex == BodyCatalog.FindBodyIndex(RequiredCharacterBody))
                 {
-                    if (base.localUser.cachedBody.GetComponent<UpdateValues>().blockedAttacks >= 50)
+                    if (base.localUser.cachedBody.GetComponent<UpdateValues>())
                     {
-                        Grant();
+                        if (base.localUser.cachedBody.GetComponent<UpdateValues>().blockedAttacks >= 50)
+                        {
+                            Grant();
+                        }
                     }
                 }
             }

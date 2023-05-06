@@ -190,4 +190,37 @@ where TDelegate : Delegate
         
         #endregion
     }
+
+    public abstract class ModdedServerUnlockable : BaseServerAchievement, IModdedUnlockableDataProvider
+    {
+        #region Implementation
+        public void Revoke()
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+        #region Contract
+        public abstract string AchievementIdentifier { get; }
+        public abstract string UnlockableIdentifier { get; }
+        public abstract string AchievementNameToken { get; }
+        public abstract string PrerequisiteUnlockableIdentifier { get; }
+        public abstract string UnlockableNameToken { get; }
+        public abstract string AchievementDescToken { get; }
+        public abstract Sprite Sprite { get; }
+        public abstract Func<string> GetHowToUnlock { get; }
+        public abstract Func<string> GetUnlocked { get; }
+        #endregion
+
+        #region Virtuals        
+        public override void OnInstall()
+        {
+            base.OnInstall();
+        }
+        public override void OnUninstall()
+        {
+            base.OnUninstall();
+        }                
+        #endregion
+    }
 }

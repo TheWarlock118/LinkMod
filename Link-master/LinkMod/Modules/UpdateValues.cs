@@ -18,8 +18,7 @@ namespace LinkMod.Modules
         public bool playedParaEquipSound = false;
         public bool playedParaUnEquipSound = false;
         public bool enteredSlowMo = false;
-        public bool playedLowHealth = false;
-        public bool isBlocking;
+        public bool playedLowHealth = false;        
 
         public float SlowMotionStopwatch = 0f;
         public float DarukSoundStopwatch = 0f;
@@ -36,8 +35,8 @@ namespace LinkMod.Modules
         {
             bool shouldBlock = false;
 
-            Vector3 aimDirection = GetComponent<CharacterBody>().inputBank.aimDirection;
-            Vector3 enemyDirection = attackPos - GetComponent<CharacterBody>().corePosition;
+            Vector3 aimDirection = base.GetComponent<CharacterBody>().inputBank.aimDirection;
+            Vector3 enemyDirection = attackPos - base.GetComponent<CharacterBody>().corePosition;
 
             float enemyAngle = Vector3.Angle(aimDirection, enemyDirection);
             if (enemyAngle < blockAngle)

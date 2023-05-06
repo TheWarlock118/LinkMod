@@ -37,13 +37,13 @@ namespace LinkMod.SkillStates
                 base.PlayAnimation("Gesture, Override", "ShieldGuard");
                 Util.PlaySound("Weapon_Shield_Metal_Equip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
                 Util.PlaySound("ShieldGuardUp", base.gameObject);                
-                this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(true);
-                this.GetComponent<UpdateValues>().isBlocking = true;
+                this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(true);                
             }
         }
 
-        public override void OnExit()
+        public void MyOnExit()
         {
+            this.outer.SetNextStateToMain();
             base.OnExit();
             if (!this.hasFired)
             {
@@ -56,7 +56,7 @@ namespace LinkMod.SkillStates
                 Util.PlaySound("Weapon_Shield_Metal_UnEquip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
             }
             this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(false);
-            this.GetComponent<UpdateValues>().isBlocking = false;
+            // base.characterBody.GetComponent<UpdateValues>().isBlocking = false;
         }
 
         public override void FixedUpdate()
@@ -76,19 +76,24 @@ namespace LinkMod.SkillStates
 
 
             this.timer += Time.fixedDeltaTime;
-            if (!(base.inputBank.jump.down && base.characterMotor.velocity.y < 0f))
+            if (!(base.inputBank.jump.down || base.characterMotor.velocity.y < 0f))
             {
                 if (base.inputBank.skill2.down)
                 {                    
                     base.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Slow80.buffIndex, 0.1f);
-                    this.GetComponent<UpdateValues>().isBlocking = true;
+                    base.characterBody.AddTimedBuffAuthority(Buffs.shieldBuff.buffIndex, 0.1f);                    
                 }
                 else
                 {
-                    this.outer.SetNextStateToMain();
+                    MyOnExit();
                     return;
                 }
-            }            
+            }
+            else
+            {
+                MyOnExit();
+                return;
+            }
         }
 
         public override InterruptPriority GetMinimumInterruptPriority()

@@ -36,9 +36,9 @@ namespace LinkMod
 
         internal List<SurvivorBase> Survivors = new List<SurvivorBase>();
 
-        public static LinkPlugin instance;                      
+        public static LinkPlugin instance;
 
-
+        private bool savedValue;
         private void Awake()
         {
             Log.Init(Logger);
@@ -61,8 +61,9 @@ namespace LinkMod
 
             RoR2.ContentManagement.ContentManager.onContentPacksAssigned += LateSetup;
 
-            // For Multiplayer Testing - comment this out before Uploading
+            // TO-DO: For Multiplayer Testing - comment this out before Uploading
             On.RoR2.Networking.NetworkManagerSystemSteam.OnClientConnect += (s, u, t) => { };
+            savedValue = true;
             Hook();
         }
 
@@ -302,28 +303,25 @@ namespace LinkMod
                         updateValues.DarukSoundStopwatch -= Time.fixedDeltaTime;
                     }
                 }
-                #endregion
+                #endregion                
             }
         }
 
         private void HealthComponent_TakeDamage(On.RoR2.HealthComponent.orig_TakeDamage orig, HealthComponent self, DamageInfo damageInfo)
-        {
-            //Mipha's Grace Functionality - On death, if using Mipha's Grace and no dio's, add dio to inventory and set res to true
-            Log.Init(Logger);
+        {            
+            Log.Init(Logger);            
+            Modules.UpdateValues updateValues = self.gameObject.GetComponent<CharacterBody>().GetComponent<Modules.UpdateValues>();
             
-            Modules.UpdateValues updateValues = self.gameObject.GetComponent<Modules.UpdateValues>();
             if (self && updateValues)
             {
-                CharacterBody characterBody = self.GetComponent<CharacterBody>();
-                SkillLocator skillLocator = characterBody.GetComponent<SkillLocator>();
-
+                CharacterBody characterBody = self.gameObject.GetComponent<CharacterBody>();
+                SkillLocator skillLocator = characterBody.GetComponent<SkillLocator>();                
                 // Shield Guarding
                 if (damageInfo.attacker)
                 {
-                    CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
-
-                    if (updateValues.isBlocking && updateValues.ShouldBlock(attackerBody.corePosition, 40f))
-                    {
+                    CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();                                                            
+                    if (characterBody.HasBuff(Modules.Buffs.shieldBuff) && updateValues.ShouldBlock(attackerBody.corePosition, 40f))
+                    {                        
                         damageInfo.damage = 0f;
                         damageInfo.rejected = true;
                         updateValues.blockedAttacks += 1;
@@ -331,8 +329,8 @@ namespace LinkMod
                     }
                 }
             }
-            // Orig needs to be called here to work both with shielding and mipha's, and allow normal damage to function properly
-            // There's a cleaner way to do this. I don't care.
+
+            // Orig needs to be called here to work both with shielding and mipha's, and allow normal damage to function properly            
             orig(self, damageInfo);
 
             if (self && updateValues) 
@@ -351,7 +349,7 @@ namespace LinkMod
                                 characterBody.inventory.GiveItem(ItemCatalog.FindItemIndex("ExtraLife"), 1);
                                 characterBody.inventory.GiveItem(ItemCatalog.FindItemIndex("UseAmbientLevel"), 1);
                                 Util.PlaySound("MiphasGraceUse", characterBody.gameObject);
-                                skillLocator.GetSkill(SkillSlot.Special).RemoveAllStocks();                                                                                              
+                                skillLocator.GetSkill(SkillSlot.Special).RemoveAllStocks();
                             }
                         }
                     }
