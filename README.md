@@ -70,10 +70,13 @@ TheWarlock117 - Everything
 - Some sounds don't play for non-host players in Multiplayer
 
 ## Future Plans
+- Better Sword buff sprite
 - Add item displays for SOTV items
 - Other Sheikah Slate abilities (Cryonis, Magnesis, Stasis) as alternate utilities
 ___
 ## Changelog
+`1.0.1`
+- Removed some leftover debugging code
 
 `1.0.0`
 - Initial release
