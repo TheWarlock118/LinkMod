@@ -30,9 +30,11 @@ namespace LinkMod.SkillStates
             this.timer = 0f;
             readySoundPlayed = false;
             fired = false;
-            shouldLaunch = false;
-            // base.PlayAnimation("Gesture, Override", "Crouch");
-            movementSpeedCoefficient = (this.moveSpeedStat / 100f);
+            shouldLaunch = false;            
+            // movementSpeedCoefficient = (this.moveSpeedStat / 100f);
+            CharacterMotor characterMotor = this.characterBody.characterMotor;
+            characterMotor.Motor.ForceUnground();
+            characterMotor.ApplyForce(Vector3.up * 2500f * (this.characterBody.rigidbody.mass / 100f), true, false);
         }
 
         public override void OnExit()
@@ -104,9 +106,7 @@ namespace LinkMod.SkillStates
             this.timer += Time.fixedDeltaTime;
             if (timer < duration)
             {
-                CharacterMotor characterMotor = this.characterBody.characterMotor;
-                characterMotor.Motor.ForceUnground();
-                characterMotor.ApplyForce(Vector3.up * 2500f * movementSpeedCoefficient * (this.characterBody.rigidbody.mass / 100f), true, false);
+                
             }
             else
             {

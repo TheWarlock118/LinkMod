@@ -32,10 +32,13 @@ namespace LinkMod.Modules.Achievements
         private class FastBowServerAchievement : BaseServerAchievement
         {
             private int killCount;
+
+            private float resetDelay;
             public override void OnInstall()
             {
                 base.OnInstall();
                 killCount = 0;
+                resetDelay = 0;
                 RoR2Application.onFixedUpdate += OnFixedUpdate;
                 GlobalEventManager.onCharacterDeathGlobal += OnCharacterDeath;
             }
@@ -48,11 +51,21 @@ namespace LinkMod.Modules.Achievements
 
             private void OnFixedUpdate()
             {
-                killCount = 0;
+                if (resetDelay >= 2f)
+                {
+                    killCount = 0;
+                    resetDelay = 0f;
+                }
+                else
+                {
+                    resetDelay += Time.fixedDeltaTime;
+                }
             }
 
             private void OnCharacterDeath(DamageReport damageReport)
             {
+                if (killCount == 0)
+                    resetDelay = 0f;
                 if ((int)damageReport.damageInfo.force.magnitude == 41 && damageReport.attackerBody == this.serverAchievementTracker.networkUser.GetCurrentBody() && damageReport.attackerBodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
                 {
                     killCount++;

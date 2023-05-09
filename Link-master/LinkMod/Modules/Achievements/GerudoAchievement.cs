@@ -34,10 +34,13 @@ namespace LinkMod.Modules.Achievements
         private class GerudoServerAchievement : BaseServerAchievement
         {
             private int killCount;
+
+            private float resetDelay;
             public override void OnInstall()
             {
                 base.OnInstall();
                 killCount = 0;
+                resetDelay = 0f;
                 GlobalEventManager.onCharacterDeathGlobal += OnCharacterDeath;
                 RoR2Application.onFixedUpdate += OnFixedUpdate;
             }
@@ -51,14 +54,27 @@ namespace LinkMod.Modules.Achievements
 
             private void OnFixedUpdate()
             {
-                killCount = 0;
+                if (resetDelay >= 0.5f)
+                {
+                    killCount = 0;
+                    resetDelay = 0f;
+                }
+                else
+                {
+                    resetDelay += Time.fixedDeltaTime;
+                }
             }
             private void OnCharacterDeath(DamageReport damageReport)
             {
+                if (killCount == 0)
+                    resetDelay = 0f;
+
                 CharacterBody currentBody = this.serverAchievementTracker.networkUser.GetCurrentBody();
-                if (damageReport.damageInfo.force.magnitude == 50f && damageReport.attackerBody == currentBody && currentBody.bodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
+                Log.LogDebug("Damage force: " + damageReport.damageInfo.force.magnitude.ToString());
+                if ((int)damageReport.damageInfo.force.magnitude == 50 && damageReport.attackerBody == currentBody && currentBody.bodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
                 {
                     killCount++;
+                    Log.LogDebug("Urbosa Kill Count: " + killCount.ToString());
                 }
                 if (killCount >= 20)
                 {
