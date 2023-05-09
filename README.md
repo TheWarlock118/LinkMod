@@ -70,11 +70,15 @@ TheWarlock117 - Everything
 - Some sounds don't play for non-host players in Multiplayer
 
 ## Future Plans
-- Better Sword buff sprite
 - Add item displays for SOTV items
 - Other Sheikah Slate abilities (Cryonis, Magnesis, Stasis) as alternate utilities
 ___
 ## Changelog
+`1.0.2`
+- Fixed bug with Link: Triple Threat not properly triggering (Thanks to SkyBlueNinja for letting me know!)
+- Revali's Gale is now unaffected by movement speed and should properly work in multiplayer (Thanks to SkyBlueNinja again!)
+- New Sword projectile buff sprite (Still not perfect lol)
+
 `1.0.1`
 - Removed some leftover debugging code
 
