@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3266243856
+CRC: 3771395317
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 063ad971b8e29152d69c5184a99b47fc
+    Hash: cb744da3a2e91a31c42f29af61fa903a
   TypeTreeHash:
     serializedVersion: 2
     Hash: 84319299fcd0178f8edc4dff3fc0bc6d
@@ -85,6 +85,7 @@ Assets:
 - Assets/LinkAssets/Prefabs/mdlLinkGerudoDisplay.prefab
 - Assets/LinkAssets/Prefabs/mdlLinkChampionDisplay.prefab
 - Assets/LinkAssets/FBXs/LinkFinalAnimationHylianSet/Meshes/Metal_001__Mt_Upper_001.mesh
+- Assets/LinkAssets/Icons/SwordBuff.png
 - Assets/LinkAssets/Icons/HylianShieldIcon.png
 - Assets/LinkAssets/Prefabs/mdlDaruk.prefab
 - Assets/LinkAssets/Link Mats/Mt_Skin.mat
@@ -136,7 +137,6 @@ Assets:
 - Assets/LinkAssets/Link Mats/Mt_armor_hood.mat
 - Assets/LinkAssets/Icons/IceRod.png
 - Assets/LinkAssets/FBXs/LinkFinalAnimationHylianSet/Meshes/Face__Mt_Face.mesh
-- Assets/LinkAssets/Icons/SwordBuff.png
 - Assets/LinkAssets/maskLinkGesture.mask
 - Assets/LinkAssets/Prefabs/mdlLinkAllArmors.prefab
 - Assets/LinkAssets/HeroMats/BlueSeeThrough.mat

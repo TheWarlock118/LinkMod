@@ -59,8 +59,8 @@ namespace LinkMod
 
             RoR2.ContentManagement.ContentManager.onContentPacksAssigned += LateSetup;
 
-            // TO-DO: For Multiplayer Testing - comment this out before Uploading
-            On.RoR2.Networking.NetworkManagerSystemSteam.OnClientConnect += (s, u, t) => { };            
+            // TODO: For Multiplayer Testing - comment this out before Uploading
+            // On.RoR2.Networking.NetworkManagerSystemSteam.OnClientConnect += (s, u, t) => { };            
             Hook();
         }
 
