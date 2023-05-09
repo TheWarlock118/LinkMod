@@ -2095,6 +2095,274 @@ namespace LinkMod.Modules.Survivors
             skins.Add(darkSkin);
             #endregion
 
+            #region NakedSkin
+            SkinDef nakedSkin = Modules.Skins.CreateSkinDef("Birthday Suit",
+                Assets.mainAssetBundle.LoadAsset<Sprite>("NakedSkin"),
+                defaultRenderers,
+                model);
+
+            nakedSkin.gameObjectActivations = new SkinDef.GameObjectActivation[]
+            {
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("DarkEyes"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("DarkBody2"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("HylianHair2"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("Belt_B_001_Buckle__Mt_Belt_B_001"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("Beltmini_001__Mt_Upper_Belt_001"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("Boots_001__Mt_Lower_001"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("Chain_001__Mt_Upper_kusari_001"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("Hood_A_001_Metal__Mt_Hood_001"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("Hood_B_001_Metal__Mt_Hood_001"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("Metal_001__Mt_Upper_001"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("DarkTunic"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("DarkBelt"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("DarkBody"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("DarkBoots"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("DarkEarring"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("DarkFace"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("DarkHair"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("DarkSkinHand"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("WildSkin"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("WildBelt"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("WildBoots"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("WildHair"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("WildHat"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("WildTunic2"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("WildLeg"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("RitoFeather"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("RitoTunic"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("RitoBoots"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("RitoHair"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("RitoHair2"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("RitoHairband"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("RitoHook"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("RitoParts"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("RitoSkin"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("GerudoArmBands"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("GerudoHair"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("GerudoHeadcloth"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("GerudoLegacc"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("GerudoPants"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("GerudoSkinHand"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("GerudoSkinLeg"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("ChampionArmBands"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("Circlet"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("CircletJewel"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("ChampionBelt"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("ChampionTunic"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("ChampionGauntlets"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("ChampionGlove"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("ChampionSkin"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("Hairband"),
+                    shouldActivate = false
+                },
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("ChampionUndershirts"),
+                    shouldActivate = false
+                }
+            };
+
+            skins.Add(nakedSkin);
+            #endregion
+
             #region MasterySkin            
             SkinDef masterySkin = Modules.Skins.CreateSkinDef("Champion's Tunic",
                 Assets.mainAssetBundle.LoadAsset<Sprite>("MasterySkin"),

@@ -55,7 +55,7 @@ namespace LinkMod.Modules.Survivors
                 CustomRendererInfo[] customRendererInfosManual = new CustomRendererInfo[] {
                     new CustomRendererInfo
                     {
-                        childName = "Skin__Mt_Underwear",
+                        childName = "Belt_C_Buckle__Mt_Belt_C_001",
                     },
                 };
                 Modules.Prefabs.SetupCharacterModel(bodyPrefab, customRendererInfosManual, mainRendererIndex);

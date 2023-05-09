@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3771395317
+CRC: 3857784399
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: cb744da3a2e91a31c42f29af61fa903a
+    Hash: 6972422cd8529e065b54057731ff9471
   TypeTreeHash:
     serializedVersion: 2
     Hash: 84319299fcd0178f8edc4dff3fc0bc6d
@@ -94,6 +94,7 @@ Assets:
 - Assets/LinkAssets/Icons/DaruksProtection.png
 - Assets/LinkAssets/Link Mats/Mt_belt_a.mat
 - Assets/LinkAssets/Icons/FalconBow.png
+- Assets/LinkAssets/Icons/NakedSkin.png
 - Assets/LinkAssets/Icons/RevalisGale.png
 - Assets/LinkAssets/Link Mats/Mt_armor_lower.mat
 - Assets/LinkAssets/Icons/UrbosasFury.png

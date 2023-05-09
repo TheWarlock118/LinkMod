@@ -35853,6 +35853,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: mdlLinkAllArmors
       objectReference: {fileID: 0}
+    - target: {fileID: 6781402736008150608, guid: 3ab4946f1dd90f34798c11e5e4fe893b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea987b06133654d4a91b5aca1f94b29e, type: 2}
     - target: {fileID: 7315608123807786001, guid: 3ab4946f1dd90f34798c11e5e4fe893b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
