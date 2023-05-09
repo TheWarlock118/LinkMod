@@ -136,6 +136,11 @@ namespace LinkMod.Modules
             LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, kill 3 enemies with your bow without touching the ground");
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Max Pain");
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, kill 3 enemies with your bow without touching the ground");
+
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_SPEEDRUN_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: Speedrunner");
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_SPEEDRUN_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, beat the game within 30 minutes");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_SPEEDRUN_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Speedrunner");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_SPEEDRUN_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, beat the game within 30 minutes");
             #endregion
             #endregion
         }

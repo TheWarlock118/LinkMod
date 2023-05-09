@@ -60,6 +60,7 @@ namespace LinkMod.Modules.Survivors
         private static UnlockableDef gerudoSkinUnlockableDef;
         private static UnlockableDef ritoSkinUnlockableDef;
         private static UnlockableDef wildSkinUnlockableDef;
+        private static UnlockableDef nakedSkinUnlockableDef;
 
         private static UnlockableDef revaliUnlockableDef;
         private static UnlockableDef darukUnlockableDef;
@@ -80,6 +81,7 @@ namespace LinkMod.Modules.Survivors
             gerudoSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.GerudoAchievement>(true);
             ritoSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.RitoAchievement>(true);
             wildSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.WildAchievement>(true);
+            nakedSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.SpeedrunAchievement>(true);
 
             revaliUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.RevaliAchievement>(true);
             darukUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.DarukAchievement>(true);
@@ -2099,7 +2101,8 @@ namespace LinkMod.Modules.Survivors
             SkinDef nakedSkin = Modules.Skins.CreateSkinDef("Birthday Suit",
                 Assets.mainAssetBundle.LoadAsset<Sprite>("NakedSkin"),
                 defaultRenderers,
-                model);
+                model,
+                nakedSkinUnlockableDef);
 
             nakedSkin.gameObjectActivations = new SkinDef.GameObjectActivation[]
             {
