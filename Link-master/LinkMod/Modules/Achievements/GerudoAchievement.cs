@@ -69,12 +69,10 @@ namespace LinkMod.Modules.Achievements
                 if (killCount == 0)
                     resetDelay = 0f;
 
-                CharacterBody currentBody = this.serverAchievementTracker.networkUser.GetCurrentBody();
-                Log.LogDebug("Damage force: " + damageReport.damageInfo.force.magnitude.ToString());
+                CharacterBody currentBody = this.serverAchievementTracker.networkUser.GetCurrentBody();                
                 if ((int)damageReport.damageInfo.force.magnitude == 50 && damageReport.attackerBody == currentBody && currentBody.bodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
                 {
-                    killCount++;
-                    Log.LogDebug("Urbosa Kill Count: " + killCount.ToString());
+                    killCount++;                    
                 }
                 if (killCount >= 20)
                 {
