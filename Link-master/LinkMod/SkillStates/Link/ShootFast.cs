@@ -31,10 +31,11 @@ namespace LinkMod.SkillStates
             base.characterBody.SetAimTimer(1000000f);
             this.muzzleString = "Muzzle";
             this.timer = 0f;
-            ShootFast.damageCoefficient = Modules.StaticValues.bowDamageCoefficient;
+            ShootFast.damageCoefficient = Modules.StaticValues.bowDamageCoefficient / 2;
             ShootFast.force = 30f;
             string[] sounds = { "Bow_Draw0", "Bow_Draw1", "Bow_Draw2", "Bow_Draw3", "Bow_Draw4", "Bow_Draw5" };
-            Util.PlayAttackSpeedSound(sounds[Random.Range(0, 5)], base.gameObject, this.timer);            
+            Util.PlaySound(sounds[Random.Range(0, 5)], base.gameObject);
+            Util.PlaySound("FireArrow_Charge", base.gameObject);
             base.PlayAnimation("Gesture, Override", "BowDraw", "ShootGun.playbackRate", 0.9f);
         }
 
@@ -83,6 +84,10 @@ namespace LinkMod.SkillStates
                 {
                     ShootFast.damageCoefficient += (this.timer * 0.1f);
                     ShootFast.force += (this.timer * 10f);
+                }
+                if(this.timer >= 1f && (this.timer % 1f == 0))
+                {
+                    Util.PlaySound("FireArrow_Charge_Complete", base.gameObject);
                 }
             }          
             else

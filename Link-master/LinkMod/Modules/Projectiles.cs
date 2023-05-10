@@ -80,19 +80,19 @@ namespace LinkMod.Modules
         
         private static void CreateBombArrow()
         {
-            bombArrowPrefab = CloneProjectilePrefab("MageFirebolt", "LinkBombArrowProjectile");
+            bombArrowPrefab = CloneProjectilePrefab("MageIceBolt", "LinkBombArrowProjectile");
                                
             ProjectileImpactExplosion bombArrowImpactExplosion = bombArrowPrefab.GetComponent<ProjectileImpactExplosion>();
             InitializeImpactExplosion(bombArrowImpactExplosion);
 
             bombArrowImpactExplosion.blastRadius = 4f;
             bombArrowImpactExplosion.destroyOnEnemy = false;
-            bombArrowImpactExplosion.blastDamageCoefficient = 8f;
+            bombArrowImpactExplosion.blastDamageCoefficient = 16f;
             bombArrowImpactExplosion.bonusBlastForce = new Vector3(10f, 10f);
             bombArrowImpactExplosion.lifetime = 24f;
             bombArrowImpactExplosion.impactEffect = Modules.Assets.bombArrowExplosionEffect;
             bombArrowImpactExplosion.explosionEffect = Modules.Assets.bombArrowExplosionEffect;
-            bombArrowImpactExplosion.explosionSoundString = "BombExplode";
+            bombArrowImpactExplosion.explosionSoundString = "BombArrow_Explosion";
             bombArrowImpactExplosion.timerAfterImpact = true;
             bombArrowImpactExplosion.lifetimeAfterImpact = 0.001f;
 
@@ -103,7 +103,7 @@ namespace LinkMod.Modules
 
         private static void CreateFireArrow()
         {
-            fireArrowPrefab = CloneProjectilePrefab("MageFirebolt", "LinkBombArrowProjectile");
+            fireArrowPrefab = CloneProjectilePrefab("MageIceBolt", "LinkFireArrowProjectile");
 
             ProjectileImpactExplosion fireArrowImpactExplosion = fireArrowPrefab.GetComponent<ProjectileImpactExplosion>();
             InitializeImpactExplosion(fireArrowImpactExplosion);
@@ -111,9 +111,10 @@ namespace LinkMod.Modules
             fireArrowImpactExplosion.blastRadius = 2f;
             fireArrowImpactExplosion.destroyOnEnemy = false;            
             fireArrowImpactExplosion.lifetime = 24f;
+            fireArrowImpactExplosion.blastDamageCoefficient = Modules.StaticValues.bowDamageCoefficient / 2;
             fireArrowImpactExplosion.impactEffect = Modules.Assets.fireArrowExplosionEffect;
             fireArrowImpactExplosion.explosionEffect = Modules.Assets.fireArrowExplosionEffect;
-            fireArrowImpactExplosion.explosionSoundString = "BombExplode";
+            fireArrowImpactExplosion.explosionSoundString = "FireArrow_Hit";
             fireArrowImpactExplosion.timerAfterImpact = true;
             fireArrowImpactExplosion.lifetimeAfterImpact = 0.001f;
             fireArrowImpactExplosion.GetComponent<ProjectileDamage>().damageType = DamageType.IgniteOnHit;
@@ -125,20 +126,19 @@ namespace LinkMod.Modules
 
         private static void CreateIceArrow()
         {
-            iceArrowPrefab = CloneProjectilePrefab("MageFirebolt", "LinkBombArrowProjectile");
+            iceArrowPrefab = CloneProjectilePrefab("Arrow", "LinkIceArrowProjectile");            
+            //ProjectileImpactExplosion iceArrowImpactExplosion = iceArrowPrefab.GetComponent<ProjectileImpactExplosion>();
+            //InitializeImpactExplosion(iceArrowImpactExplosion);
 
-            ProjectileImpactExplosion iceArrowImpactExplosion = iceArrowPrefab.GetComponent<ProjectileImpactExplosion>();
-            InitializeImpactExplosion(iceArrowImpactExplosion);
-
-            iceArrowImpactExplosion.blastRadius = 2f;
-            iceArrowImpactExplosion.destroyOnEnemy = false;
-            iceArrowImpactExplosion.lifetime = 24f;
-            iceArrowImpactExplosion.impactEffect = Modules.Assets.iceArrowExplosionEffect;
-            iceArrowImpactExplosion.explosionEffect = Modules.Assets.iceArrowExplosionEffect;
-            iceArrowImpactExplosion.explosionSoundString = "BombExplode";
-            iceArrowImpactExplosion.timerAfterImpact = true;
-            iceArrowImpactExplosion.lifetimeAfterImpact = 0.001f;
-            iceArrowImpactExplosion.GetComponent<ProjectileDamage>().damageType = DamageType.Freeze2s;
+            //iceArrowImpactExplosion.blastRadius = 2f;
+            //iceArrowImpactExplosion.destroyOnEnemy = false;
+            //iceArrowImpactExplosion.lifetime = 24f;
+            //iceArrowImpactExplosion.impactEffect = Modules.Assets.iceArrowExplosionEffect;
+            //iceArrowImpactExplosion.explosionEffect = Modules.Assets.iceArrowExplosionEffect;
+            //iceArrowImpactExplosion.explosionSoundString = "IceArrow_Hit";
+            //iceArrowImpactExplosion.timerAfterImpact = true;
+            //iceArrowImpactExplosion.lifetimeAfterImpact = 0.001f;
+            //iceArrowImpactExplosion.GetComponent<ProjectileDamage>().damageType = DamageType.Freeze2s;
 
             ProjectileController arrowController = iceArrowPrefab.GetComponent<ProjectileController>();
             arrowController.ghostPrefab = CreateGhostPrefab("linkArrow");

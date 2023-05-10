@@ -34,7 +34,8 @@ namespace LinkMod.SkillStates
             Shoot.damageCoefficient = Modules.StaticValues.bowDamageCoefficient;
             Shoot.force = 30f;
             string[] sounds = { "Bow_Draw0", "Bow_Draw1", "Bow_Draw2", "Bow_Draw3", "Bow_Draw4", "Bow_Draw5" };
-            Util.PlayAttackSpeedSound(sounds[Random.Range(0, 5)], base.gameObject, this.timer);            
+            Util.PlaySound(sounds[Random.Range(0, 5)], base.gameObject);
+            Util.PlaySound("BombArrow_Charge", base.gameObject);
             base.PlayAnimation("Gesture, Override", "BowDraw", "ShootGun.playbackRate", 1.8f);
         }
 
@@ -82,14 +83,17 @@ namespace LinkMod.SkillStates
                 {                    
                     Shoot.force += (this.timer * 5f);
                 }
-                this.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Slow80.buffIndex, 0.1f);
+                this.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Slow80.buffIndex, 0.1f);                
             }          
             else
             {
                 this.outer.SetNextStateToMain();
                 return;
             }
-
+            if(this.timer % 1f == 0)
+            {
+                Util.PlaySound("BombArrow_Charge", base.gameObject);
+            }
             
         }
 

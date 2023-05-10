@@ -31,10 +31,11 @@ namespace LinkMod.SkillStates
             base.characterBody.SetAimTimer(1000000f);
             this.muzzleString = "Muzzle";
             this.timer = 0f;
-            ShootTri.damageCoefficient = Modules.StaticValues.bowDamageCoefficient;
+            ShootTri.damageCoefficient = Modules.StaticValues.bowDamageCoefficient / 3;
             ShootTri.force = 31f;
             string[] sounds = { "Bow_Draw0", "Bow_Draw1", "Bow_Draw2", "Bow_Draw3", "Bow_Draw4", "Bow_Draw5" };
-            Util.PlayAttackSpeedSound(sounds[Random.Range(0, 5)], base.gameObject, this.timer);
+            Util.PlaySound(sounds[Random.Range(0, 5)], base.gameObject);
+            Util.PlaySound("IceArrow_Charge", base.gameObject);
             base.PlayAnimation("Gesture, Override", "BowEquip", "ShootGun.playbackRate", 1.8f);
             base.PlayAnimation("Gesture, Override", "BowDraw", "ShootGun.playbackRate", 1.8f);
         }
@@ -114,6 +115,14 @@ namespace LinkMod.SkillStates
                     ShootTri.force += (this.timer * 5f);
                 }
                 this.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Slow80.buffIndex, 0.1f);
+                if (this.timer == 1f)
+                {
+                    Util.PlaySound("IceArrow_Charge_Complete", base.gameObject);
+                }
+                if(this.timer % 5f == 0)
+                {
+                    Util.PlaySound("IceArrow_Charge_Complete", base.gameObject);
+                }
             }          
             else
             {
