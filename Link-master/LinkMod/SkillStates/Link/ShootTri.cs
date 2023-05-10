@@ -55,10 +55,10 @@ namespace LinkMod.SkillStates
                 if (base.isAuthority)
                 {
                     Ray aimRay = base.GetAimRay();
-                    ProjectileDamage projectileDamage = Modules.Projectiles.arrowPrefab.GetComponent<ProjectileDamage>();
+                    ProjectileDamage projectileDamage = Modules.Projectiles.iceArrowPrefab.GetComponent<ProjectileDamage>();
                     projectileDamage.damageType = DamageType.Freeze2s;
 
-                    ProjectileManager.instance.FireProjectile(Modules.Projectiles.arrowPrefab,
+                    ProjectileManager.instance.FireProjectile(Modules.Projectiles.iceArrowPrefab,
                         aimRay.origin,
                         Util.QuaternionSafeLookRotation(aimRay.direction),
                         base.gameObject,
@@ -72,7 +72,7 @@ namespace LinkMod.SkillStates
 
 
                     Vector3 arrow2Direction = new Vector3(aimRay.direction.x - 0.1f, aimRay.direction.y, aimRay.direction.z); //Adjusts direction for 2nd arrow to slight right
-                    ProjectileManager.instance.FireProjectile(Modules.Projectiles.arrowPrefab, 
+                    ProjectileManager.instance.FireProjectile(Modules.Projectiles.iceArrowPrefab, 
                         aimRay.origin,
                         Util.QuaternionSafeLookRotation(arrow2Direction),
                         base.gameObject,
@@ -85,7 +85,7 @@ namespace LinkMod.SkillStates
                     Util.PlaySound(sounds[Random.Range(0, 3)], base.gameObject);
 
                     Vector3 arrow3Direction = new Vector3(aimRay.direction.x + 0.1f, arrow2Direction.y, aimRay.direction.z); //Adjusts direction for 3rd to slight left
-                    ProjectileManager.instance.FireProjectile(Modules.Projectiles.arrowPrefab,
+                    ProjectileManager.instance.FireProjectile(Modules.Projectiles.iceArrowPrefab,
                         aimRay.origin,
                         Util.QuaternionSafeLookRotation(arrow3Direction),
                         base.gameObject,

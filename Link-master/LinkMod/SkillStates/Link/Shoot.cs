@@ -79,8 +79,7 @@ namespace LinkMod.SkillStates
             if (base.inputBank.skill2.down) 
             {
                 if (base.fixedAge <= this.duration && base.isAuthority) //The longer the skill is held down, the more damage and force the arrow has
-                {
-                    Shoot.damageCoefficient += (this.timer * 0.1f);
+                {                    
                     Shoot.force += (this.timer * 5f);
                 }
                 this.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Slow80.buffIndex, 0.1f);

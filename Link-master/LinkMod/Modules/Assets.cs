@@ -20,6 +20,9 @@ namespace LinkMod.Modules
 
         internal static GameObject bombExplosionEffect;
         internal static GameObject bombArrowExplosionEffect;
+        internal static GameObject fireArrowExplosionEffect;
+        internal static GameObject iceArrowExplosionEffect;
+
         internal static GameObject urbosaEffect;
 
         // networked hit sounds
@@ -33,7 +36,9 @@ namespace LinkMod.Modules
         internal static Shader hotpoo = RoR2.LegacyResourcesAPI.Load<Shader>("Shaders/Deferred/HGStandard");
         internal static GameObject blueExplosion = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/MageLightningBombExplosion");        
         internal static GameObject bombArrowExplosion = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/ImpactEffects/ClayGrenadierBarrelExplosion");
-        internal static GameObject fireArrowExplosion = RoR2.LegacyResourcesAPI.Load<GameObject>("prefabs/effects/molotovexplosion");
+        internal static GameObject fireArrowExplosion = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/ImpactEffects/MagmaOrbExplosion");
+        internal static GameObject iceArrowExplosion = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/ImpactEffects/IceRingExplosion");
+
         internal static Material commandoMat;
         private static string[] assetNames = new string[0];
 
@@ -123,6 +128,8 @@ namespace LinkMod.Modules
                 };
             }
 
+            fireArrowExplosionEffect = fireArrowExplosion;
+            iceArrowExplosionEffect = iceArrowExplosion;
         }
 
         private static GameObject CreateTracer(string originalTracerName, string newTracerName)

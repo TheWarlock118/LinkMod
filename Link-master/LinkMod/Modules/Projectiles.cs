@@ -9,8 +9,12 @@ namespace LinkMod.Modules
     internal static class Projectiles
     {
         internal static GameObject bombPrefab;
+
         internal static GameObject arrowPrefab;
         internal static GameObject bombArrowPrefab;
+        internal static GameObject fireArrowPrefab;
+        internal static GameObject iceArrowPrefab;
+
         internal static GameObject miphaPrefab;
         internal static GameObject urbosaPrefab;
         internal static GameObject darukPrefab;
@@ -20,14 +24,19 @@ namespace LinkMod.Modules
         {            
             CreateBomb();
             CreateBombArrow();
+            CreateFireArrow();
+            CreateIceArrow();
             CreateArrow();
             CreateMipha();
             CreateDaruk();
             CreateRevali();
-            CreateUrbosa();
-            AddProjectile(bombArrowPrefab);
+            CreateUrbosa();  
+            
             AddProjectile(bombPrefab);
             AddProjectile(arrowPrefab);
+            AddProjectile(bombArrowPrefab);
+            AddProjectile(fireArrowPrefab);
+            AddProjectile(iceArrowPrefab);
             AddProjectile(miphaPrefab);
             AddProjectile(urbosaPrefab);
             AddProjectile(darukPrefab);
@@ -46,8 +55,9 @@ namespace LinkMod.Modules
             ProjectileImpactExplosion bombImpactExplosion = bombPrefab.GetComponent<ProjectileImpactExplosion>();
             InitializeImpactExplosion(bombImpactExplosion);
 
-            bombImpactExplosion.blastRadius = 16f;
+            bombImpactExplosion.blastRadius = 4f;
             bombImpactExplosion.destroyOnEnemy = false;
+            bombImpactExplosion.bonusBlastForce = new Vector3(10f, 10f);
             bombImpactExplosion.lifetime = 24f;
             bombImpactExplosion.impactEffect = Modules.Assets.bombExplosionEffect;
             bombImpactExplosion.explosionEffect = Modules.Assets.bombExplosionEffect;
@@ -75,8 +85,10 @@ namespace LinkMod.Modules
             ProjectileImpactExplosion bombArrowImpactExplosion = bombArrowPrefab.GetComponent<ProjectileImpactExplosion>();
             InitializeImpactExplosion(bombArrowImpactExplosion);
 
-            bombArrowImpactExplosion.blastRadius = 16f;
+            bombArrowImpactExplosion.blastRadius = 4f;
             bombArrowImpactExplosion.destroyOnEnemy = false;
+            bombArrowImpactExplosion.blastDamageCoefficient = 8f;
+            bombArrowImpactExplosion.bonusBlastForce = new Vector3(10f, 10f);
             bombArrowImpactExplosion.lifetime = 24f;
             bombArrowImpactExplosion.impactEffect = Modules.Assets.bombArrowExplosionEffect;
             bombArrowImpactExplosion.explosionEffect = Modules.Assets.bombArrowExplosionEffect;
@@ -85,6 +97,50 @@ namespace LinkMod.Modules
             bombArrowImpactExplosion.lifetimeAfterImpact = 0.001f;
 
             ProjectileController arrowController = bombArrowPrefab.GetComponent<ProjectileController>();
+            arrowController.ghostPrefab = CreateGhostPrefab("linkArrow");
+            arrowController.startSound = "";
+        }
+
+        private static void CreateFireArrow()
+        {
+            fireArrowPrefab = CloneProjectilePrefab("MageFirebolt", "LinkBombArrowProjectile");
+
+            ProjectileImpactExplosion fireArrowImpactExplosion = fireArrowPrefab.GetComponent<ProjectileImpactExplosion>();
+            InitializeImpactExplosion(fireArrowImpactExplosion);
+
+            fireArrowImpactExplosion.blastRadius = 2f;
+            fireArrowImpactExplosion.destroyOnEnemy = false;            
+            fireArrowImpactExplosion.lifetime = 24f;
+            fireArrowImpactExplosion.impactEffect = Modules.Assets.fireArrowExplosionEffect;
+            fireArrowImpactExplosion.explosionEffect = Modules.Assets.fireArrowExplosionEffect;
+            fireArrowImpactExplosion.explosionSoundString = "BombExplode";
+            fireArrowImpactExplosion.timerAfterImpact = true;
+            fireArrowImpactExplosion.lifetimeAfterImpact = 0.001f;
+            fireArrowImpactExplosion.GetComponent<ProjectileDamage>().damageType = DamageType.IgniteOnHit;
+
+            ProjectileController arrowController = fireArrowPrefab.GetComponent<ProjectileController>();
+            arrowController.ghostPrefab = CreateGhostPrefab("linkArrow");
+            arrowController.startSound = "";
+        }
+
+        private static void CreateIceArrow()
+        {
+            iceArrowPrefab = CloneProjectilePrefab("MageFirebolt", "LinkBombArrowProjectile");
+
+            ProjectileImpactExplosion iceArrowImpactExplosion = iceArrowPrefab.GetComponent<ProjectileImpactExplosion>();
+            InitializeImpactExplosion(iceArrowImpactExplosion);
+
+            iceArrowImpactExplosion.blastRadius = 2f;
+            iceArrowImpactExplosion.destroyOnEnemy = false;
+            iceArrowImpactExplosion.lifetime = 24f;
+            iceArrowImpactExplosion.impactEffect = Modules.Assets.iceArrowExplosionEffect;
+            iceArrowImpactExplosion.explosionEffect = Modules.Assets.iceArrowExplosionEffect;
+            iceArrowImpactExplosion.explosionSoundString = "BombExplode";
+            iceArrowImpactExplosion.timerAfterImpact = true;
+            iceArrowImpactExplosion.lifetimeAfterImpact = 0.001f;
+            iceArrowImpactExplosion.GetComponent<ProjectileDamage>().damageType = DamageType.Freeze2s;
+
+            ProjectileController arrowController = iceArrowPrefab.GetComponent<ProjectileController>();
             arrowController.ghostPrefab = CreateGhostPrefab("linkArrow");
             arrowController.startSound = "";
         }
