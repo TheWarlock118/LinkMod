@@ -150,7 +150,7 @@ namespace LinkMod.Modules.Survivors
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.ShootTri)),
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,
-                baseRechargeInterval = 2f,
+                baseRechargeInterval = 3f,
                 beginSkillCooldownOnSkillEnd = true,
                 canceledFromSprinting = false,
                 forceSprintDuringState = false,
@@ -216,7 +216,7 @@ namespace LinkMod.Modules.Survivors
                 keywordTokens = new string[] { "KEYWORD_AGILE" }
             });
 
-            SkillDef[] secondaries = { shieldSkillDef, shootSkillDef, shootTriSkillDef, shootFastSkillDef};
+            SkillDef[] secondaries = { shieldSkillDef, shootFastSkillDef, shootTriSkillDef, shootSkillDef };
             UnlockableDef[] secondaryUnlockables = { null, null, triBowUnlockableDef, fastBowUnlockableDef };
             Modules.Skills.AddSecondarySkills(bodyPrefab, secondaryUnlockables, secondaries);
             #endregion
@@ -953,7 +953,11 @@ namespace LinkMod.Modules.Survivors
                     gameObject = childLocator.FindChildGameObject("ChampionUndershirts"),
                     shouldActivate = false
                 },
-
+                new SkinDef.GameObjectActivation
+                {
+                    gameObject = childLocator.FindChildGameObject("Skin__Mt_Underwear"),
+                    shouldActivate = false
+                },
             };
 
             skins.Add(defaultSkin);

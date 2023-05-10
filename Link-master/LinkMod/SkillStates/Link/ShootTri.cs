@@ -55,7 +55,9 @@ namespace LinkMod.SkillStates
                 if (base.isAuthority)
                 {
                     Ray aimRay = base.GetAimRay();
-                    
+                    ProjectileDamage projectileDamage = Modules.Projectiles.arrowPrefab.GetComponent<ProjectileDamage>();
+                    projectileDamage.damageType = DamageType.Freeze2s;
+
                     ProjectileManager.instance.FireProjectile(Modules.Projectiles.arrowPrefab,
                         aimRay.origin,
                         Util.QuaternionSafeLookRotation(aimRay.direction),
@@ -68,13 +70,6 @@ namespace LinkMod.SkillStates
                         ShootTri.force);
                     Util.PlaySound(sounds[Random.Range(0, 3)], base.gameObject);
 
-                    /*
-                    //debugging
-                    Chat.SendBroadcastChat(new Chat.SimpleChatMessage
-                    {
-                        baseToken = "aimRay: x" + aimRay.direction.x + " y: " + aimRay.direction.y + " z: " + aimRay.direction.z
-                    });
-                    */
 
                     Vector3 arrow2Direction = new Vector3(aimRay.direction.x - 0.1f, aimRay.direction.y, aimRay.direction.z); //Adjusts direction for 2nd arrow to slight right
                     ProjectileManager.instance.FireProjectile(Modules.Projectiles.arrowPrefab, 
@@ -89,14 +84,6 @@ namespace LinkMod.SkillStates
                         ShootTri.force);
                     Util.PlaySound(sounds[Random.Range(0, 3)], base.gameObject);
 
-                    /*
-                    //Debugging
-                    Chat.SendBroadcastChat(new Chat.SimpleChatMessage
-                    {
-                        baseToken = "2nd aimRay: x" + arrow2Direction.x + " y: " + arrow2Direction.y + " z: " + arrow2Direction.z
-                    });
-                    */
-
                     Vector3 arrow3Direction = new Vector3(aimRay.direction.x + 0.1f, arrow2Direction.y, aimRay.direction.z); //Adjusts direction for 3rd to slight left
                     ProjectileManager.instance.FireProjectile(Modules.Projectiles.arrowPrefab,
                         aimRay.origin,
@@ -109,13 +96,6 @@ namespace LinkMod.SkillStates
                         null,
                         ShootTri.force);
                     Util.PlaySound(sounds[Random.Range(0, 3)], base.gameObject);
-                    /*
-                    //Debugging
-                    Chat.SendBroadcastChat(new Chat.SimpleChatMessage
-                    {
-                        baseToken = "3rd aimRay: x" + arrow3Direction.x + " y: " + arrow3Direction.y + " z: " + arrow3Direction.z
-                    });
-                    */
                 }
 
             }

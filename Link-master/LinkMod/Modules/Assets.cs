@@ -19,6 +19,7 @@ namespace LinkMod.Modules
         internal static GameObject swordHitImpactEffect;
 
         internal static GameObject bombExplosionEffect;
+        internal static GameObject bombArrowExplosionEffect;
         internal static GameObject urbosaEffect;
 
         // networked hit sounds
@@ -30,7 +31,9 @@ namespace LinkMod.Modules
 
         // cache these and use to create our own materials
         internal static Shader hotpoo = RoR2.LegacyResourcesAPI.Load<Shader>("Shaders/Deferred/HGStandard");
-        internal static GameObject blueExplosion = RoR2.LegacyResourcesAPI.Load<GameObject>("prefabs/effects/magelightningbombexplosion");
+        internal static GameObject blueExplosion = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/MageLightningBombExplosion");        
+        internal static GameObject bombArrowExplosion = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/ImpactEffects/ClayGrenadierBarrelExplosion");
+        internal static GameObject fireArrowExplosion = RoR2.LegacyResourcesAPI.Load<GameObject>("prefabs/effects/molotovexplosion");
         internal static Material commandoMat;
         private static string[] assetNames = new string[0];
 
@@ -88,9 +91,7 @@ namespace LinkMod.Modules
 
             // bombExplosionEffect = LoadEffect("BombExplosionEffect", "LinkBombExplosion");
             // bombExplosionEffect = EntityStates.VagrantMonster.FireMegaNova.novaEffectPrefab;
-            bombExplosionEffect = blueExplosion;
-
-
+            bombExplosionEffect = blueExplosion;            
             if (bombExplosionEffect)
             {
                 ShakeEmitter shakeEmitter = bombExplosionEffect.AddComponent<ShakeEmitter>();
@@ -98,6 +99,22 @@ namespace LinkMod.Modules
                 shakeEmitter.duration = 0.5f;
                 shakeEmitter.radius = 200f;
                 shakeEmitter.scaleShakeRadiusWithLocalScale = false;                
+                shakeEmitter.wave = new Wave
+                {
+                    amplitude = 1f,
+                    frequency = 40f,
+                    cycleOffset = 0f
+                };
+            }
+
+            bombArrowExplosionEffect = bombArrowExplosion;
+            if (bombArrowExplosionEffect)
+            {
+                ShakeEmitter shakeEmitter = bombArrowExplosionEffect.AddComponent<ShakeEmitter>();
+                shakeEmitter.amplitudeTimeDecay = true;
+                shakeEmitter.duration = 0.5f;
+                shakeEmitter.radius = 200f;
+                shakeEmitter.scaleShakeRadiusWithLocalScale = false;
                 shakeEmitter.wave = new Wave
                 {
                     amplitude = 1f,

@@ -10,6 +10,7 @@ namespace LinkMod.Modules
     {
         internal static GameObject bombPrefab;
         internal static GameObject arrowPrefab;
+        internal static GameObject bombArrowPrefab;
         internal static GameObject miphaPrefab;
         internal static GameObject urbosaPrefab;
         internal static GameObject darukPrefab;
@@ -18,11 +19,13 @@ namespace LinkMod.Modules
         internal static void RegisterProjectiles()
         {            
             CreateBomb();
+            CreateBombArrow();
             CreateArrow();
             CreateMipha();
             CreateDaruk();
             CreateRevali();
             CreateUrbosa();
+            AddProjectile(bombArrowPrefab);
             AddProjectile(bombPrefab);
             AddProjectile(arrowPrefab);
             AddProjectile(miphaPrefab);
@@ -60,11 +63,32 @@ namespace LinkMod.Modules
         private static void CreateArrow()
         {
             arrowPrefab = CloneProjectilePrefab("Arrow", "LinkArrowProjectile");
-            ProjectileController arrowController = arrowPrefab.GetComponent<ProjectileController>();
+            ProjectileController arrowController = arrowPrefab.GetComponent<ProjectileController>();                               
             arrowController.ghostPrefab = CreateGhostPrefab("linkArrow");
             arrowController.startSound = "";
         }
         
+        private static void CreateBombArrow()
+        {
+            bombArrowPrefab = CloneProjectilePrefab("MageFirebolt", "LinkBombArrowProjectile");
+                               
+            ProjectileImpactExplosion bombArrowImpactExplosion = bombArrowPrefab.GetComponent<ProjectileImpactExplosion>();
+            InitializeImpactExplosion(bombArrowImpactExplosion);
+
+            bombArrowImpactExplosion.blastRadius = 16f;
+            bombArrowImpactExplosion.destroyOnEnemy = false;
+            bombArrowImpactExplosion.lifetime = 24f;
+            bombArrowImpactExplosion.impactEffect = Modules.Assets.bombArrowExplosionEffect;
+            bombArrowImpactExplosion.explosionEffect = Modules.Assets.bombArrowExplosionEffect;
+            bombArrowImpactExplosion.explosionSoundString = "BombExplode";
+            bombArrowImpactExplosion.timerAfterImpact = true;
+            bombArrowImpactExplosion.lifetimeAfterImpact = 0.001f;
+
+            ProjectileController arrowController = bombArrowPrefab.GetComponent<ProjectileController>();
+            arrowController.ghostPrefab = CreateGhostPrefab("linkArrow");
+            arrowController.startSound = "";
+        }
+
         private static void CreateMipha()
         {
             miphaPrefab = CloneProjectilePrefab("FMJRamping", "MiphaProjectile");

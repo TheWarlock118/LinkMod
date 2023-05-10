@@ -55,13 +55,14 @@ namespace LinkMod.SkillStates
                 if (base.isAuthority)
                 {
                     Ray aimRay = base.GetAimRay();
-                    
+                    ProjectileDamage projectileDamage = Modules.Projectiles.arrowPrefab.GetComponent<ProjectileDamage>();
+                    projectileDamage.damageType = DamageType.IgniteOnHit;                    
                     ProjectileManager.instance.FireProjectile(Modules.Projectiles.arrowPrefab,
                         aimRay.origin,
                         Util.QuaternionSafeLookRotation(aimRay.direction),
                         base.gameObject,
                         ShootFast.damageCoefficient * this.damageStat,
-                        40f,
+                        39f,
                         base.RollCrit(),
                         DamageColorIndex.Default,
                         null,
