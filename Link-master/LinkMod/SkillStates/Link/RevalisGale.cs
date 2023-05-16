@@ -30,11 +30,33 @@ namespace LinkMod.SkillStates
             this.timer = 0f;
             readySoundPlayed = false;
             fired = false;
-            shouldLaunch = false;            
+            shouldLaunch = false;
             // movementSpeedCoefficient = (this.moveSpeedStat / 100f);
+
+
+            new BlastAttack
+            {
+                attacker = base.characterBody.gameObject,
+                baseDamage = this.damageStat * 0.5f,
+                baseForce = 5000f,
+                bonusForce = Vector3.zero,
+                attackerFiltering = AttackerFiltering.NeverHitSelf,
+                crit = base.characterBody.RollCrit(),
+                damageColorIndex = DamageColorIndex.Item,
+                damageType = DamageType.Generic,
+                falloffModel = BlastAttack.FalloffModel.None,
+                inflictor = base.gameObject,
+                position = characterBody.corePosition,
+                procChainMask = default(ProcChainMask),
+                procCoefficient = 1f,
+                radius = 10f,
+                losType = BlastAttack.LoSType.NearestHit,
+                teamIndex = base.characterBody.teamComponent.teamIndex
+            }.Fire();
+
             CharacterMotor characterMotor = this.characterBody.characterMotor;
             characterMotor.Motor.ForceUnground();
-            characterMotor.ApplyForce(Vector3.up * 2500f * (this.characterBody.rigidbody.mass / 100f), true, false);
+            characterMotor.ApplyForce(Vector3.up * 4000f * (this.characterBody.rigidbody.mass / 100f), true, false);            
         }
 
         public override void OnExit()
@@ -76,25 +98,7 @@ namespace LinkMod.SkillStates
                     null,
                     0f);
 
-                new BlastAttack
-                {
-                    attacker = base.characterBody.gameObject,
-                    baseDamage = base.characterBody.damage * 1f,
-                    baseForce = 5000f,
-                    bonusForce = Vector3.zero,
-                    attackerFiltering = AttackerFiltering.NeverHitSelf,
-                    crit = base.characterBody.RollCrit(),
-                    damageColorIndex = DamageColorIndex.Item,
-                    damageType = DamageType.Generic,
-                    falloffModel = BlastAttack.FalloffModel.None,
-                    inflictor = base.gameObject,
-                    position = characterBody.corePosition,
-                    procChainMask = default(ProcChainMask),
-                    procCoefficient = 1f,
-                    radius = 10f,
-                    losType = BlastAttack.LoSType.NearestHit,
-                    teamIndex = base.characterBody.teamComponent.teamIndex
-                }.Fire();                
+                              
             }            
         }
 

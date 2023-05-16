@@ -40,7 +40,7 @@ namespace LinkMod.SkillStates
             new BlastAttack
             {
                 attacker = base.characterBody.gameObject,
-                baseDamage = base.characterBody.damage * UrbosasFury.damageCoefficient,
+                baseDamage = this.damageStat * UrbosasFury.damageCoefficient,
                 baseForce = blastAttackForce,
                 bonusForce = Vector3.zero,
                 attackerFiltering = AttackerFiltering.NeverHitSelf,
