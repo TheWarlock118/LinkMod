@@ -9,12 +9,12 @@ namespace LinkMod.SkillStates
 {
     public class UrbosasFury : BaseSkillState
     {
-        public static float damageCoefficient = 16f;
+        public static float damageCoefficient = 4f;
         public static float procCoefficient = 1f;
         public static float baseDuration = .51f;
         public static float throwForce = 80f;
         public float blastAttackRadius = 50f;
-        public float blastAttackProcCoefficient = 1f;
+        public float blastAttackProcCoefficient = 0.5f;
         public float blastAttackDamageCoefficient = 8f;
         public float blastAttackForce = 50f;
         
@@ -40,18 +40,18 @@ namespace LinkMod.SkillStates
             new BlastAttack
             {
                 attacker = base.characterBody.gameObject,
-                baseDamage = base.characterBody.damage * 16f,
-                baseForce = 50f,
+                baseDamage = base.characterBody.damage * UrbosasFury.damageCoefficient,
+                baseForce = blastAttackForce,
                 bonusForce = Vector3.zero,
                 attackerFiltering = AttackerFiltering.NeverHitSelf,
                 crit = base.characterBody.RollCrit(),
                 damageColorIndex = DamageColorIndex.Item,
-                damageType = DamageType.Generic,
+                damageType = DamageType.Shock5s,
                 falloffModel = BlastAttack.FalloffModel.None,
                 inflictor = base.gameObject,
                 position = characterBody.corePosition,
                 procChainMask = default(ProcChainMask),
-                procCoefficient = 1f,
+                procCoefficient = this.blastAttackProcCoefficient,
                 radius = 200f,
                 losType = BlastAttack.LoSType.NearestHit,
                 teamIndex = base.characterBody.teamComponent.teamIndex

@@ -131,7 +131,7 @@ namespace LinkMod.Modules
             ProjectileImpactExplosion iceArrowImpactExplosion = iceArrowPrefab.GetComponent<ProjectileImpactExplosion>();
             InitializeImpactExplosion(iceArrowImpactExplosion);
 
-            iceArrowImpactExplosion.blastProcCoefficient = 4f;
+            iceArrowImpactExplosion.blastProcCoefficient = 2f;
             iceArrowImpactExplosion.blastRadius = 4f;
             iceArrowImpactExplosion.destroyOnEnemy = true;
             iceArrowImpactExplosion.lifetime = 1f;
