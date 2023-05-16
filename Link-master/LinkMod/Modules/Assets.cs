@@ -35,7 +35,8 @@ namespace LinkMod.Modules
         // cache these and use to create our own materials
         internal static Shader hotpoo = RoR2.LegacyResourcesAPI.Load<Shader>("Shaders/Deferred/HGStandard");
         internal static GameObject blueExplosion = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/MageLightningBombExplosion");        
-        internal static GameObject bombArrowExplosion = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/ImpactEffects/ClayGrenadierBarrelExplosion");
+        // internal static GameObject bombArrowExplosion = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/VolatileBatteryExplosion");
+        internal static GameObject bombArrowExplosion = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/OmniEffect/OmniExplosionVFXCommandoGrenade");
         internal static GameObject fireArrowExplosion = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/ImpactEffects/MagmaOrbExplosion");
         internal static GameObject iceArrowExplosion = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/ImpactEffects/IceRingExplosion");
 

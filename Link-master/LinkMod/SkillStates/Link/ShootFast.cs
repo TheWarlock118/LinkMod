@@ -35,7 +35,8 @@ namespace LinkMod.SkillStates
             ShootFast.force = 30f;
             string[] sounds = { "Bow_Draw0", "Bow_Draw1", "Bow_Draw2", "Bow_Draw3", "Bow_Draw4", "Bow_Draw5" };
             Util.PlaySound(sounds[Random.Range(0, 5)], base.gameObject);
-            Util.PlaySound("FireArrow_Charge", base.gameObject);
+            // Too annoying
+            // Util.PlayAttackSpeedSound("FireArrow_Charge", base.gameObject, 4f);
             base.PlayAnimation("Gesture, Override", "BowDraw", "ShootGun.playbackRate", 0.9f);
         }
 

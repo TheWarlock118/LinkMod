@@ -35,7 +35,8 @@ namespace LinkMod.SkillStates
             ShootTri.force = 31f;
             string[] sounds = { "Bow_Draw0", "Bow_Draw1", "Bow_Draw2", "Bow_Draw3", "Bow_Draw4", "Bow_Draw5" };
             Util.PlaySound(sounds[Random.Range(0, 5)], base.gameObject);
-            Util.PlaySound("IceArrow_Charge", base.gameObject);
+            // Too annoying
+            // Util.PlayAttackSpeedSound("IceArrow_Charge", base.gameObject, 2f);            
             base.PlayAnimation("Gesture, Override", "BowEquip", "ShootGun.playbackRate", 1.8f);
             base.PlayAnimation("Gesture, Override", "BowDraw", "ShootGun.playbackRate", 1.8f);
         }
