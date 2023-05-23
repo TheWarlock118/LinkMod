@@ -56,8 +56,9 @@ namespace LinkMod.Modules.Achievements
             }
 
             private void OnCharacterDeath(DamageReport damageReport)
-            {
-                if ((int)damageReport.damageInfo.force.magnitude == 39 && damageReport.attackerBody == this.serverAchievementTracker.networkUser.GetCurrentBody() && damageReport.attackerBodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
+            {                
+                CharacterBody currentBody = this.serverAchievementTracker.networkUser.GetCurrentBody();                
+                if (damageReport.damageInfo.damageType.HasFlag(DamageType.IgniteOnHit) && damageReport.attackerBody == currentBody && damageReport.attackerBodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
                 {
                     killCount++;
                 }

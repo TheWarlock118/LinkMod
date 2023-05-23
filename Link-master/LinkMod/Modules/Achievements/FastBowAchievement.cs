@@ -9,7 +9,7 @@ namespace LinkMod.Modules.Achievements
     internal class FastBowAchievement : GenericModdedUnlockable
     {
         public override string AchievementTokenPrefix => "ACHIEVEMENT_LINK_BODY_FASTBOW_";
-        public override string AchievementSpriteName => "FalconBow";        
+        public override string AchievementSpriteName => "RoyalGuardBow";        
         public override string PrerequisiteUnlockableIdentifier => LinkPlugin.developerPrefix + "_LINK_BODY_UNLOCKABLE_REWARD_ID";        
 
         public string RequiredCharacterBody = "LinkBody";        
@@ -64,9 +64,12 @@ namespace LinkMod.Modules.Achievements
 
             private void OnCharacterDeath(DamageReport damageReport)
             {
+                Log.LogDebug("KillCount = " + killCount.ToString());
                 if (killCount == 0)
                     resetDelay = 0f;
-                if ((int)damageReport.damageInfo.force.magnitude == 41 && damageReport.attackerBody == this.serverAchievementTracker.networkUser.GetCurrentBody() && damageReport.attackerBodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
+
+                CharacterBody currentBody = this.serverAchievementTracker.networkUser.GetCurrentBody();                
+                if (damageReport.damageInfo.damageType.HasFlag(DamageType.Freeze2s) && damageReport.attackerBody == currentBody && damageReport.attackerBodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
                 {
                     killCount++;
                 }

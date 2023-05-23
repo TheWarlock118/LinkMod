@@ -57,7 +57,8 @@ namespace LinkMod.Modules
 
             bombImpactExplosion.blastRadius = 8f;
             bombImpactExplosion.destroyOnEnemy = false;
-            bombImpactExplosion.blastDamageCoefficient = Modules.StaticValues.bombDamageCoefficient;            
+            bombImpactExplosion.blastDamageCoefficient = Modules.StaticValues.bombDamageCoefficient;
+            bombImpactExplosion.blastAttackerFiltering = AttackerFiltering.AlwaysHit;
             bombImpactExplosion.bonusBlastForce = new Vector3(5000f, 5000f, 5000f);
             bombImpactExplosion.falloffModel = BlastAttack.FalloffModel.Linear;
             bombImpactExplosion.lifetime = 24f;
@@ -113,8 +114,7 @@ namespace LinkMod.Modules
 
             fireArrowImpactExplosion.blastRadius = 2f;
             fireArrowImpactExplosion.destroyOnEnemy = false;            
-            fireArrowImpactExplosion.lifetime = 24f;
-            fireArrowImpactExplosion.blastDamageCoefficient = Modules.StaticValues.bowDamageCoefficient / 2;
+            fireArrowImpactExplosion.lifetime = 1f;            
             fireArrowImpactExplosion.impactEffect = Modules.Assets.fireArrowExplosionEffect;
             fireArrowImpactExplosion.explosionEffect = Modules.Assets.fireArrowExplosionEffect;
             fireArrowImpactExplosion.explosionSoundString = "FireArrow_Hit";
@@ -130,7 +130,7 @@ namespace LinkMod.Modules
         private static void CreateIceArrow()
         {
             iceArrowPrefab = CloneProjectilePrefab("MageIceBolt", "LinkIceArrowProjectile");
-            // Adding a projectile explosion 
+            
             ProjectileImpactExplosion iceArrowImpactExplosion = iceArrowPrefab.GetComponent<ProjectileImpactExplosion>();
             InitializeImpactExplosion(iceArrowImpactExplosion);
 

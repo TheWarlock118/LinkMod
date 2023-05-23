@@ -9,7 +9,7 @@ namespace LinkMod.SkillStates
 {
     public class UrbosasFury : BaseSkillState
     {
-        public static float damageCoefficient = 4f;
+        public static float damageCoefficient = Modules.StaticValues.urbosaDamageCoefficient;
         public static float procCoefficient = 1f;
         public static float baseDuration = .51f;
         public static float throwForce = 80f;
@@ -87,19 +87,7 @@ namespace LinkMod.SkillStates
         }
 
         private void SummonUrbosa()
-        {
-            /*
-            if (base.isAuthority)
-            {
-                Ray aimRay = base.GetAimRay();
-                EffectManager.SpawnEffect(Modules.Assets.urbosaEffect, new EffectData
-                {
-                    origin = base.GetAimRay().origin,
-                    rotation = Util.QuaternionSafeLookRotation(aimRay.direction),
-                }, true);
-            }
-            */            
-                       
+        {                                   
             if (base.isAuthority)
             {
                 Ray aimRay = base.GetAimRay();

@@ -17,7 +17,7 @@ namespace LinkMod.SkillStates.BaseStates
         protected string hitboxName = "Sword";
 
         protected DamageType damageType = DamageType.Generic;
-        protected float damageCoefficient = 5f;
+        protected float damageCoefficient = Modules.StaticValues.swordDamageCoefficient;
         protected float procCoefficient = 1f;
         protected float pushForce = 0f;
         protected Vector3 bonusForce = Vector3.zero;
@@ -31,8 +31,8 @@ namespace LinkMod.SkillStates.BaseStates
         protected bool cancelled = false;
 
         private float projectileForce = 60f;
-        private float projectileDamageCoef;
-        
+        private float projectileDamageCoef = Modules.StaticValues.swordDamageCoefficient / 2;
+
         protected string hitSoundString = "SwordOnHit";
         protected string muzzleString = "SwingCenter";
         protected GameObject swingEffectPrefab;
@@ -141,7 +141,7 @@ namespace LinkMod.SkillStates.BaseStates
                     {
                         if (base.isAuthority)
                         {
-                            projectileDamageCoef = Modules.StaticValues.swordDamageCoefficient / 2;
+                            
                             Ray aimRay = base.GetAimRay();
                             ProjectileManager.instance.FireProjectile(EntityStates.Vulture.Weapon.FireWindblade.projectilePrefab, //Placeholder projectile
                             aimRay.origin,

@@ -33,34 +33,31 @@ namespace LinkMod.Modules
 
             #region Passive
             LanguageAPI.Add(prefix + "PASSIVE_NAME", "Paraglider");
-            LanguageAPI.Add(prefix + "PASSIVE_DESCRIPTION", "An item that you received from the king on the Great Plateau.\nIt allows you to sail through the sky.\nHold space while you're in the air to use it.");
+            LanguageAPI.Add(prefix + "PASSIVE_DESCRIPTION", "An item that you received from the king on the Great Plateau.\nIt allows you to sail through the sky.\n" + $"<style=cIsUtility>Hold space while you're in the air to use it</style>.");
             #endregion
 
             #region Primary
             LanguageAPI.Add(prefix + "PRIMARY_SWORD_NAME", "The Master Sword");
-            LanguageAPI.Add(prefix + "PRIMARY_SWORD_DESCRIPTION", "The legendary sword that seals the darkness. " + $"Swing forward for <style=cIsDamage>{100f * StaticValues.swordDamageCoefficient}% damage</style>.");
+            LanguageAPI.Add(prefix + "PRIMARY_SWORD_DESCRIPTION", "The legendary sword that seals the darkness. " + $"<style=cIsUtility>Swing forward</style> for " + $"<style=cIsDamage>{100f * StaticValues.swordDamageCoefficient}% damage</style>." + $" At over " + $"<style=cIsHealth>90% health</style>, fire a sword beam for <style=cIsDamage>{100f * StaticValues.swordDamageCoefficient / 2}% damage</style>.");
             #endregion
 
             #region Secondary
             LanguageAPI.Add(prefix + "SECONDARY_BOW_NAME", "Royal Guard Bow");
-            LanguageAPI.Add(prefix + "SECONDARY_BOW_DESCRIPTION", Helpers.agilePrefix + $"Loose an arrow for <style=cIsDamage>{100f * StaticValues.bowDamageCoefficient}% damage</style>.");
-
-            LanguageAPI.Add(prefix + "SECONDARY_ROLL_NAME", "Roll");
-            LanguageAPI.Add(prefix + "SECONDARY_ROLL_DESCRIPTION", Helpers.agilePrefix + "Become immune to damage and roll for a quick get away.");
+            LanguageAPI.Add(prefix + "SECONDARY_BOW_DESCRIPTION", Helpers.agilePrefix + $"<style=cIsUtility>Loose a bomb arrow</style>, which explodes to fling enemies and " + $"deal <style=cIsDamage>{100f * StaticValues.bombArrowDamageCoefficient}% damage</style>.");
 
             LanguageAPI.Add(prefix + "SECONDARY_3BOW_NAME", "Great Eagle Bow");
-            LanguageAPI.Add(prefix + "SECONDARY_3BOW_DESCRIPTION", Helpers.agilePrefix + $"Loose three arrows at once, each dealing <style=cIsDamage>{100f * StaticValues.bowDamageCoefficient / 3}%damage</style>.");
+            LanguageAPI.Add(prefix + "SECONDARY_3BOW_DESCRIPTION", Helpers.agilePrefix + $"<style=cIsUtility>Loose three ice arrows at once</style>," + $" each dealing <style=cIsDamage>{100f * StaticValues.bowDamageCoefficient / 3}% damage</style> and " + $"<style=cIsHealth> freezing enemies for 2 seconds</style>.");
 
             LanguageAPI.Add(prefix + "SECONDARY_FASTBOW_NAME", "Falcon Bow");
-            LanguageAPI.Add(prefix + "SECONDARY_FASTBOW_DESCRIPTION", Helpers.agilePrefix + $"Loose a hasty arrow for <style=cIsDamage>{50f * StaticValues.bowDamageCoefficient}%damage</style>. The specially engineered bowstring allows for faster drawing and a short cooldown.");
+            LanguageAPI.Add(prefix + "SECONDARY_FASTBOW_DESCRIPTION", Helpers.agilePrefix + $"<style=cIsUtility>Loose a hasty fire arrow</style> for <style=cIsDamage>{100f * StaticValues.bowDamageCoefficient / 2}% fire damage</style>. The specially engineered bowstring allows for faster drawing and a short cooldown.");
 
             LanguageAPI.Add(prefix + "SECONDARY_SHIELD_NAME", "Hylian Shield");
-            LanguageAPI.Add(prefix + "SECONDARY_SHIELD_DESCRIPTION", "A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it. Hold to block all damage from the front. Can attack with your sword while blocking.");
+            LanguageAPI.Add(prefix + "SECONDARY_SHIELD_DESCRIPTION", "A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it." + $" <style=cIsUtility>Hold to block all damage from the front</style>. Can attack with your sword while blocking.");
             #endregion
 
             #region Utility
             LanguageAPI.Add(prefix + "UTILITY_BOMB_NAME", "Remote Bomb");
-            LanguageAPI.Add(prefix + "UTILITY_BOMB_DESCRIPTION", $"Hold to draw a bomb and let go to throw. Explodes on impact for <style=cIsDamage>{100f * StaticValues.bombDamageCoefficient}% damage</style>. While gliding, bombs will drop straight down.");
+            LanguageAPI.Add(prefix + "UTILITY_BOMB_DESCRIPTION", $"<style=cIsUtility>Hold to draw a bomb and let go to throw</style>. Explodes on impact for <style=cIsDamage>{100f * StaticValues.bombDamageCoefficient}% damage</style>. While gliding, bombs will drop straight down.");
 
             LanguageAPI.Add(prefix + "UTILITY_MAG_NAME", "Magnesis");
             LanguageAPI.Add(prefix + "UTILITY_MAG_DESCRIPTION", "Manipulate metallic objects using magnetism.");
@@ -74,16 +71,16 @@ namespace LinkMod.Modules
 
             #region Special
             LanguageAPI.Add(prefix + "SPECIAL_MIPHA_NAME", "Mipha's Grace");
-            LanguageAPI.Add(prefix + "SPECIAL_MIPHA_DESCRIPTION", "When your hearts run out, call on the Champion Mipha to bring you back to life. Usable once per stage.");
+            LanguageAPI.Add(prefix + "SPECIAL_MIPHA_DESCRIPTION", "When your hearts run out, call on the Champion Mipha to " + $"<style=cIsUtility>bring you back to life</style>. Usable once per stage.");
 
             LanguageAPI.Add(prefix + "SPECIAL_DARUK_NAME", "Daruk's Protection");
-            LanguageAPI.Add(prefix + "SPECIAL_DARUK_DESCRIPTION", "Call on the Champion Daruk to enforce your defenses. The next attack is automatically deflected. Cooldown begins after attack deflection.");
+            LanguageAPI.Add(prefix + "SPECIAL_DARUK_DESCRIPTION", "Call on the Champion Daruk to " + $"<style=cIsUtility>enforce your defenses</style>. The next attack is automatically deflected. Cooldown begins after attack deflection.");
 
             LanguageAPI.Add(prefix + "SPECIAL_REVALI_NAME", "Revali's Gale");
-            LanguageAPI.Add(prefix + "SPECIAL_REVALI_DESCRIPTION", "Call on the Champion Revali and soar into the sky, dealing a small amount of damage and pushing back enemies around you.");
+            LanguageAPI.Add(prefix + "SPECIAL_REVALI_DESCRIPTION", "Call on the Champion Revali and " + $"<style=cIsUtility>soar into the sky</style>, dealing " + $"<style=cIsDamage>{100f * StaticValues.revaliDamageCoefficient}% damage</style> and pushing back enemies around you.");
 
             LanguageAPI.Add(prefix + "SPECIAL_URBOSA_NAME", "Urbosa's Fury");
-            LanguageAPI.Add(prefix + "SPECIAL_URBOSA_DESCRIPTION", "Call on the Champion Urbosa to summon powerful lightning and damage your foes.");
+            LanguageAPI.Add(prefix + "SPECIAL_URBOSA_DESCRIPTION", "Call on the Champion Urbosa to " + $"<style=cIsUtility>summon powerful lightning</style>, dealing " + $"<style=cIsDamage>{100f * StaticValues.urbosaDamageCoefficient}% damage</style> and " + $"<style=cIsHealth>shocking enemies for 2 seconds</style>.");
             #endregion
 
             #region Achievements            
@@ -133,9 +130,9 @@ namespace LinkMod.Modules
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_FASTBOW_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, kill 3 enemies with a single Great Eagle Bow shot");
 
             LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: Max Pain");
-            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, kill 3 enemies with your bow without touching the ground");
+            LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, kill 3 enemies with your Falcon Bow without touching the ground");
             LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_ACHIEVEMENT_ID_NAME", "Link: Max Pain");
-            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, kill 3 enemies with your bow without touching the ground");
+            LanguageAPI.Add("ACHIEVEMENT_ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_ACHIEVEMENT_ID_DESCRIPTION", "As Link, kill 3 enemies with your Falcon Bow without touching the ground");
 
             LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_SPEEDRUN_UNLOCKABLE_ACHIEVEMENT_NAME", "Link: Speedrunner");
             LanguageAPI.Add("ACHIEVEMENT_LINK_BODY_SPEEDRUN_UNLOCKABLE_ACHIEVEMENT_DESCRIPTION", "As Link, beat the game within 30 minutes");

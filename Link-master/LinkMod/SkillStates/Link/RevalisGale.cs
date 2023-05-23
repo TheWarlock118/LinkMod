@@ -7,7 +7,7 @@ namespace LinkMod.SkillStates
 {
     public class RevalisGale : BaseSkillState
     {
-        public static float damageCoefficient = 16f;
+        public static float damageCoefficient = Modules.StaticValues.revaliDamageCoefficient;
         public static float procCoefficient = 1f;
         public static float baseDuration = 0.5f;
         public static float throwForce = 80f;       
@@ -37,7 +37,7 @@ namespace LinkMod.SkillStates
             new BlastAttack
             {
                 attacker = base.characterBody.gameObject,
-                baseDamage = this.damageStat * 0.5f,
+                baseDamage = this.damageStat * RevalisGale.damageCoefficient,
                 baseForce = 5000f,
                 bonusForce = Vector3.zero,
                 attackerFiltering = AttackerFiltering.NeverHitSelf,
@@ -49,14 +49,14 @@ namespace LinkMod.SkillStates
                 position = characterBody.corePosition,
                 procChainMask = default(ProcChainMask),
                 procCoefficient = 1f,
-                radius = 10f,
+                radius = 20f,
                 losType = BlastAttack.LoSType.NearestHit,
                 teamIndex = base.characterBody.teamComponent.teamIndex
             }.Fire();
 
             CharacterMotor characterMotor = this.characterBody.characterMotor;
             characterMotor.Motor.ForceUnground();
-            characterMotor.ApplyForce(Vector3.up * 4000f * (this.characterBody.rigidbody.mass / 100f), true, false);            
+            characterMotor.ApplyForce(Vector3.up * 6000f * (this.characterBody.rigidbody.mass / 100f), true, false);            
         }
 
         public override void OnExit()
