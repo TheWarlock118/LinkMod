@@ -5122,7 +5122,7 @@ localScale = new Vector3(1.75085F, 1.75085F, 1.75085F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplaySawmerang"),
-childName = "Root",
+childName = "Head",
 localPos = new Vector3(0F, -1.7606F, -0.9431F),
 localAngles = new Vector3(0F, 0F, 0F),
 localScale = new Vector3(0.1F, 0.1F, 0.1F),
@@ -5241,7 +5241,7 @@ localScale = new Vector3(-0.00191F, -0.00191F, -0.00148F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.AttackSpeedAndMoveSpeed,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5250,9 +5250,9 @@ localScale = new Vector3(-0.00191F, -0.00191F, -0.00148F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayCoffee"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
+childName = "Leg_1_L",
+localPos = new Vector3(-0.00022F, -0.00005F, -0.00102F),
+localAngles = new Vector3(358.614F, 176.1062F, 90.94106F),
 localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                             limbMask = LimbFlags.None
                         }
@@ -5262,7 +5262,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.BearVoid,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5271,10 +5271,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayBearVoid"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_2",
+localPos = new Vector3(-0.00002F, -0.00205F, -0.00004F),
+localAngles = new Vector3(81.19864F, 273.4605F, 3.92819F),
+localScale = new Vector3(0.00301F, 0.00301F, 0.00301F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5283,7 +5283,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.BleedOnHitVoid,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5292,10 +5292,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayTriTipVoid"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_2",
+localPos = new Vector3(-0.00363F, -0.00023F, 0.00225F),
+localAngles = new Vector3(9.14773F, 306.9309F, 162.7443F),
+localScale = new Vector3(-0.00532F, -0.00532F, -0.00532F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5304,7 +5304,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.ChainLightningVoid,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5313,10 +5313,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayUkuleleVoid"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_2",
+localPos = new Vector3(-0.00032F, -0.00185F, 0.00002F),
+localAngles = new Vector3(286.6041F, 88.5617F, 151.7254F),
+localScale = new Vector3(-0.00569F, -0.00569F, -0.00569F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5325,7 +5325,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.CloverVoid,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5334,10 +5334,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayCloverVoid"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_2",
+localPos = new Vector3(-0.00088F, 0.00166F, -0.00061F),
+localAngles = new Vector3(13.79218F, 179.8981F, 359.7485F),
+localScale = new Vector3(0.0022F, 0.00228F, 0.0022F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5346,7 +5346,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.CritDamage,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5356,9 +5356,9 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayLaserSight"),
 childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+localPos = new Vector3(-0.00058F, 0.00004F, -0.00017F),
+localAngles = new Vector3(333.3669F, 38.70263F, 67.23852F),
+localScale = new Vector3(0.00048F, 0.00048F, 0.00048F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5367,7 +5367,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.CritGlassesVoid,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5376,10 +5376,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayGlassesVoid"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Head",
+localPos = new Vector3(-0.00058F, 0.00138F, 0F),
+localAngles = new Vector3(274.0444F, 118.1071F, 333.7419F),
+localScale = new Vector3(0.00197F, 0.00186F, 0.00186F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5388,7 +5388,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.ElementalRingVoid,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5397,10 +5397,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayVoidRing"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Wrist_R",
+localPos = new Vector3(0.00125F, 0.00022F, -0.00009F),
+localAngles = new Vector3(358.7645F, 106.3358F, 257.4453F),
+localScale = new Vector3(0.00152F, 0.00152F, 0.00152F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5409,7 +5409,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.LunarSun,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5430,7 +5430,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.LunarSun,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5451,7 +5451,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.EquipmentMagazineVoid,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5460,10 +5460,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayFuelCellVoid"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_1",
+localPos = new Vector3(0.00213F, 0.00107F, -0.0019F),
+localAngles = new Vector3(6.18004F, 277.9501F, 292.5677F),
+localScale = new Vector3(0.00109F, 0.00109F, 0.00109F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5472,7 +5472,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.ExplodeOnDeathVoid,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5481,10 +5481,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayWillowWispVoid"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_1",
+localPos = new Vector3(0.00107F, 0.00061F, -0.00212F),
+localAngles = new Vector3(359.868F, 0.54344F, 85.74317F),
+localScale = new Vector3(0.00039F, 0.00039F, 0.00039F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5493,7 +5493,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.ExtraLifeVoid,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5502,10 +5502,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayHippoVoid"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_1",
+localPos = new Vector3(0.0009F, 0.00208F, 0.00102F),
+localAngles = new Vector3(63.34361F, 111.7035F, 6.38692F),
+localScale = new Vector3(-0.00177F, -0.00177F, -0.00177F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5514,7 +5514,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.FragileDamageBonus,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5523,10 +5523,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayDelicateWatch"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Wrist_R",
+localPos = new Vector3(0.00002F, 0.00007F, 0.00001F),
+localAngles = new Vector3(0.39067F, 265.9609F, 278.2188F),
+localScale = new Vector3(0.0023F, 0.00387F, 0.00317F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5535,7 +5535,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.FreeChest,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5544,10 +5544,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayShippingRequestForm"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_1",
+localPos = new Vector3(0.00121F, -0.00035F, -0.00211F),
+localAngles = new Vector3(8.11174F, 113.7442F, 252.1412F),
+localScale = new Vector3(0.0039F, 0.0039F, 0.0039F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5556,7 +5556,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.HalfAttackSpeedHalfCooldowns,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5566,9 +5566,9 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayLunarShoulderNature"),
 childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+localPos = new Vector3(-0.00004F, 0.0003F, 0.00017F),
+localAngles = new Vector3(296.9232F, 179.5322F, 311.6152F),
+localScale = new Vector3(0.00404F, 0.00404F, 0.00404F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5577,7 +5577,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.HalfSpeedDoubleHealth,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5586,10 +5586,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayLunarShoulderStone"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Arm_1_L",
+localPos = new Vector3(-0.00011F, -0.00022F, -0.00019F),
+localAngles = new Vector3(295.7096F, 176.8642F, 110.464F),
+localScale = new Vector3(0.00517F, 0.00517F, 0.00517F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5598,7 +5598,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.HealingPotion,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5607,10 +5607,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayHealingPotion"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_1",
+localPos = new Vector3(0.00099F, 0.00102F, 0.00175F),
+localAngles = new Vector3(41.1794F, 341.6209F, 100.0668F),
+localScale = new Vector3(0.00034F, 0.00034F, 0.00034F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5619,7 +5619,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.ImmuneToDebuff,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5628,10 +5628,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayRainCoatBelt"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_1",
+localPos = new Vector3(0.00051F, 0.00028F, 0.00031F),
+localAngles = new Vector3(275.3081F, 340.451F, 112.2108F),
+localScale = new Vector3(0.01134F, 0.00909F, 0.00834F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5640,7 +5640,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.MinorConstructOnKill,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5649,10 +5649,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayDefenseNucleus"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_2",
+localPos = new Vector3(-0.00414F, -0.00234F, -0.00459F),
+localAngles = new Vector3(77.80402F, 217.4886F, 310.7868F),
+localScale = new Vector3(0.34879F, 0.34879F, 0.34879F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5661,7 +5661,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.MissileVoid,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5670,10 +5670,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayMissileLauncherVoid"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_2",
+localPos = new Vector3(-0.00479F, 0.00007F, -0.00263F),
+localAngles = new Vector3(280.3456F, 66.67075F, 6.73252F),
+localScale = new Vector3(0.00075F, 0.00075F, 0.00075F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5682,7 +5682,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.MoreMissile,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5691,9 +5691,9 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayICBM"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
+childName = "Spine_2",
+localPos = new Vector3(-0.00079F, -0.00161F, -0.00037F),
+localAngles = new Vector3(309.6678F, 307.1359F, 104.2177F),
 localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                             limbMask = LimbFlags.None
                         }
@@ -5703,7 +5703,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.MoveSpeedOnKill,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5712,10 +5712,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayGrappleHook"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_1",
+localPos = new Vector3(0.001F, -0.00104F, -0.00123F),
+localAngles = new Vector3(354.8669F, 354.6142F, 79.05666F),
+localScale = new Vector3(0.00116F, 0.00116F, 0.00116F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5725,7 +5725,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.MushroomVoid,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5734,10 +5734,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayMushroomVoid"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Ankle_R",
+localPos = new Vector3(0.00171F, -0.00025F, 0.00019F),
+localAngles = new Vector3(352.4758F, 192.9588F, 203.6024F),
+localScale = new Vector3(0.00043F, 0.00043F, 0.00043F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5746,7 +5746,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.OutOfCombatArmor,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5755,9 +5755,9 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayOddlyShapedOpal"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
+childName = "Spine_2",
+localPos = new Vector3(-0.0015F, 0.00131F, 0.00003F),
+localAngles = new Vector3(67.64236F, 90.15549F, 183.0891F),
 localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                             limbMask = LimbFlags.None
                         }
@@ -5767,7 +5767,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.PermanentDebuffOnHit,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5776,10 +5776,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayScorpion"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_1",
+localPos = new Vector3(0.00135F, -0.00103F, -0.00034F),
+localAngles = new Vector3(278.3848F, 111.7765F, 344.8164F),
+localScale = new Vector3(0.00899F, 0.00899F, 0.00899F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5788,7 +5788,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.PrimarySkillShuriken,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5797,9 +5797,9 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayShuriken"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
+childName = "Wrist_R",
+localPos = new Vector3(0.0004F, 0.00015F, 0.00042F),
+localAngles = new Vector3(346.3761F, 2.02263F, 345.6077F),
 localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                             limbMask = LimbFlags.None
                         }
@@ -5809,7 +5809,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.RandomEquipmentTrigger,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5818,9 +5818,9 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayBottledChaos"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
+childName = "Spine_1",
+localPos = new Vector3(0.00231F, -0.00021F, 0.00242F),
+localAngles = new Vector3(353.062F, 342.0303F, 89.63073F),
 localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                             limbMask = LimbFlags.None
                         }
@@ -5830,7 +5830,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.RandomlyLunar,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5839,10 +5839,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayDomino"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_2",
+localPos = new Vector3(-0.00644F, -0.00191F, -0.00234F),
+localAngles = new Vector3(348.979F, 261.4951F, 10.25595F),
+localScale = new Vector3(1.12851F, 1.12851F, 1.12851F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5851,7 +5851,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.RegeneratingScrap,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5860,9 +5860,9 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayRegeneratingScrap"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
+childName = "Spine_1",
+localPos = new Vector3(0.00047F, -0.0007F, 0.00103F),
+localAngles = new Vector3(297.6038F, 212.7115F, 236.4136F),
 localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                             limbMask = LimbFlags.None
                         }
@@ -5872,7 +5872,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.SlowOnHitVoid,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5881,10 +5881,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayBaubleVoid"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_2",
+localPos = new Vector3(0.00326F, 0.00496F, 0.00087F),
+localAngles = new Vector3(6.95573F, 4.92211F, 95.55271F),
+localScale = new Vector3(0.00608F, 0.00608F, 0.00608F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5893,7 +5893,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.StrengthenBurn,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5902,10 +5902,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayGasTank"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_1",
+localPos = new Vector3(0.00125F, -0.00021F, -0.00185F),
+localAngles = new Vector3(16.27512F, 15.98508F, 89.9665F),
+localScale = new Vector3(0.00112F, 0.00112F, 0.00112F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5914,7 +5914,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.TreasureCacheVoid,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5923,10 +5923,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayKeyVoid"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_1",
+localPos = new Vector3(0.00071F, 0.00107F, 0.00164F),
+localAngles = new Vector3(57.85221F, 351.5668F, 179.0171F),
+localScale = new Vector3(0.00532F, 0.00532F, 0.00532F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5935,7 +5935,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Items.VoidMegaCrabItem,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5944,9 +5944,9 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayMegaCrabItem"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
+childName = "Spine_1",
+localPos = new Vector3(0.00122F, 0.00125F, 0F),
+localAngles = new Vector3(277.7285F, 80.47313F, 8.49707F),
 localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                             limbMask = LimbFlags.None
                         }
@@ -5956,7 +5956,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Equipment.BossHunter,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5977,7 +5977,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Equipment.BossHunter,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5986,10 +5986,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayBlunderbuss"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_2",
+localPos = new Vector3(-0.0051F, -0.00315F, -0.00484F),
+localAngles = new Vector3(19.65068F, 88.34724F, 5.44067F),
+localScale = new Vector3(0.64005F, 0.64005F, 0.64005F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5998,7 +5998,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Equipment.BossHunterConsumed,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -6007,40 +6007,41 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayTricornUsed"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Head",
+localPos = new Vector3(-0.00189F, 0.00033F, -0.00015F),
+localAngles = new Vector3(286.9469F, 97.02748F, 351.0573F),
+localScale = new Vector3(0.0076F, 0.00703F, 0.0074F),
                             limbMask = LimbFlags.None
                         }
                     }
                 }
             });
 
-            itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
-            {
-                keyAsset = RoR2Content.Equipment.Scanner,
-                displayRuleGroup = new DisplayRuleGroup
-                {
-                    rules = new ItemDisplayRule[]
-                    {
-                        new ItemDisplayRule
-                        {
-                            ruleType = ItemDisplayRuleType.ParentedPrefab,
-                            followerPrefab = ItemDisplays.LoadDisplay("DisplayEliteMendingAntlers"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
-                            limbMask = LimbFlags.None
-                        }
-                    }
-                }
-            });
+            // TODO: Find what keyAsset to use            
+//            itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
+//            {
+//                keyAsset = DLC1Content.Items.CritDamage,
+//                displayRuleGroup = new DisplayRuleGroup
+//                {
+//                    rules = new ItemDisplayRule[]
+//                    {
+//                        new ItemDisplayRule
+//                        {
+//                            ruleType = ItemDisplayRuleType.ParentedPrefab,
+//                            followerPrefab = ItemDisplays.LoadDisplay("DisplayEliteMendingAntlers"),
+//childName = "Arm_1_R",
+//localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
+//localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
+//localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+//                            limbMask = LimbFlags.None
+//                        }
+//                    }
+//                }
+//            });
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Equipment.EliteVoidEquipment,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -6049,40 +6050,41 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayAffixVoid"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Head",
+localPos = new Vector3(-0.00043F, 0.00092F, 0F),
+localAngles = new Vector3(351.1231F, 89.82127F, 2.34557F),
+localScale = new Vector3(0.00143F, 0.00143F, 0.00143F),
                             limbMask = LimbFlags.None
                         }
                     }
                 }
             });
 
-            itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
-            {
-                keyAsset = RoR2Content.Equipment.Scanner,
-                displayRuleGroup = new DisplayRuleGroup
-                {
-                    rules = new ItemDisplayRule[]
-                    {
-                        new ItemDisplayRule
-                        {
-                            ruleType = ItemDisplayRuleType.ParentedPrefab,
-                            followerPrefab = ItemDisplays.LoadDisplay("DisplayIrradiatingLaser"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
-                            limbMask = LimbFlags.None
-                        }
-                    }
-                }
-            });
+            // TODO: Find correct keyAsset
+//            itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
+//            {
+//                keyAsset = DLC1Content.Equipment.,
+//                displayRuleGroup = new DisplayRuleGroup
+//                {
+//                    rules = new ItemDisplayRule[]
+//                    {
+//                        new ItemDisplayRule
+//                        {
+//                            ruleType = ItemDisplayRuleType.ParentedPrefab,
+//                            followerPrefab = ItemDisplays.LoadDisplay("DisplayIrradiatingLaser"),
+//childName = "Arm_1_R",
+//localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
+//localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
+//localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+//                            limbMask = LimbFlags.None
+//                        }
+//                    }
+//                }
+//            });
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Equipment.LunarPortalOnUse,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -6091,10 +6093,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayLunarPortalOnUse"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Spine_2",
+localPos = new Vector3(-0.00523F, -0.00147F, -0.00514F),
+localAngles = new Vector3(280.157F, 37.81123F, 60.46198F),
+localScale = new Vector3(0.5018F, 0.5018F, 0.5018F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -6103,7 +6105,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Equipment.Molotov,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -6112,9 +6114,9 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayMolotov"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
+childName = "Spine_1",
+localPos = new Vector3(0.00157F, 0.00139F, 0.00162F),
+localAngles = new Vector3(40.78915F, 340.5419F, 98.40808F),
 localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                             limbMask = LimbFlags.None
                         }
@@ -6124,7 +6126,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Equipment.MultiShopCard,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -6133,9 +6135,9 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayExecutiveCard"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
+childName = "Spine_1",
+localPos = new Vector3(0.00119F, 0.00036F, -0.00181F),
+localAngles = new Vector3(350.0431F, 102.8576F, 291.0072F),
 localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                             limbMask = LimbFlags.None
                         }
@@ -6145,7 +6147,7 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = RoR2Content.Equipment.Scanner,
+                keyAsset = DLC1Content.Equipment.VendingMachine,
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -6154,9 +6156,9 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayVendingMachine"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
+childName = "Spine_1",
+localPos = new Vector3(0.00118F, 0.00158F, -0.00219F),
+localAngles = new Vector3(66.80531F, 264.9326F, 355.8302F),
 localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                             limbMask = LimbFlags.None
                         }
