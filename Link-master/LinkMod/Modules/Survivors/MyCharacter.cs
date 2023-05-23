@@ -5104,7 +5104,7 @@ localScale = new Vector3(0.0028F, 0.0028F, 0.0028F),
 childName = "Head",
 localPos = new Vector3(0F, 0F, 0.00489F),
 localAngles = new Vector3(0F, 0F, 0F),
-localScale = new Vector3(1.75085F, 1.75085F, 1.75085F),
+localScale = new Vector3(0.91016F, 0.91016F, 0.91016F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -5121,11 +5121,11 @@ localScale = new Vector3(1.75085F, 1.75085F, 1.75085F),
                         new ItemDisplayRule
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
-                            followerPrefab = ItemDisplays.LoadDisplay("DisplaySawmerang"),
+                            followerPrefab = ItemDisplays.LoadDisplay("DisplaySawmerangFollower"),
 childName = "Head",
-localPos = new Vector3(0F, -1.7606F, -0.9431F),
-localAngles = new Vector3(0F, 0F, 0F),
-localScale = new Vector3(0.1F, 0.1F, 0.1F),
+localPos = new Vector3(0.00022F, -0.0048F, 0.00586F),
+localAngles = new Vector3(358.4698F, 88.18073F, 290.429F),
+localScale = new Vector3(-0.00148F, -0.00148F, -0.00148F),
                             limbMask = LimbFlags.None
                         }
                     }

@@ -44,9 +44,8 @@ namespace LinkMod.Modules
         {
             if (itemDisplayPrefabs.ContainsKey(name.ToLower()))
             {
-                if (itemDisplayPrefabs[name.ToLower()]) return itemDisplayPrefabs[name.ToLower()];
-            }
-
+                if (itemDisplayPrefabs[name.ToLower()]) return itemDisplayPrefabs[name.ToLower()];                
+            }            
             return null;
         }
     }
