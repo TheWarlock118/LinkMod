@@ -14,6 +14,8 @@ namespace LinkMod.Modules
 
         internal const float bowDamageCoefficient = 0.9f;
 
-        internal const float bombDamageCoefficient = 16f;
+        internal const float bombDamageCoefficient = 8f;
+
+        internal const float bombArrowDamageCoefficient = 4f;
     }
 }

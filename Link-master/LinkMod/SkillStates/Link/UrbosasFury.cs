@@ -52,7 +52,7 @@ namespace LinkMod.SkillStates
                 position = characterBody.corePosition,
                 procChainMask = default(ProcChainMask),
                 procCoefficient = this.blastAttackProcCoefficient,
-                radius = 200f,
+                radius = 150f,
                 losType = BlastAttack.LoSType.NearestHit,
                 teamIndex = base.characterBody.teamComponent.teamIndex
             }.Fire();

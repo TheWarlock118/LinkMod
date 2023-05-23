@@ -55,9 +55,9 @@ namespace LinkMod.Modules
             ProjectileImpactExplosion bombImpactExplosion = bombPrefab.GetComponent<ProjectileImpactExplosion>();
             InitializeImpactExplosion(bombImpactExplosion);
 
-            bombImpactExplosion.blastRadius = 6f;
+            bombImpactExplosion.blastRadius = 8f;
             bombImpactExplosion.destroyOnEnemy = false;
-            bombImpactExplosion.blastDamageCoefficient = 8f;
+            bombImpactExplosion.blastDamageCoefficient = Modules.StaticValues.bombDamageCoefficient;            
             bombImpactExplosion.bonusBlastForce = new Vector3(5000f, 5000f, 5000f);
             bombImpactExplosion.falloffModel = BlastAttack.FalloffModel.Linear;
             bombImpactExplosion.lifetime = 24f;
@@ -87,9 +87,9 @@ namespace LinkMod.Modules
             ProjectileImpactExplosion bombArrowImpactExplosion = bombArrowPrefab.GetComponent<ProjectileImpactExplosion>();
             InitializeImpactExplosion(bombArrowImpactExplosion);
 
-            bombArrowImpactExplosion.blastRadius = 4f;
-            bombArrowImpactExplosion.destroyOnEnemy = true;
-            bombArrowImpactExplosion.blastDamageCoefficient = 16f;
+            bombArrowImpactExplosion.blastRadius = 8f;
+            bombArrowImpactExplosion.destroyOnEnemy = false;
+            bombArrowImpactExplosion.blastDamageCoefficient = Modules.StaticValues.bombArrowDamageCoefficient;
             bombArrowImpactExplosion.bonusBlastForce = new Vector3(5000f, 5000f, 5000f);
             bombArrowImpactExplosion.falloffModel = BlastAttack.FalloffModel.Linear;
             bombArrowImpactExplosion.lifetime = 24f;

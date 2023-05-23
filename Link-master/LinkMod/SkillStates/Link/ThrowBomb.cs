@@ -7,7 +7,7 @@ namespace LinkMod.SkillStates
 {
     public class ThrowBomb : BaseSkillState
     {
-        public static float damageCoefficient = 8f;
+        public static float damageCoefficient = 1f; // Bomb itself should have no damage. All damage comes from explosion
         public static float procCoefficient = 1f;
         public static float baseDuration = 0.65f;
         public static float throwForce = 50f;

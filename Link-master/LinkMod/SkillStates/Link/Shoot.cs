@@ -8,7 +8,7 @@ namespace LinkMod.SkillStates
 {
     public class Shoot : BaseSkillState
     {
-        public static float damageCoefficient = Modules.StaticValues.bowDamageCoefficient;
+        public static float damageCoefficient = 1;
         public static float procCoefficient = 1f;
         public static float baseDuration = 1.5f;
         public static float force = 30f;
@@ -30,8 +30,7 @@ namespace LinkMod.SkillStates
             this.fireTime = 0.2f * this.duration;
             base.characterBody.SetAimTimer(1000000f);
             this.muzzleString = "Muzzle";
-            this.timer = 0f;
-            Shoot.damageCoefficient = Modules.StaticValues.bowDamageCoefficient;
+            this.timer = 0f;            
             Shoot.force = 30f;
             string[] sounds = { "Bow_Draw0", "Bow_Draw1", "Bow_Draw2", "Bow_Draw3", "Bow_Draw4", "Bow_Draw5" };
             Util.PlaySound(sounds[Random.Range(0, 5)], base.gameObject);
