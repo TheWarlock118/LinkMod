@@ -58,7 +58,7 @@ namespace LinkMod.Modules
             bombImpactExplosion.blastRadius = 8f;
             bombImpactExplosion.destroyOnEnemy = false;
             bombImpactExplosion.blastDamageCoefficient = Modules.StaticValues.bombDamageCoefficient;
-            bombImpactExplosion.blastAttackerFiltering = AttackerFiltering.AlwaysHit;
+            bombImpactExplosion.blastAttackerFiltering = AttackerFiltering.AlwaysHitSelf;            
             bombImpactExplosion.bonusBlastForce = new Vector3(5000f, 5000f, 5000f);
             bombImpactExplosion.falloffModel = BlastAttack.FalloffModel.Linear;
             bombImpactExplosion.lifetime = 24f;
@@ -66,11 +66,11 @@ namespace LinkMod.Modules
             bombImpactExplosion.explosionEffect = Modules.Assets.bombExplosionEffect;
             bombImpactExplosion.explosionSoundString = "BombExplode";            
             bombImpactExplosion.timerAfterImpact = true;
-            bombImpactExplosion.lifetimeAfterImpact = 0.001f;
+            bombImpactExplosion.lifetimeAfterImpact = 0.001f;            
 
             ProjectileController bombController = bombPrefab.GetComponent<ProjectileController>();
-            if (Modules.Assets.mainAssetBundle.LoadAsset<GameObject>("LinkBombRound") != null) bombController.ghostPrefab = CreateGhostPrefab("LinkBombRound");
-            bombController.startSound = "";
+            if (Modules.Assets.mainAssetBundle.LoadAsset<GameObject>("LinkBombRound") != null) bombController.ghostPrefab = CreateGhostPrefab("LinkBombRound");            
+            bombController.startSound = "";            
         }
         
         private static void CreateArrow()
@@ -91,11 +91,15 @@ namespace LinkMod.Modules
             bombArrowImpactExplosion.blastRadius = 8f;
             bombArrowImpactExplosion.destroyOnEnemy = false;
             bombArrowImpactExplosion.blastDamageCoefficient = Modules.StaticValues.bombArrowDamageCoefficient;
+            bombArrowImpactExplosion.blastAttackerFiltering = AttackerFiltering.AlwaysHitSelf;
             bombArrowImpactExplosion.bonusBlastForce = new Vector3(5000f, 5000f, 5000f);
             bombArrowImpactExplosion.falloffModel = BlastAttack.FalloffModel.Linear;
             bombArrowImpactExplosion.lifetime = 24f;
             bombArrowImpactExplosion.impactEffect = Modules.Assets.bombArrowExplosionEffect;
-            bombArrowImpactExplosion.explosionEffect = Modules.Assets.bombArrowExplosionEffect;
+            bombArrowImpactExplosion.explosionEffect = Modules.Assets.bombArrowExplosionEffect;            
+
+            // Try this?
+            // bombArrowImpactExplosion.lifetimeExpiredSound = new NetworkSoundEventDef();
             bombArrowImpactExplosion.explosionSoundString = "BombArrow_Explosion";
             bombArrowImpactExplosion.timerAfterImpact = true;
             bombArrowImpactExplosion.lifetimeAfterImpact = 0.00001f;

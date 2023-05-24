@@ -9,7 +9,7 @@ Please check known issues first!
 Also be aware that I am unlikely to add any more skins than are already included. 
 Due to the nature of BOTW's assets, adding new skins is incredibly time-consuming and tedious, and if I add any more, it will be further down the road, when I am feeling particularly masochistic.
 
-[![](https://cdn.discordapp.com/attachments/1099804589684969593/1103858994172411945/Risk_of_Rain_2_Screenshot_2023.05.04_-_18.38.40.40.png)]()
+[![](https://cdn.discordapp.com/attachments/1099804589684969593/1110724735056216074/Risk_of_Rain_2_Screenshot_2023.05.23_-_17.22.53.87.png)]()
 
 | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837409102942339/Bow.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837408461193217/Shielding.png) |
 |-|-|
@@ -29,31 +29,31 @@ TheWarlock117 - Everything
 ### Passive
 | Skill | | Description |
 |:-|-|------|
-| Paraglider | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804887358914630/Paraglider.png) | An item that you received from the king on the Great Plateau. It allows you to sail through the sky. Hold space while you're in the air to use it. |
+| Paraglider | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804887358914630/Paraglider.png) | An item that you received from the king on the Great Plateau. It allows you to sail through the sky.`Hold space while you're in the air to use it`. |
 
 ### Primary
 | Skill | | Description |
 |:-|-|------|
-| The Master Sword | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804836582658168/MasterSword.png) | The legendary sword that seals the darkness. Swing forward for `500%` damage. |
+| The Master Sword | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804836582658168/MasterSword.png) | The legendary sword that seals the darkness. Swing forward for `200%` damage. At over `90%` health, fire a sword beam for `100%` damage. |
 
 ### Secondary
 | Skill | | Description | Cooldown |
 |:-|-|------|-|
 | Hylian Shield | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1103354683235516517/HylianShieldIcon.png) | A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it. Hold to block all damage from the front. Can attack with your sword while blocking. | None |
-| Royal Guard Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804748112212088/RoyalGuardBow.png) | Loose an arrow for `90%` damage | 1s |
-| Great Eagle Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804714373222501/GreatEagleBow.png) | Loose three arrows at once, each dealing `30%` damage | 2s |
-| Falcon Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804708685750292/FalconBow.png) | Loose a hasty arrow for `45%` damage. The specially engineered bowstring allows for faster drawing and a short cooldown. | 0.5s |
+| Falcon Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804708685750292/FalconBow.png) | Loose a hasty fire arrow for `45%` fire damage. The specially engineered bowstring allows for faster drawing and a short cooldown. | 0.5s |
+| Great Eagle Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804714373222501/GreatEagleBow.png) | Loose three ice arrows at once, each dealing `30%` damage and freezing enemies for 2 seconds. | 5s |
+| Royal Guard Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804748112212088/RoyalGuardBow.png) | Loose a bomb arrow, which explodes to fling enemies and deal `400%` damage | 4s |
 
 ### Utility
 | Skill | | Description | Cooldown |
 |:-|-|------|-|
-| Remote Bomb | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804877707812974/RemoteBomb.png) | Hold to draw a bomb and let go to throw. Explodes on impact for `1600%` damage. While gliding, bombs will drop straight down. | 6s |
+| Remote Bomb | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804877707812974/RemoteBomb.png) | Hold to draw a bomb and let go to throw. Explodes on impact to fling enemies and deal `400%` damage. While gliding, bombs will drop straight down. | 6s |
 
 ### Special
 | Skill | | Description | Cooldown |
 |:-|-|------|-|
-| Urbosa's Fury | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804902382899220/UrbosasFury.png) | Call on the Champion Urbosa to summon powerful lightning and damage your foes. | 12s |
-| Revali's Gale | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804910859599965/RevalisGale.png) | Call on the Champion Revali and soar into the sky, dealing a small amount of damage and pushing back enemies around you. | 8s |
+| Urbosa's Fury | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804902382899220/UrbosasFury.png) | Call on the Champion Urbosa to summon powerful lightning, dealing `400%` damage and shocking enemies for 2 seconds. | 12s |
+| Revali's Gale | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804910859599965/RevalisGale.png) | Call on the Champion Revali and soar into the sky, dealing `50%` damage and pushing back enemies around you. | 8s |
 | Daruk's Protection | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804924352663662/DaruksProtection.png) | Call on the Champion Daruk to enforce your defenses. The next attack is automatically deflected. Cooldown begins after attack deflection. | 24s |
 | Mipha's Grace | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804935039754360/MiphasGrace.png) | When your hearts run out, call on the Champion Mipha to bring you back to life. Usable once per stage. | 1/Stage |
 
@@ -70,10 +70,30 @@ TheWarlock117 - Everything
 - Some sounds don't play for non-host players in Multiplayer
 
 ## Future Plans
-- Add item displays for SOTV items
 - Other Sheikah Slate abilities (Cryonis, Magnesis, Stasis) as alternate utilities
 ___
 ## Changelog
+`1.1.0`
+- Added most SOTV item displays.
+- Fixed bug with Sawmerang not being consumed on pick-up caused by faulty item display
+- Falcon Bow now shoots Fire Arrows
+- Great Eagle Bow now shoots Ice Arrows
+- Royal Guard Bow now shoots Bomb Arrows
+- Bow Order changed (Royal, Eagle, Falcon) to (Falcon, Eagle, Royal)
+- Link: Triple Threat now unlocks Royal Guard Bow instead of Falcon Bow
+- Bomb and Bomb Arrows now fling enemies
+- Urbosa's Fury now shocks enemies
+- Added new Skin: Birthday Suit
+- Added new Achievement: Speedrunner, which unlocks Birthday Suit skin
+- Raised Revali's Gale height
+- Master Sword damage: 500% -> 200%
+- Sword Beam damage: 250% -> 100%
+- Bomb damage: 1600% -> 400%
+- Urbosa's Fury damage: 800% -> 400%
+- Royal Guard Bow cooldown: 1s -> 4s
+- Great Eagle Bow cooldown: 2s -> 5s
+- Damage now properly represented in all tokens
+
 `1.0.2`
 - Fixed bug with Link: Triple Threat not properly triggering (Thanks to SkyBlueNinja for letting me know!)
 - Revali's Gale is now unaffected by movement speed and should properly work in multiplayer (Thanks to SkyBlueNinja again!)

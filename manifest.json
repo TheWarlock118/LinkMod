@@ -1,6 +1,6 @@
 {
     "name": "Link",
-    "version_number": "1.0.2",
+    "version_number": "1.1.0",
     "website_url": "https://github.com/TheWarlock118/LinkMod",
     "description": "Adds Link from The Legend of Zelda: Breath of the Wild as a playable character.",
     "dependencies": [

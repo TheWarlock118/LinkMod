@@ -57,7 +57,7 @@ namespace LinkMod.Modules
 
             #region Utility
             LanguageAPI.Add(prefix + "UTILITY_BOMB_NAME", "Remote Bomb");
-            LanguageAPI.Add(prefix + "UTILITY_BOMB_DESCRIPTION", $"<style=cIsUtility>Hold to draw a bomb and let go to throw</style>. Explodes on impact for <style=cIsDamage>{100f * StaticValues.bombDamageCoefficient}% damage</style>. While gliding, bombs will drop straight down.");
+            LanguageAPI.Add(prefix + "UTILITY_BOMB_DESCRIPTION", $"<style=cIsUtility>Hold to draw a bomb and let go to throw</style>. Explodes on impact to fling enemies and deal <style=cIsDamage>{100f * StaticValues.bombDamageCoefficient}% damage</style>. While gliding, bombs will drop straight down.");
 
             LanguageAPI.Add(prefix + "UTILITY_MAG_NAME", "Magnesis");
             LanguageAPI.Add(prefix + "UTILITY_MAG_DESCRIPTION", "Manipulate metallic objects using magnetism.");

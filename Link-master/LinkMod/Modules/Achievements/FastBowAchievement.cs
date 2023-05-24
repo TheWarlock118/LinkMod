@@ -63,8 +63,7 @@ namespace LinkMod.Modules.Achievements
             }
 
             private void OnCharacterDeath(DamageReport damageReport)
-            {
-                Log.LogDebug("KillCount = " + killCount.ToString());
+            {                
                 if (killCount == 0)
                     resetDelay = 0f;
 
