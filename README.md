@@ -71,6 +71,8 @@ TheWarlock117 - Everything
 
 ## Future Plans
 - Other Sheikah Slate abilities (Cryonis, Magnesis, Stasis) as alternate utilities
+- Animation masking (If possible)
+- Bomb affecting Link
 ___
 ## Changelog
 `1.1.0`
