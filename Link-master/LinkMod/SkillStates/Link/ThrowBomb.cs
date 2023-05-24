@@ -44,10 +44,7 @@ namespace LinkMod.SkillStates
                 this.isHolding = false;
                 //Util.PlaySound("LinkBombThrow", base.gameObject);
                 if(base.inputBank.jump.down && base.characterMotor.velocity.y < 0f && !base.characterMotor.isGrounded)
-                {
-                    CharacterBody testCharacterBody = new CharacterBody();
-                    testCharacterBody.teamComponent = new TeamComponent();
-                    testCharacterBody.teamComponent.teamIndex = TeamIndex.Monster;
+                {                    
                     if (base.isAuthority)
                     {
                         Ray aimRay = base.GetAimRay();
@@ -55,7 +52,7 @@ namespace LinkMod.SkillStates
                         ProjectileManager.instance.FireProjectile(Modules.Projectiles.bombPrefab,
                             aimRay.origin,
                             aimDown,
-                            testCharacterBody.gameObject,
+                            base.gameObject,
                             ThrowBomb.damageCoefficient * this.damageStat,
                             100f,
                             base.RollCrit(),

@@ -58,9 +58,9 @@ TheWarlock117 - Everything
 | Mipha's Grace | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804935039754360/MiphasGrace.png) | When your hearts run out, call on the Champion Mipha to bring you back to life. Usable once per stage. | 1/Stage |
 
 ### Skins
-|   Hylian Outfit  | Snowquill Outfit |   Gerudo Outfit  |    Wild Outfit   |    Dark Link     | Champion's Tunic |
-|--|--|--|--|--|--|
-| <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1103865066480210010/Hylian.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644397445220/Snowquill.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643919282336/Gerudo.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644607148042/Wild.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643726356521/Dark.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1103865066794778634/Champion.png" width="110" height="195"/> |
+|   Hylian Outfit  | Snowquill Outfit |   Gerudo Outfit  |    Wild Outfit   |    Dark Link     | Birthday Suit | Champion's Tunic |
+|--|--|--|--|--|--|--|
+| <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1103865066480210010/Hylian.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644397445220/Snowquill.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643919282336/Gerudo.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644607148042/Wild.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643726356521/Dark.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1110731174571163740/Naked.png" width="110" height="195"> |  <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1103865066794778634/Champion.png" width="110" height="195"/> |
 
 ## Known Issues
 - Some animations are unsynced in Multiplayer - Bomb Throw, Paraglider, Shielding, etc.
