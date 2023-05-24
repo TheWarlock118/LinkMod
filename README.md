@@ -75,6 +75,9 @@ TheWarlock117 - Everything
 - Bomb affecting Link
 ___
 ## Changelog
+`1.1.1`
+- Reset the R2API dependencies (I'm too dumb to do it properly and I've been coding all day)
+
 `1.1.0`
 - Added most SOTV item displays.
 - Fixed bug with Sawmerang not being consumed on pick-up caused by faulty item display
