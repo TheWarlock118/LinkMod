@@ -9,7 +9,7 @@ Please check known issues first!
 Also be aware that I am unlikely to add any more skins than are already included. 
 Due to the nature of BOTW's assets, adding new skins is incredibly time-consuming and tedious, and if I add any more, it will be further down the road, when I am feeling particularly masochistic.
 
-[![](https://cdn.discordapp.com/attachments/1099804589684969593/1110724735056216074/Risk_of_Rain_2_Screenshot_2023.05.23_-_17.22.53.87.png)]()
+[![](https://cdn.discordapp.com/attachments/1099804589684969593/1100724735056216074/Risk_of_Rain_2_Screenshot_2023.05.23_-_17.22.53.87.png)]()
 
 | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837409102942339/Bow.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837408461193217/Shielding.png) |
 |-|-|
@@ -39,7 +39,7 @@ TheWarlock117 - Everything
 ### Secondary
 | Skill | | Description | Cooldown |
 |:-|-|------|-|
-| Hylian Shield | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1103354683235516517/HylianShieldIcon.png) | A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it. Hold to block all damage from the front. Can attack with your sword while blocking. | None |
+| Hylian Shield | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1003354683235516517/HylianShieldIcon.png) | A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it. Hold to block all damage from the front. Can attack with your sword while blocking. | None |
 | Falcon Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804708685750292/FalconBow.png) | Loose a hasty fire arrow for `45%` fire damage. The specially engineered bowstring allows for faster drawing and a short cooldown. | 0.5s |
 | Great Eagle Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804714373222501/GreatEagleBow.png) | Loose three ice arrows at once, each dealing `30%` damage and freezing enemies for 2 seconds. | 5s |
 | Royal Guard Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804748112212088/RoyalGuardBow.png) | Loose a bomb arrow, which explodes to fling enemies and deal `400%` damage | 4s |
@@ -58,9 +58,9 @@ TheWarlock117 - Everything
 | Mipha's Grace | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804935039754360/MiphasGrace.png) | When your hearts run out, call on the Champion Mipha to bring you back to life. Usable once per stage. | 1/Stage |
 
 ### Skins
-|   Hylian Outfit  | Snowquill Outfit |   Gerudo Outfit  |    Wild Outfit   |    Dark Link     | Birthday Suit | Champion's Tunic |
+|   Hylian Outfit  | Snowquill Outfit |   Gerudo Outfit  |    Wild Outfit   |    Dark Link     |  Birthday Suit   | Champion's Tunic |
 |--|--|--|--|--|--|--|
-| <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1103865066480210010/Hylian.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644397445220/Snowquill.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643919282336/Gerudo.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644607148042/Wild.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643726356521/Dark.png" width="110" height="195"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1110731174571163740/Naked.png" width="110" height="195"> |  <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1103865066794778634/Champion.png" width="110" height="195"/> |
+| <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1003865066480210010/Hylian.png" width="100" height="177"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644397445220/Snowquill.png" width="100" height="177"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643919282336/Gerudo.png" width="100" height="177"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644607148042/Wild.png" width="100" height="177"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643726356521/Dark.png" width="100" height="177"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1100731174571163740/Naked.png" width="100" height="177"> |  <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1003865066794778634/Champion.png" width="100" height="177"/> |
 
 ## Known Issues
 - Some animations are unsynced in Multiplayer - Bomb Throw, Paraglider, Shielding, etc.
