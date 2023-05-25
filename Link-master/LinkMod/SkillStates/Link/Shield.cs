@@ -78,6 +78,11 @@ namespace LinkMod.SkillStates
             this.timer += Time.fixedDeltaTime;
             if (!(base.inputBank.jump.down || base.characterMotor.velocity.y < 0f))
             {
+                if(base.inputBank.skill3.down || base.inputBank.skill4.down)
+                {
+                    MyOnExit();
+                    return;
+                }
                 if (base.inputBank.skill2.down)
                 {                    
                     base.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Slow80.buffIndex, 0.1f);
