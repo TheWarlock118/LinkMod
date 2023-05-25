@@ -255,7 +255,7 @@ namespace LinkMod.Modules.Survivors
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.Stasis)),
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,
-                baseRechargeInterval = 10f,
+                baseRechargeInterval = 15f,
                 beginSkillCooldownOnSkillEnd = true,
                 canceledFromSprinting = false,
                 forceSprintDuringState = false,

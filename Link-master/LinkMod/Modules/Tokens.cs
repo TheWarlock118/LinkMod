@@ -63,10 +63,10 @@ namespace LinkMod.Modules
             LanguageAPI.Add(prefix + "UTILITY_MAG_DESCRIPTION", $"Hold for up to <style=cIsHealth>3 seconds</style> to <style=cIsUtility>magnetise enemies and draw them in</style>. Magnetised enemies are <style=cIsHealth>crippled</style>, reducing enemy armor by <style=cIsDamage>20</style> and movement speed by <style=cIsDamage>50%</style>.");
 
             LanguageAPI.Add(prefix + "UTILITY_STAS_NAME", "Stasis");
-            LanguageAPI.Add(prefix + "UTILITY_STAS_DESCRIPTION", $"<style=cIsUtility>Release a blast which freezes all nearby enemies</style> for <style=cIsHealth>3 seconds</style>.");
+            LanguageAPI.Add(prefix + "UTILITY_STAS_DESCRIPTION", $"<style=cIsUtility>Pause time on yourself</style> for <style=cIsDamage>5 seconds</style>, <style=cIsHealth>freezing and regenerating half of your health</style>.");
 
             LanguageAPI.Add(prefix + "UTILITY_CRY_NAME", "Cryonis");
-            LanguageAPI.Add(prefix + "UTILITY_CRY_DESCRIPTION", $"<style=cIsUtility>Create a pillar of ice</style>, which deals <style=cIsDamage>{100f * StaticValues.cryonisDamageCoefficient}% damage</style> and <style=cIsHealth>freezing on contact</style>.");
+            LanguageAPI.Add(prefix + "UTILITY_CRY_DESCRIPTION", $"<style=cIsUtility>Create a circle of ice pillars</style>, <style=cIsHealth>freezing enemies within the circle</style> and dealing <style=cIsDamage>{100f * StaticValues.cryonisDamageCoefficient}% damage</style> on contact.");
             #endregion
 
             #region Special
