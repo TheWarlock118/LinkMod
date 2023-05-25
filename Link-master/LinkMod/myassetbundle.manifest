@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3857784399
+CRC: 1940000911
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6972422cd8529e065b54057731ff9471
+    Hash: ad453b9636b05e527997e319769ce160
   TypeTreeHash:
     serializedVersion: 2
     Hash: 84319299fcd0178f8edc4dff3fc0bc6d
@@ -80,6 +80,7 @@ Assets:
 - Assets/LinkAssets/FBXs/LinkFinalAnimationHylianSet/LinkFinalAnimationHylianSet.fbx
 - Assets/LinkAssets/DarukProtection.fbx
 - Assets/LinkAssets/Link Mats/link_head_alb.png
+- Assets/LinkAssets/Anims/WaistUp.mask
 - Assets/LinkAssets/Prefabs/mdlLinkDark.prefab
 - Assets/LinkAssets/Prefabs/mdlLinkDarkDisplay.prefab
 - Assets/LinkAssets/Prefabs/mdlLinkGerudoDisplay.prefab
@@ -123,6 +124,7 @@ Assets:
 - Assets/LinkAssets/FBXs/LinkFinalAnimationDarkSet/Meshes/Arm_160__Mt_Upper_160.mesh
 - Assets/LinkAssets/Prefabs/LinkBombRound.prefab
 - Assets/LinkAssets/Anims/animDaruk.controller
+- Assets/LinkAssets/Anims/WaistDown.mask
 - Assets/LinkAssets/RevaliGaleAnimation.fbx
 - Assets/LinkAssets/Icons/BowOfLight.png
 - Assets/LinkAssets/Link Mats/Dark/Mt_DarkEyes.mat
@@ -132,6 +134,7 @@ Assets:
 - Assets/LinkAssets/Link Mats/Mt_armor_upper.mat
 - Assets/LinkAssets/Link Mats/Mt_Eyelashes.mat
 - Assets/LinkAssets/Icons/RemoteBomb.png
+- Assets/LinkAssets/Anims/animLink.controller
 - Assets/LinkAssets/Prefabs/mdlLinkHylianDisplay.prefab
 - Assets/LinkAssets/Icons/LinkIcon.png
 - Assets/LinkAssets/Prefabs/mdlLinkGerudo.prefab
