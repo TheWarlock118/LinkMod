@@ -41,6 +41,7 @@ namespace LinkMod.SkillStates
                 {
                     this.hasFired = true;
                     Ray aimRay = base.GetAimRay();
+                    Util.PlaySound("Cryonis_Make", base.characterBody.gameObject);
                     new BlastAttack
                     {
                         attacker = base.characterBody.gameObject,

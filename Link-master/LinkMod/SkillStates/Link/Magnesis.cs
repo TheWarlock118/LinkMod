@@ -10,9 +10,12 @@ namespace LinkMod.SkillStates
         public static float baseDuration = 0.65f;
         public static float radius = 30f;
 
-        private float duration;        
+        private float duration;
+        private float soundStopwatch;
         private float timer;
-        private bool hasFired;        
+        private bool hasFired;
+
+        private uint magnesisSoundLoopID;
 
         public override void OnEnter()
         {
@@ -36,7 +39,7 @@ namespace LinkMod.SkillStates
             radialForce.forceMagnitude = -5000f;
             radialForce.tetherVfxOrigin = null;
 
-            
+            this.soundStopwatch = 0f;
         }
 
         public override void OnExit()
@@ -45,6 +48,8 @@ namespace LinkMod.SkillStates
             RadialForce radialForce = base.characterBody.gameObject.GetComponent<RadialForce>();
             radialForce.radius = 0f;
             radialForce.forceMagnitude = 0f;
+
+            Util.PlaySound("Magnesis_End", base.characterBody.gameObject);
         }
 
         private void Fire()
@@ -65,9 +70,16 @@ namespace LinkMod.SkillStates
             base.FixedUpdate();
             this.Fire();
             this.timer += Time.fixedDeltaTime;
-
+            
             if (base.inputBank.skill3.down && timer < 3f)
             {
+                if (this.soundStopwatch <= 0f)
+                {
+                    magnesisSoundLoopID = Util.PlaySound("Magnesis_Start", base.characterBody.gameObject);
+                    soundStopwatch = 2f;
+                }
+                soundStopwatch -= Time.fixedDeltaTime;
+
                 new BlastAttack
                 {
                     attacker = base.characterBody.gameObject,
@@ -90,6 +102,7 @@ namespace LinkMod.SkillStates
             }
             else
             {
+                AkSoundEngine.StopPlayingID(magnesisSoundLoopID);
                 this.outer.SetNextStateToMain();
                 return;
             }

@@ -21,12 +21,17 @@ namespace LinkMod.SkillStates
             base.OnEnter();
             this.duration = Stasis.baseDuration;
             this.timer = 0f;            
-            base.characterBody.SetAimTimer(2f);            
+            base.characterBody.SetAimTimer(2f);
+            Util.PlaySound("Stasis_Start", base.characterBody.gameObject);
+            base.characterBody.characterMotor.useGravity = false;
+            base.characterBody.characterMotor.velocity = Vector3.zero;
         }
 
         public override void OnExit()
         {
-            base.OnExit();            
+            base.OnExit();
+            Util.PlaySound("Stasis_End", base.characterBody.gameObject);
+            base.characterBody.characterMotor.useGravity = true;
         }
 
         private void Fire()
@@ -55,7 +60,7 @@ namespace LinkMod.SkillStates
                         losType = BlastAttack.LoSType.NearestHit,
                         teamIndex = base.characterBody.teamComponent.teamIndex
                     }.Fire();
-
+                    Util.PlaySound("Stasis_Timer_Full", base.characterBody.gameObject);
                     this.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Immune.buffIndex, 5f);
                     this.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.CrocoRegen.buffIndex, 5f);
                 }
