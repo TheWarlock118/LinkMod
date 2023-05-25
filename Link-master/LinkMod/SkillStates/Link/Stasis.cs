@@ -25,7 +25,7 @@ namespace LinkMod.SkillStates
             Util.PlaySound("Stasis_Start", base.characterBody.gameObject);
             base.characterBody.characterMotor.useGravity = false;
             base.characterBody.characterMotor.velocity = Vector3.zero;
-            base.characterBody.RemoveBuff(Modules.Buffs.shieldBuff);
+            base.characterBody.ClearTimedBuffs(Modules.Buffs.shieldBuff);
         }
 
         public override void OnExit()
