@@ -50,27 +50,26 @@ namespace LinkMod.Modules
 
         private static void CreateBomb()
         {
-            bombPrefab = CloneProjectilePrefab("CommandoGrenadeProjectile", "LinkBombProjectile");
-
+            bombPrefab = CloneProjectilePrefab("CommandoGrenadeProjectile", "LinkBombProjectile");                                  
             ProjectileImpactExplosion bombImpactExplosion = bombPrefab.GetComponent<ProjectileImpactExplosion>();
             InitializeImpactExplosion(bombImpactExplosion);
 
             bombImpactExplosion.blastRadius = 8f;
             bombImpactExplosion.destroyOnEnemy = false;
             bombImpactExplosion.blastDamageCoefficient = Modules.StaticValues.bombDamageCoefficient;
-            bombImpactExplosion.blastAttackerFiltering = AttackerFiltering.AlwaysHitSelf;            
-            bombImpactExplosion.bonusBlastForce = new Vector3(5000f, 5000f, 5000f);
+            bombImpactExplosion.blastAttackerFiltering = AttackerFiltering.AlwaysHitSelf;
+            bombImpactExplosion.bonusBlastForce = new Vector3(0f, 5000f, 0f);
             bombImpactExplosion.falloffModel = BlastAttack.FalloffModel.Linear;
             bombImpactExplosion.lifetime = 24f;
             bombImpactExplosion.impactEffect = Modules.Assets.bombExplosionEffect;
             bombImpactExplosion.explosionEffect = Modules.Assets.bombExplosionEffect;
-            bombImpactExplosion.explosionSoundString = "BombExplode";            
+            bombImpactExplosion.explosionSoundString = "BombExplode";
             bombImpactExplosion.timerAfterImpact = true;
             bombImpactExplosion.lifetimeAfterImpact = 0.001f;            
 
-            ProjectileController bombController = bombPrefab.GetComponent<ProjectileController>();
+            ProjectileController bombController = bombPrefab.GetComponent<ProjectileController>();            
             if (Modules.Assets.mainAssetBundle.LoadAsset<GameObject>("LinkBombRound") != null) bombController.ghostPrefab = CreateGhostPrefab("LinkBombRound");            
-            bombController.startSound = "";            
+            bombController.startSound = "";     
         }
         
         private static void CreateArrow()
@@ -92,7 +91,7 @@ namespace LinkMod.Modules
             bombArrowImpactExplosion.destroyOnEnemy = false;
             bombArrowImpactExplosion.blastDamageCoefficient = Modules.StaticValues.bombArrowDamageCoefficient;
             bombArrowImpactExplosion.blastAttackerFiltering = AttackerFiltering.AlwaysHitSelf;
-            bombArrowImpactExplosion.bonusBlastForce = new Vector3(5000f, 5000f, 5000f);
+            bombArrowImpactExplosion.bonusBlastForce = new Vector3(0f, 5000f, 0f);
             bombArrowImpactExplosion.falloffModel = BlastAttack.FalloffModel.Linear;
             bombArrowImpactExplosion.lifetime = 24f;
             bombArrowImpactExplosion.impactEffect = Modules.Assets.bombArrowExplosionEffect;
@@ -218,6 +217,23 @@ namespace LinkMod.Modules
             projectileImpactExplosion.timerAfterImpact = false;
 
             projectileImpactExplosion.GetComponent<ProjectileDamage>().damageType = DamageType.Generic;
+        }
+
+        private static void InitializeProjectileExplosion(ProjectileExplosion projectileExplosion)
+        {
+            projectileExplosion.blastDamageCoefficient = 1f;
+            projectileExplosion.blastProcCoefficient = 1f;
+            projectileExplosion.blastRadius = 1f;
+            projectileExplosion.bonusBlastForce = Vector3.zero;
+            projectileExplosion.childrenCount = 0;
+            projectileExplosion.childrenDamageCoefficient = 0f;
+            projectileExplosion.childrenProjectilePrefab = null;                        
+            projectileExplosion.explosionSoundString = "";
+            projectileExplosion.falloffModel = RoR2.BlastAttack.FalloffModel.None;
+            projectileExplosion.fireChildren = false;
+            projectileExplosion.explosionEffect = null;            
+
+            projectileExplosion.GetComponent<ProjectileDamage>().damageType = DamageType.Generic;
         }
 
         private static GameObject CreateGhostPrefab(string ghostName)

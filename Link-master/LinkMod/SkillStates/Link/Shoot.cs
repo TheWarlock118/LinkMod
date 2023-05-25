@@ -56,7 +56,8 @@ namespace LinkMod.SkillStates
                 if (base.isAuthority)
                 {
                     Ray aimRay = base.GetAimRay();
-
+                    ProjectileImpactExplosion bombArrowImpactExplosion = Modules.Projectiles.bombArrowPrefab.GetComponent<ProjectileImpactExplosion>();
+                    bombArrowImpactExplosion.bonusBlastForce = new Vector3(Random.Range(-5000, 5000), 5000, Random.Range(-5000, 5000));
                     ProjectileManager.instance.FireProjectile(Modules.Projectiles.bombArrowPrefab,
                         aimRay.origin,
                         Util.QuaternionSafeLookRotation(aimRay.direction),

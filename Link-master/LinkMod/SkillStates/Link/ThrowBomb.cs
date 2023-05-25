@@ -1,6 +1,8 @@
 ﻿using EntityStates;
+using EntityStates.VagrantMonster;
 using RoR2;
 using RoR2.Projectile;
+using R2API;
 using UnityEngine;
 
 namespace LinkMod.SkillStates
@@ -38,13 +40,19 @@ namespace LinkMod.SkillStates
             this.outer.SetNextStateToMain();
             base.OnExit();
             base.characterBody.SetAimTimer(1f);
+
+            
             if (!this.hasFired)
             {
                 this.hasFired = true;
                 this.isHolding = false;
                 //Util.PlaySound("LinkBombThrow", base.gameObject);
-                if(base.inputBank.jump.down && base.characterMotor.velocity.y < 0f && !base.characterMotor.isGrounded)
-                {                    
+
+                ProjectileImpactExplosion bombImpactExplosion = Modules.Projectiles.bombPrefab.GetComponent<ProjectileImpactExplosion>();
+                bombImpactExplosion.bonusBlastForce = new Vector3(Random.Range(-5000, 5000), 5000, Random.Range(-5000, 5000));                
+                if (base.inputBank.jump.down && base.characterMotor.velocity.y < 0f && !base.characterMotor.isGrounded)
+                {
+                    // Drop bomb straight down
                     if (base.isAuthority)
                     {
                         Ray aimRay = base.GetAimRay();
@@ -63,8 +71,7 @@ namespace LinkMod.SkillStates
                 }
                 else if (base.isAuthority)
                 {
-                    Ray aimRay = base.GetAimRay();
-
+                    Ray aimRay = base.GetAimRay();                   
                     ProjectileManager.instance.FireProjectile(Modules.Projectiles.bombPrefab,
                         aimRay.origin,
                         Util.QuaternionSafeLookRotation(aimRay.direction),
