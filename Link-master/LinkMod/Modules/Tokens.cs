@@ -66,7 +66,7 @@ namespace LinkMod.Modules
             LanguageAPI.Add(prefix + "UTILITY_STAS_DESCRIPTION", $"<style=cIsUtility>Release a blast which freezes all nearby enemies</style> for <style=cIsHealth>3 seconds</style>.");
 
             LanguageAPI.Add(prefix + "UTILITY_CRY_NAME", "Cryonis");
-            LanguageAPI.Add(prefix + "UTILITY_CRY_DESCRIPTION", "Create a pillar of ice.");
+            LanguageAPI.Add(prefix + "UTILITY_CRY_DESCRIPTION", $"<style=cIsUtility>Create a pillar of ice</style>, which deals <style=cIsDamage>{100f * StaticValues.cryonisDamageCoefficient}% damage</style> and <style=cIsHealth>freezing on contact</style>.");
             #endregion
 
             #region Special

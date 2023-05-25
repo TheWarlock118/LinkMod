@@ -294,8 +294,32 @@ namespace LinkMod.Modules.Survivors
                 stockToConsume = 1,
             });
 
-            SkillDef[] utilities = { bombSkillDef, stasisSkillDef, magnesisSkillDef};
-            UnlockableDef[] utilityUnlockables = { null, null, null };
+            SkillDef cryonisSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
+            {
+                skillName = prefix + "_LINK_BODY_UTILITY_CRY_NAME",
+                skillNameToken = prefix + "_LINK_BODY_UTILITY_CRY_NAME",
+                skillDescriptionToken = prefix + "_LINK_BODY_UTILITY_CRY_DESCRIPTION",
+                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("Cryonis"),
+                activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.Cryonis)),
+                activationStateMachineName = "Slide",
+                baseMaxStock = 1,
+                baseRechargeInterval = 2f,
+                beginSkillCooldownOnSkillEnd = true,
+                canceledFromSprinting = false,
+                forceSprintDuringState = false,
+                fullRestockOnAssign = true,
+                interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
+                resetCooldownTimerOnUse = false,
+                isCombatSkill = true,
+                mustKeyPress = true,
+                cancelSprintingOnActivation = true,
+                rechargeStock = 1,
+                requiredStock = 1,
+                stockToConsume = 1,
+            });
+
+            SkillDef[] utilities = { bombSkillDef, magnesisSkillDef, stasisSkillDef,  cryonisSkillDef};
+            UnlockableDef[] utilityUnlockables = { null, null, null, null };
             Modules.Skills.AddUtilitySkills(bodyPrefab, utilityUnlockables, utilities);
             #endregion
 

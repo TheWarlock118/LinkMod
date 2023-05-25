@@ -18,8 +18,10 @@ namespace LinkMod.Modules
 
         internal const float bombArrowDamageCoefficient = 4f;
 
-        internal const float urbosaDamageCoefficient = 4f;
+        internal const float urbosaDamageCoefficient = 4f;       
 
         internal const float revaliDamageCoefficient = 0.5f;
+
+        internal const float cryonisDamageCoefficient = 2.5f;
     }
 }

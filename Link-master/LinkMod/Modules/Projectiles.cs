@@ -13,7 +13,7 @@ namespace LinkMod.Modules
         internal static GameObject arrowPrefab;
         internal static GameObject bombArrowPrefab;
         internal static GameObject fireArrowPrefab;
-        internal static GameObject iceArrowPrefab;
+        internal static GameObject iceArrowPrefab;        
 
         internal static GameObject miphaPrefab;
         internal static GameObject urbosaPrefab;
