@@ -39,7 +39,7 @@ TheWarlock117 - Everything
 ### Secondary
 | Skill | | Description | Cooldown |
 |:-|-|------|-|
-| Hylian Shield | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1003354683235516517/HylianShieldIcon.png) | A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it. Hold to block all damage from the front. Can attack with your sword while blocking. | None |
+| Hylian Shield | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1103354683235516517/HylianShieldIcon.png) | A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it. Hold to block all damage from the front. Can attack with your sword while blocking. | None |
 | Falcon Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804708685750292/FalconBow.png) | Loose a hasty fire arrow for `45%` fire damage. The specially engineered bowstring allows for faster drawing and a short cooldown. | 0.5s |
 | Great Eagle Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804714373222501/GreatEagleBow.png) | Loose three ice arrows at once, each dealing `30%` damage and freezing enemies for 2 seconds. | 5s |
 | Royal Guard Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804748112212088/RoyalGuardBow.png) | Loose a bomb arrow, which explodes to fling enemies and deal `400%` damage | 4s |
@@ -48,7 +48,7 @@ TheWarlock117 - Everything
 | Skill | | Description | Cooldown |
 |:-|-|------|-|
 | Remote Bomb | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804877707812974/RemoteBomb.png) | Hold to draw a bomb and let go to throw. Explodes on impact to fling enemies and deal `400%` damage. While gliding, bombs will drop straight down. | 6s |
-| Magnesis | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1111450057988907058/Magnesis.png) | Hold to draw a bomb and let go to throw. Explodes on impact to fling enemies and deal `400%` damage. While gliding, bombs will drop straight down. | 10s |
+| Magnesis | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1111450057988907058/Magnesis.png) | Hold for up to 3 seconds to draw enemies in. Magnetised enemies are crippled, reducing enemy armor by 20 and movement speed by 50%. | 10s |
 | Stasis | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1111450058349608970/Stasis.png) | Pause time on yourself for 5 seconds, freezing and regenerating half of your health. | 30s |
 | Cryonis | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1111450058689363988/Cryonis.png) | Create a circle of ice pillars, freezing enemies within the circle and dealing `250%` damage on contact. | 15s |
 
