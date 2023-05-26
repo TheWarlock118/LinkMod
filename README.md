@@ -48,6 +48,9 @@ TheWarlock117 - Everything
 | Skill | | Description | Cooldown |
 |:-|-|------|-|
 | Remote Bomb | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804877707812974/RemoteBomb.png) | Hold to draw a bomb and let go to throw. Explodes on impact to fling enemies and deal `400%` damage. While gliding, bombs will drop straight down. | 6s |
+| Magnesis | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1111450057988907058/Magnesis.png) | Hold to draw a bomb and let go to throw. Explodes on impact to fling enemies and deal `400%` damage. While gliding, bombs will drop straight down. | 10s |
+| Stasis | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1111450058349608970/Stasis.png) | Pause time on yourself for 5 seconds, freezing and regenerating half of your health. | 30s |
+| Cryonis | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1111450058689363988/Cryonis.png) | Create a circle of ice pillars, freezing enemies within the circle and dealing `250%` damage on contact. | 15s |
 
 ### Special
 | Skill | | Description | Cooldown |
@@ -65,16 +68,22 @@ TheWarlock117 - Everything
 ## Known Issues
 - Some animations are unsynced in Multiplayer - Bomb Throw, Paraglider, Shielding, etc.
 - Mipha's Grace stock not correctly showing used for non-host players in Multiplayer - should be visual only
-- Animation masking issues (Legs not moving while attacking, etc.) - Seems to be limited by BOTW's animations and model skeleton
 - Some particles are unreasonably large (Teleporter particles, etc.). I believe this is caused by the model's initial scale, and as it takes an incredible amount of tedious work to get the model ready in-game, is likely not be patched anytime soon
 - Some sounds don't play for non-host players in Multiplayer
 
 ## Future Plans
-- Other Sheikah Slate abilities (Cryonis, Magnesis, Stasis) as alternate utilities
-- Animation masking (If possible)
-- Bomb affecting Link
+- Multiplayer testing of Sheikah slate runes (Stasis, Magnesis, Cryonis)
+- Achievements for unlocking Sheikah runes
 ___
 ## Changelog
+`1.2.0`
+- Added a few more SOTV item displays (Still missing Tricorn ghost hat, Lunar Sun Head, maybe others?)
+- Added Stasis Utility ability
+- Added Magnesis Utility ability
+- Added Cryonis Utility ability
+- Bomb affects Link and pushes in random direction
+- Animation masking (No more sliding - leg animations now independent of upper body)
+
 `1.1.1`
 - Reset the R2API dependencies (I'm too dumb to do it properly and I've been coding all day)
 

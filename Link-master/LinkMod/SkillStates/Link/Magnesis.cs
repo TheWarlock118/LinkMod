@@ -76,29 +76,30 @@ namespace LinkMod.SkillStates
                 if (this.soundStopwatch <= 0f)
                 {
                     magnesisSoundLoopID = Util.PlaySound("Magnesis_Start", base.characterBody.gameObject);
+                    new BlastAttack
+                    {
+                        attacker = base.characterBody.gameObject,
+                        baseDamage = 0f,
+                        baseForce = 0f,
+                        bonusForce = Vector3.zero,
+                        attackerFiltering = AttackerFiltering.NeverHitSelf,
+                        crit = base.characterBody.RollCrit(),
+                        damageColorIndex = DamageColorIndex.Item,
+                        damageType = DamageType.CrippleOnHit,
+                        falloffModel = BlastAttack.FalloffModel.None,
+                        inflictor = base.gameObject,
+                        position = characterBody.corePosition,
+                        procChainMask = default(ProcChainMask),
+                        procCoefficient = 0.0001f,
+                        radius = Magnesis.radius,
+                        losType = BlastAttack.LoSType.NearestHit,
+                        teamIndex = base.characterBody.teamComponent.teamIndex
+                    }.Fire();
                     soundStopwatch = 2f;
                 }
                 soundStopwatch -= Time.fixedDeltaTime;
 
-                new BlastAttack
-                {
-                    attacker = base.characterBody.gameObject,
-                    baseDamage = 0f,
-                    baseForce = 0f,
-                    bonusForce = Vector3.zero,
-                    attackerFiltering = AttackerFiltering.NeverHitSelf,
-                    crit = base.characterBody.RollCrit(),
-                    damageColorIndex = DamageColorIndex.Item,
-                    damageType = DamageType.CrippleOnHit,
-                    falloffModel = BlastAttack.FalloffModel.None,
-                    inflictor = base.gameObject,
-                    position = characterBody.corePosition,
-                    procChainMask = default(ProcChainMask),
-                    procCoefficient = 0.0001f,
-                    radius = Magnesis.radius,
-                    losType = BlastAttack.LoSType.NearestHit,
-                    teamIndex = base.characterBody.teamComponent.teamIndex
-                }.Fire();                
+                              
             }
             else
             {

@@ -37,7 +37,7 @@ namespace LinkMod.SkillStates
                 base.PlayAnimation("Gesture, Override", "ShieldGuard");
                 Util.PlaySound("Weapon_Shield_Metal_Equip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
                 Util.PlaySound("ShieldGuardUp", base.gameObject);                
-                this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(true);                
+                //this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(true);                
             }
         }
 
@@ -55,7 +55,7 @@ namespace LinkMod.SkillStates
             {
                 Util.PlaySound("Weapon_Shield_Metal_UnEquip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
             }
-            this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(false);
+            //this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(false);
             // base.characterBody.GetComponent<UpdateValues>().isBlocking = false;
         }
 
