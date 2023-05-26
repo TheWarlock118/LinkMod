@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1940000911
+CRC: 1237710387
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ad453b9636b05e527997e319769ce160
+    Hash: 885d18f8688db667d21a9057fa9335cf
   TypeTreeHash:
     serializedVersion: 2
     Hash: 84319299fcd0178f8edc4dff3fc0bc6d
@@ -118,6 +118,7 @@ Assets:
 - Assets/LinkAssets/FBXs/LinkFinalAnimationChampionSet/Meshes/Code_116__Mt_Tunic_116.mesh
 - Assets/LinkAssets/linkArrow.prefab
 - Assets/LinkAssets/Link Mats/Mt_Face.mat
+- Assets/LinkAssets/Anims/NoneMask.mask
 - Assets/LinkAssets/Icons/FireRod.png
 - Assets/LinkAssets/Prefabs/mdlRevali.prefab
 - Assets/LinkAssets/Anims/animMipha.controller

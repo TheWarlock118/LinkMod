@@ -4,6 +4,7 @@ using RoR2.Skills;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace LinkMod.Modules.Survivors
 {
@@ -5479,9 +5480,11 @@ localScale = new Vector3(0.00152F, 0.00152F, 0.00152F),
                 }
             });
 
+
+            // TODO: Find keyAsset
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
-                keyAsset = DLC1Content.Items.LunarSun,
+                keyAsset = Addressables.LoadAssetAsync<ItemDef>("RoR2/DLC1/LunarSun/LunarSun.asset").WaitForCompletion(),
                 displayRuleGroup = new DisplayRuleGroup
                 {
                     rules = new ItemDisplayRule[]
@@ -5511,10 +5514,10 @@ localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
                         {
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplaySunHeadNeck"),
-childName = "Arm_1_R",
-localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
+childName = "Head",
+localPos = new Vector3(0.00123F, -0.00022F, 0F),
+localAngles = new Vector3(13.45911F, 178.2647F, 281.5286F),
+localScale = new Vector3(0.01243F, 0.01243F, 0.01243F),
                             limbMask = LimbFlags.None
                         }
                     }
@@ -6080,36 +6083,35 @@ localScale = new Vector3(0.64005F, 0.64005F, 0.64005F),
                             ruleType = ItemDisplayRuleType.ParentedPrefab,
                             followerPrefab = ItemDisplays.LoadDisplay("DisplayTricornUsed"),
 childName = "Head",
-localPos = new Vector3(-0.00189F, 0.00033F, -0.00015F),
+localPos = new Vector3(-0.00248F, -0.00003F, -0.00006F),
 localAngles = new Vector3(286.9469F, 97.02748F, 351.0573F),
-localScale = new Vector3(0.0076F, 0.00703F, 0.0074F),
+localScale = new Vector3(0.01257F, 0.01143F, 0.01224F),
                             limbMask = LimbFlags.None
                         }
                     }
                 }
             });
-
-            // TODO: Find what keyAsset to use            
-//            itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
-//            {
-//                keyAsset = DLC1Content.Items.CritDamage,
-//                displayRuleGroup = new DisplayRuleGroup
-//                {
-//                    rules = new ItemDisplayRule[]
-//                    {
-//                        new ItemDisplayRule
-//                        {
-//                            ruleType = ItemDisplayRuleType.ParentedPrefab,
-//                            followerPrefab = ItemDisplays.LoadDisplay("DisplayEliteMendingAntlers"),
-//childName = "Arm_1_R",
-//localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-//localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-//localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
-//                            limbMask = LimbFlags.None
-//                        }
-//                    }
-//                }
-//            });
+            
+            itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
+            {
+                keyAsset = Addressables.LoadAssetAsync<EquipmentDef>("RoR2/DLC1/EliteEarth/EliteEarthEquipment.asset").WaitForCompletion(),
+                displayRuleGroup = new DisplayRuleGroup
+                {
+                    rules = new ItemDisplayRule[]
+                    {
+                        new ItemDisplayRule
+                        {
+                            ruleType = ItemDisplayRuleType.ParentedPrefab,
+                            followerPrefab = ItemDisplays.LoadDisplay("DisplayEliteMendingAntlers"),
+childName = "Head",
+localPos = new Vector3(-0.00136F, 0.00122F, 0.00007F),
+localAngles = new Vector3(82.37151F, 198.0776F, 285.8943F),
+localScale = new Vector3(0.00385F, 0.00385F, 0.00385F),
+                            limbMask = LimbFlags.None
+                        }
+                    }
+                }
+            });
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
@@ -6131,28 +6133,27 @@ localScale = new Vector3(0.00143F, 0.00143F, 0.00143F),
                     }
                 }
             });
-
-            // TODO: Find correct keyAsset
-//            itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
-//            {
-//                keyAsset = DLC1Content.Equipment.,
-//                displayRuleGroup = new DisplayRuleGroup
-//                {
-//                    rules = new ItemDisplayRule[]
-//                    {
-//                        new ItemDisplayRule
-//                        {
-//                            ruleType = ItemDisplayRuleType.ParentedPrefab,
-//                            followerPrefab = ItemDisplays.LoadDisplay("DisplayIrradiatingLaser"),
-//childName = "Arm_1_R",
-//localPos = new Vector3(-0.00015F, -0.00016F, -0.00036F),
-//localAngles = new Vector3(331.5351F, 323.3058F, 4.78554F),
-//localScale = new Vector3(0.0018F, 0.0018F, 0.0018F),
-//                            limbMask = LimbFlags.None
-//                        }
-//                    }
-//                }
-//            });
+            
+            itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
+            {
+                keyAsset = LegacyResourcesAPI.Load<EquipmentDef>("EquipmentDefs/IrradiatingLaser"),
+                displayRuleGroup = new DisplayRuleGroup
+                {
+                    rules = new ItemDisplayRule[]
+                    {
+                        new ItemDisplayRule
+                        {
+                            ruleType = ItemDisplayRuleType.ParentedPrefab,
+                            followerPrefab = ItemDisplays.LoadDisplay("DisplayIrradiatingLaser"),
+childName = "Arm_1_R",
+localPos = new Vector3(0.00001F, 0.0005F, -0.00046F),
+localAngles = new Vector3(66.57253F, 354.043F, 18.15818F),
+localScale = new Vector3(0.0012F, 0.0012F, 0.0012F),
+                            limbMask = LimbFlags.None
+                        }
+                    }
+                }
+            });
 
             itemDisplayRules.Add(new ItemDisplayRuleSet.KeyAssetRuleGroup
             {
