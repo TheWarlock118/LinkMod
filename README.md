@@ -82,7 +82,7 @@ ___
 - Added Magnesis Utility ability
 - Added Cryonis Utility ability
 - Bomb affects Link and pushes in random direction
-- Animation masking (No more sliding - leg animations now independent of upper body)
+- Animation masking (No more sliding - leg animations now independent of upper body) 
 
 `1.1.1`
 - Reset the R2API dependencies (I'm too dumb to do it properly and I've been coding all day)
