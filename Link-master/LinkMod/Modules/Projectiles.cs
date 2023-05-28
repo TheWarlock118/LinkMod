@@ -57,8 +57,8 @@ namespace LinkMod.Modules
             bombImpactExplosion.blastRadius = 8f;
             bombImpactExplosion.destroyOnEnemy = false;
             bombImpactExplosion.blastDamageCoefficient = Modules.StaticValues.bombDamageCoefficient;
-            bombImpactExplosion.blastAttackerFiltering = AttackerFiltering.AlwaysHitSelf;
-            bombImpactExplosion.bonusBlastForce = new Vector3(0f, 5000f, 0f);
+            bombImpactExplosion.bonusBlastForce = new Vector3(0f, 1000f, 0f);
+            bombImpactExplosion.blastAttackerFiltering = AttackerFiltering.AlwaysHitSelf;                 
             bombImpactExplosion.falloffModel = BlastAttack.FalloffModel.Linear;
             bombImpactExplosion.lifetime = 24f;
             bombImpactExplosion.impactEffect = Modules.Assets.bombExplosionEffect;
@@ -90,8 +90,8 @@ namespace LinkMod.Modules
             bombArrowImpactExplosion.blastRadius = 8f;
             bombArrowImpactExplosion.destroyOnEnemy = false;
             bombArrowImpactExplosion.blastDamageCoefficient = Modules.StaticValues.bombArrowDamageCoefficient;
-            bombArrowImpactExplosion.blastAttackerFiltering = AttackerFiltering.AlwaysHitSelf;
-            bombArrowImpactExplosion.bonusBlastForce = new Vector3(0f, 5000f, 0f);
+            bombArrowImpactExplosion.bonusBlastForce = new Vector3(0f, 1000f, 0f);
+            bombArrowImpactExplosion.blastAttackerFiltering = AttackerFiltering.AlwaysHitSelf;            
             bombArrowImpactExplosion.falloffModel = BlastAttack.FalloffModel.Linear;
             bombArrowImpactExplosion.lifetime = 24f;
             bombArrowImpactExplosion.impactEffect = Modules.Assets.bombArrowExplosionEffect;

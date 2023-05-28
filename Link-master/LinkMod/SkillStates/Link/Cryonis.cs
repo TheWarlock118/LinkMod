@@ -45,7 +45,7 @@ namespace LinkMod.SkillStates
                     new BlastAttack
                     {
                         attacker = base.characterBody.gameObject,
-                        baseDamage = 0f,
+                        baseDamage = Cryonis.damageCoefficient * this.damageStat,
                         baseForce = 0f,
                         bonusForce = Vector3.zero,
                         attackerFiltering = AttackerFiltering.NeverHitSelf,

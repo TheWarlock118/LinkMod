@@ -47,9 +47,7 @@ namespace LinkMod.SkillStates
                 this.hasFired = true;
                 this.isHolding = false;
                 //Util.PlaySound("LinkBombThrow", base.gameObject);
-
-                ProjectileImpactExplosion bombImpactExplosion = Modules.Projectiles.bombPrefab.GetComponent<ProjectileImpactExplosion>();
-                bombImpactExplosion.bonusBlastForce = new Vector3(Random.Range(-5000, 5000), 5000, Random.Range(-5000, 5000));                
+              
                 if (base.inputBank.jump.down && base.characterMotor.velocity.y < 0f && !base.characterMotor.isGrounded)
                 {
                     // Drop bomb straight down
@@ -62,7 +60,7 @@ namespace LinkMod.SkillStates
                             aimDown,
                             base.gameObject,
                             ThrowBomb.damageCoefficient * this.damageStat,
-                            100f,
+                            1500f,
                             base.RollCrit(),
                             DamageColorIndex.Default,
                             null,
@@ -77,7 +75,7 @@ namespace LinkMod.SkillStates
                         Util.QuaternionSafeLookRotation(aimRay.direction),
                         base.gameObject,
                         ThrowBomb.damageCoefficient * this.damageStat,
-                        100f,
+                        1500f,
                         base.RollCrit(),
                         DamageColorIndex.Default,
                         null,

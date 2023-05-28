@@ -9,7 +9,7 @@ Please check known issues first!
 Also be aware that I am unlikely to add any more skins than are already included. 
 Due to the nature of BOTW's assets, adding new skins is incredibly time-consuming and tedious, and if I add any more, it will be further down the road, when I am feeling particularly masochistic.
 
-[![](https://cdn.discordapp.com/attachments/1099804589684969593/1100724735056216074/Risk_of_Rain_2_Screenshot_2023.05.23_-_17.22.53.87.png)]()
+[![](https://cdn.discordapp.com/attachments/1099804589684969593/1110724735056216074/Risk_of_Rain_2_Screenshot_2023.05.23_-_17.22.53.87.png)]()
 
 | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837409102942339/Bow.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837408461193217/Shielding.png) |
 |-|-|

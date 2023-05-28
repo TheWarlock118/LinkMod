@@ -19,6 +19,7 @@ namespace LinkMod.SkillStates
 
         private float duration;
         private float fireTime;
+        private float arrowSpeed;
         private float timer;
         private bool hasFired;
         private string muzzleString;
@@ -31,7 +32,7 @@ namespace LinkMod.SkillStates
             base.characterBody.SetAimTimer(1000000f);
             this.muzzleString = "Muzzle";
             this.timer = 0f;            
-            Shoot.force = 30f;
+            this.arrowSpeed = 30f;
             string[] sounds = { "Bow_Draw0", "Bow_Draw1", "Bow_Draw2", "Bow_Draw3", "Bow_Draw4", "Bow_Draw5" };
             Util.PlaySound(sounds[Random.Range(0, 5)], base.gameObject);
             // Too annoying
@@ -55,19 +56,17 @@ namespace LinkMod.SkillStates
 
                 if (base.isAuthority)
                 {
-                    Ray aimRay = base.GetAimRay();
-                    ProjectileImpactExplosion bombArrowImpactExplosion = Modules.Projectiles.bombArrowPrefab.GetComponent<ProjectileImpactExplosion>();
-                    bombArrowImpactExplosion.bonusBlastForce = new Vector3(Random.Range(-5000, 5000), 5000, Random.Range(-5000, 5000));
+                    Ray aimRay = base.GetAimRay();                    
                     ProjectileManager.instance.FireProjectile(Modules.Projectiles.bombArrowPrefab,
                         aimRay.origin,
                         Util.QuaternionSafeLookRotation(aimRay.direction),
                         base.gameObject,
                         Shoot.damageCoefficient * this.damageStat,
-                        40f,
+                        1500f,
                         base.RollCrit(),
                         DamageColorIndex.Default,
                         null,
-                        Shoot.force);
+                        this.arrowSpeed);
                 }
 
             }
@@ -82,7 +81,7 @@ namespace LinkMod.SkillStates
             {
                 if (base.fixedAge <= this.duration && base.isAuthority) //The longer the skill is held down, the more damage and force the arrow has
                 {                    
-                    Shoot.force += (this.timer * 5f);
+                    this.arrowSpeed += (this.timer * 5f);
                 }
                 this.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Slow80.buffIndex, 0.1f);                
             }          
