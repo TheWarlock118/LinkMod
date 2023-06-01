@@ -432,8 +432,6 @@ namespace LinkMod.Modules.Survivors
             passSkillLocator.passiveSkill.icon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("Paraglider");            
         }
 
-
-
         internal override void InitializeSkins()
         {
             GameObject model = bodyPrefab.GetComponentInChildren<ModelLocator>().modelTransform.gameObject;
@@ -448,12 +446,7 @@ namespace LinkMod.Modules.Survivors
 
             List<SkinDef> skins = new List<SkinDef>();
 
-            #region DefaultSkin
-            SkinDef defaultSkin = Modules.Skins.CreateSkinDef("Hylian Outfit",
-                Assets.mainAssetBundle.LoadAsset<Sprite>("HylianSkin"),
-                defaultRenderers,                
-                model.gameObject);
-
+            #region gameObjectActivationsForCopying
             // defaultSkin.rendererInfos = Modules.Skins.getRendererMaterials(defaultSkin.rendererInfos, Modules.Materials.CreateHopooMaterial("Mt_armor_upper"));
             // defaultSkin.meshReplacements = Modules.Skins.getMeshReplacements(defaultSkin.rendererInfos, "Metal_001__Mt_Upper_001");
 
@@ -787,6 +780,13 @@ namespace LinkMod.Modules.Survivors
                 },
             };
             */
+            #endregion
+
+            #region DefaultSkin
+            SkinDef defaultSkin = Modules.Skins.CreateSkinDef("Hylian Outfit",
+                Assets.mainAssetBundle.LoadAsset<Sprite>("HylianSkin"),
+                defaultRenderers,                
+                model.gameObject);            
 
             defaultSkin.gameObjectActivations = new SkinDef.GameObjectActivation[]
             {

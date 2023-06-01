@@ -12,8 +12,8 @@ namespace LinkMod.Modules
 
             string desc = "Link is the Hero of Hyrule, weilder of the Triforce of Courage.<color=#CCD3E0>" + Environment.NewLine + Environment.NewLine;
             desc = desc + "< ! > The Master Sword is Link's primary weapon against the forces of evil." + Environment.NewLine + Environment.NewLine;
-            desc = desc + "< ! > His shield allows Link to block projectiles, while his bows allows him to deal high damage at range." + Environment.NewLine + Environment.NewLine;
-            desc = desc + "< ! > Link's Sheikah Bombs allow for high-damage crowd control." + Environment.NewLine + Environment.NewLine;
+            desc = desc + "< ! > His shield allows Link to block damage, while his bows allow him to deal high damage at range with a variety of effects." + Environment.NewLine + Environment.NewLine;
+            desc = desc + "< ! > Link's Sheikah runes allow for a wide variety of utility options." + Environment.NewLine + Environment.NewLine;
             desc = desc + "< ! > Link's Champion Abilities offer extra mobility, protection, high damage, or a second life." + Environment.NewLine + Environment.NewLine;
 
             string outro = "..and so he left for Hyrule, another kingdom saved.";
