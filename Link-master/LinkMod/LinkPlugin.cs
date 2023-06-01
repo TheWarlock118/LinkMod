@@ -29,7 +29,7 @@ namespace LinkMod
     {
         public const string MODUID = "com.TheWarlock117.LinkMod";
         public const string MODNAME = "LinkMod";
-        public const string MODVERSION = "1.2.0";
+        public const string MODVERSION = "1.2.1";
 
         // a prefix for name tokens to prevent conflicts- please capitalize all name tokens for convention
         public const string developerPrefix = "CASEY";
@@ -225,12 +225,12 @@ namespace LinkMod
                 {                    
                     if (skillLocator.GetSkill(SkillSlot.Secondary).cooldownRemaining == skillLocator.GetSkill(SkillSlot.Secondary).baseRechargeInterval) //If bow is not mid cooldown, allow for extreme slowfall
                     {
-                        self.characterMotor.velocity = new Vector3(0f, 0f, 0f);
+                        self.characterMotor.velocity = Vector3.zero;
                     }
                     // Don't need to check recharge interval if using fast bow
                     if (skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_FASTBOW_NAME")
                     {
-                        self.characterMotor.velocity = new Vector3(0f, 0f, 0f);
+                        self.characterMotor.velocity = Vector3.zero;
                     }
                     if (!updateValues.enteredSlowMo)
                     {
@@ -316,13 +316,29 @@ namespace LinkMod
                 // Shield Guarding
                 if (damageInfo.attacker)
                 {
-                    CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();                                                            
-                    if (characterBody.HasBuff(Modules.Buffs.shieldBuff) && updateValues.ShouldBlock(attackerBody.corePosition, 40f))
-                    {                        
-                        damageInfo.damage = 0f;
-                        damageInfo.rejected = true;
-                        updateValues.blockedAttacks += 1;
-                        Util.PlaySound("Guard_" + UnityEngine.Random.Range(0, 3), characterBody.gameObject);
+                    CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
+
+                    // Thanks TheTimesweeper for this!!
+                    // Check if the damage source is the attacker 
+                    if (damageInfo.attacker == damageInfo.inflictor)
+                    {
+                        if (characterBody.HasBuff(Modules.Buffs.shieldBuff) && updateValues.ShouldBlock(attackerBody.corePosition, 40f))
+                        {
+                            damageInfo.damage = 0f;
+                            damageInfo.rejected = true;
+                            updateValues.blockedAttacks += 1;
+                            Util.PlaySound("Guard_" + UnityEngine.Random.Range(0, 3), characterBody.gameObject);
+                        }
+                    }
+                    else if(damageInfo.inflictor != null) // Otherwise block based on inflictor (i.e. projectile)
+                    {
+                        if (characterBody.HasBuff(Modules.Buffs.shieldBuff) && updateValues.ShouldBlock(damageInfo.inflictor.transform.position, 40f))
+                        {
+                            damageInfo.damage = 0f;
+                            damageInfo.rejected = true;
+                            updateValues.blockedAttacks += 1;
+                            Util.PlaySound("Guard_" + UnityEngine.Random.Range(0, 3), characterBody.gameObject);
+                        }
                     }
                 }
             }

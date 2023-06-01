@@ -3,6 +3,8 @@
 - Unlockable alternative skills and skins
 - Multiplayer compatible
 
+Watch a showcase [here](https://youtu.be/wHsy55Ua4JI)!
+
 PM me on Discord @TheWarlock117#6226 with any bugs, complaints, or suggestions!
 
 Please check known issues first!
@@ -21,7 +23,7 @@ Due to the nature of BOTW's assets, adding new skins is incredibly time-consumin
 TheWarlock117 - Everything
 
 ### Acknowledgements
-- Rob & TheTimeSweeper for their incredible Henry Tutorial survivor, on which this is based
+- Rob & TheTimesweeper for their incredible Henry Tutorial survivor, on which this is based
 - Risk of Rain 2 Modding discord for their unending help and patience
 
 ## Skills
@@ -29,7 +31,7 @@ TheWarlock117 - Everything
 ### Passive
 | Skill | | Description |
 |:-|-|------|
-| Paraglider | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804887358914630/Paraglider.png) | An item that you received from the king on the Great Plateau. It allows you to sail through the sky.`Hold space while you're in the air to use it`. |
+| Paraglider | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804887358914630/Paraglider.png) | An item that you received from the king on the Great Plateau. It allows you to sail through the sky.Hold space while you're in the air to use it. |
 
 ### Primary
 | Skill | | Description |
@@ -48,7 +50,7 @@ TheWarlock117 - Everything
 | Skill | | Description | Cooldown |
 |:-|-|------|-|
 | Remote Bomb | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804877707812974/RemoteBomb.png) | Hold to draw a bomb and let go to throw. Explodes on impact to fling enemies and deal `400%` damage. While gliding, bombs will drop straight down. | 6s |
-| Magnesis | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1111450057988907058/Magnesis.png) | Hold for up to 3 seconds to draw enemies in. Magnetised enemies are crippled, reducing enemy armor by 20 and movement speed by 50%. | 10s |
+| Magnesis | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1111450057988907058/Magnesis.png) | Hold for up to 6 seconds to draw enemies in. Magnetised enemies are crippled, reducing enemy armor by 20 and movement speed by 50%. | 10s |
 | Stasis | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1111450058349608970/Stasis.png) | Pause time on yourself for 5 seconds, freezing and regenerating half of your health. | 30s |
 | Cryonis | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1111450058689363988/Cryonis.png) | Create a circle of ice pillars, freezing enemies within the circle and dealing `250%` damage on contact. | 15s |
 
@@ -76,6 +78,14 @@ TheWarlock117 - Everything
 - Achievements for unlocking Sheikah runes
 ___
 ## Changelog
+`1.2.1`
+- Bomb direction now based on distance from target (no longer random)
+- Cryonis now deals 250% damage within the circle as well as on contact
+- Shield now blocks damage based on direction of inflictor (projectile) instead of attackerBody (Thanks TheTimesweeper!)
+- Magnesis max block time 3s -> 6s
+- Can now block with shield while falling (still cancels on jump)
+- Added wind takeoff sound to Revali's Gale
+
 `1.2.0`
 - Added a few more SOTV item displays (Still missing Tricorn ghost hat, Lunar Sun Head, maybe others?)
 - Added Stasis Utility ability

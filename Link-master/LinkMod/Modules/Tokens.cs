@@ -60,7 +60,7 @@ namespace LinkMod.Modules
             LanguageAPI.Add(prefix + "UTILITY_BOMB_DESCRIPTION", $"<style=cIsUtility>Hold to draw a bomb and let go to throw</style>. Explodes on impact to fling enemies and deal <style=cIsDamage>{100f * StaticValues.bombDamageCoefficient}% damage</style>. While gliding, bombs will drop straight down.");
 
             LanguageAPI.Add(prefix + "UTILITY_MAG_NAME", "Magnesis");
-            LanguageAPI.Add(prefix + "UTILITY_MAG_DESCRIPTION", $"Hold for up to <style=cIsHealth>3 seconds</style> to <style=cIsUtility>magnetise enemies and draw them in</style>. Magnetised enemies are <style=cIsHealth>crippled</style>, reducing enemy armor by <style=cIsDamage>20</style> and movement speed by <style=cIsDamage>50%</style>.");
+            LanguageAPI.Add(prefix + "UTILITY_MAG_DESCRIPTION", $"Hold for up to <style=cIsHealth>6 seconds</style> to <style=cIsUtility>magnetise enemies and draw them in</style>. Magnetised enemies are <style=cIsHealth>crippled</style>, reducing enemy armor by <style=cIsDamage>20</style> and movement speed by <style=cIsDamage>50%</style>.");
 
             LanguageAPI.Add(prefix + "UTILITY_STAS_NAME", "Stasis");
             LanguageAPI.Add(prefix + "UTILITY_STAS_DESCRIPTION", $"<style=cIsUtility>Pause time on yourself</style> for <style=cIsDamage>5 seconds</style>, <style=cIsHealth>freezing and regenerating half of your health</style>.");

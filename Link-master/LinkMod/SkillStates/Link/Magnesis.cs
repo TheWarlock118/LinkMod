@@ -71,7 +71,7 @@ namespace LinkMod.SkillStates
             this.Fire();
             this.timer += Time.fixedDeltaTime;
             
-            if (base.inputBank.skill3.down && timer < 3f)
+            if (base.inputBank.skill3.down && timer < 6f)            
             {
                 if (this.soundStopwatch <= 0f)
                 {
@@ -97,9 +97,7 @@ namespace LinkMod.SkillStates
                     }.Fire();
                     soundStopwatch = 2f;
                 }
-                soundStopwatch -= Time.fixedDeltaTime;
-
-                              
+                soundStopwatch -= Time.fixedDeltaTime;                              
             }
             else
             {

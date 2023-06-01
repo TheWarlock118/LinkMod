@@ -51,10 +51,8 @@ namespace LinkMod.SkillStates
             }
             base.characterBody.SetAimTimer(1f);
             base.PlayAnimation("Gesture, Override", "BufferEmpty");
-            if (characterMotor.isGrounded)
-            {
-                Util.PlaySound("Weapon_Shield_Metal_UnEquip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
-            }
+            Util.PlaySound("Weapon_Shield_Metal_UnEquip0" + UnityEngine.Random.Range(0, 2), base.gameObject);            
+
             //this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(false);
             // base.characterBody.GetComponent<UpdateValues>().isBlocking = false;
         }
@@ -76,7 +74,7 @@ namespace LinkMod.SkillStates
 
 
             this.timer += Time.fixedDeltaTime;
-            if (!(base.inputBank.jump.down || base.characterMotor.velocity.y < 0f))
+            if (!base.inputBank.jump.down)
             {
                 if(base.inputBank.skill3.down || base.inputBank.skill4.down)
                 {

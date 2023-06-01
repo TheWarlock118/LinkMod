@@ -75,7 +75,7 @@ namespace LinkMod.SkillStates
             if (!readySoundPlayed)
             {
                 Util.PlaySound("AbilityReady", base.gameObject);
-                // Util.PlaySound("Revali_Wind", base.gameObject);
+                Util.PlaySound("Revali_TakeOff", base.gameObject);                
                 readySoundPlayed = true;
             }
 

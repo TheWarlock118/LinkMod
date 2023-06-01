@@ -35,11 +35,14 @@ namespace LinkMod.Modules.Achievements
         {
             private int killCount;
 
+            private int killsNotCounted;
+
             private float resetDelay;
             public override void OnInstall()
             {
                 base.OnInstall();
                 killCount = 0;
+                killsNotCounted = 0;
                 resetDelay = 0f;
                 GlobalEventManager.onCharacterDeathGlobal += OnCharacterDeath;
                 RoR2Application.onFixedUpdate += OnFixedUpdate;
@@ -57,6 +60,7 @@ namespace LinkMod.Modules.Achievements
                 if (resetDelay >= 0.5f)
                 {
                     killCount = 0;
+                    killsNotCounted = 0;
                     resetDelay = 0f;
                 }
                 else
@@ -69,16 +73,24 @@ namespace LinkMod.Modules.Achievements
                 if (killCount == 0)
                     resetDelay = 0f;
 
-                CharacterBody currentBody = this.serverAchievementTracker.networkUser.GetCurrentBody();              
-                SkillLocator skillLocator = currentBody.GetComponent<SkillLocator>();
+                CharacterBody currentBody = this.serverAchievementTracker.networkUser.GetCurrentBody();                              
                 if (damageReport.damageInfo.damageType.HasFlag(DamageType.Shock5s) && damageReport.attackerBody == currentBody && currentBody.bodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
-                {
+                {                    
                     killCount++;                    
+                }
+                else
+                {
+                    killsNotCounted++;
                 }
                 if (killCount >= 20)
                 {
                     Grant();
                 }
+
+                //Log.LogDebug("Has Shock: " + damageReport.damageInfo.damageType.HasFlag(DamageType.Shock5s).ToString());
+                //Log.LogDebug("Attacker is Link: " + (damageReport.attackerBody == currentBody).ToString());
+                //Log.LogDebug("Kill Count: " + killCount.ToString());
+                //Log.LogDebug("Kills Not Counted: " + killsNotCounted.ToString());
             }
 
             
