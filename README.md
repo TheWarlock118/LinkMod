@@ -85,6 +85,7 @@ TheWarlock117 - Everything
 - Aerial sword attack
 - Separate models for Bomb, Fire, Ice arrows
 - Balancing
+- BOTW effects instead of RoR2 placeholders (Cryonis, Stasis, Daruk's Protection, etc.)
 ___
 ## Changelog
 `1.2.2`
