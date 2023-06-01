@@ -10,15 +10,15 @@ namespace LinkMod.Modules
              + "< ! > Link's Sheikah Runes allow for a wide variety of utility options." + Environment.NewLine + Environment.NewLine
              + "< ! > Link's Champion Abilities offer extra mobility, protection, high damage, or a second life." + Environment.NewLine + Environment.NewLine;
 
-        internal const float swordDamageCoefficient = 2f;
+        internal const float swordDamageCoefficient = 3f;
 
         internal const float bowDamageCoefficient = 0.9f;
 
-        internal const float bombDamageCoefficient = 4f;
+        internal const float bombDamageCoefficient = 5f;
 
         internal const float bombArrowDamageCoefficient = 4f;
 
-        internal const float urbosaDamageCoefficient = 4f;       
+        internal const float urbosaDamageCoefficient = 6f;       
 
         internal const float revaliDamageCoefficient = 0.5f;
 

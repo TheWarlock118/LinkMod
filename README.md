@@ -72,12 +72,30 @@ TheWarlock117 - Everything
 - Mipha's Grace stock not correctly showing used for non-host players in Multiplayer - should be visual only
 - Some particles are unreasonably large (Teleporter particles, etc.). I believe this is caused by the model's initial scale, and as it takes an incredible amount of tedious work to get the model ready in-game, is likely not be patched anytime soon
 - Some sounds don't play for non-host players in Multiplayer
+- Bow slow-mo can be inconsistent (both sound and activation)
+- Stasis doesn't freeze properly when player has invulnerability
 
 ## Future Plans
 - Multiplayer testing of Sheikah slate runes (Stasis, Magnesis, Cryonis)
 - Achievements for unlocking Sheikah runes
+- Spin attack
+- Shield Surfing
+- Strafing animations
+- Aim pitch, yaw animations
+- Aerial sword attack
+- Separate models for Bomb, Fire, Ice arrows
+- Balancing
 ___
 ## Changelog
+`1.2.2`
+- Fire arrow explosion radius 2 -> 4
+- Bomb arrow explosion radius 8 -> 12
+- Bomb explosion radius 8 -> 12
+- Bomb damage 400% -> 500%
+- Urbosa Damage 400% -> 600%
+- Sword damage 200% -> 300%
+- Sword beam damage 100% -> 150%
+
 `1.2.1`
 - Bomb direction now based on distance from target (no longer random)
 - Cryonis now deals 250% damage within the circle as well as on contact

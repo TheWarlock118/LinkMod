@@ -18,6 +18,8 @@ namespace LinkMod.SkillStates
         public static GameObject projectilePrefab;
 
         private float duration;
+        private float arrowAngleOffset = 180f;
+        private float arrowAngleOffsetRadians;
         private float fireTime;
         private float timer;
         private bool hasFired;
@@ -29,14 +31,19 @@ namespace LinkMod.SkillStates
             this.duration = ShootTri.baseDuration;
             this.fireTime = 0.2f * this.duration;
             base.characterBody.SetAimTimer(1000000f);
+
             this.muzzleString = "Muzzle";
             this.timer = 0f;
+
             ShootTri.damageCoefficient = Modules.StaticValues.bowDamageCoefficient / 3;
             ShootTri.force = 31f;
+
             string[] sounds = { "Bow_Draw0", "Bow_Draw1", "Bow_Draw2", "Bow_Draw3", "Bow_Draw4", "Bow_Draw5" };
             Util.PlaySound(sounds[Random.Range(0, 5)], base.gameObject);
+
             // Too annoying
             // Util.PlayAttackSpeedSound("IceArrow_Charge", base.gameObject, 2f);            
+            arrowAngleOffsetRadians = arrowAngleOffset * Mathf.Deg2Rad;
             base.PlayAnimation("Gesture, Override", "BowEquip", "ShootGun.playbackRate", 1.8f);
             base.PlayAnimation("Gesture, Override", "BowDraw", "ShootGun.playbackRate", 1.8f);
         }
@@ -73,7 +80,7 @@ namespace LinkMod.SkillStates
                     Util.PlaySound(sounds[Random.Range(0, 3)], base.gameObject);
 
 
-                    Vector3 arrow2Direction = new Vector3(aimRay.direction.x - 0.1f, aimRay.direction.y, aimRay.direction.z); //Adjusts direction for 2nd arrow to slight right
+                    Vector3 arrow2Direction = Quaternion.Euler(0f, -arrowAngleOffsetRadians, 0f) * aimRay.direction;
                     ProjectileManager.instance.FireProjectile(Modules.Projectiles.iceArrowPrefab, 
                         aimRay.origin,
                         Util.QuaternionSafeLookRotation(arrow2Direction),
@@ -86,7 +93,7 @@ namespace LinkMod.SkillStates
                         ShootTri.force);
                     Util.PlaySound(sounds[Random.Range(0, 3)], base.gameObject);
 
-                    Vector3 arrow3Direction = new Vector3(aimRay.direction.x + 0.1f, arrow2Direction.y, aimRay.direction.z); //Adjusts direction for 3rd to slight left
+                    Vector3 arrow3Direction = Quaternion.Euler(0f, arrowAngleOffsetRadians, 0f) * aimRay.direction;
                     ProjectileManager.instance.FireProjectile(Modules.Projectiles.iceArrowPrefab,
                         aimRay.origin,
                         Util.QuaternionSafeLookRotation(arrow3Direction),

@@ -29,7 +29,7 @@ namespace LinkMod
     {
         public const string MODUID = "com.TheWarlock117.LinkMod";
         public const string MODNAME = "LinkMod";
-        public const string MODVERSION = "1.2.1";
+        public const string MODVERSION = "1.2.2";
 
         // a prefix for name tokens to prevent conflicts- please capitalize all name tokens for convention
         public const string developerPrefix = "CASEY";
@@ -236,7 +236,8 @@ namespace LinkMod
                     {
                         if (Modules.Config.SlowBowSound.Value)
                         {
-                            Util.PlaySound("SlowMotionEnter", self.gameObject);
+                            if(AkSoundEngine.GetGameObjectFromPlayingID(updateValues.slowMotionPlayID) != 0)
+                                Util.PlaySound("SlowMotionEnter", self.gameObject);
                         }
                         updateValues.enteredSlowMo = true;
                     }
