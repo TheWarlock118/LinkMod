@@ -82,7 +82,7 @@ namespace LinkMod.Modules
         
         private static void CreateBombArrow()
         {
-            bombArrowPrefab = CloneProjectilePrefab("MageIceBolt", "LinkBombArrowProjectile");
+            bombArrowPrefab = CloneProjectilePrefab("FireMeatball", "LinkBombArrowProjectile");
                                
             ProjectileImpactExplosion bombArrowImpactExplosion = bombArrowPrefab.GetComponent<ProjectileImpactExplosion>();
             InitializeImpactExplosion(bombArrowImpactExplosion);
@@ -110,7 +110,9 @@ namespace LinkMod.Modules
 
         private static void CreateFireArrow()
         {
-            fireArrowPrefab = CloneProjectilePrefab("MageIceBolt", "LinkFireArrowProjectile");
+            fireArrowPrefab = CloneProjectilePrefab("FireMeatball", "LinkFireArrowProjectile");            
+            if(!fireArrowPrefab.GetComponent<ProjectileImpactExplosion>())
+                fireArrowPrefab.AddComponent<ProjectileImpactExplosion>();
 
             ProjectileImpactExplosion fireArrowImpactExplosion = fireArrowPrefab.GetComponent<ProjectileImpactExplosion>();
             InitializeImpactExplosion(fireArrowImpactExplosion);
@@ -126,13 +128,13 @@ namespace LinkMod.Modules
             fireArrowImpactExplosion.GetComponent<ProjectileDamage>().damageType = DamageType.IgniteOnHit;
 
             ProjectileController arrowController = fireArrowPrefab.GetComponent<ProjectileController>();
-            arrowController.ghostPrefab = CreateGhostPrefab("linkArrow");
+            arrowController.ghostPrefab = CreateGhostPrefab("linkArrow");                       
             arrowController.startSound = "";
         }
 
         private static void CreateIceArrow()
         {
-            iceArrowPrefab = CloneProjectilePrefab("MageIceBolt", "LinkIceArrowProjectile");
+            iceArrowPrefab = CloneProjectilePrefab("FireMeatball", "LinkIceArrowProjectile");
             
             ProjectileImpactExplosion iceArrowImpactExplosion = iceArrowPrefab.GetComponent<ProjectileImpactExplosion>();
             InitializeImpactExplosion(iceArrowImpactExplosion);

@@ -72,8 +72,11 @@ TheWarlock117 - Everything
 - Mipha's Grace stock not correctly showing used for non-host players in Multiplayer - should be visual only
 - Some particles are unreasonably large (Teleporter particles, etc.). I believe this is caused by the model's initial scale, and as it takes an incredible amount of tedious work to get the model ready in-game, is likely not be patched anytime soon
 - Some sounds don't play for non-host players in Multiplayer
-- Bow slow-mo can be inconsistent (both sound and activation)
+- Bow slow-mo can be inconsistent (both sound and activation) 
 - Stasis doesn't freeze properly when player has invulnerability
+- Magnesis pulling doesn't work for non-host players in multiplayer
+- Paraglider buff doesn't work for non-host players in multiplayer
+- Clipping issues with Arrow projectiles
 
 ## Future Plans
 - Multiplayer testing of Sheikah slate runes (Stasis, Magnesis, Cryonis)

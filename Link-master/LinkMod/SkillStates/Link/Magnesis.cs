@@ -45,9 +45,12 @@ namespace LinkMod.SkillStates
         public override void OnExit()
         {
             base.OnExit();
-            RadialForce radialForce = base.characterBody.gameObject.GetComponent<RadialForce>();
-            radialForce.radius = 0f;
-            radialForce.forceMagnitude = 0f;
+            if (base.isAuthority)
+            {
+                RadialForce radialForce = base.characterBody.gameObject.GetComponent<RadialForce>();
+                radialForce.radius = 0f;
+                radialForce.forceMagnitude = 0f;
+            }
 
             Util.PlaySound("Magnesis_End", base.characterBody.gameObject);
         }

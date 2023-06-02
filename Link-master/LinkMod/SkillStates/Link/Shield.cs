@@ -32,13 +32,10 @@ namespace LinkMod.SkillStates
             this.timer = 0f;
             this.animationTimer = 1f;
             this.childLocator = base.GetModelChildLocator();
-            if (characterMotor.isGrounded)
-            {
-                base.PlayAnimation("Gesture, Override", "ShieldGuard");
-                Util.PlaySound("Weapon_Shield_Metal_Equip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
-                Util.PlaySound("ShieldGuardUp", base.gameObject);                
-                //this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(true);                
-            }
+            base.PlayAnimation("Gesture, Override", "ShieldGuard");
+            Util.PlaySound("Weapon_Shield_Metal_Equip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
+            Util.PlaySound("ShieldGuardUp", base.gameObject);                
+            //this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(true);                
         }
 
         public void MyOnExit()
