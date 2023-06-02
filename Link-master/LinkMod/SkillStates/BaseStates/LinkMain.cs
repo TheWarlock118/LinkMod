@@ -162,7 +162,11 @@ namespace LinkMod.SkillStates.BaseStates
                     {
                         Util.PlaySound(paraUnEquipSounds[UnityEngine.Random.Range(0, 2)], characterBody.gameObject);
                         updateValues.playedParaUnEquipSound = true;
-                        characterBody.RemoveBuff(Modules.Buffs.paragliderBuff);
+                        if (this.characterBody.HasBuff(Modules.Buffs.paragliderBuff))
+                        {
+                            this.characterBody.RemoveBuff(Modules.Buffs.paragliderBuff);
+                            Log.LogDebug("Attempting to Remove Paraglider Buff");
+                        }
                     }
                 }
             }
@@ -206,8 +210,12 @@ namespace LinkMod.SkillStates.BaseStates
             {
                 updateValues.enteredParaglider = true;
                 updateValues.playedFall = false;
-
-                characterBody.AddBuff(Modules.Buffs.paragliderBuff);
+                if (!this.characterBody.HasBuff(Modules.Buffs.paragliderBuff))
+                {
+                    this.characterBody.AddBuff(Modules.Buffs.paragliderBuff);
+                    Log.LogDebug("Attempting to Add Paraglider Buff");
+                }
+                
 
                 //animator.CrossFadeInFixedTime("Glide", 0.01f, 2);
                 animator.Play("Glide", 2);

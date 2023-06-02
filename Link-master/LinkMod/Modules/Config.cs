@@ -18,9 +18,9 @@ namespace LinkMod.Modules
 
             Config.SwordDamageCoeffConfig = LinkPlugin.instance.Config.Bind<float>("Balance", "Sword Damage %", 300, "Default: 300% Sword Beam does 1/2 this damage.");
             Config.BowDamageCoeffConfig = LinkPlugin.instance.Config.Bind<float>("Balance", "Bow Damage %", 600, "Default: 600% Falcon Bow fire arrows deal 1/2 this damage, Great Eagle Bow frost arrows deal 1/3.");
-            Config.BombDamageCoeffConfig = LinkPlugin.instance.Config.Bind<float>("Balance", "Bomb Damage %", 500, "Default: 500%");
+            Config.BombDamageCoeffConfig = LinkPlugin.instance.Config.Bind<float>("Balance", "Bomb Damage %", 650, "Default: 650%");
             Config.BombArrowDamageCoeffConfig = LinkPlugin.instance.Config.Bind<float>("Balance", "Bomb Arrow Damage %", 400, "Default: 400%");
-            Config.UrbosaDamageCoeffConfig = LinkPlugin.instance.Config.Bind<float>("Balance", "Urbosa Damage %", 600, "Default: 600%");
+            Config.UrbosaDamageCoeffConfig = LinkPlugin.instance.Config.Bind<float>("Balance", "Urbosa Damage %", 500, "Default: 500%");
             Config.RevaliDamageCoeffConfig = LinkPlugin.instance.Config.Bind<float>("Balance", "Revali Damage %", 50, "Default: 50%");
             Config.CryonisDamageCoeffConfig = LinkPlugin.instance.Config.Bind<float>("Balance", "Cryonis Damage %", 250, "Default: 250%");
         }
