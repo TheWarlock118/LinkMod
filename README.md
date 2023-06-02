@@ -73,13 +73,10 @@ TheWarlock117 - Everything
 - Some particles are unreasonably large (Teleporter particles, etc.). I believe this is caused by the model's initial scale, and as it takes an incredible amount of tedious work to get the model ready in-game, is likely not be patched anytime soon
 - Some sounds don't play for non-host players in Multiplayer
 - Bow slow-mo can be inconsistent (both sound and activation) 
-- Stasis doesn't freeze properly when player has invulnerability
+- Stasis doesn't apply freeze effect properly when player has invulnerability (movement still stopped, but can still look around)
 - Magnesis pulling doesn't work for non-host players in multiplayer
-- Paraglider buff doesn't work for non-host players in multiplayer
-- Clipping issues with Arrow projectiles
 
 ## Future Plans
-- Multiplayer testing of Sheikah slate runes (Stasis, Magnesis, Cryonis)
 - Achievements for unlocking Sheikah runes
 - Spin attack
 - Shield Surfing
@@ -89,6 +86,9 @@ TheWarlock117 - Everything
 - Separate models for Bomb, Fire, Ice arrows
 - Balancing
 - BOTW effects instead of RoR2 placeholders (Cryonis, Stasis, Daruk's Protection, etc.)
+- Footstep sounds
+- Spawn sounds and animation
+- Custom Mipha logic rather than just adding Dio's Best Friend
 ___
 ## Changelog
 `1.2.2`
@@ -99,6 +99,8 @@ ___
 - Urbosa Damage 400% -> 600%
 - Sword damage 200% -> 300%
 - Sword beam damage 100% -> 150%
+- Arrows now follow an arc through the arrow rather than fired straight
+- Arrows should no longer clip through enemies
 
 `1.2.1`
 - Bomb direction now based on distance from target (no longer random)

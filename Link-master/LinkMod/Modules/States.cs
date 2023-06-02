@@ -21,6 +21,9 @@ namespace LinkMod.Modules
             entityStates.Add(typeof(ShootFast));            
 
             entityStates.Add(typeof(ThrowBomb));
+            entityStates.Add(typeof(Magnesis));
+            entityStates.Add(typeof(Stasis));
+            entityStates.Add(typeof(Cryonis));
             entityStates.Add(typeof(Shield));
 
             entityStates.Add(typeof(MiphasGrace));
