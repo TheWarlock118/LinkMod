@@ -25,6 +25,7 @@ TheWarlock117 - Everything
 ### Acknowledgements
 - Rob & TheTimesweeper for their incredible Henry Tutorial survivor, on which this is based
 - Risk of Rain 2 Modding discord for their unending help and patience
+- TheTimesweeper for Enforcer shielding code
 
 ## Skills
 
@@ -74,7 +75,8 @@ TheWarlock117 - Everything
 - Some sounds don't play for non-host players in Multiplayer
 - Bow slow-mo can be inconsistent (both sound and activation) 
 - Stasis doesn't apply freeze effect properly when player has invulnerability (movement still stopped, but can still look around)
-- Magnesis pulling doesn't work for non-host players in multiplayer
+- Skins re-granted on game start
+- Some achievement-tracking hooks sometimes don't start tracking correctly
 
 ## Future Plans
 - Achievements for unlocking Sheikah runes
@@ -87,6 +89,7 @@ TheWarlock117 - Everything
 - Balancing
 - BOTW effects instead of RoR2 placeholders (Cryonis, Stasis, Daruk's Protection, etc.)
 - Footstep sounds
+- Jumping sounds
 - Spawn sounds and animation
 - Custom Mipha logic rather than just adding Dio's Best Friend
 ___
@@ -95,12 +98,20 @@ ___
 - Fire arrow explosion radius 2 -> 4
 - Bomb arrow explosion radius 8 -> 12
 - Bomb explosion radius 8 -> 12
-- Bomb damage 400% -> 500%
-- Urbosa Damage 400% -> 600%
+- Bomb damage 400% -> 550%
+- Bomb Arrow Damage 400% -> 550%
+- Urbosa Damage 400% -> 650%
 - Sword damage 200% -> 300%
 - Sword beam damage 100% -> 150%
-- Arrows now follow an arc through the arrow rather than fired straight
+- Added balance config option for all damage percentages
+- Arrows now follow an arc and adhere to gravity rather than fire straight
 - Arrows should no longer clip through enemies
+- TriArrows now fired based on rotation rather than updating x value (should be more consistent)
+- Fixed error with ragdollController caused by glider bone
+- Added Logbook Lore
+- Fixed some typos
+- Magnesis now works for non-host players in multiplayer (Thank you orbeezeater22!)
+
 
 `1.2.1`
 - Bomb direction now based on distance from target (no longer random)

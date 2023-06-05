@@ -12,7 +12,7 @@ namespace LinkMod.Modules.Achievements
         public override string AchievementSpriteName => "GerudoSkin";        
         public override string PrerequisiteUnlockableIdentifier => LinkPlugin.developerPrefix + "_LINK_BODY_UNLOCKABLE_REWARD_ID";
 
-        
+        public static bool isInstalled = false;        
 
         public string RequiredCharacterBody = "LinkBody";                
 
@@ -25,7 +25,7 @@ namespace LinkMod.Modules.Achievements
         public override void OnBodyRequirementBroken()
         {
             base.OnUninstall();            
-        }
+        }        
 
         public override BodyIndex LookUpRequiredBodyIndex()
         {
@@ -41,11 +41,13 @@ namespace LinkMod.Modules.Achievements
             public override void OnInstall()
             {
                 base.OnInstall();
+                Log.LogDebug("Installing Urbosa Achievement");
                 killCount = 0;
                 killsNotCounted = 0;
                 resetDelay = 0f;
                 GlobalEventManager.onCharacterDeathGlobal += OnCharacterDeath;
                 RoR2Application.onFixedUpdate += OnFixedUpdate;
+                GerudoAchievement.isInstalled = true;
             }
 
             public override void OnUninstall()
@@ -53,6 +55,7 @@ namespace LinkMod.Modules.Achievements
                 base.OnUninstall();
                 GlobalEventManager.onCharacterDeathGlobal -= OnCharacterDeath;
                 RoR2Application.onFixedUpdate -= OnFixedUpdate;
+                GerudoAchievement.isInstalled = false;
             }
 
             private void OnFixedUpdate()
@@ -87,10 +90,11 @@ namespace LinkMod.Modules.Achievements
                     Grant();
                 }
 
-                //Log.LogDebug("Has Shock: " + damageReport.damageInfo.damageType.HasFlag(DamageType.Shock5s).ToString());
-                //Log.LogDebug("Attacker is Link: " + (damageReport.attackerBody == currentBody).ToString());
-                //Log.LogDebug("Kill Count: " + killCount.ToString());
-                //Log.LogDebug("Kills Not Counted: " + killsNotCounted.ToString());
+                Log.LogDebug("Damage Type: " + damageReport.damageInfo.damageType.ToString());
+                Log.LogDebug("Has Shock: " + damageReport.damageInfo.damageType.HasFlag(DamageType.Shock5s).ToString());
+                Log.LogDebug("Attacker is Link: " + (damageReport.attackerBody == currentBody).ToString());
+                Log.LogDebug("Kill Count: " + killCount.ToString());
+                Log.LogDebug("Kills Not Counted: " + killsNotCounted.ToString());
             }
 
             

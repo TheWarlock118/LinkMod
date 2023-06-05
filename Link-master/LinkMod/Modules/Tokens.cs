@@ -10,7 +10,7 @@ namespace LinkMod.Modules
             #region Link
             string prefix = LinkPlugin.developerPrefix + "_LINK_BODY_";
 
-            string desc = "Link is the Hero of Hyrule, weilder of the Triforce of Courage.<color=#CCD3E0>" + Environment.NewLine + Environment.NewLine;
+            string desc = "Link is the Hero of Hyrule, wielder of the Triforce of Courage.<color=#CCD3E0>" + Environment.NewLine + Environment.NewLine;
             desc = desc + "< ! > The Master Sword is Link's primary weapon against the forces of evil." + Environment.NewLine + Environment.NewLine;
             desc = desc + "< ! > His shield allows Link to block damage, while his bows allow him to deal high damage at range with a variety of effects." + Environment.NewLine + Environment.NewLine;
             desc = desc + "< ! > Link's Sheikah runes allow for a wide variety of utility options." + Environment.NewLine + Environment.NewLine;
@@ -22,7 +22,7 @@ namespace LinkMod.Modules
             LanguageAPI.Add(prefix + "NAME", "Link");
             LanguageAPI.Add(prefix + "DESCRIPTION", desc);
             LanguageAPI.Add(prefix + "SUBTITLE", "Hero's Shade");
-            LanguageAPI.Add(prefix + "LORE", "sample lore");
+            LanguageAPI.Add(prefix + "LORE", "...\n\n...Open your eyes...\n\nOpen your eyes...\n\nOpen your eyes.\n\nWake up, Link.\n\nLink... You are the light--our light--that must shine upon Hyrule once again. Now, go...\n\nPut on every armor piece you own... all at once.");
             LanguageAPI.Add(prefix + "OUTRO_FLAVOR", outro);
             LanguageAPI.Add(prefix + "OUTRO_FAILURE", outroFailure);
 

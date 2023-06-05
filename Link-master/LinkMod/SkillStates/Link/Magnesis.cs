@@ -11,8 +11,7 @@ namespace LinkMod.SkillStates
         public static float radius = 30f;
         
         private float soundStopwatch;
-        private float timer;
-        private bool hasFired;
+        private float timer;        
         private TeamFilter teamFilter;
         private RadialForce radialForce;
         private uint magnesisSoundLoopID;
@@ -20,7 +19,7 @@ namespace LinkMod.SkillStates
         public override void OnEnter()
         {
             base.OnEnter();
-            this.timer = 0f;                        
+            this.timer = 0f;
             if (base.characterBody.gameObject.GetComponent<TeamFilter>())
             {
                 teamFilter = base.characterBody.gameObject.GetComponent<TeamFilter>();
@@ -30,7 +29,7 @@ namespace LinkMod.SkillStates
                 teamFilter = base.characterBody.gameObject.AddComponent<TeamFilter>();
             }
             teamFilter.teamIndex = TeamIndex.Player;
-            
+
             if (base.characterBody.gameObject.GetComponent<RadialForce>())
             {
                 radialForce = base.characterBody.gameObject.GetComponent<RadialForce>();
@@ -38,78 +37,35 @@ namespace LinkMod.SkillStates
             else
             {
                 radialForce = base.characterBody.gameObject.AddComponent<RadialForce>();
-            }            
-            radialForce.tetherVfxOrigin = null;
+            }
 
             radialForce.forceMagnitude = -5000f;
             radialForce.radius = Magnesis.radius;
 
-            Log.LogDebug("Entering Magnesis");
-            Log.LogDebug("Force Radius: " + radialForce.radius.ToString());
-            Log.LogDebug("Force Magnitude: " + radialForce.forceMagnitude.ToString());
-            
+            radialForce.tetherVfxOrigin = null;
+
             this.soundStopwatch = 0f;
         }
 
         public override void OnExit()
         {
-            base.OnExit();
-            RadialForce radialForce = base.characterBody.gameObject.GetComponent<RadialForce>();
+            base.OnExit();            
             radialForce.radius = 0f;
             radialForce.forceMagnitude = 0f;
 
-            Log.LogDebug("Exiting Magnesis");
-            Log.LogDebug("Force Radius: " + radialForce.radius.ToString());
-            Log.LogDebug("Force Magnitude: " + radialForce.forceMagnitude.ToString());
-
             Util.PlaySound("Magnesis_End", base.characterBody.gameObject);
-        }
-
-        private void Fire()
-        {
-            if (!this.hasFired)
-            {
-                this.hasFired = true;
-
-                if (base.isAuthority)
-                {                    
-
-                }
-            }
         }
 
         public override void FixedUpdate()
         {
             base.FixedUpdate();
-            this.Fire();
             this.timer += Time.fixedDeltaTime;
 
-            if (base.characterBody.gameObject.GetComponent<TeamFilter>())
-            {
-                teamFilter = base.characterBody.gameObject.GetComponent<TeamFilter>();
-            }
-            else
-            {
-                teamFilter = base.characterBody.gameObject.AddComponent<TeamFilter>();
-            }
-            teamFilter.teamIndex = TeamIndex.Player;
-
-            if (base.characterBody.gameObject.GetComponent<RadialForce>())
-            {
-                radialForce = base.characterBody.gameObject.GetComponent<RadialForce>();
-            }
-            else
-            {
-                radialForce = base.characterBody.gameObject.AddComponent<RadialForce>();
-            }
-            radialForce.tetherVfxOrigin = null;
-
-            radialForce.forceMagnitude = -5000f;
-            radialForce.radius = Magnesis.radius;
+            if (!base.isAuthority)
+                return;
 
             if (base.inputBank.skill3.down && timer < Magnesis.duration)            
-            {
-                
+            {                
                 if (this.soundStopwatch <= 0f)
                 {
                     magnesisSoundLoopID = Util.PlaySound("Magnesis_Start", base.characterBody.gameObject);
@@ -136,7 +92,7 @@ namespace LinkMod.SkillStates
                 }
                 soundStopwatch -= Time.fixedDeltaTime;                              
             }
-            else
+            else if(base.isAuthority)
             {
                 AkSoundEngine.StopPlayingID(magnesisSoundLoopID);
                 this.outer.SetNextStateToMain();
