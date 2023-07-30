@@ -8,7 +8,7 @@ using LinkMod.Modules;
 
 namespace LinkMod.SkillStates
 {
-    public class Shield : BaseSkillState
+    public class Shield : SkillStates.BaseStates.LinkMain
     {
         public static float procCoefficient = 1f;
         public static float baseDuration = 10f;
@@ -38,9 +38,8 @@ namespace LinkMod.SkillStates
             //this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(true);
         }
 
-        public void MyOnExit()
-        {
-            this.outer.SetNextStateToMain();
+        public override void OnExit()
+        {            
             base.OnExit();            
             if (!this.hasFired)
             {
@@ -73,26 +72,11 @@ namespace LinkMod.SkillStates
             this.timer += Time.fixedDeltaTime;
             if (!base.inputBank.jump.down)
             {
-                if(base.inputBank.skill3.down || base.inputBank.skill4.down)
-                {
-                    MyOnExit();
-                    return;
-                }
                 if (base.inputBank.skill2.down)
                 {                    
                     base.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Slow80.buffIndex, 0.1f);
                     base.characterBody.AddTimedBuffAuthority(Buffs.shieldBuff.buffIndex, 0.1f);                    
                 }
-                else
-                {
-                    MyOnExit();
-                    return;
-                }
-            }
-            else
-            {
-                MyOnExit();
-                return;
             }
         }
 

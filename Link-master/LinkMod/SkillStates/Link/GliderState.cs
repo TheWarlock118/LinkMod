@@ -51,11 +51,6 @@ namespace LinkMod.SkillStates
             {
                 characterBody.characterMotor.velocity = new Vector3(characterBody.characterMotor.velocity.x, 0f, characterBody.characterMotor.velocity.z);
             }
-
-            //if (!(characterBody.inputBank.jump.down && characterBody.characterMotor.velocity.y < 0f && !characterBody.characterMotor.isGrounded))
-            //{
-            //    this.outer.SetNextStateToMain();
-            //}
         }
 
         public override void FixedUpdate()

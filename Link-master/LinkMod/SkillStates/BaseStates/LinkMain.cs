@@ -51,6 +51,16 @@ namespace LinkMod.SkillStates.BaseStates
             Modules.UpdateValues updateValues = characterBody.gameObject.GetComponent<Modules.UpdateValues>();
             SkillLocator skillLocator = characterBody.GetComponent<SkillLocator>();
 
+            #region ExitShieldState
+            if (this.hasInputBank && base.isAuthority)
+            {
+                if (this.outer.state.GetType() == typeof(Shield) && (!base.inputBank.skill2.down || base.inputBank.skill3.down || base.inputBank.skill4.down || base.inputBank.jump.down))
+                {
+                    this.outer.SetNextStateToMain();
+                }
+            }
+            #endregion
+
             #region MiphaGraceRemoveDioAndSetCooldown
             if (skillLocator)
             {
@@ -152,19 +162,15 @@ namespace LinkMod.SkillStates.BaseStates
             #endregion
 
 
+
             #region ParagliderSlow-Bow
 
             // Handle bow slow-mo
-            if (characterBody.inputBank.skill2.down && characterBody.characterMotor.velocity.y < 0f && (skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_3BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_FASTBOW_NAME"))
+            if (this.outer.state.GetType() != typeof(SlowbowState) && (characterBody.inputBank.skill2.down && characterBody.characterMotor.velocity.y < 0f && (skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_3BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_FASTBOW_NAME")))
             {
                 this.outer.SetNextState(new SlowbowState());
 
-            } // Handle paraglider gliding and equipping
-            //else if (characterBody.inputBank.jump.down && characterBody.characterMotor.velocity.y < 0f && !characterBody.characterMotor.isGrounded)
-            //{
-            //    this.outer.SetNextState(new GliderState());
-            //}
-
+            }
             #endregion
 
             #region DarukShield
