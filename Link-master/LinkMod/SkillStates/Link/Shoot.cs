@@ -6,7 +6,7 @@ using EntityStates;
 
 namespace LinkMod.SkillStates
 {
-    public class Shoot : BaseSkillState
+    public class Shoot : SkillStates.BaseStates.LinkMain
     {
         public static float damageCoefficient = 1;
         public static float procCoefficient = 1f;
@@ -85,11 +85,6 @@ namespace LinkMod.SkillStates
                 }
                 this.characterBody.AddTimedBuffAuthority(RoR2Content.Buffs.Slow80.buffIndex, 0.1f);                
             }          
-            else
-            {
-                this.outer.SetNextStateToMain();
-                return;
-            }
             //if(this.timer % 1f == 0)
             //{
             //    Util.PlaySound("BombArrow_Charge", base.gameObject);

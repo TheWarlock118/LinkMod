@@ -6,7 +6,7 @@ using EntityStates;
 
 namespace LinkMod.SkillStates
 {
-    public class ShootFast : BaseSkillState
+    public class ShootFast : SkillStates.BaseStates.LinkMain
     {
         public static float damageCoefficient = Modules.StaticValues.bowDamageCoefficient / 2;
         public static float procCoefficient = 1f;
@@ -91,11 +91,6 @@ namespace LinkMod.SkillStates
                     Util.PlaySound("FireArrow_Charge_Complete", base.gameObject);
                 }
             }          
-            else
-            {
-                this.outer.SetNextStateToMain();
-                return;
-            }
 
             
         }

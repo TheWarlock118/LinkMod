@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace LinkMod.SkillStates
 {
-    public class ThrowBomb : BaseSkillState
+    public class ThrowBomb : SkillStates.BaseStates.LinkMain
     {
         public static float damageCoefficient = 1f; // Bomb itself should have no damage. All damage comes from explosion
         public static float procCoefficient = 1f;
@@ -34,9 +34,8 @@ namespace LinkMod.SkillStates
             base.PlayAnimation("Gesture, Override", "DrawBomb", "ThrowBomb.playbackRate", this.duration);
         }
 
-        public void MyOnExit()
-        {
-            this.outer.SetNextStateToMain();
+        public override void OnExit()
+        {            
             base.OnExit();
             base.characterBody.SetAimTimer(1f);
 
@@ -85,12 +84,7 @@ namespace LinkMod.SkillStates
 
         public override void FixedUpdate()
         {
-            base.FixedUpdate();
-            if (!base.inputBank.skill3.down)
-            {
-                MyOnExit();                
-                return;
-            }            
+            base.FixedUpdate();        
         }
 
         public override InterruptPriority GetMinimumInterruptPriority()

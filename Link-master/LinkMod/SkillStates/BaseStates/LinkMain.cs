@@ -51,10 +51,23 @@ namespace LinkMod.SkillStates.BaseStates
             Modules.UpdateValues updateValues = characterBody.gameObject.GetComponent<Modules.UpdateValues>();
             SkillLocator skillLocator = characterBody.GetComponent<SkillLocator>();
 
-            #region ExitShieldState
+            #region ExitInputBankStates
             if (this.hasInputBank && base.isAuthority)
             {
+                // Exit Shield
                 if (this.outer.state.GetType() == typeof(Shield) && (!base.inputBank.skill2.down || base.inputBank.skill3.down || base.inputBank.skill4.down || base.inputBank.jump.down))
+                {
+                    this.outer.SetNextStateToMain();
+                }
+
+                // Exit Bow
+                if ((this.outer.state.GetType() == typeof(Shoot) || this.outer.state.GetType() == typeof(ShootTri) || this.outer.state.GetType() == typeof(ShootFast)) && !base.inputBank.skill2.down)
+                {
+                    this.outer.SetNextStateToMain();
+                }
+
+                // Exit Bomb
+                if ((this.outer.state.GetType() == typeof(ThrowBomb)) && !base.inputBank.skill3.down)
                 {
                     this.outer.SetNextStateToMain();
                 }

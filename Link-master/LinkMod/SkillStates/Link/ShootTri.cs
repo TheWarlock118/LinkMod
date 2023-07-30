@@ -6,7 +6,7 @@ using EntityStates;
 
 namespace LinkMod.SkillStates
 {
-    public class ShootTri : BaseSkillState
+    public class ShootTri : SkillStates.BaseStates.LinkMain
     {
         public static float damageCoefficient = Modules.StaticValues.bowDamageCoefficient / 3;
         public static float procCoefficient = 1f;
@@ -131,12 +131,7 @@ namespace LinkMod.SkillStates
                 {
                     Util.PlaySound("IceArrow_Charge_Complete", base.gameObject);
                 }
-            }          
-            else
-            {
-                this.outer.SetNextStateToMain();
-                return;
-            }            
+            }                    
         }
 
         public override InterruptPriority GetMinimumInterruptPriority()
