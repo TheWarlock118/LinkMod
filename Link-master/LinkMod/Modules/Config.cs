@@ -12,9 +12,10 @@ namespace LinkMod.Modules
             Config.UrbosaReadySound = LinkPlugin.instance.Config.Bind<bool>("Champion Ready Sounds", "Urbosas Fury", true, "Enables the sound 'Urbosa's Fury is Ready' when the cooldown is over.");
             Config.DarukReadySound = LinkPlugin.instance.Config.Bind<bool>("Champion Ready Sounds", "Daruks Protection", true, "Enables the sound 'Daruk's Protection is Ready to Roll' when the cooldown is over.");
 
-            Config.SlowBowSound = LinkPlugin.instance.Config.Bind<bool>("Character Sounds", "Bow Slow-Mo", true, "Enables the looping slow-mo sound when using a bow while falling.");
-            Config.DarukShieldSound = LinkPlugin.instance.Config.Bind<bool>("Character Sounds", "Daruk Shield", true, "Enables the looping sound that plays when the Daruk's protection shield is up.");
-            Config.StasisTimerSound = LinkPlugin.instance.Config.Bind<bool>("Character Sounds", "Stasis Timer", true, "Enables the timer count-down sound when using Stasis.");            
+            Config.SlowBowSound = LinkPlugin.instance.Config.Bind<bool>("Character Sounds and Effects", "Bow Slow-Mo", true, "Enables the looping slow-mo sound when using a bow while falling.");
+            Config.DarukShieldSound = LinkPlugin.instance.Config.Bind<bool>("Character Sounds and Effects", "Daruk Shield", true, "Enables the looping sound that plays when the Daruk's protection shield is up.");
+            Config.StasisTimerSound = LinkPlugin.instance.Config.Bind<bool>("Character Sounds and Effects", "Stasis Timer", true, "Enables the timer count-down sound when using Stasis.");
+            Config.ShieldBlockEffect = LinkPlugin.instance.Config.Bind<bool>("Character Sounds and Effects", "Shield Block Effect", true, "Enables the \"Blocked\" effect when blocking attacks with the shield.");
 
             Config.SwordDamageCoeffConfig = LinkPlugin.instance.Config.Bind<float>("Balance", "Sword Damage %", 300, "Default: 300% \nSword Beam does 1/2 this damage.");
             Config.BowDamageCoeffConfig = LinkPlugin.instance.Config.Bind<float>("Balance", "Bow Damage %", 600, "Default: 600% \nFalcon Bow fire arrows deal 1/2 this damage, Great Eagle Bow frost arrows deal 1/3.");
@@ -46,6 +47,7 @@ namespace LinkMod.Modules
         public static ConfigEntry<bool> SlowBowSound;
         public static ConfigEntry<bool> StasisTimerSound;
         public static ConfigEntry<bool> DarukShieldSound;
+        public static ConfigEntry<bool> ShieldBlockEffect;
 
         public static ConfigEntry<float> SwordDamageCoeffConfig;
         public static ConfigEntry<float> BowDamageCoeffConfig;

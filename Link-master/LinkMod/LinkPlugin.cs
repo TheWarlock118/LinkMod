@@ -1,6 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Configuration;
 using LinkMod.Modules.Survivors;
+using R2API;
 using R2API.Utils;
 using RoR2;
 using RoR2.Projectile;
@@ -88,7 +89,14 @@ namespace LinkMod
                     CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
 
                     // Thanks TheTimesweeper for this!!
-                    // Check if the damage source is the attacker 
+                    // Check if the damage source is the attacker                    
+                    GameObject blockEffect = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/ImpactEffects/CaptainBodyArmorBlockEffect");
+                    
+                    EffectData blockEffectData = new EffectData
+                    {
+                        origin = damageInfo.position,
+                        rotation = Util.QuaternionSafeLookRotation(characterBody.inputBank.aimDirection)                        
+                    };
                     if (damageInfo.attacker == damageInfo.inflictor)
                     {
                         if (characterBody.HasBuff(Modules.Buffs.shieldBuff) && updateValues.ShouldBlock(attackerBody.corePosition, 40f))
@@ -96,6 +104,10 @@ namespace LinkMod
                             damageInfo.damage = 0f;
                             damageInfo.rejected = true;
                             updateValues.blockedAttacks += 1;
+
+                            if (Modules.Config.ShieldBlockEffect.Value)
+                                EffectManager.SpawnEffect(blockEffect, blockEffectData, true);                            
+
                             Util.PlaySound("Guard_" + UnityEngine.Random.Range(0, 3), characterBody.gameObject);
                         }
                     }
@@ -106,6 +118,9 @@ namespace LinkMod
                             damageInfo.damage = 0f;
                             damageInfo.rejected = true;
                             updateValues.blockedAttacks += 1;
+                            if (Modules.Config.ShieldBlockEffect.Value)                            
+                                EffectManager.SpawnEffect(blockEffect, blockEffectData, true);                            
+
                             Util.PlaySound("Guard_" + UnityEngine.Random.Range(0, 3), characterBody.gameObject);
                         }
                     }
