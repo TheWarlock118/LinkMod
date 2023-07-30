@@ -30,7 +30,7 @@ namespace LinkMod
     {
         public const string MODUID = "com.TheWarlock117.LinkMod";
         public const string MODNAME = "LinkMod";
-        public const string MODVERSION = "1.2.2";
+        public const string MODVERSION = "1.2.3";
 
         // a prefix for name tokens to prevent conflicts- please capitalize all name tokens for convention
         public const string developerPrefix = "CASEY";
@@ -61,7 +61,7 @@ namespace LinkMod
             RoR2.ContentManagement.ContentManager.onContentPacksAssigned += LateSetup;
 
             // TODO: For Multiplayer Testing - comment this out before Uploading
-            On.RoR2.Networking.NetworkManagerSystemSteam.OnClientConnect += (s, u, t) => { };            
+            // On.RoR2.Networking.NetworkManagerSystemSteam.OnClientConnect += (s, u, t) => { };            
             Hook();
         }
 

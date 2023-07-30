@@ -69,9 +69,8 @@ TheWarlock117 - Everything
 | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1103865066480210010/Hylian.png" width="100" height="177"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644397445220/Snowquill.png" width="100" height="177"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643919282336/Gerudo.png" width="100" height="177"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644607148042/Wild.png" width="100" height="177"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643726356521/Dark.png" width="100" height="177"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1110731174571163740/Naked.png" width="100" height="177"> |  <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1103865066794778634/Champion.png" width="100" height="177"/> |
 
 ## Known Issues
-- Some animations are unsynced in Multiplayer - Bomb Throw, Paraglider, Shielding, etc.
 - Mipha's Grace stock not correctly showing used for non-host players in Multiplayer - should be visual only
-- Some particles are unreasonably large (Teleporter particles, etc.). I believe this is caused by the model's initial scale, and as it takes an incredible amount of tedious work to get the model ready in-game, is likely not be patched anytime soon
+- Some particles are unreasonably large (Teleporter particles, etc.)
 - Some sounds don't play for non-host players in Multiplayer
 - Bow slow-mo can be inconsistent (both sound and activation) 
 - Stasis doesn't apply freeze effect properly when player has invulnerability (movement still stopped, but can still look around)
@@ -94,6 +93,13 @@ TheWarlock117 - Everything
 - Custom Mipha logic rather than just adding Dio's Best Friend
 ___
 ## Changelog
+`1.2.3`
+- Multiplayer Paraglider animation now properly synced between clients
+- Multiplayer Bow animations now properly synced between clients
+- Multiplayer Bomb animations now properly snyced between clients
+- Link's 'Hyah' sound now only plays on 33% of all sword swings, rather than 100%
+- Added a 'Blocked' effect to blocking damage with Link's shield, can be disabled in config
+
 `1.2.2`
 - Fire arrow explosion radius 2 -> 4
 - Bomb arrow explosion radius 8 -> 12
