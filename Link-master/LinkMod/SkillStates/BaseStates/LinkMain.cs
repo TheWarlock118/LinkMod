@@ -46,7 +46,6 @@ namespace LinkMod.SkillStates.BaseStates
                 this.characterBody.RemoveBuff(Modules.Buffs.swordProjectileBuff);
             }
             #endregion
-
             
             Modules.UpdateValues updateValues = characterBody.gameObject.GetComponent<Modules.UpdateValues>();
             SkillLocator skillLocator = characterBody.GetComponent<SkillLocator>();
@@ -174,15 +173,49 @@ namespace LinkMod.SkillStates.BaseStates
             }
             #endregion
 
-
-
-            #region ParagliderSlow-Bow
-
-            // Handle bow slow-mo
-            if (this.outer.state.GetType() != typeof(SlowbowState) && (characterBody.inputBank.skill2.down && characterBody.characterMotor.velocity.y < 0f && (skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_3BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_FASTBOW_NAME")))
+            #region Slow-Bow
+            
+            if (characterBody.inputBank.skill2.down && characterBody.characterMotor.velocity.y < 0f && (skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_3BOW_NAME" || skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_FASTBOW_NAME"))
+            {                
+                if (skillLocator.GetSkill(SkillSlot.Secondary).cooldownRemaining == skillLocator.GetSkill(SkillSlot.Secondary).baseRechargeInterval) //If bow is not mid cooldown, allow for extreme slowfall
+                {
+                    characterBody.characterMotor.velocity = Vector3.zero;
+                }
+                // Don't need to check recharge interval if using fast bow
+                if (skillLocator.GetSkill(SkillSlot.Secondary).skillDef.skillName == "CASEY_LINK_BODY_SECONDARY_FASTBOW_NAME")
+                {
+                    characterBody.characterMotor.velocity = Vector3.zero;
+                }
+                if (!updateValues.enteredSlowMo)
+                {
+                    if (Modules.Config.SlowBowSound.Value)
+                    {
+                        if (AkSoundEngine.GetGameObjectFromPlayingID(updateValues.slowMotionPlayID) != 0)
+                            Util.PlaySound("SlowMotionEnter", characterBody.gameObject);
+                    }
+                    updateValues.enteredSlowMo = true;
+                }
+                if (updateValues.SlowMotionStopwatch <= 0f)
+                {
+                    if (Modules.Config.SlowBowSound.Value)
+                    {
+                        updateValues.slowMotionPlayID = Util.PlaySound("SlowMotionLoop", characterBody.gameObject);
+                    }
+                    updateValues.SlowMotionStopwatch = 2f;
+                }
+                else
+                {
+                    updateValues.SlowMotionStopwatch -= Time.fixedDeltaTime;
+                }
+            }
+            else
             {
-                this.outer.SetNextState(new SlowbowState());
-
+                if (!characterBody.inputBank.skill2.down || characterBody.characterMotor.isGrounded)
+                {
+                    AkSoundEngine.StopPlayingID(updateValues.slowMotionPlayID);
+                    updateValues.SlowMotionStopwatch = 0f;
+                    updateValues.enteredSlowMo = false;
+                }
             }
             #endregion
 

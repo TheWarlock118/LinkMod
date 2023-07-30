@@ -25,8 +25,7 @@ namespace LinkMod.Modules
             entityStates.Add(typeof(Stasis));
             entityStates.Add(typeof(Cryonis));
             entityStates.Add(typeof(Shield));
-            entityStates.Add(typeof(GliderState));
-            entityStates.Add(typeof(SlowbowState));
+            entityStates.Add(typeof(GliderState));            
 
             entityStates.Add(typeof(MiphasGrace));
             entityStates.Add(typeof(DaruksProtection));
