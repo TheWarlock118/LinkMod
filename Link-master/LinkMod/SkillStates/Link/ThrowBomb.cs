@@ -16,8 +16,7 @@ namespace LinkMod.SkillStates
 
         private float duration;
         private float fireTime;
-        private bool hasFired;
-        private bool isHolding = true;
+        private bool hasFired;        
         
         private Animator animator;
 
@@ -44,8 +43,7 @@ namespace LinkMod.SkillStates
             
             if (!this.hasFired)
             {
-                this.hasFired = true;
-                this.isHolding = false;
+                this.hasFired = true;                
                 //Util.PlaySound("LinkBombThrow", base.gameObject);
               
                 if (base.inputBank.jump.down && base.characterMotor.velocity.y < 0f && !base.characterMotor.isGrounded)
@@ -81,15 +79,13 @@ namespace LinkMod.SkillStates
                         null,
                         ThrowBomb.throwForce);
                 }
-                base.PlayAnimation("Gesture, Override", "ThrowBomb", "ThrowBomb.playbackRate", this.duration);
-                
+                base.PlayAnimation("Gesture, Override", "ThrowBomb", "ThrowBomb.playbackRate", this.duration);                
             }
         }
 
         public override void FixedUpdate()
         {
             base.FixedUpdate();
-            this.isHolding = true;
             if (!base.inputBank.skill3.down)
             {
                 MyOnExit();                

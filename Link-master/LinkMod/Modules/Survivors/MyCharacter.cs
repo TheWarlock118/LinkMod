@@ -362,7 +362,7 @@ namespace LinkMod.Modules.Survivors
                 canceledFromSprinting = false,
                 forceSprintDuringState = false,
                 fullRestockOnAssign = false,
-                interruptPriority = EntityStates.InterruptPriority.Skill,
+                interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
                 resetCooldownTimerOnUse = false,
                 isCombatSkill = true,
                 mustKeyPress = true,
@@ -386,7 +386,7 @@ namespace LinkMod.Modules.Survivors
                 canceledFromSprinting = false,
                 forceSprintDuringState = false,
                 fullRestockOnAssign = false,
-                interruptPriority = EntityStates.InterruptPriority.Skill,
+                interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
                 resetCooldownTimerOnUse = false,
                 isCombatSkill = false,
                 mustKeyPress = true,
@@ -410,7 +410,7 @@ namespace LinkMod.Modules.Survivors
                 canceledFromSprinting = false,
                 forceSprintDuringState = false,
                 fullRestockOnAssign = false,
-                interruptPriority = EntityStates.InterruptPriority.Skill,
+                interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
                 resetCooldownTimerOnUse = false,
                 isCombatSkill = true,
                 mustKeyPress = false,
@@ -429,7 +429,7 @@ namespace LinkMod.Modules.Survivors
             passSkillLocator.passiveSkill.enabled = true;
             passSkillLocator.passiveSkill.skillNameToken = prefix + "_LINK_BODY_PASSIVE_NAME";
             passSkillLocator.passiveSkill.skillDescriptionToken = prefix + "_LINK_BODY_PASSIVE_DESCRIPTION";
-            passSkillLocator.passiveSkill.icon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("Paraglider");            
+            passSkillLocator.passiveSkill.icon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("Paraglider");
         }
 
         internal override void InitializeSkins()

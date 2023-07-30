@@ -34,19 +34,19 @@ namespace LinkMod.SkillStates
             this.childLocator = base.GetModelChildLocator();
             base.PlayAnimation("Gesture, Override", "ShieldGuard");
             Util.PlaySound("Weapon_Shield_Metal_Equip0" + UnityEngine.Random.Range(0, 2), base.gameObject);
-            Util.PlaySound("ShieldGuardUp", base.gameObject);                
-            //this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(true);                
+            Util.PlaySound("ShieldGuardUp", base.gameObject);
+            //this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(true);
         }
 
         public void MyOnExit()
         {
             this.outer.SetNextStateToMain();
-            base.OnExit();
+            base.OnExit();            
             if (!this.hasFired)
             {
                 this.hasFired = true;
             }
-            base.characterBody.SetAimTimer(1f);
+            base.characterBody.SetAimTimer(1f);            
             base.PlayAnimation("Gesture, Override", "BufferEmpty");
             Util.PlaySound("Weapon_Shield_Metal_UnEquip0" + UnityEngine.Random.Range(0, 2), base.gameObject);            
 
@@ -55,10 +55,10 @@ namespace LinkMod.SkillStates
         }
 
         public override void FixedUpdate()
-        {
-            base.FixedUpdate();     
-            
-            if(animationTimer > 0f)
+        {                        
+            base.FixedUpdate();            
+
+            if (animationTimer > 0f)
             {
                 animationTimer -= Time.fixedDeltaTime;
             }
