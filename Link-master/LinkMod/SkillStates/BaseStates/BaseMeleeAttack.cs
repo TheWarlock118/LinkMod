@@ -174,8 +174,12 @@ namespace LinkMod.SkillStates.BaseStates
         }
 
         private void PlayAttackSound() 
-        {            
-            Util.PlayAttackSpeedSound("SwordAttack" + (1 + swingIndex) + "_" + UnityEngine.Random.Range(1, 3), base.gameObject, this.attackSpeedStat);
+        {
+            // 33% chance for Link to yell when attacking
+            if (UnityEngine.Random.Range(1, 3) == 1)
+            {
+                Util.PlayAttackSpeedSound("SwordAttack" + (1 + swingIndex) + "_" + UnityEngine.Random.Range(1, 3), base.gameObject, this.attackSpeedStat);
+            }
             Util.PlayAttackSpeedSound("Sword_Swing" + (1 + swingIndex), base.gameObject, this.attackSpeedStat);
             if (swingIndex == 3)
                 Util.PlayAttackSpeedSound("Sword_Swing2", base.gameObject, this.attackSpeedStat);
