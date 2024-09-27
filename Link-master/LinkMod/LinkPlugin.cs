@@ -44,7 +44,7 @@ namespace LinkMod
             instance = this;
             
             // load assets and read config
-            Modules.Assets.Initialize();
+            Modules.ModAssets.Initialize();
             Modules.Config.ReadConfig();
             Modules.States.RegisterStates(); // register states for networking
             Modules.Buffs.RegisterBuffs(); // add and register custom buffs/debuffs

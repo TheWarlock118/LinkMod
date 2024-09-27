@@ -25,10 +25,10 @@ namespace LinkMod.SkillStates
             
             this.hitSoundString = "";
             this.muzzleString = swingIndex % 2 == 0 ? "SwingLeft" : "SwingRight";
-            this.swingEffectPrefab = Modules.Assets.swordSwingEffect;
-            this.hitEffectPrefab = Modules.Assets.swordHitImpactEffect;
+            this.swingEffectPrefab = Modules.ModAssets.swordSwingEffect;
+            this.hitEffectPrefab = Modules.ModAssets.swordHitImpactEffect;
 
-            this.impactSound = Modules.Assets.swordHitSoundEvent.index;
+            this.impactSound = Modules.ModAssets.swordHitSoundEvent.index;
 
             base.OnEnter();
         }

@@ -109,7 +109,7 @@ namespace LinkMod.Modules
                 new SkinDef.MeshReplacement
                 {
                     renderer = defaultRendererInfos[i].renderer,
-                    mesh = Assets.mainAssetBundle.LoadAsset<Mesh>(meshes[i])
+                    mesh = ModAssets.mainAssetBundle.LoadAsset<Mesh>(meshes[i])
                 });
             }
 

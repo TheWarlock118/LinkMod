@@ -19,7 +19,7 @@ namespace LinkMod.Modules
             if (tempMat)
                 return tempMat;
 
-            tempMat = Assets.mainAssetBundle.LoadAsset<Material>(materialName);
+            tempMat = ModAssets.mainAssetBundle.LoadAsset<Material>(materialName);
 
             if (!tempMat)
             {

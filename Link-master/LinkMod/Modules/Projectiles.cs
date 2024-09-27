@@ -61,14 +61,14 @@ namespace LinkMod.Modules
             bombImpactExplosion.blastAttackerFiltering = AttackerFiltering.AlwaysHitSelf;                 
             bombImpactExplosion.falloffModel = BlastAttack.FalloffModel.Linear;
             bombImpactExplosion.lifetime = 24f;
-            bombImpactExplosion.impactEffect = Modules.Assets.bombExplosionEffect;
-            bombImpactExplosion.explosionEffect = Modules.Assets.bombExplosionEffect;
+            bombImpactExplosion.impactEffect = Modules.ModAssets.bombExplosionEffect;
+            bombImpactExplosion.explosionEffect = Modules.ModAssets.bombExplosionEffect;
             bombImpactExplosion.explosionSoundString = "BombExplode";
             bombImpactExplosion.timerAfterImpact = true;
             bombImpactExplosion.lifetimeAfterImpact = 0.001f;            
 
             ProjectileController bombController = bombPrefab.GetComponent<ProjectileController>();            
-            if (Modules.Assets.mainAssetBundle.LoadAsset<GameObject>("LinkBombRound") != null) bombController.ghostPrefab = CreateGhostPrefab("LinkBombRound");            
+            if (Modules.ModAssets.mainAssetBundle.LoadAsset<GameObject>("LinkBombRound") != null) bombController.ghostPrefab = CreateGhostPrefab("LinkBombRound");            
             bombController.startSound = "";     
         }
         
@@ -94,8 +94,8 @@ namespace LinkMod.Modules
             bombArrowImpactExplosion.blastAttackerFiltering = AttackerFiltering.AlwaysHitSelf;            
             bombArrowImpactExplosion.falloffModel = BlastAttack.FalloffModel.Linear;
             bombArrowImpactExplosion.lifetime = 24f;
-            bombArrowImpactExplosion.impactEffect = Modules.Assets.bombArrowExplosionEffect;
-            bombArrowImpactExplosion.explosionEffect = Modules.Assets.bombArrowExplosionEffect;            
+            bombArrowImpactExplosion.impactEffect = Modules.ModAssets.bombArrowExplosionEffect;
+            bombArrowImpactExplosion.explosionEffect = Modules.ModAssets.bombArrowExplosionEffect;            
 
             // Try this?
             // bombArrowImpactExplosion.lifetimeExpiredSound = new NetworkSoundEventDef();
@@ -120,8 +120,8 @@ namespace LinkMod.Modules
             fireArrowImpactExplosion.blastRadius = 4f;
             fireArrowImpactExplosion.destroyOnEnemy = false;            
             fireArrowImpactExplosion.lifetime = 1f;            
-            fireArrowImpactExplosion.impactEffect = Modules.Assets.fireArrowExplosionEffect;
-            fireArrowImpactExplosion.explosionEffect = Modules.Assets.fireArrowExplosionEffect;
+            fireArrowImpactExplosion.impactEffect = Modules.ModAssets.fireArrowExplosionEffect;
+            fireArrowImpactExplosion.explosionEffect = Modules.ModAssets.fireArrowExplosionEffect;
             fireArrowImpactExplosion.explosionSoundString = "FireArrow_Hit";
             fireArrowImpactExplosion.timerAfterImpact = true;
             fireArrowImpactExplosion.lifetimeAfterImpact = 0.001f;
@@ -143,8 +143,8 @@ namespace LinkMod.Modules
             iceArrowImpactExplosion.blastRadius = 4f;
             iceArrowImpactExplosion.destroyOnEnemy = true;
             iceArrowImpactExplosion.lifetime = 1f;
-            iceArrowImpactExplosion.impactEffect = Modules.Assets.iceArrowExplosionEffect;
-            iceArrowImpactExplosion.explosionEffect = Modules.Assets.iceArrowExplosionEffect;
+            iceArrowImpactExplosion.impactEffect = Modules.ModAssets.iceArrowExplosionEffect;
+            iceArrowImpactExplosion.explosionEffect = Modules.ModAssets.iceArrowExplosionEffect;
             iceArrowImpactExplosion.explosionSoundString = "IceArrow_Hit";
             iceArrowImpactExplosion.timerAfterImpact = true;
             iceArrowImpactExplosion.lifetimeAfterImpact = 0.001f;
@@ -240,11 +240,11 @@ namespace LinkMod.Modules
 
         private static GameObject CreateGhostPrefab(string ghostName)
         {
-            GameObject ghostPrefab = Modules.Assets.mainAssetBundle.LoadAsset<GameObject>(ghostName);
+            GameObject ghostPrefab = Modules.ModAssets.mainAssetBundle.LoadAsset<GameObject>(ghostName);
             if (!ghostPrefab.GetComponent<NetworkIdentity>()) ghostPrefab.AddComponent<NetworkIdentity>();
             if (!ghostPrefab.GetComponent<ProjectileGhostController>()) ghostPrefab.AddComponent<ProjectileGhostController>();
 
-            Modules.Assets.ConvertAllRenderersToHopooShader(ghostPrefab);
+            Modules.ModAssets.ConvertAllRenderersToHopooShader(ghostPrefab);
 
             return ghostPrefab;
         }

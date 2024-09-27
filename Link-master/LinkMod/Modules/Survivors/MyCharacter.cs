@@ -26,8 +26,8 @@ namespace LinkMod.Modules.Survivors
             bodyName = "LinkBody",
             bodyNameToken = LinkPlugin.developerPrefix + "_LINK_BODY_NAME",
             bodyColor = new Color(0.12f, 0.39f, 0.25f, 1),
-            characterPortrait = Modules.Assets.LoadCharacterIcon("Link"),
-            crosshair = Modules.Assets.LoadCrosshair("Standard"),
+            characterPortrait = Modules.ModAssets.LoadCharacterIcon("Link"),
+            crosshair = Modules.ModAssets.LoadCrosshair("Standard"),
             damage = 12f,
             healthGrowth = 33f,
             healthRegen = 1.5f,
@@ -113,7 +113,7 @@ namespace LinkMod.Modules.Survivors
             string prefix = LinkPlugin.developerPrefix;
 
             #region Primary
-            Modules.Skills.AddPrimarySkill(bodyPrefab, Modules.Skills.CreatePrimarySkillDef(new EntityStates.SerializableEntityStateType(typeof(SkillStates.SlashCombo)), "Weapon", prefix + "_LINK_BODY_PRIMARY_SWORD_NAME", prefix + "_LINK_BODY_PRIMARY_SWORD_DESCRIPTION", Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("MasterSword"), true), null);
+            Modules.Skills.AddPrimarySkill(bodyPrefab, Modules.Skills.CreatePrimarySkillDef(new EntityStates.SerializableEntityStateType(typeof(SkillStates.SlashCombo)), "Weapon", prefix + "_LINK_BODY_PRIMARY_SWORD_NAME", prefix + "_LINK_BODY_PRIMARY_SWORD_DESCRIPTION", Modules.ModAssets.mainAssetBundle.LoadAsset<Sprite>("MasterSword"), true), null);
             #endregion
 
             #region Secondary
@@ -122,7 +122,7 @@ namespace LinkMod.Modules.Survivors
                 skillName = prefix + "_LINK_BODY_SECONDARY_BOW_NAME",
                 skillNameToken = prefix + "_LINK_BODY_SECONDARY_BOW_NAME",
                 skillDescriptionToken = prefix + "_LINK_BODY_SECONDARY_BOW_DESCRIPTION",
-                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("RoyalGuardBow"),
+                skillIcon = Modules.ModAssets.mainAssetBundle.LoadAsset<Sprite>("RoyalGuardBow"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.Shoot)),
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,
@@ -147,7 +147,7 @@ namespace LinkMod.Modules.Survivors
                 skillName = prefix + "_LINK_BODY_SECONDARY_3BOW_NAME",
                 skillNameToken = prefix + "_LINK_BODY_SECONDARY_3BOW_NAME",
                 skillDescriptionToken = prefix + "_LINK_BODY_SECONDARY_3BOW_DESCRIPTION",
-                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("GreatEagleBow"),
+                skillIcon = Modules.ModAssets.mainAssetBundle.LoadAsset<Sprite>("GreatEagleBow"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.ShootTri)),
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,
@@ -172,7 +172,7 @@ namespace LinkMod.Modules.Survivors
                 skillName = prefix + "_LINK_BODY_SECONDARY_FASTBOW_NAME",
                 skillNameToken = prefix + "_LINK_BODY_SECONDARY_FASTBOW_NAME",
                 skillDescriptionToken = prefix + "_LINK_BODY_SECONDARY_FASTBOW_DESCRIPTION",
-                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("FalconBow"),
+                skillIcon = Modules.ModAssets.mainAssetBundle.LoadAsset<Sprite>("FalconBow"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.ShootFast)),
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,
@@ -197,7 +197,7 @@ namespace LinkMod.Modules.Survivors
                 skillName = prefix + "_LINK_BODY_SECONDARY_SHIELD_NAME",
                 skillNameToken = prefix + "_LINK_BODY_SECONDARY_SHIELD_NAME",
                 skillDescriptionToken = prefix + "_LINK_BODY_SECONDARY_SHIELD_DESCRIPTION",
-                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("HylianShieldIcon"),
+                skillIcon = Modules.ModAssets.mainAssetBundle.LoadAsset<Sprite>("HylianShieldIcon"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.Shield)),
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,
@@ -227,7 +227,7 @@ namespace LinkMod.Modules.Survivors
                 skillName = prefix + "_LINK_BODY_UTILITY_BOMB_NAME",
                 skillNameToken = prefix + "_LINK_BODY_UTILITY_BOMB_NAME",
                 skillDescriptionToken = prefix + "_LINK_BODY_UTILITY_BOMB_DESCRIPTION",
-                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("RemoteBomb"),
+                skillIcon = Modules.ModAssets.mainAssetBundle.LoadAsset<Sprite>("RemoteBomb"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.ThrowBomb)),
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,
@@ -251,7 +251,7 @@ namespace LinkMod.Modules.Survivors
                 skillName = prefix + "_LINK_BODY_UTILITY_STAS_NAME",
                 skillNameToken = prefix + "_LINK_BODY_UTILITY_STAS_NAME",
                 skillDescriptionToken = prefix + "_LINK_BODY_UTILITY_STAS_DESCRIPTION",
-                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("Stasis"),
+                skillIcon = Modules.ModAssets.mainAssetBundle.LoadAsset<Sprite>("Stasis"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.Stasis)),
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,
@@ -275,7 +275,7 @@ namespace LinkMod.Modules.Survivors
                 skillName = prefix + "_LINK_BODY_UTILITY_MAG_NAME",
                 skillNameToken = prefix + "_LINK_BODY_UTILITY_MAG_NAME",
                 skillDescriptionToken = prefix + "_LINK_BODY_UTILITY_MAG_DESCRIPTION",
-                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("Magnesis"),
+                skillIcon = Modules.ModAssets.mainAssetBundle.LoadAsset<Sprite>("Magnesis"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.Magnesis)),
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,
@@ -299,7 +299,7 @@ namespace LinkMod.Modules.Survivors
                 skillName = prefix + "_LINK_BODY_UTILITY_CRY_NAME",
                 skillNameToken = prefix + "_LINK_BODY_UTILITY_CRY_NAME",
                 skillDescriptionToken = prefix + "_LINK_BODY_UTILITY_CRY_DESCRIPTION",
-                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("Cryonis"),
+                skillIcon = Modules.ModAssets.mainAssetBundle.LoadAsset<Sprite>("Cryonis"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.Cryonis)),
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,
@@ -329,7 +329,7 @@ namespace LinkMod.Modules.Survivors
                 skillName = prefix + "_LINK_BODY_SPECIAL_MIPHA_NAME",
                 skillNameToken = prefix + "_LINK_BODY_SPECIAL_MIPHA_NAME",
                 skillDescriptionToken = prefix + "_LINK_BODY_SPECIAL_MIPHA_DESCRIPTION",
-                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("MiphasGrace"),
+                skillIcon = Modules.ModAssets.mainAssetBundle.LoadAsset<Sprite>("MiphasGrace"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.MiphasGrace)),
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,
@@ -353,7 +353,7 @@ namespace LinkMod.Modules.Survivors
                 skillName = prefix + "_LINK_BODY_SPECIAL_DARUK_NAME",
                 skillNameToken = prefix + "_LINK_BODY_SPECIAL_DARUK_NAME",
                 skillDescriptionToken = prefix + "_LINK_BODY_SPECIAL_DARUK_DESCRIPTION",
-                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("DaruksProtection"),
+                skillIcon = Modules.ModAssets.mainAssetBundle.LoadAsset<Sprite>("DaruksProtection"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.DaruksProtection)),
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,
@@ -377,7 +377,7 @@ namespace LinkMod.Modules.Survivors
                 skillName = prefix + "_LINK_BODY_SPECIAL_REVALI_NAME",
                 skillNameToken = prefix + "_LINK_BODY_SPECIAL_REVALI_NAME",
                 skillDescriptionToken = prefix + "_LINK_BODY_SPECIAL_REVALI_DESCRIPTION",
-                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("RevalisGale"),
+                skillIcon = Modules.ModAssets.mainAssetBundle.LoadAsset<Sprite>("RevalisGale"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.RevalisGale)),
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,
@@ -401,7 +401,7 @@ namespace LinkMod.Modules.Survivors
                 skillName = prefix + "_LINK_BODY_SPECIAL_URBOSA_NAME",
                 skillNameToken = prefix + "_LINK_BODY_SPECIAL_URBOSA_NAME",
                 skillDescriptionToken = prefix + "_LINK_BODY_SPECIAL_URBOSA_DESCRIPTION",
-                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("UrbosasFury"),
+                skillIcon = Modules.ModAssets.mainAssetBundle.LoadAsset<Sprite>("UrbosasFury"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.UrbosasFury)),
                 activationStateMachineName = "Slide",
                 baseMaxStock = 1,
@@ -429,7 +429,7 @@ namespace LinkMod.Modules.Survivors
             passSkillLocator.passiveSkill.enabled = true;
             passSkillLocator.passiveSkill.skillNameToken = prefix + "_LINK_BODY_PASSIVE_NAME";
             passSkillLocator.passiveSkill.skillDescriptionToken = prefix + "_LINK_BODY_PASSIVE_DESCRIPTION";
-            passSkillLocator.passiveSkill.icon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("Paraglider");
+            passSkillLocator.passiveSkill.icon = Modules.ModAssets.mainAssetBundle.LoadAsset<Sprite>("Paraglider");
         }
 
         internal override void InitializeSkins()
@@ -784,7 +784,7 @@ namespace LinkMod.Modules.Survivors
 
             #region DefaultSkin
             SkinDef defaultSkin = Modules.Skins.CreateSkinDef("Hylian Outfit",
-                Assets.mainAssetBundle.LoadAsset<Sprite>("HylianSkin"),
+                ModAssets.mainAssetBundle.LoadAsset<Sprite>("HylianSkin"),
                 defaultRenderers,                
                 model.gameObject);            
 
@@ -1037,7 +1037,7 @@ namespace LinkMod.Modules.Survivors
 
             #region RitoSkin            
             SkinDef ritoSkin = Modules.Skins.CreateSkinDef("Snowquill Outfit",
-                Assets.mainAssetBundle.LoadAsset<Sprite>("RitoSkin"),
+                ModAssets.mainAssetBundle.LoadAsset<Sprite>("RitoSkin"),
                 defaultRenderers,                
                 model.gameObject,
                 ritoSkinUnlockableDef);
@@ -1312,7 +1312,7 @@ namespace LinkMod.Modules.Survivors
 
             #region GerudoSkin
             SkinDef gerudoSkin = Modules.Skins.CreateSkinDef("Gerudo Outfit",
-                Assets.mainAssetBundle.LoadAsset<Sprite>("GerudoSkin"),
+                ModAssets.mainAssetBundle.LoadAsset<Sprite>("GerudoSkin"),
                 defaultRenderers,                
                 model,
                 gerudoSkinUnlockableDef);
@@ -1597,7 +1597,7 @@ namespace LinkMod.Modules.Survivors
 
             #region WildSkin
             SkinDef wildSkin = Modules.Skins.CreateSkinDef("Wild Outfit",
-                Assets.mainAssetBundle.LoadAsset<Sprite>("WildSkin"),
+                ModAssets.mainAssetBundle.LoadAsset<Sprite>("WildSkin"),
                 defaultRenderers,                
                 model,
                 wildSkinUnlockableDef);
@@ -1876,7 +1876,7 @@ namespace LinkMod.Modules.Survivors
 
             #region DarkSkin            
             SkinDef darkSkin = Modules.Skins.CreateSkinDef("Dark Link",
-                Assets.mainAssetBundle.LoadAsset<Sprite>("DarkSkin"),
+                ModAssets.mainAssetBundle.LoadAsset<Sprite>("DarkSkin"),
                 defaultRenderers,                
                 model,
                 darkSkinUnlockableDef);
@@ -2175,7 +2175,7 @@ namespace LinkMod.Modules.Survivors
 
             #region NakedSkin
             SkinDef nakedSkin = Modules.Skins.CreateSkinDef("Birthday Suit",
-                Assets.mainAssetBundle.LoadAsset<Sprite>("NakedSkin"),
+                ModAssets.mainAssetBundle.LoadAsset<Sprite>("NakedSkin"),
                 defaultRenderers,
                 model,
                 nakedSkinUnlockableDef);
@@ -2444,7 +2444,7 @@ namespace LinkMod.Modules.Survivors
 
             #region MasterySkin            
             SkinDef masterySkin = Modules.Skins.CreateSkinDef("Champion's Tunic",
-                Assets.mainAssetBundle.LoadAsset<Sprite>("MasterySkin"),
+                ModAssets.mainAssetBundle.LoadAsset<Sprite>("MasterySkin"),
                 defaultRenderers,                
                 model.gameObject,
                 masterySkinUnlockableDef);
