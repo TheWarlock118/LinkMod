@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace LinkMod.Modules.Achievements
 {
-    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_REVALI_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_REVALI_UNLOCKABLE_REWARD_ID", null, null)]    
+    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_REVALI_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_REVALI_UNLOCKABLE_REWARD_ID", null, 5, null)]    
     internal class RevaliAchievement : GenericModdedUnlockable
     {
         public override string AchievementTokenPrefix => "ACHIEVEMENT_LINK_BODY_REVALI_";

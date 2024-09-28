@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace LinkMod.Modules.Achievements
 {
-    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_REWARD_ID", null, typeof(TriBowServerAchievement))]    
+    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_TRIBOW_UNLOCKABLE_REWARD_ID", null, 5, typeof(TriBowServerAchievement))]    
     internal class TriBowAchievement : GenericModdedUnlockable
     {
         public override string AchievementTokenPrefix => "ACHIEVEMENT_LINK_BODY_TRIBOW_";
@@ -57,8 +57,8 @@ namespace LinkMod.Modules.Achievements
 
             private void OnCharacterDeath(DamageReport damageReport)
             {                
-                CharacterBody currentBody = this.serverAchievementTracker.networkUser.GetCurrentBody();                
-                if (damageReport.damageInfo.damageType.HasFlag(DamageType.IgniteOnHit) && damageReport.attackerBody == currentBody && damageReport.attackerBodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
+                CharacterBody currentBody = this.serverAchievementTracker.networkUser.GetCurrentBody();
+                if (damageReport.damageInfo.damageType.damageType.HasFlag(DamageType.IgniteOnHit) && damageReport.attackerBody == currentBody && damageReport.attackerBodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
                 {
                     killCount++;
                 }

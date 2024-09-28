@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace LinkMod.Modules.Achievements
 {
-    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_DARUK_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_DARUK_UNLOCKABLE_REWARD_ID", null, typeof(DarukServerAchievement))]    
+    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_DARUK_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_DARUK_UNLOCKABLE_REWARD_ID", null, 5, typeof(DarukServerAchievement))]    
     internal class DarukAchievement : GenericModdedUnlockable
     {
         public override string AchievementTokenPrefix => "ACHIEVEMENT_LINK_BODY_DARUK_";

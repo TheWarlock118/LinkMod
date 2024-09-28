@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace LinkMod.Modules.Achievements
 {
-    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_WILD_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_WILD_UNLOCKABLE_REWARD_ID", null, null)]    
+    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_WILD_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_WILD_UNLOCKABLE_REWARD_ID", null, 5, null)]    
     internal class WildAchievement : GenericModdedUnlockable
     {
         public override string AchievementTokenPrefix => "ACHIEVEMENT_LINK_BODY_WILD_";        

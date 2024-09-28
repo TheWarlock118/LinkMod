@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace LinkMod.Modules.Achievements
 {
-    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_SPEEDRUN_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_SPEEDRUN_UNLOCKABLE_REWARD_ID", null, typeof(SpeedrunServerAchievement))]    
+    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_SPEEDRUN_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_SPEEDRUN_UNLOCKABLE_REWARD_ID", null, 5, typeof(SpeedrunServerAchievement))]    
     internal class SpeedrunAchievement : GenericModdedUnlockable
     {
         public override string AchievementTokenPrefix => "ACHIEVEMENT_LINK_BODY_SPEEDRUN_";

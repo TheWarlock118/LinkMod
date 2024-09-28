@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 131059821
+CRC: 194807214
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 413b2c07b9dbf39115d8ecd341e68a45
+    Hash: 8c31bba07bbe63ccd570271e367fab50
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 84319299fcd0178f8edc4dff3fc0bc6d
+    Hash: a60029d0ffd3c9216d7f6b5c2f2a3e19
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -38,9 +38,9 @@ ClassTypes:
 - Class: 95
   Script: {instanceID: 0}
 - Class: 114
-  Script: {fileID: 11500000, guid: 9a68da65c907acb4eb4dbcd042f172e7, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 261c50d8a80898e4ebf2e8e415ea6766, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9a68da65c907acb4eb4dbcd042f172e7, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 751bd37d2e55f5f448dbb0d97812d9ba, type: 3}
 - Class: 115
@@ -55,94 +55,112 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 319
   Script: {instanceID: 0}
-SerializeReferenceClassIdentifiers: []
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Assembly-CSharp
+  ClassName: ChildLocator/NameTransformPair
 Assets:
-- Assets/LinkAssets/Icons/Magnesis.png
-- Assets/LinkAssets/Link Mats/Dark/Mt_Dark3.mat
-- Assets/LinkAssets/Prefabs/mdlLinkHylian.prefab
-- Assets/LinkAssets/Icons/RitoSkin.png
-- Assets/LinkAssets/Link Mats/Mt_armor_belt_b.mat
-- Assets/LinkAssets/Icons/GerudoSkin.png
-- Assets/LinkAssets/Prefabs/mdlUrbosa.prefab
-- Assets/LinkAssets/Icons/MasterSword.png
-- Assets/LinkAssets/Icons/HylianSkin.png
-- Assets/LinkAssets/Icons/MiphasGrace.png
-- Assets/LinkAssets/Link Mats/Mt_Eye.mat
-- Assets/LinkAssets/Prefabs/mdlLinkAllArmorsDisplayReal.prefab
-- Assets/LinkAssets/Icons/MasterySkin.png
-- Assets/LinkAssets/FBXs/LinkHylianSet/LinkHylianSet.fbx
-- Assets/LinkAssets/Icons/GreatEagleBow.png
-- Assets/LinkAssets/FBXs/LinkFinalAnimationHylianSet/Meshes/Boots_001__Mt_Lower_001.mesh
 - Assets/LinkAssets/Anims/animUrbosa.controller
-- Assets/LinkAssets/Icons/DarkSkin.png
-- Assets/LinkAssets/Prefabs/mdlLinkChampion.prefab
-- Assets/LinkAssets/Icons/WildSkin.png
-- Assets/LinkAssets/FBXs/LinkFinalAnimationHylianSet/LinkFinalAnimationHylianSet.fbx
-- Assets/LinkAssets/DarukProtection.fbx
-- Assets/LinkAssets/Link Mats/link_head_alb.png
-- Assets/LinkAssets/Anims/WaistUp.mask
-- Assets/LinkAssets/Prefabs/mdlLinkDark.prefab
-- Assets/LinkAssets/Prefabs/mdlLinkDarkDisplay.prefab
-- Assets/LinkAssets/Prefabs/mdlLinkGerudoDisplay.prefab
-- Assets/LinkAssets/Prefabs/mdlLinkChampionDisplay.prefab
-- Assets/LinkAssets/FBXs/LinkFinalAnimationHylianSet/Meshes/Metal_001__Mt_Upper_001.mesh
-- Assets/LinkAssets/Icons/SwordBuff.png
-- Assets/LinkAssets/Icons/HylianShieldIcon.png
-- Assets/LinkAssets/Prefabs/mdlDaruk.prefab
-- Assets/LinkAssets/Link Mats/Mt_Skin.mat
-- Assets/LinkAssets/FBXs/LinkFinalAnimationDarkSet/Meshes/Boots_160__Mt_Lower_160.mesh
-- Assets/LinkAssets/FBXs/ChampionMesh/Meshes/meshChampion.mesh
-- Assets/LinkAssets/Icons/DaruksProtection.png
-- Assets/LinkAssets/Link Mats/Mt_belt_a.mat
-- Assets/LinkAssets/Icons/FalconBow.png
-- Assets/LinkAssets/Icons/NakedSkin.png
-- Assets/LinkAssets/Icons/RevalisGale.png
-- Assets/LinkAssets/Link Mats/Mt_armor_lower.mat
-- Assets/LinkAssets/Icons/UrbosasFury.png
-- Assets/LinkAssets/Link Mats/Mt_Earring.mat
-- Assets/LinkAssets/Link Mats/Champion Set/Mt_Armor_116.mat
-- Assets/LinkAssets/Icons/ParagliderBuff.png
-- Assets/LinkAssets/Anims/animLinkFinal.controller
-- Assets/LinkAssets/Anims/animLinkDisplayFinal.controller
-- Assets/LinkAssets/UrbosaFuryAnimation.fbx
-- Assets/LinkAssets/Icons/Paraglider.png
-- Assets/LinkAssets/Prefabs/mdlMipha.prefab
-- Assets/LinkAssets/Link Mats/Mt_Belt_c.mat
+- Assets/LinkAssets/mdlLinkRito.prefab
+- Assets/LinkAssets/mdlLinkChampion.prefab
 - Assets/LinkAssets/Prefabs/mdlLinkRitoDisplay.prefab
-- Assets/LinkAssets/MiphaGraceAnimation.fbx
-- Assets/LinkAssets/Prefabs/mdlLinkWild.prefab
-- Assets/LinkAssets/Icons/Cryonis.png
-- Assets/LinkAssets/Anims/animRevali.controller
-- Assets/LinkAssets/Icons/RoyalGuardBow.png
-- Assets/LinkAssets/Prefabs/mdlLinkWildDisplay.prefab
-- Assets/LinkAssets/FBXs/LinkFinalAnimationChampionSet/Meshes/Code_116__Mt_Tunic_116.mesh
-- Assets/LinkAssets/linkArrow.prefab
-- Assets/LinkAssets/Link Mats/Mt_Face.mat
-- Assets/LinkAssets/Anims/NoneMask.mask
-- Assets/LinkAssets/Icons/FireRod.png
-- Assets/LinkAssets/Prefabs/mdlRevali.prefab
-- Assets/LinkAssets/Anims/animMipha.controller
-- Assets/LinkAssets/FBXs/LinkFinalAnimationDarkSet/Meshes/Arm_160__Mt_Upper_160.mesh
-- Assets/LinkAssets/Prefabs/LinkBombRound.prefab
-- Assets/LinkAssets/Anims/animDaruk.controller
-- Assets/LinkAssets/Anims/WaistDown.mask
-- Assets/LinkAssets/RevaliGaleAnimation.fbx
-- Assets/LinkAssets/Icons/BowOfLight.png
-- Assets/LinkAssets/Link Mats/Dark/Mt_DarkEyes.mat
-- Assets/LinkAssets/Link Mats/Mt_Hair.mat
-- Assets/LinkAssets/Icons/Stasis.png
-- Assets/LinkAssets/Prefabs/mdlLinkRito.prefab
-- Assets/LinkAssets/Link Mats/Mt_armor_upper.mat
-- Assets/LinkAssets/Link Mats/Mt_Eyelashes.mat
-- Assets/LinkAssets/Icons/RemoteBomb.png
+- Assets/LinkAssets/mdlLinkWild.prefab
 - Assets/LinkAssets/Anims/animLink.controller
-- Assets/LinkAssets/Prefabs/mdlLinkHylianDisplay.prefab
-- Assets/LinkAssets/Icons/LinkIcon.png
-- Assets/LinkAssets/Prefabs/mdlLinkGerudo.prefab
-- Assets/LinkAssets/Link Mats/Mt_armor_hood.mat
-- Assets/LinkAssets/Icons/IceRod.png
-- Assets/LinkAssets/FBXs/LinkFinalAnimationHylianSet/Meshes/Face__Mt_Face.mesh
+- Assets/LinkAssets/Icons/MasterySkin.png
+- Assets/LinkAssets/mdlUrbosa.prefab
 - Assets/LinkAssets/maskLinkGesture.mask
+- Assets/LinkAssets/mdlLinkDarkDisplay.prefab
+- Assets/LinkAssets/Link Mats/Mt_Hair.mat
+- Assets/LinkAssets/Link Mats/Dark/Mt_Dark3.mat
+- Assets/LinkAssets/Icons/RitoSkin.png
+- Assets/LinkAssets/Prefabs/mdlLinkChampionDisplay.prefab
+- Assets/LinkAssets/FBXs/LinkFinalAnimationChampionSet/Meshes/Code_116__Mt_Tunic_116.mesh
+- Assets/LinkAssets/Anims/animMipha.controller
+- Assets/LinkAssets/Prefabs/mdlLinkGerudoDisplay.prefab
+- Assets/LinkAssets/Icons/HylianSkin.png
+- Assets/LinkAssets/RevaliGaleAnimation.fbx
+- Assets/LinkAssets/Prefabs/mdlLinkDarkDisplay.prefab
+- Assets/LinkAssets/Icons/FalconBow.png
+- Assets/LinkAssets/mdlDaruk.prefab
+- Assets/LinkAssets/mdlLinkChampionDisplay.prefab
+- Assets/LinkAssets/Icons/ParagliderBuff.png
+- Assets/LinkAssets/Icons/LinkIcon.png
+- Assets/LinkAssets/Link Mats/Mt_Eyelashes.mat
+- Assets/LinkAssets/Prefabs/mdlRevali.prefab
+- Assets/LinkAssets/Icons/WildSkin.png
+- Assets/LinkAssets/linkArrow.prefab
+- Assets/LinkAssets/FBXs/LinkFinalAnimationDarkSet/Meshes/Boots_160__Mt_Lower_160.mesh
+- Assets/LinkAssets/Link Mats/Champion Set/Mt_Armor_116.mat
+- Assets/LinkAssets/Link Mats/link_head_alb.png
+- Assets/LinkAssets/UrbosaFuryAnimation.fbx
+- Assets/LinkAssets/Prefabs/mdlMipha.prefab
+- Assets/LinkAssets/Icons/BowOfLight.png
+- Assets/LinkAssets/Icons/DaruksProtection.png
+- Assets/LinkAssets/Icons/NakedSkin.png
+- Assets/LinkAssets/Anims/WaistDown.mask
+- Assets/LinkAssets/mdlLinkHylianDisplay.prefab
+- Assets/LinkAssets/Prefabs/mdlUrbosa.prefab
+- Assets/LinkAssets/FBXs/LinkFinalAnimationHylianSet/Meshes/Face__Mt_Face.mesh
+- Assets/LinkAssets/Prefabs/mdlLinkRito.prefab
+- Assets/LinkAssets/mdlLinkWildDisplay.prefab
+- Assets/LinkAssets/Prefabs/LinkBombRound.prefab
+- Assets/LinkAssets/Link Mats/Mt_Belt_c.mat
+- Assets/LinkAssets/Prefabs/mdlDaruk.prefab
+- Assets/LinkAssets/FBXs/LinkFinalAnimationHylianSet/Meshes/Boots_001__Mt_Lower_001.mesh
+- Assets/LinkAssets/Icons/Paraglider.png
+- Assets/LinkAssets/Anims/NoneMask.mask
+- Assets/LinkAssets/DarukProtection.fbx
+- Assets/LinkAssets/Icons/SwordBuff.png
+- Assets/LinkAssets/Link Mats/Mt_armor_upper.mat
+- Assets/LinkAssets/Icons/GreatEagleBow.png
+- Assets/LinkAssets/Anims/WaistUp.mask
+- Assets/LinkAssets/mdlMipha.prefab
+- Assets/LinkAssets/Link Mats/Mt_armor_lower.mat
+- Assets/LinkAssets/Anims/animLinkFinal.controller
+- Assets/LinkAssets/Prefabs/mdlLinkWild.prefab
+- Assets/LinkAssets/LinkBombRound.prefab
+- Assets/LinkAssets/FBXs/LinkFinalAnimationHylianSet/LinkFinalAnimationHylianSet.fbx
+- Assets/LinkAssets/MiphaGraceAnimation.fbx
+- Assets/LinkAssets/Link Mats/Mt_Eye.mat
+- Assets/LinkAssets/Icons/RevalisGale.png
+- Assets/LinkAssets/Prefabs/mdlLinkDark.prefab
+- Assets/LinkAssets/Icons/Magnesis.png
+- Assets/LinkAssets/FBXs/ChampionMesh/Meshes/meshChampion.mesh
+- Assets/LinkAssets/Icons/FireRod.png
+- Assets/LinkAssets/Anims/animLinkDisplayFinal.controller
+- Assets/LinkAssets/Link Mats/Mt_Earring.mat
+- Assets/LinkAssets/Anims/animRevali.controller
+- Assets/LinkAssets/Link Mats/Dark/Mt_DarkEyes.mat
+- Assets/LinkAssets/mdlRevali.prefab
 - Assets/LinkAssets/Prefabs/mdlLinkAllArmors.prefab
+- Assets/LinkAssets/mdlLinkGerudoDisplay.prefab
+- Assets/LinkAssets/FBXs/LinkFinalAnimationDarkSet/Meshes/Arm_160__Mt_Upper_160.mesh
+- Assets/LinkAssets/Prefabs/mdlLinkAllArmorsDisplayReal.prefab
+- Assets/LinkAssets/Link Mats/Mt_armor_hood.mat
+- Assets/LinkAssets/Link Mats/Mt_Face.mat
+- Assets/LinkAssets/Anims/animDaruk.controller
+- Assets/LinkAssets/mdlLinkGerudo.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkChampion.prefab
+- Assets/LinkAssets/Prefabs/mdlLinkGerudo.prefab
+- Assets/LinkAssets/Icons/GerudoSkin.png
+- Assets/LinkAssets/Icons/RoyalGuardBow.png
 - Assets/LinkAssets/HeroMats/BlueSeeThrough.mat
+- Assets/LinkAssets/Icons/MiphasGrace.png
+- Assets/LinkAssets/mdlLinkRitoDisplay.prefab
+- Assets/LinkAssets/mdlLinkDark.prefab
+- Assets/LinkAssets/Link Mats/Mt_Skin.mat
+- Assets/LinkAssets/Icons/Cryonis.png
+- Assets/LinkAssets/Icons/MasterSword.png
+- Assets/LinkAssets/FBXs/LinkFinalAnimationHylianSet/Meshes/Metal_001__Mt_Upper_001.mesh
+- Assets/LinkAssets/Prefabs/mdlLinkHylianDisplay.prefab
+- Assets/LinkAssets/FBXs/LinkHylianSet/LinkHylianSet.fbx
+- Assets/LinkAssets/Prefabs/mdlLinkWildDisplay.prefab
+- Assets/LinkAssets/Icons/RemoteBomb.png
+- Assets/LinkAssets/Icons/Stasis.png
+- Assets/LinkAssets/Icons/DarkSkin.png
+- Assets/LinkAssets/Link Mats/Mt_armor_belt_b.mat
+- Assets/LinkAssets/Icons/UrbosasFury.png
+- Assets/LinkAssets/Icons/HylianShieldIcon.png
+- Assets/LinkAssets/Icons/IceRod.png
+- Assets/LinkAssets/Link Mats/Mt_belt_a.mat
+- Assets/LinkAssets/Prefabs/mdlLinkHylian.prefab
 Dependencies: []

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace LinkMod.Modules.Achievements
 {
-    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_MIPHA_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_MIPHA_UNLOCKABLE_REWARD_ID", null, typeof(MiphaServerAchievement))]    
+    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_MIPHA_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_MIPHA_UNLOCKABLE_REWARD_ID", null, 5, typeof(MiphaServerAchievement))]    
     internal class MiphaAchievement : GenericModdedUnlockable
     {
         public override string AchievementTokenPrefix => "ACHIEVEMENT_LINK_BODY_MIPHA_";

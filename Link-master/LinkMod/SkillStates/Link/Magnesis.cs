@@ -93,8 +93,8 @@ namespace LinkMod.SkillStates
                 soundStopwatch -= Time.fixedDeltaTime;                              
             }
             else if(base.isAuthority)
-            {
-                AkSoundEngine.StopPlayingID(magnesisSoundLoopID);
+            {                   
+                // AkSoundEngine.StopPlayingID(magnesisSoundLoopID);
                 this.outer.SetNextStateToMain();
                 return;
             }

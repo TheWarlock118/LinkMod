@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace LinkMod.Modules.Achievements
 {
-    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_GERUDO_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_GERUDO_UNLOCKABLE_REWARD_ID", null, typeof(GerudoServerAchievement))]    
+    [RegisterAchievement("ACHIEVEMENT_LINK_BODY_GERUDO_UNLOCKABLE_ACHIEVEMENT_ID", "ACHIEVEMENT_LINK_BODY_GERUDO_UNLOCKABLE_REWARD_ID", null, 5, typeof(GerudoServerAchievement))]    
     internal class GerudoAchievement : GenericModdedUnlockable
     {
         public override string AchievementTokenPrefix => "ACHIEVEMENT_LINK_BODY_GERUDO_";        
@@ -77,7 +77,7 @@ namespace LinkMod.Modules.Achievements
                     resetDelay = 0f;
 
                 CharacterBody currentBody = this.serverAchievementTracker.networkUser.GetCurrentBody();                              
-                if (damageReport.damageInfo.damageType.HasFlag(DamageType.Shock5s) && damageReport.attackerBody == currentBody && currentBody.bodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
+                if (damageReport.damageInfo.damageType.damageType.HasFlag(DamageType.Shock5s) && damageReport.attackerBody == currentBody && currentBody.bodyIndex == BodyCatalog.FindBodyIndex("LinkBody"))
                 {                    
                     killCount++;                    
                 }
