@@ -46,7 +46,7 @@ namespace LinkMod.Modules.Survivors
 
             if (characterEnabled.Value)
             {
-                InitializeUnlockables();
+                // InitializeUnlockables();
 
                 bodyPrefab = Modules.Prefabs.CreatePrefab("LinkBody", "mdlLinkAllArmors", bodyInfo);
                 bodyPrefab.GetComponent<EntityStateMachine>().mainStateType = new EntityStates.SerializableEntityStateType(characterMainState);
