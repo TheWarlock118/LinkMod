@@ -17,7 +17,7 @@ Due to the nature of BOTW's assets, adding new skins is incredibly time-consumin
 |-|-|
 | ![](https://i.postimg.cc/Bn7CcVYz/Daruk.png) | ![](https://i.postimg.cc/K8CMYSsm/Paraglider-In-Action.png) |
 
-<img src="https://i.postimg.cc/YC069xrz/LinkIcon.png" width="100" height="100"/>
+<img src="https://i.postimg.cc/YC069xrz/LinkIcon.png" width="300" height="300"/>
 
 ## Credits
 TheWarlock117 - Everything
