@@ -15,7 +15,7 @@ Due to the nature of BOTW's assets, adding new skins is incredibly time-consumin
 
 | ![](https://i.postimg.cc/5yWgQQ7N/Bow.png) | ![](https://i.postimg.cc/3NryqKWF/Shielding.png) |
 |-|-|
-| ![](https://i.postimg.cc/Bn7CcVYz/Daruk.png) | ![](https://i.postimg.cc/K8CMYSsm/Paraglider-In-Action.png) |
+| ![]() | ![](https://i.postimg.cc/K8CMYSsm/Paraglider-In-Action.png) |
 
 <img src="https://i.postimg.cc/YC069xrz/LinkIcon.png" width="300" height="300"/>
 
