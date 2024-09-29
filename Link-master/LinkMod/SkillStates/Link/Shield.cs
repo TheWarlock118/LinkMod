@@ -50,7 +50,7 @@ namespace LinkMod.SkillStates
             Util.PlaySound("Weapon_Shield_Metal_UnEquip0" + UnityEngine.Random.Range(0, 2), base.gameObject);            
 
             //this.childLocator.FindChild("ShieldHitbox").gameObject.SetActive(false);
-            // base.characterBody.GetComponent<UpdateValues>().isBlocking = false;
+            // base.characterBody.GetComponent<UpdateValues>().isBlocking = false;          
         }
 
         public override void FixedUpdate()

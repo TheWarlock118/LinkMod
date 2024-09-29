@@ -13,7 +13,7 @@ Due to the nature of BOTW's assets, adding new skins is incredibly time-consumin
 
 [![](https://cdn.discordapp.com/attachments/1099804589684969593/1110724735056216074/Risk_of_Rain_2_Screenshot_2023.05.23_-_17.22.53.87.png)]()
 
-| ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837409102942339/Bow.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837408461193217/Shielding.png) |
+| ![](https://i.postimg.cc/5yWgQQ7N/Bow.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837408461193217/Shielding.png) |
 |-|-|
 | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837408129855608/Daruk.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837408725446747/Paraglider.png) |
 
