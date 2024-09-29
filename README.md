@@ -11,13 +11,13 @@ Please check known issues first!
 Also be aware that I am unlikely to add any more skins than are already included. 
 Due to the nature of BOTW's assets, adding new skins is incredibly time-consuming and tedious, and if I add any more, it will be further down the road, when I am feeling particularly masochistic.
 
-[![](https://cdn.discordapp.com/attachments/1099804589684969593/1110724735056216074/Risk_of_Rain_2_Screenshot_2023.05.23_-_17.22.53.87.png)]()
+[![](https://i.postimg.cc/h4MQd73y/Risk-of-Rain-2-Screenshot-2023-05-23-17-22-53-87.png)]()
 
-| ![](https://i.postimg.cc/5yWgQQ7N/Bow.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837408461193217/Shielding.png) |
+| ![](https://i.postimg.cc/5yWgQQ7N/Bow.png) | ![](https://i.postimg.cc/3NryqKWF/Shielding.png) |
 |-|-|
-| ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837408129855608/Daruk.png) | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099837408725446747/Paraglider.png) |
+| ![](https://i.postimg.cc/Bn7CcVYz/Daruk.png) | ![](https://i.postimg.cc/K8CMYSsm/Paraglider-In-Action.png) |
 
-<img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099838130565152819/LinkIcon.png" width="100" height="100"/>
+<img src="https://i.postimg.cc/YC069xrz/LinkIcon.png" width="100" height="100"/>
 
 ## Credits
 TheWarlock117 - Everything
@@ -32,41 +32,41 @@ TheWarlock117 - Everything
 ### Passive
 | Skill | | Description |
 |:-|-|------|
-| Paraglider | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804887358914630/Paraglider.png) | An item that you received from the king on the Great Plateau. It allows you to sail through the sky.Hold space while you're in the air to use it. |
+| Paraglider | ![](https://i.postimg.cc/RCTKLYqT/Paraglider.png) | An item that you received from the king on the Great Plateau. It allows you to sail through the sky.Hold space while you're in the air to use it. |
 
 ### Primary
 | Skill | | Description |
 |:-|-|------|
-| The Master Sword | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804836582658168/MasterSword.png) | The legendary sword that seals the darkness. Swing forward for `200%` damage. At over `90%` health, fire a sword beam for `100%` damage. |
+| The Master Sword | ![](https://i.postimg.cc/5tF85NFH/Master-Sword.png) | The legendary sword that seals the darkness. Swing forward for `200%` damage. At over `90%` health, fire a sword beam for `100%` damage. |
 
 ### Secondary
 | Skill | | Description | Cooldown |
 |:-|-|------|-|
-| Hylian Shield | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1103354683235516517/HylianShieldIcon.png) | A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it. Hold to block all damage from the front. Can attack with your sword while blocking. | None |
-| Falcon Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804708685750292/FalconBow.png) | Loose a hasty fire arrow for `45%` fire damage. The specially engineered bowstring allows for faster drawing and a short cooldown. | 0.5s |
-| Great Eagle Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804714373222501/GreatEagleBow.png) | Loose three ice arrows at once, each dealing `30%` damage and freezing enemies for 2 seconds. | 5s |
-| Royal Guard Bow | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804748112212088/RoyalGuardBow.png) | Loose a bomb arrow, which explodes to fling enemies and deal `400%` damage | 4s |
+| Hylian Shield | ![](https://i.postimg.cc/9XPtNMgZ/Hylian-Shield-Icon.png) | A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it. Hold to block all damage from the front. Can attack with your sword while blocking. | None |
+| Falcon Bow | ![](https://i.postimg.cc/N0ykNkZj/Falcon-Bow.png) | Loose a hasty fire arrow for `45%` fire damage. The specially engineered bowstring allows for faster drawing and a short cooldown. | 0.5s |
+| Great Eagle Bow | ![](https://i.postimg.cc/Rhm1Z5hW/Great-Eagle-Bow.png) | Loose three ice arrows at once, each dealing `30%` damage and freezing enemies for 2 seconds. | 5s |
+| Royal Guard Bow | ![](https://i.postimg.cc/nL7QjR6B/Royal-Guard-Bow.png) | Loose a bomb arrow, which explodes to fling enemies and deal `400%` damage | 4s |
 
 ### Utility
 | Skill | | Description | Cooldown |
 |:-|-|------|-|
-| Remote Bomb | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804877707812974/RemoteBomb.png) | Hold to draw a bomb and let go to throw. Explodes on impact to fling enemies and deal `400%` damage. While gliding, bombs will drop straight down. | 6s |
-| Magnesis | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1111450057988907058/Magnesis.png) | Hold for up to 6 seconds to draw enemies in. Magnetised enemies are crippled, reducing enemy armor by 20 and movement speed by 50%. | 10s |
-| Stasis | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1111450058349608970/Stasis.png) | Pause time on yourself for 5 seconds, freezing and regenerating half of your health. | 30s |
-| Cryonis | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1111450058689363988/Cryonis.png) | Create a circle of ice pillars, freezing enemies within the circle and dealing `250%` damage on contact. | 15s |
+| Remote Bomb | ![](https://i.postimg.cc/vHH9qvVw/Remote-Bomb.png) | Hold to draw a bomb and let go to throw. Explodes on impact to fling enemies and deal `400%` damage. While gliding, bombs will drop straight down. | 6s |
+| Magnesis | ![](https://i.postimg.cc/13dpNN4h/Magnesis.png) | Hold for up to 6 seconds to draw enemies in. Magnetised enemies are crippled, reducing enemy armor by 20 and movement speed by 50%. | 10s |
+| Stasis | ![](https://i.postimg.cc/1trnMgRz/Stasis.png) | Pause time on yourself for 5 seconds, freezing and regenerating half of your health. | 30s |
+| Cryonis | ![](https://i.postimg.cc/fWYBn5y3/Cryonis.png) | Create a circle of ice pillars, freezing enemies within the circle and dealing `250%` damage on contact. | 15s |
 
 ### Special
 | Skill | | Description | Cooldown |
 |:-|-|------|-|
-| Urbosa's Fury | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804902382899220/UrbosasFury.png) | Call on the Champion Urbosa to summon powerful lightning, dealing `400%` damage and shocking enemies for 2 seconds. | 12s |
-| Revali's Gale | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804910859599965/RevalisGale.png) | Call on the Champion Revali and soar into the sky, dealing `50%` damage and pushing back enemies around you. | 8s |
-| Daruk's Protection | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804924352663662/DaruksProtection.png) | Call on the Champion Daruk to enforce your defenses. The next attack is automatically deflected. Cooldown begins after attack deflection. | 24s |
-| Mipha's Grace | ![](https://cdn.discordapp.com/attachments/1099804589684969593/1099804935039754360/MiphasGrace.png) | When your hearts run out, call on the Champion Mipha to bring you back to life. Usable once per stage. | 1/Stage |
+| Urbosa's Fury | ![](https://i.postimg.cc/PJ6LsBws/Urbosas-Fury.png) | Call on the Champion Urbosa to summon powerful lightning, dealing `400%` damage and shocking enemies for 2 seconds. | 12s |
+| Revali's Gale | ![](https://i.postimg.cc/yYQRwSmg/Revalis-Gale.png) | Call on the Champion Revali and soar into the sky, dealing `50%` damage and pushing back enemies around you. | 8s |
+| Daruk's Protection | ![](https://i.postimg.cc/YCC3FH3g/Daruks-Protection.png) | Call on the Champion Daruk to enforce your defenses. The next attack is automatically deflected. Cooldown begins after attack deflection. | 24s |
+| Mipha's Grace | ![](https://i.postimg.cc/mDYMqXjB/Miphas-Grace.png) | When your hearts run out, call on the Champion Mipha to bring you back to life. Usable once per stage. | 1/Stage |
 
 ### Skins
 |   Hylian Outfit  | Snowquill Outfit |   Gerudo Outfit  |    Wild Outfit   |    Dark Link     |  Birthday Suit   | Champion's Tunic |
 |--|--|--|--|--|--|--|
-| <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1103865066480210010/Hylian.png" width="100" height="177"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644397445220/Snowquill.png" width="100" height="177"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643919282336/Gerudo.png" width="100" height="177"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817644607148042/Wild.png" width="100" height="177"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1099817643726356521/Dark.png" width="100" height="177"/> | <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1110731174571163740/Naked.png" width="100" height="177"> |  <img src="https://cdn.discordapp.com/attachments/1099804589684969593/1103865066794778634/Champion.png" width="100" height="177"/> |
+| <img src="https://i.postimg.cc/ZnL897vV/Hylian.png" width="100" height="177"/> | <img src="https://i.postimg.cc/nzJ9vKJ5/Snowquill.png" width="100" height="177"/> | <img src="https://i.postimg.cc/nL6YNQtY/Gerudo.png" width="100" height="177"/> | <img src="https://i.postimg.cc/Yqs4XB7Q/Wild.png" width="100" height="177"/> | <img src="https://i.postimg.cc/J4qxtnbM/Dark.png" width="100" height="177"/> | <img src="https://i.postimg.cc/WzSZpdxy/Naked.png" width="100" height="177"> |  <img src="https://i.postimg.cc/rFcg8WRf/Champion.png" width="100" height="177"/> |
 
 ## Known Issues
 - Mipha's Grace stock not correctly showing used for non-host players in Multiplayer - should be visual only
