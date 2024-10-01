@@ -30,7 +30,7 @@ namespace LinkMod
     {
         public const string MODUID = "com.TheWarlock117.LinkMod";
         public const string MODNAME = "LinkMod";
-        public const string MODVERSION = "1.2.3";
+        public const string MODVERSION = "1.2.4";
 
         // a prefix for name tokens to prevent conflicts- please capitalize all name tokens for convention
         public const string developerPrefix = "CASEY";

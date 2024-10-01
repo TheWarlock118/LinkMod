@@ -77,19 +77,19 @@ namespace LinkMod.Modules.Survivors
 
         internal override void InitializeUnlockables()
         {            
-            masterySkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.MasteryAchievement>(true);
-            darkSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.DarkAchievement>(true);
-            gerudoSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.GerudoAchievement>(true);
-            ritoSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.RitoAchievement>(true);
-            wildSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.WildAchievement>(true);
-            nakedSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.SpeedrunAchievement>(true);
+            //masterySkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.MasteryAchievement>(true);
+            //darkSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.DarkAchievement>(true);
+            //gerudoSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.GerudoAchievement>(true);
+            //ritoSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.RitoAchievement>(true);
+            //wildSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.WildAchievement>(true);
+            //nakedSkinUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.SpeedrunAchievement>(true);
 
-            revaliUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.RevaliAchievement>(true);
-            darukUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.DarukAchievement>(true);
-            miphaUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.MiphaAchievement>(true);
+            //revaliUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.RevaliAchievement>(true);
+            //darukUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.DarukAchievement>(true);
+            //miphaUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.MiphaAchievement>(true);
 
-            fastBowUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.FastBowAchievement>(true);
-            triBowUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.TriBowAchievement>(true);
+            //fastBowUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.FastBowAchievement>(true);
+            //triBowUnlockableDef = Modules.Unlockables.AddUnlockable<Achievements.TriBowAchievement>(true);
         }
 
         internal override void InitializeDoppelganger()
@@ -217,7 +217,9 @@ namespace LinkMod.Modules.Survivors
             });
 
             SkillDef[] secondaries = { shieldSkillDef, shootFastSkillDef, shootTriSkillDef, shootSkillDef };
-            UnlockableDef[] secondaryUnlockables = { null, null, triBowUnlockableDef, fastBowUnlockableDef };
+            UnlockableDef[] secondaryUnlockables = { null, null, null, null };
+            // Removing skill unlockables until fixed
+            // UnlockableDef[] secondaryUnlockables = { null, null, triBowUnlockableDef, fastBowUnlockableDef };
             Modules.Skills.AddSecondarySkills(bodyPrefab, secondaryUnlockables, secondaries);
             #endregion
 
@@ -421,7 +423,10 @@ namespace LinkMod.Modules.Survivors
             });
 
             SkillDef[] specials = { urbosaSkillDef, revaliSkillDef, darukSkillDef, miphaSkillDef};
-            UnlockableDef[] specialUnlockables = { null, revaliUnlockableDef, darukUnlockableDef, miphaUnlockableDef };
+            UnlockableDef[] specialUnlockables = { null, null, null, null };
+            // Removing skill unlockables until fixed.
+            // UnlockableDef[] specialUnlockables = { null, revaliUnlockableDef, darukUnlockableDef, miphaUnlockableDef };
+
             Modules.Skills.AddSpecialSkills(bodyPrefab, specialUnlockables, specials);
             #endregion
 

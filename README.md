@@ -15,7 +15,7 @@ Due to the nature of BOTW's assets, adding new skins is incredibly time-consumin
 
 | ![](https://i.postimg.cc/5yWgQQ7N/Bow.png) | ![](https://i.postimg.cc/3NryqKWF/Shielding.png) |
 |-|-|
-| ![](https://i.postimg.cc/Bn7CcVYz/Daruk.png) | ![](https://i.postimg.cc/K8CMYSsm/Paraglider-In-Action.png) |
+| ![](https://i.postimg.cc/3Nr41Wsx/Daruk.png) | ![](https://i.postimg.cc/K8CMYSsm/Paraglider-In-Action.png) |
 
 <img src="https://i.postimg.cc/YC069xrz/LinkIcon.png" width="300" height="300"/>
 
@@ -44,7 +44,7 @@ TheWarlock117 - Everything
 |:-|-|------|-|
 | Hylian Shield | ![](https://i.postimg.cc/9XPtNMgZ/Hylian-Shield-Icon.png) | A shield passed down through the Hyrulean royal family, along with the legend of the hero who wielded it. Hold to block all damage from the front. Can attack with your sword while blocking. | None |
 | Falcon Bow | ![](https://i.postimg.cc/N0ykNkZj/Falcon-Bow.png) | Loose a hasty fire arrow for `45%` fire damage. The specially engineered bowstring allows for faster drawing and a short cooldown. | 0.5s |
-| Great Eagle Bow | ![](https://i.postimg.cc/Rhm1Z5hW/Great-Eagle-Bow.png) | Loose three ice arrows at once, each dealing `30%` damage and freezing enemies for 2 seconds. | 5s |
+| Great Eagle Bow | ![](https://i.postimg.cc/KYLMv67x/Great-Eagle-Bow.png) | Loose three ice arrows at once, each dealing `30%` damage and freezing enemies for 2 seconds. | 5s |
 | Royal Guard Bow | ![](https://i.postimg.cc/nL7QjR6B/Royal-Guard-Bow.png) | Loose a bomb arrow, which explodes to fling enemies and deal `400%` damage | 4s |
 
 ### Utility
@@ -61,12 +61,12 @@ TheWarlock117 - Everything
 | Urbosa's Fury | ![](https://i.postimg.cc/PJ6LsBws/Urbosas-Fury.png) | Call on the Champion Urbosa to summon powerful lightning, dealing `400%` damage and shocking enemies for 2 seconds. | 12s |
 | Revali's Gale | ![](https://i.postimg.cc/yYQRwSmg/Revalis-Gale.png) | Call on the Champion Revali and soar into the sky, dealing `50%` damage and pushing back enemies around you. | 8s |
 | Daruk's Protection | ![](https://i.postimg.cc/YCC3FH3g/Daruks-Protection.png) | Call on the Champion Daruk to enforce your defenses. The next attack is automatically deflected. Cooldown begins after attack deflection. | 24s |
-| Mipha's Grace | ![](https://i.postimg.cc/mDYMqXjB/Miphas-Grace.png) | When your hearts run out, call on the Champion Mipha to bring you back to life. Usable once per stage. | 1/Stage |
+| Mipha's Grace | ![](https://i.postimg.cc/t486bqxB/Miphas-Grace.png) | When your hearts run out, call on the Champion Mipha to bring you back to life. Usable once per stage. | 1/Stage |
 
 ### Skins
 |   Hylian Outfit  | Snowquill Outfit |   Gerudo Outfit  |    Wild Outfit   |    Dark Link     |  Birthday Suit   | Champion's Tunic |
 |--|--|--|--|--|--|--|
-| <img src="https://i.postimg.cc/ZnL897vV/Hylian.png" width="100" height="177"/> | <img src="https://i.postimg.cc/nzJ9vKJ5/Snowquill.png" width="100" height="177"/> | <img src="https://i.postimg.cc/nL6YNQtY/Gerudo.png" width="100" height="177"/> | <img src="https://i.postimg.cc/Yqs4XB7Q/Wild.png" width="100" height="177"/> | <img src="https://i.postimg.cc/J4qxtnbM/Dark.png" width="100" height="177"/> | <img src="https://i.postimg.cc/WzSZpdxy/Naked.png" width="100" height="177"> |  <img src="https://i.postimg.cc/rFcg8WRf/Champion.png" width="100" height="177"/> |
+| <img src="https://i.postimg.cc/nrdsPpxY/Hylian.png" width="100" height="177"/> | <img src="https://i.postimg.cc/nzJ9vKJ5/Snowquill.png" width="100" height="177"/> | <img src="https://i.postimg.cc/nL6YNQtY/Gerudo.png" width="100" height="177"/> | <img src="https://i.postimg.cc/Yqs4XB7Q/Wild.png" width="100" height="177"/> | <img src="https://i.postimg.cc/J4qxtnbM/Dark.png" width="100" height="177"/> | <img src="https://i.postimg.cc/Hx98bbPN/Naked.png" width="100" height="177"> |  <img src="https://i.postimg.cc/gJW6wg4R/Champion.png" width="100" height="177"/> |
 
 ## Known Issues
 - Mipha's Grace stock not correctly showing used for non-host players in Multiplayer - should be visual only
@@ -76,8 +76,13 @@ TheWarlock117 - Everything
 - Stasis doesn't apply freeze effect properly when player has invulnerability (movement still stopped, but can still look around)
 - Skins re-granted on game start
 - Some achievement-tracking hooks sometimes don't start tracking correctly
+- TriBowAchievement causes errors
+- SOTS: Swapping skins in lobby causes them to render incorrectly (LobbySkinsFix needs updated AFAIK)
 
 ## Future Plans
+- SOTS: Fix unlockables and re-enable achievements
+- SOTS: Item placements
+- Add translation files
 - Achievements for unlocking Sheikah runes
 - Spin attack
 - Shield Surfing
@@ -93,6 +98,10 @@ TheWarlock117 - Everything
 - Custom Mipha logic rather than just adding Dio's Best Friend
 ___
 ## Changelog
+`1.2.4`
+- Updated for SOTS
+- Achievements disabled for now due to changes in unlockables. Prioritizing SOTS release while working on re-enabling.
+
 `1.2.3`
 - Multiplayer Paraglider animation now properly synced between clients
 - Multiplayer Bow animations now properly synced between clients
